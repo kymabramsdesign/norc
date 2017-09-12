@@ -18,9 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
     'from<br />Evaluation',
     'is Accessible',
     'for Informed<br />Decisions'],
-    onStringTyped: () => {
+    onStringTyped: function() {
       speedUp = speedUp-50;
       backUp = backUp-50;
+      // this.typeSpeed = this.options.typeSpeed;
     },
     backSpeed: backUp,
     typeSpeed: speedUp,
