@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>NORC Intro Animation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -10,24 +12,25 @@
 <body>
 <header></header>
 <main>
-  <div class="wrap">
 
-    <div class="type-wrap insight">
-      <div id="insight-type">
-        <p>Insight</p>
-      </div>
-      <span id="typed"></span>
-    </div>
+  <div class="entry-screen">
+    <div class="text-overlay"></div>
 
-<div class="type-wrap">
-    <span id="typed2"></span>
-  </div>
+    <div class="intro intro-left">
+      <div id="typed-first"></div>
+    </div><!-- end of .intro-left -->
 
-  </div><!-- end of .wrap -->
+    <div class="intro intro-right">
+      <div id="typed-second"></div>
+    </div><!-- end of .intro-right -->
+
+  </div><!-- end of .entry-screen -->
+
 </main>
 
 <footer>
-  <script src="js/typed.min.js" type="text/javascript"></script>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/typeIt.min.js"></script>
   <script src="js/ticker.js"></script>
 </footer>
 
