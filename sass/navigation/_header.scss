@@ -13,12 +13,26 @@
   }
 }
 
-.tagline {
-  fill: $white-85;
+#logo {
+  .tagline {
+    fill: $white-85;
+  }
+  .nrc {
+    fill: $white-85;
+  }
+  .star {
+    fill: $white;
+  }
 }
-.nrc {
-  fill: $white-85;
-}
-.star {
-  fill: $white;
+
+#color-logo {
+  .tagline {
+    fill: $black;
+  }
+  .nrc {
+    fill: $putty;
+  }
+  .star {
+    fill: $orange;
+  }
 }

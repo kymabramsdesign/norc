@@ -655,19 +655,34 @@ a:hover, a:active {
   }
 }
 
-/* line 16, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
-.tagline {
+/* line 17, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+#logo .tagline {
   fill: rgba(255, 255, 255, 0.85);
 }
 
-/* line 19, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
-.nrc {
+/* line 20, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+#logo .nrc {
   fill: rgba(255, 255, 255, 0.85);
 }
 
-/* line 22, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
-.star {
+/* line 23, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+#logo .star {
   fill: #fff;
+}
+
+/* line 29, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+#color-logo .tagline {
+  fill: #000;
+}
+
+/* line 32, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+#color-logo .nrc {
+  fill: #A9A09A;
+}
+
+/* line 35, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+#color-logo .star {
+  fill: #E87424;
 }
 
 /*--------------------------------------------------------------
