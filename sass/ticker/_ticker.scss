@@ -48,28 +48,21 @@ body {
   }
 
   .text-overlay {
-    background-image: url('/img/grid.png');
-    background-position: 11px 23.3vh;
-    background-repeat: no-repeat;
-    background-size: 687px;
-    height: 100vh;
+    height: 100%;
+    left: $small-left;
     position: absolute;
-    right: 0;
-    width: $large-right;
+    width: 705px;
     z-index: 1000;
 
     @media screen and (max-width: 1024px) {
-      background-position: 8px 23.1vh;
-      background-size: 587px;
-      width: $large-right-tablet;
+      left: $small-left-tablet;
+      width: 554px;
     }
 
     @media screen and (max-width: 767px) {
-      background-image: url('/img/grid.png');
-      background-position: left 40vh;
-      background-repeat: no-repeat;
-      background-size: 489px;
-      width: 100vw;
+      left: 0;
+      margin-top: 6vh;
+      width: 100%;
     }
   }
 }
@@ -77,6 +70,10 @@ body {
 .intro {
   background-color: $navy;
   margin-top: 40vh;
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 43vh;
+  }
 
   @media screen and (max-width: 767px) {
     margin-top: 32vh;
