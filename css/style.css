@@ -492,13 +492,13 @@ object {
   height: 100%;
 }
 
-/* line 24, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 23, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture img {
   height: 100%;
   width: 50vw;
 }
 
-/* line 29, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 28, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:before {
   content: url("/img/zoom.svg");
   width: 30px;
@@ -514,12 +514,12 @@ object {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 40, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 39, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:hover {
   cursor: pointer;
 }
 
-/* line 43, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 42, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:hover:before {
   opacity: 1;
   -webkit-transition: opacity 0.4s ease-in-out;
@@ -529,19 +529,19 @@ object {
   transition: opacity 0.4s ease-in-out;
 }
 
-/* line 52, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 50, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video img {
   height: 100%;
   width: 50vw;
 }
 
-/* line 57, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 55, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:before {
   content: url("/img/play-button.svg");
   width: 109px;
   height: 125px;
   position: absolute;
-  left: 23.5%;
+  left: 23%;
   margin-top: 6.5%;
   opacity: .8;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -551,12 +551,12 @@ object {
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 68, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 66, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover {
   cursor: pointer;
 }
 
-/* line 71, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 69, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover:before {
   opacity: 1;
   -webkit-transition: opacity 0.4s ease-in-out;
@@ -566,7 +566,7 @@ object {
   transition: opacity 0.4s ease-in-out;
 }
 
-/* line 79, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 77, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .right-50 {
   width: 50%;
   padding: 34px 48px;
