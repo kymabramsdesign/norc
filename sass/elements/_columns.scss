@@ -1,0 +1,74 @@
+//Story Pages
+.story-content {
+  margin-top: 114px;
+  display: flex;
+}
+
+.left-50 {
+  background-color: beige;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+
+  .picture {
+
+    img {
+      height: 100%;
+      width: 50vw;
+    }
+
+    &:before {
+      content: url('/img/zoom.svg');
+      width: 30px;
+      height: 31px;
+      position: absolute;
+      left: 46.5%;
+      margin-top: 15px;
+      opacity: .8;
+      @include transition(opacity .3s ease-in-out);
+    }
+
+    &:hover{
+      cursor: pointer;
+
+      &:before {
+        opacity: 1;
+        @include transition(opacity .4s ease-in-out);
+      }
+    }
+  }
+
+  .video {
+
+    img {
+      height: 100%;
+      width: 50vw;
+    }
+
+    &:before {
+      content: url('/img/play-button.svg');
+      width: 109px;
+      height: 125px;
+      position: absolute;
+      left: 23.5%;
+      margin-top: 6.5%;
+      opacity: .8;
+      @include transition(opacity .3s ease-in-out);
+    }
+
+    &:hover{
+      cursor: pointer;
+
+      &:before {
+        opacity: 1;
+        @include transition(opacity .4s ease-in-out);
+      }
+    }
+  }
+}
+
+.right-50 {
+  width: 50%;
+  padding: 34px 48px;
+}

@@ -4,6 +4,7 @@
   position: fixed;
   top: 25px;
   width: 230px;
+  z-index: 100;
 
   @media screen and (max-width:767px) {
     left: 15px;
@@ -26,13 +27,63 @@
 }
 
 #color-logo {
-  .tagline {
-    fill: $black;
-  }
   .nrc {
     fill: $putty;
   }
   .star {
     fill: $orange;
+  }
+}
+
+.header-background {
+  background-color: $black-41;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 10;
+}
+
+// Sub Navigation for Story Pages
+.sub-nav {
+  display: flex;
+  position: fixed;
+  top: 80px;
+  width: 100vw;
+  z-index: 12;
+
+  .story-item {
+    color: $black-50;
+    font-size: 14px;
+    height: auto;
+    padding: 9px;
+    text-align: center;
+    text-decoration: none;
+    @include transition(color .2s ease-in-out, background-color .2s ease-in-out, font-size .3s ease-in-out, padding .3s ease-in-out);
+
+    @media screen and (max-width: 1024px) {
+      font-size: 13px;
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 800px) {
+      font-size: 12px;
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      padding: 9px;
+      width: 100vw !important;
+    }
+
+    &:hover {
+      @include transition(color .4s ease-in-out, background-color .4s ease-in-out);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    padding: 10px 0 45px;
   }
 }

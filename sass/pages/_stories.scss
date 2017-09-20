@@ -1,18 +1,52 @@
-//NORC logo
-// .tagline {
-//   fill: $black;
-// }
-// .nrc {
-//   fill: $putty;
-// }
-// .star {
-//   fill: $orange;
-// }
-
 .story-page {
 
+  .header-logo {
+    width: 164px;
+
+    @media screen and (max-width: 767px) {
+      width: 140px;
+    }
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
+
+  .data {
+    color: $black;
+    font-size: 18px;
+    line-height: 26px;
+  }
 
   &_global {
     background-color: $purple-background;
+
+    .header-background {
+      background-color: $purple-background;
+    }
+
+    .sub-nav {
+      background-color: $purple-subhead;
+
+      .story-item {
+        width: 25vw;
+
+        &:hover {
+          background-color: $purple-hover;
+          color: $purple;
+        }
+
+        &.active {
+          background-color: $purple-hover;
+          color: $purple;
+        }
+      }
+    }
+
+    h1 {
+      color: $purple;
+    }
   }
 }

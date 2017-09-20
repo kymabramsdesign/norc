@@ -1,6 +1,7 @@
 p {
+	color: $text-grey;
 	font-weight: 400;
-	margin-bottom: 1.5em;
+	margin: 0;
 }
 
 dfn, cite, em, i {
@@ -39,8 +40,4 @@ abbr, acronym {
 mark, ins {
 	background: $color__background-ins;
 	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
 }

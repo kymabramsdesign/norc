@@ -8,9 +8,6 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;
@@ -27,10 +24,16 @@ $orange: #E87424;
 $putty: #A9A09A;
 
 // Global Development colors
-$purple-background: rgba(97,49,100,.08);
+$purple-subhead: #e1dae1;
+$purple-background: #e8e2e8;
+$purple-hover: rgba(97,49,100,.16);
 $purple: #613064;
 
+$text-grey: rgba(0,0,0,.43);
+
 $white-85: rgba(255,255,255,.85);
+$black-50: rgba(0,0,0,.3);
+$black-41: rgba(0,0,0,.41);
 
 $white: #fff;
 $black: #000;
