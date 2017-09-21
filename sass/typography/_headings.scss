@@ -6,6 +6,17 @@ h1 {
   font-size: 30px;
   font-weight: 400;
   margin: 31px 0 1px;
+  @include transition(font-size .3s ease-in-out);
+
+  @media screen and (max-width: 1024px) {
+    font-size: 26px;
+    margin: 26px 0 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 22px;
+    margin: 22px 0 0;
+  }
 }
 
 h2 {
@@ -13,4 +24,13 @@ h2 {
   font-size: 28px;
   font-weight: 300;
   margin: 0 0 20px;
+  @include transition(font-size .3s ease-in-out);
+
+  @media screen and (max-width: 1024px) {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 20px;
+  }
 }

@@ -5,6 +5,12 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+
+  @media screen and (max-width: 767px) {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
 }
 
 .left-50 {
@@ -19,6 +25,10 @@
           flex-wrap: wrap;
   height: 100%;
 
+  @media screen and (max-width: 767px) {
+    width: 1000vw;
+  }
+
   .picture {
     img {
       height: 100%;
@@ -27,13 +37,17 @@
 
     &:before {
       content: url('/img/zoom.svg');
-      width: 30px;
-      height: 31px;
-      position: absolute;
+      height: 27px;
       left: 46.5%;
       margin-top: 15px;
       opacity: .8;
-      @include transition(opacity .3s ease-in-out);
+      position: absolute;
+      width: 26px;
+      @include transition(opacity .3s ease-in-out, left .3s ease-in-out);
+
+      @media screen and (max-width: 1024px) {
+        left: 45%;
+      }
     }
 
     &:hover{
@@ -47,26 +61,39 @@
   }
 
   .video {
+    align-items: center;
+    background-image: url('/img/cuba-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 27vw;
+    justify-content: center;
+    width: 50vw;
+    @include transition(height .3s ease-in-out);
+
+    @media screen and (max-width: 1000px) {
+      height: 30vw;
+    }
+
     img {
-      height: 100%;
-      width: 50vw;
-    }
-
-    &:before {
-      content: url('/img/play-button.svg');
-      width: 109px;
       height: 125px;
-      position: absolute;
-      left: 23%;
-      margin-top: 6.5%;
       opacity: .8;
-      @include transition(opacity .3s ease-in-out);
+      @include transition(opacity .3s ease-in-out, height .3s ease-in-out);
+
+      @media screen and (min-width: 1441px) {
+        height: 150px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        height: 115px;
+      }
     }
 
-    &:hover{
+    &:hover {
       cursor: pointer;
 
-      &:before {
+      img {
         opacity: 1;
         @include transition(opacity .4s ease-in-out);
       }
@@ -77,4 +104,14 @@
 .right-50 {
   width: 50%;
   padding: 34px 48px;
+  @include transition(padding .3s ease-in-out);
+
+  @media screen and (max-width: 1024px) {
+    padding: 30px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 20px;
+    width: 100vw;
+  }
 }
