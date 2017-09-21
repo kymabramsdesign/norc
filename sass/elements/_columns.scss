@@ -5,6 +5,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  @include transition(margin .3s ease-in-out);
 
   @media screen and (max-width: 767px) {
     -webkit-flex-wrap: wrap;
@@ -39,7 +40,7 @@
     &:before {
       content: url('/img/zoom.svg');
       height: 27px;
-      left: 46.5%;
+      left: 92.5%;
       margin-top: 15px;
       opacity: .8;
       position: absolute;
@@ -47,7 +48,7 @@
       @include transition(opacity .3s ease-in-out, left .3s ease-in-out);
 
       @media screen and (max-width: 1024px) {
-        left: 45%;
+        left: 90%;
       }
     }
 
