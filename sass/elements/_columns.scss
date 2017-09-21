@@ -23,7 +23,8 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  height: 100%;
+  left: 0;
+  position: absolute;
 
   @media screen and (max-width: 767px) {
     width: 1000vw;
@@ -61,14 +62,23 @@
   }
 
   .video {
-    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-image: url('/img/cuba-2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     height: 27vw;
-    justify-content: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 50vw;
     @include transition(height .3s ease-in-out);
 
@@ -102,8 +112,10 @@
 }
 
 .right-50 {
-  width: 50%;
   padding: 34px 48px;
+  position: absolute;
+  right: 0;
+  width: 50%;
   @include transition(padding .3s ease-in-out);
 
   @media screen and (max-width: 1024px) {

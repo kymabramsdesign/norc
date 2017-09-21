@@ -4,47 +4,41 @@ var columns = function() {
   var leftHeight = $('.left-50').height();
   var windowHeight = $(window).height();
   var scrollPosition = $(window).scrollTop();
-  var bottomPosition = leftHeight - windowHeight;
+  // var bottomPosition = leftHeight - windowHeight;
 
-  if ( (windowHeight + scrollPosition) >= (leftOffset + leftHeight) ) {
+  if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
     $('.left-50').css({
       'position': 'fixed',
-      'bottom': 0,
-      'height': 'initial'
-    });
-  }
-
-  if ( (windowHeight + scrollPosition) < leftBottom ) {
-    $('.left-50').css({
-      'position': 'initial',
-      'bottom': 'initial',
-      'height': '100%'
+      'bottom': 0
     });
   }
 
   $(window).on( 'scroll', function() {
-    var scrollPosition = $(window).scrollTop();
+    var leftBottom = $('.left-50').position().top + $('.left-50').outerHeight(true);
+  var windowHeight = $(window).height();
+  var scrollPosition = $(window).scrollTop();
 
-    if ( (windowHeight + scrollPosition) >= (leftOffset + leftHeight) ) {
+    if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
       $('.left-50').css({
         'position': 'fixed',
-        'bottom': 0,
-        'height': 'initial'
+        'bottom': 0
       });
     }
 
-    if ( (windowHeight + scrollPosition) < leftBottom ) {
+    if ( (windowHeight + scrollPosition) <= (leftHeight + leftOffset) ) {
       $('.left-50').css({
-        'position': 'initial',
-        'bottom': 'initial',
-        'height': '100%'
+        'position': 'absolute',
+        'bottom': 'initial'
       });
     }
 
   });
 
-  alert(windowHeight);
-  alert(leftHeight);
+  // alert(windowHeight);
+  // alert(leftHeight);
+  // alert(leftBottom);
+  // alert(scrollPosition+windowHeight);
+  // alert(leftOffset);
 }
 
 $(document).ready(columns);
