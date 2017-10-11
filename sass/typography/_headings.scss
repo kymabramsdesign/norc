@@ -34,3 +34,7 @@ h2 {
     font-size: 20px;
   }
 }
+
+h3 {
+  @include transition(font-size .3s ease-in-out);
+}

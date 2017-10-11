@@ -10,7 +10,7 @@ body {
   height: 100vh;
   width: 100vw;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 900px) {
     -webkit-align-content: flex-start;
         -ms-flex-line-pack: start;
             align-content: flex-start;
@@ -18,6 +18,10 @@ body {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     padding: 0 25px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 9px;
   }
 
   .typed-first, .typed-second {
@@ -28,12 +32,11 @@ body {
   }
 
   .typed-first {
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+            align-content: flex-start;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 900px) {
       -webkit-box-pack: start;
       -webkit-justify-content: flex-start;
           -ms-flex-pack: start;
@@ -57,7 +60,7 @@ body {
       line-height: 54px !important;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 900px) {
       font-size: 44px !important;
       line-height: 10px !important;
       -webkit-box-pack: start;
@@ -73,20 +76,36 @@ body {
 
   .text-overlay {
     height: 100%;
-    left: $small-left;
+    left: 410px;
     position: absolute;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
     width: 705px;
     z-index: 1000;
 
+    @media screen and (max-width: 1320px) {
+      left: 377px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      left: 306px;
+    }
+
     @media screen and (max-width: 1024px) {
-      left: $small-left-tablet;
+      left: 271px;
       width: 554px;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 900px) {
+      height: auto;
       left: 0;
-      margin-top: 6vh;
+      margin-top: 374px;
       width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-top: 49vh;
     }
   }
 }
@@ -99,36 +118,63 @@ body {
     margin-top: 43vh;
   }
 
+  @media screen and (max-width: 900px) {
+    margin-top: 300px;
+  }
+
   @media screen and (max-width: 767px) {
-    margin-top: 32vh;
+    margin-top: 40vh;
   }
 
   &-left {
     color: $orange;
-    width: $small-left;
+    width: 410px;
 
-    @media screen and (max-width: 1024px) {
-      width: $small-left-tablet;
+    @media screen and (max-width: 1320px) {
+      width: 377px;
     }
 
-    @media screen and (max-width: 767px) {
-      width: $small-left-mobile;
+    @media screen and (max-width: 1200px) {
+      width: 306px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 271px;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: $full-width;
     }
 
     h3 {
       font-size: 77px;
       font-weight: 400;
       line-height: 86px;
-      margin: 0;
+      margin: 0 0 0 55px;
+
+      @media screen and (max-width: 1320px) {
+        font-size: 70px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        font-size: 62px;
+        margin-left: 21px;
+      }
 
       @media screen and (max-width: 1024px) {
-        font-size: 60px;
+        font-size: 54px;
         line-height: 68px;
+      }
+
+      @media screen and (max-width: 900px) {
+        font-size: 60px;
+        margin-left: 31px;
       }
 
       @media screen and (max-width: 767px) {
         font-size: 44px;
         line-height: 50px;
+        margin-left: 3px;
       }
     }
   }
@@ -136,17 +182,20 @@ body {
   &-right {
     color: $white;
     padding-left: 14px;
-    width: $large-right;
+    width: auto;
 
     @media screen and (max-width: 1024px) {
       padding-left: 12px;
-      width: $large-right-tablet;
+    }
+
+    @media screen and (max-width: 900px) {
+      margin-top: 19px;
+      padding-left: 32px;
+      width: $full-width;
     }
 
     @media screen and (max-width: 767px) {
-      margin-top: 19px;
-      padding-left: 0;
-      width: $large-right-mobile;
+      padding-left: 5px;
     }
 
     h3 {
@@ -155,16 +204,30 @@ body {
       line-height: 86px;
       margin: 0;
 
+      @media screen and (max-width: 1320px) {
+        font-size: 70px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        font-size: 62px;
+      }
+
       @media screen and (max-width: 1024px) {
-        font-size: 60px;
+        font-size: 54px;
         line-height: 68px;
+      }
+
+      @media screen and (max-width: 900px) {
+        font-size: 60px;
+        margin-left: 0;
+        margin-top: -10px;
+        text-align: left;
       }
 
       @media screen and (max-width: 767px) {
         font-size: 44px;
         line-height: 54px;
-        margin-top: -10px;
-        text-align: left;
+        margin-top: -12px;
       }
     }
   }

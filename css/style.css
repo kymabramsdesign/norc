@@ -349,6 +349,15 @@ h2 {
   }
 }
 
+/* line 38, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
+h3 {
+  -webkit-transition: font-size 0.3s ease-in-out;
+  -moz-transition: font-size 0.3s ease-in-out;
+  -ms-transition: font-size 0.3s ease-in-out;
+  -o-transition: font-size 0.3s ease-in-out;
+  transition: font-size 0.3s ease-in-out;
+}
+
 /* line 1, /Users/kadimac/Desktop/norc-repo/sass/typography/_copy.scss */
 p {
   color: rgba(0, 0, 0, 0.43);
@@ -1093,7 +1102,7 @@ body {
   width: 100vw;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 900px) {
   /* line 5, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .entry-screen {
     -webkit-align-content: flex-start;
@@ -1106,7 +1115,14 @@ body {
   }
 }
 
-/* line 23, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 767px) {
+  /* line 5, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .entry-screen {
+    padding: 0 9px;
+  }
+}
+
+/* line 27, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
 .entry-screen .typed-first, .entry-screen .typed-second {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1114,16 +1130,15 @@ body {
   display: flex;
 }
 
-/* line 30, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+/* line 34, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
 .entry-screen .typed-first {
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
 }
 
-@media screen and (max-width: 767px) {
-  /* line 30, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 900px) {
+  /* line 34, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .typed-first {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -1132,7 +1147,7 @@ body {
   }
 }
 
-/* line 44, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+/* line 47, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
 .entry-screen .ti-cursor {
   color: #fff !important;
   display: -webkit-box !important;
@@ -1146,15 +1161,15 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 44, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  /* line 47, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .ti-cursor {
     font-size: 60px !important;
     line-height: 54px !important;
   }
 }
 
-@media screen and (max-width: 767px) {
-  /* line 44, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 900px) {
+  /* line 47, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .ti-cursor {
     font-size: 44px !important;
     line-height: 10px !important;
@@ -1170,121 +1185,197 @@ body {
   }
 }
 
-/* line 74, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+/* line 77, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
 .entry-screen .text-overlay {
   height: 100%;
-  left: 42%;
+  left: 410px;
   position: absolute;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
   width: 705px;
   z-index: 1000;
 }
 
-@media screen and (max-width: 1024px) {
-  /* line 74, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 1320px) {
+  /* line 77, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .text-overlay {
-    left: 40%;
+    left: 377px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 77, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .entry-screen .text-overlay {
+    left: 306px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 77, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .entry-screen .text-overlay {
+    left: 271px;
     width: 554px;
   }
 }
 
-@media screen and (max-width: 767px) {
-  /* line 74, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 900px) {
+  /* line 77, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .text-overlay {
+    height: auto;
     left: 0;
-    margin-top: 6vh;
+    margin-top: 374px;
     width: 100%;
   }
 }
 
-/* line 94, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 767px) {
+  /* line 77, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .entry-screen .text-overlay {
+    margin-top: 49vh;
+  }
+}
+
+/* line 113, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
 .intro {
   background-color: #151336;
   margin-top: 40vh;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 94, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  /* line 113, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro {
     margin-top: 43vh;
   }
 }
 
-@media screen and (max-width: 767px) {
-  /* line 94, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 900px) {
+  /* line 113, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro {
-    margin-top: 32vh;
+    margin-top: 300px;
   }
 }
 
-/* line 106, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 767px) {
+  /* line 113, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro {
+    margin-top: 40vh;
+  }
+}
+
+/* line 129, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
 .intro-left {
   color: #E87424;
-  width: 42%;
+  width: 410px;
+}
+
+@media screen and (max-width: 1320px) {
+  /* line 129, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro-left {
+    width: 377px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 129, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro-left {
+    width: 306px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 106, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  /* line 129, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro-left {
-    width: 40%;
+    width: 271px;
   }
 }
 
-@media screen and (max-width: 767px) {
-  /* line 106, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 900px) {
+  /* line 129, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro-left {
     width: 100%;
   }
 }
 
-/* line 118, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+/* line 149, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
 .intro-left h3 {
   font-size: 77px;
   font-weight: 400;
   line-height: 86px;
-  margin: 0;
+  margin: 0 0 0 55px;
+}
+
+@media screen and (max-width: 1320px) {
+  /* line 149, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro-left h3 {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 149, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro-left h3 {
+    font-size: 62px;
+    margin-left: 21px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 118, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  /* line 149, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro-left h3 {
-    font-size: 60px;
+    font-size: 54px;
     line-height: 68px;
   }
 }
 
+@media screen and (max-width: 900px) {
+  /* line 149, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro-left h3 {
+    font-size: 60px;
+    margin-left: 31px;
+  }
+}
+
 @media screen and (max-width: 767px) {
-  /* line 118, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  /* line 149, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro-left h3 {
     font-size: 44px;
     line-height: 50px;
+    margin-left: 3px;
   }
 }
 
-/* line 136, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+/* line 182, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
 .intro-right {
   color: #fff;
   padding-left: 14px;
-  width: 58%;
+  width: auto;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 136, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  /* line 182, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro-right {
     padding-left: 12px;
-    width: 60%;
   }
 }
 
-@media screen and (max-width: 767px) {
-  /* line 136, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 900px) {
+  /* line 182, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro-right {
     margin-top: 19px;
-    padding-left: 0;
+    padding-left: 32px;
     width: 100%;
   }
 }
 
-/* line 152, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 767px) {
+  /* line 182, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro-right {
+    padding-left: 5px;
+  }
+}
+
+/* line 201, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
 .intro-right h3 {
   font-size: 77px;
   font-weight: 400;
@@ -1292,21 +1383,44 @@ body {
   margin: 0;
 }
 
-@media screen and (max-width: 1024px) {
-  /* line 152, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+@media screen and (max-width: 1320px) {
+  /* line 201, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro-right h3 {
-    font-size: 60px;
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* line 201, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro-right h3 {
+    font-size: 62px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 201, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro-right h3 {
+    font-size: 54px;
     line-height: 68px;
   }
 }
 
+@media screen and (max-width: 900px) {
+  /* line 201, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  .intro-right h3 {
+    font-size: 60px;
+    margin-left: 0;
+    margin-top: -10px;
+    text-align: left;
+  }
+}
+
 @media screen and (max-width: 767px) {
-  /* line 152, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
+  /* line 201, /Users/kadimac/Desktop/norc-repo/sass/pages/_ticker.scss */
   .intro-right h3 {
     font-size: 44px;
     line-height: 54px;
-    margin-top: -10px;
-    text-align: left;
+    margin-top: -12px;
   }
 }
 
