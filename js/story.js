@@ -4,8 +4,14 @@ var columns = function() {
   var leftHeight = $('.left-50').height();
   var windowHeight = $(window).height();
   var scrollPosition = $(window).scrollTop();
+  var subnavHeight = $('.sub-nav').height();
 
-  if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
+  if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
+    $('.left-50').css({
+      'position': 'fixed',
+      'top': subnavHeight+80
+    });
+  } else if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
     $('.left-50').css({
       'position': 'fixed',
       'bottom': 0
@@ -14,10 +20,20 @@ var columns = function() {
 
   $(window).on( 'scroll', function() {
     var leftBottom = $('.left-50').position().top + $('.left-50').outerHeight(true);
-  var windowHeight = $(window).height();
-  var scrollPosition = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    var scrollPosition = $(window).scrollTop();
+    var subnavHeight = $('.sub-nav').height();
+    var rightHeight = $('.right-50').height();
+    var leftHeight = $('.left-50').height();
 
-    if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
+    if ( rightHeight <= leftHeight ) {
+      $('.left-50 .picture img').css('margin-bottom', '-4px');
+    } else if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
+      $('.left-50').css({
+        'position': 'fixed',
+        'top': subnavHeight+80
+      });
+    } else if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
       $('.left-50').css({
         'position': 'fixed',
         'bottom': 0
@@ -50,6 +66,7 @@ var subNav = function() {
 $(document).ready(columns);
 $(document).ready(subNav);
 $(window).resize(subNav);
+$(window).resize(columns);
 
 $(window).resize(function() {
   var leftBottom = $('.left-50').position().top + $('.left-50').outerHeight(true);
@@ -57,11 +74,18 @@ $(window).resize(function() {
   var leftHeight = $('.left-50').height();
   var windowHeight = $(window).height();
   var scrollPosition = $(window).scrollTop();
+  var subnavHeight = $('.sub-nav').height();
 
-  if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
+  if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
     $('.left-50').css({
       'position': 'fixed',
-      'bottom': 0
+      'top': subnavHeight+80
+    });
+  } else if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
+    $('.left-50').css({
+      'position': 'fixed',
+      'bottom': 0,
+      'top': 'inital'
     });
   }
 });

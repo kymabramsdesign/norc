@@ -15,7 +15,7 @@
 }
 
 .left-50 {
-  background-color: beige;
+  background-color: beige; //Take out after programming scroll functionality
   width: 50%;
   display: -webkit-box;
   display: -webkit-flex;
@@ -67,7 +67,7 @@
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    background-image: url('/img/cuba-2.jpg');
+    background-image: url('/img/cuba-1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
