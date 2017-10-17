@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 30px;
   font-weight: 400;
-  margin: 31px 0 1px;
+  margin: 0 0 1px;
   -webkit-transition: font-size 0.3s ease-in-out;
   -moz-transition: font-size 0.3s ease-in-out;
   -ms-transition: font-size 0.3s ease-in-out;
@@ -310,7 +310,6 @@ h1 {
   /* line 5, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
   h1 {
     font-size: 26px;
-    margin: 26px 0 0;
   }
 }
 
@@ -318,11 +317,10 @@ h1 {
   /* line 5, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
   h1 {
     font-size: 22px;
-    margin: 22px 0 0;
   }
 }
 
-/* line 22, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
+/* line 23, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
 h2 {
   color: rgba(0, 0, 0, 0.43);
   font-size: 28px;
@@ -336,20 +334,20 @@ h2 {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 22, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
+  /* line 23, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
   h2 {
     font-size: 24px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 22, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
+  /* line 23, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
   h2 {
     font-size: 20px;
   }
 }
 
-/* line 38, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
+/* line 39, /Users/kadimac/Desktop/norc-repo/sass/typography/_headings.scss */
 h3 {
   -webkit-transition: font-size 0.3s ease-in-out;
   -moz-transition: font-size 0.3s ease-in-out;

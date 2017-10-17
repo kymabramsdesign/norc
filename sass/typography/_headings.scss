@@ -5,17 +5,18 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 30px;
   font-weight: 400;
-  margin: 31px 0 1px;
+  margin: 0 0 1px;
+  // margin: 31px 0 1px;
   @include transition(font-size .3s ease-in-out);
 
   @media screen and (max-width: 1024px) {
     font-size: 26px;
-    margin: 26px 0 0;
+    // margin: 26px 0 0;
   }
 
   @media screen and (max-width: 767px) {
     font-size: 22px;
-    margin: 22px 0 0;
+    // margin: 22px 0 0;
   }
 }
 

@@ -5,6 +5,19 @@ var columns = function() {
   var windowHeight = $(window).height();
   var scrollPosition = $(window).scrollTop();
   var subnavHeight = $('.sub-nav').height();
+  var rightHeight = $('.right-50').height();
+
+  if ( (rightHeight + 20) < ( windowHeight - (subnavHeight+80)) ) {
+    $('.right-50').css({
+      'position': 'fixed',
+      'top': subnavHeight+80
+    });
+  } else {
+    $('.right-50').css({
+      'position': 'absolute',
+      'top': 'initial'
+    });
+  }
 
   if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
     $('.left-50').css({
@@ -47,7 +60,7 @@ var columns = function() {
       });
     }
   });
-}
+};
 
 var subNav = function() {
   var navHeight = $('.sub-nav').height();
@@ -61,7 +74,7 @@ var subNav = function() {
   else {
     $('.story-content').css('margin-top', '114px');
   }
-}
+};
 
 $(document).ready(columns);
 $(document).ready(subNav);
