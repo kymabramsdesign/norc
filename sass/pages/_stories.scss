@@ -70,5 +70,23 @@
     h1 {
       color: $purple;
     }
+
+    .page-overlay {
+      background-color: $purple-background;
+    }
+  }
+
+  .large-image {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 106;
+    @include transition(all .3s ease-in-out);
+
+    img {
+      height: auto;
+      width: 90vw;
+      @include transition(all .3s ease-in-out);
+    }
   }
 }

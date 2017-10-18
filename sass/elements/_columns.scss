@@ -31,9 +31,11 @@
   }
 
   .picture {
+    @include transition(all .3s ease-in-out);
     img {
       height: 100%;
       width: 50vw;
+      @include transition(all .3s ease-in-out);
     }
 
     &:before {

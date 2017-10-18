@@ -62,6 +62,7 @@ var columns = function() {
   });
 };
 
+// Adjusts the height of the Subnav
 var subNav = function() {
   var navHeight = $('.sub-nav').height();
 
@@ -101,6 +102,13 @@ $(window).resize(function() {
       'top': 'inital'
     });
   }
+});
+
+//Controls the image/video pop-up preview
+$(".picture").on('click', function() {
+  $(".page-overlay").fadeIn(300);
+  $("body").addClass('no-scroll');
+  $(this).addClass('large-image');
 });
 
 

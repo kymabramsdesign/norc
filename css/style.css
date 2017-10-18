@@ -520,6 +520,23 @@ object {
   transition: all 0.3s ease-in-out;
 }
 
+/* line 9, /Users/kadimac/Desktop/norc-repo/sass/elements/_media.scss */
+.page-overlay {
+  background-color: #fff;
+  display: none;
+  height: 100vh;
+  opacity: .85;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 105;
+}
+
+/* line 20, /Users/kadimac/Desktop/norc-repo/sass/elements/_media.scss */
+.no-scroll {
+  overflow: hidden;
+}
+
 /*Story Pages*/
 /* line 2, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .story-content {
@@ -565,13 +582,27 @@ object {
   }
 }
 
-/* line 34, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 33, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+.left-50 .picture {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 35, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture img {
   height: 100%;
   width: 50vw;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-/* line 39, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 41, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:before {
   content: url("/img/zoom.svg");
   height: 27px;
@@ -588,18 +619,18 @@ object {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 39, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 41, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .picture:before {
     left: 90%;
   }
 }
 
-/* line 54, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 56, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:hover {
   cursor: pointer;
 }
 
-/* line 57, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 59, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:hover:before {
   opacity: 1;
   -webkit-transition: opacity 0.4s ease-in-out;
@@ -609,7 +640,7 @@ object {
   transition: opacity 0.4s ease-in-out;
 }
 
-/* line 64, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 66, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video {
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -637,13 +668,13 @@ object {
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 64, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 66, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video {
     height: 30vw;
   }
 }
 
-/* line 89, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 91, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video img {
   height: 125px;
   opacity: .8;
@@ -655,25 +686,25 @@ object {
 }
 
 @media screen and (min-width: 1441px) {
-  /* line 89, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 91, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 150px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 89, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 91, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 115px;
   }
 }
 
-/* line 103, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 105, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover {
   cursor: pointer;
 }
 
-/* line 106, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 108, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover img {
   opacity: 1;
   -webkit-transition: opacity 0.4s ease-in-out;
@@ -683,7 +714,7 @@ object {
   transition: opacity 0.4s ease-in-out;
 }
 
-/* line 114, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 116, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .right-50 {
   padding: 34px 48px;
   position: absolute;
@@ -697,14 +728,14 @@ object {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 114, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 116, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .right-50 {
     padding: 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 114, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 116, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .right-50 {
     padding: 20px;
     width: 100vw;
@@ -1519,6 +1550,35 @@ body {
 /* line 70, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
 .story-page_global h1 {
   color: #613064;
+}
+
+/* line 74, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
+.story-page_global .page-overlay {
+  background-color: #e8e2e8;
+}
+
+/* line 79, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
+.story-page .large-image {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 106;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 86, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
+.story-page .large-image img {
+  height: auto;
+  width: 90vw;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=../css/style.map */
