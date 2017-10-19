@@ -108,7 +108,7 @@ function popUpTop () {
 }
 
 // On Click Function for the images
-$(".picture").on('click', function() {
+$('.picture, .video').on('click', function() {
   var scrollPosition = $(window).scrollTop();
   var imageSrc = $(this).find('img').attr('src'); // Get image src
   var imageAlt = $(this).find('img').attr('alt'); // Get image alt
@@ -116,7 +116,14 @@ $(".picture").on('click', function() {
   var windowHeight = $(window).height(); // Get window height
   
   $(".page-overlay").fadeIn(300);
-  $('.image-container .main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
+
+  //Check if the user has clicked on a video
+  if ( $(this).hasClass('video') === true ) {
+    $('.image-container .main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
+    
+  } else {
+    $('.image-container .main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
+  }
 
   //add image the first time
   if ( $('.image-container').hasClass('move-out') !== true ) {
@@ -155,7 +162,7 @@ $(".picture").on('click', function() {
   // close the popup when user clicks Close Button
   $('.close-button').on('click', function() {
     var windowWidth = $(window).width();
-    $('.page-overlay').fadeOut(300); // remove overlay
+    $('.page-overlay').fadeOut(400); // remove overlay
     $('move-out').css('left', -windowWidth);
     $('.image-container').removeClass('move-in').addClass('move-out');
     $("body").removeClass('no-scroll'); // body to scroll again
