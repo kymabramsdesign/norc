@@ -99,31 +99,71 @@ function extraResize() {
   }
 }
 
-//Controls the image/video pop-up preview
+// Controls the image/video pop-up preview
+
+// Puts image the exact width of the screen to the left for sliding on
 function popUpTop () {
   var windowWidth = $(window).width();
   $('.image-container').css('left', -windowWidth);
 }
 
+// On Click Function for the images
 $(".picture").on('click', function() {
   var scrollPosition = $(window).scrollTop();
-  var imageSrc = $(this).find('img').attr('src');
-  var imageAlt = $(this).find('img').attr('alt');
-  var windowHeight = $(window).height();
-
+  var imageSrc = $(this).find('img').attr('src'); // Get image src
+  var imageAlt = $(this).find('img').attr('alt'); // Get image alt
+  var caption = $(this).find('img').attr('caption'); // Get image caption
+  var windowHeight = $(window).height(); // Get window height
+  
   $(".page-overlay").fadeIn(300);
   $('.image-container img').show().attr('src', imageSrc).attr('alt', imageAlt);
   $('.image-container').addClass('move-in').append('<img src="img/close.svg" alt="Close" class="close-button" />');
+  $('.image-container').append('<p class="caption">'+ caption + '</p>');
 
   var thisImageHeight = $('.main-image').innerHeight(); // Get the height of the displayed image
+  var thisImageWidth = $('.main-image').innerWidth(); // Get the width of the displayed image
   var currentMargin = $('.image-container.move-in').css('padding-top'); //current container top padding
   currentMargin = parseFloat(currentMargin)*2; // total container top and bottom padding
-  var closeMargin = ((windowHeight-thisImageHeight-currentMargin)/2) + 'px'; //gets margin for top of close button
+  var closeMargin = ((windowHeight-thisImageHeight-currentMargin)/2) + 'px'; //gets margin for top of close
+  var captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
+  captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
+  var paddingLeft = parseFloat($('.move-in').css('padding-left')); //get image left padding
+  var paddingRight = parseFloat($('.move-in').css('padding-right')); //get image right padding
+  var captionPadding = (paddingLeft - paddingRight)/2;
 
   $('.move-in').css('top', scrollPosition);
   $('.close-button').show().css('margin-top', closeMargin);
+  $('.caption').css({
+    'top': captionMargin,
+    'width': thisImageWidth,
+    'margin-left': -captionPadding+'px'
+  });
   $("body").addClass('no-scroll');
 });
+
+// Keeps the close X lined up with the image on resize
+function closeResisze() {
+  if ( $('.image-container').hasClass('move-in') ) {
+    var windowHeight = $(window).height();
+    var thisImageHeight = $('.main-image').innerHeight(); // Get the height of the displayed image
+    var thisImageWidth = $('.main-image').innerWidth(); // Get the width of the displayed image
+    var currentMargin = $('.image-container.move-in').css('padding-top'); //current container top padding
+    currentMargin = parseFloat(currentMargin)*2; // total container top and bottom padding
+    var closeMargin = ((windowHeight-thisImageHeight-currentMargin)/2) + 'px'; //gets margin for top of close
+    var captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
+    captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
+    var paddingLeft = parseFloat($('.move-in').css('padding-left')); //get image left padding
+    var paddingRight = parseFloat($('.move-in').css('padding-right')); //get image right padding
+    var captionPadding = (paddingLeft - paddingRight)/2;
+
+    $('.close-button').css('margin-top', closeMargin);
+    $('.caption').css({
+    'top': captionMargin,
+    'width': thisImageWidth,
+    'margin-left': -captionPadding+'px'
+  });
+  }
+}
 
 
 // Collect all functions to execute at once on Load
@@ -139,6 +179,7 @@ function initializeResize() {
   subNav();
   extraResize();
   popUpTop();
+  closeResisze();
 }
 
 

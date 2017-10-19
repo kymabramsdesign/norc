@@ -1619,27 +1619,37 @@ body {
 }
 
 /* line 126, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
+.story-page .image-container.move-in .caption {
+  color: rgba(0, 0, 0, 0.55);
+  font-size: 17px;
+  line-height: 22px;
+  margin-bottom: 0;
+  position: absolute;
+  width: 100vw;
+}
+
+/* line 155, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container.move-in .close-button {
   -ms-flex-item-align: start;
   align-self: flex-start;
   cursor: pointer;
   opacity: .55;
   margin: 0 0 0 23px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
-/* line 134, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
+/* line 163, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container.move-in .close-button:hover {
   opacity: 1;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=../css/style.map */
