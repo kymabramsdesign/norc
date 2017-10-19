@@ -95,6 +95,14 @@
       max-height: 100%;
     }
 
+    &.move-out {
+      height: 100vh;
+      padding: 80px 130px 80px 175px;
+      top: 0;
+      width: 100vw;
+      @include transition(left .35s ease-in-out);
+    }
+
     &.move-in {
       height: 100vh;
       left: 0 !important;
@@ -116,54 +124,46 @@
       }
 
       @media screen and (max-width: 900px) {
-        padding: 60px 30px 60px 75px;
+        padding: 60px 30px 60px 65px;
+
+        .main-image {
+          max-width: 98%;
+        }
       }
 
       @media screen and (max-width: 767px) {
         padding: 60px 30px;
       }
+    }
 
-      .caption {
-        color: $black-55;
-        font-size: 17px;
-        line-height: 22px;
-        margin-bottom: 0;
-        position: absolute;
-        width: 100vw;
+    .caption {
+      color: $black-55;
+      font-size: 17px;
+      line-height: 22px;
+      margin-bottom: 0;
+      position: absolute;
+      width: 100vw;
 
-        @media screen and (min-width: 1441px) {
- 
-        }
+      @media screen and (max-width: 767px) {
 
-        @media screen and (max-width: 1210px) {
+      }
+    }
 
-        }
+    .close-button {
+      -ms-flex-item-align: start;
+      align-self: flex-start;
+      cursor: pointer;
+      opacity: .55;
+      margin: 0 0 0 23px;
+      @include transition(opacity .3s ease-in-out);
 
-        @media screen and (max-width: 1024px) {
- 
-        }
-
-        @media screen and (max-width: 900px) {
-  
-        }
-
-        @media screen and (max-width: 767px) {
-
-        }
+      @media screen and (max-width: 900px) {
+        margin: 0 0 0 13px;
       }
 
-      .close-button {
-        -ms-flex-item-align: start;
-        align-self: flex-start;
-        cursor: pointer;
-        opacity: .55;
-        margin: 0 0 0 23px;
+      &:hover {
+        opacity: 1;
         @include transition(opacity .3s ease-in-out);
-
-        &:hover {
-          opacity: 1;
-          @include transition(opacity .3s ease-in-out);
-        }
       }
     }
   }
