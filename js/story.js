@@ -109,14 +109,21 @@ $(".picture").on('click', function() {
   var scrollPosition = $(window).scrollTop();
   var imageSrc = $(this).find('img').attr('src');
   var imageAlt = $(this).find('img').attr('alt');
+  var windowHeight = $(window).height();
 
   $(".page-overlay").fadeIn(300);
   $('.image-container img').show().attr('src', imageSrc).attr('alt', imageAlt);
-  $('.image-container').addClass('move-in');
+  $('.image-container').addClass('move-in').append('<img src="img/close.svg" alt="Close" class="close-button" />');
+
+  var thisImageHeight = $('.main-image').innerHeight(); // Get the height of the displayed image
+  var currentMargin = $('.image-container.move-in').css('padding-top'); //current container top padding
+  currentMargin = parseFloat(currentMargin)*2; // total container top and bottom padding
+  var closeMargin = ((windowHeight-thisImageHeight-currentMargin)/2) + 'px'; //gets margin for top of close button
+
   $('.move-in').css('top', scrollPosition);
+  $('.close-button').show().css('margin-top', closeMargin);
   $("body").addClass('no-scroll');
 });
-
 
 
 // Collect all functions to execute at once on Load
