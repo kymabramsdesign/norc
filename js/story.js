@@ -67,7 +67,7 @@ function subNav() {
   var navHeight = $('.sub-nav').height();
 
   if ( navHeight >= 35 && navHeight < 60 ) {
-    $('.story-content').css('margin-top', '128px');
+    $('.story-content').css('margin-top', '117px');
   }
   else if ( navHeight >= 60 ) {
     $('.story-content').css('margin-top', '145px');
