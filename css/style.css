@@ -838,6 +838,20 @@ a:hover, a:focus, a:active, a:visited {
   fill: #E87424;
 }
 
+.menu-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 200;
+}
+
+.share-button {
+  position: fixed;
+  right: 40px;
+  top: 10px;
+  z-index: 200;
+}
+
 .header-background {
   background-color: rgba(0, 0, 0, 0.41);
   height: 80px;
