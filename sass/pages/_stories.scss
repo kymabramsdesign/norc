@@ -92,7 +92,6 @@
     
 
     img {
-      display: none;
       max-height: 100%;
     }
 
@@ -192,7 +191,6 @@
       &:hover {
         @include transition(opacity .3s ease-in-out);
         opacity: 1;
-        
       }
     }
   }

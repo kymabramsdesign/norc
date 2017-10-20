@@ -129,12 +129,16 @@ function popUpTop () {
 function videoPopup () {
   $('.video').on('click', function() {
     var windowWidth = $(window).width();
+    var windowHeight = $(window).height();
+    var currentContainerMargin = parseFloat($('.image-container.move-in').css('padding-top')); //current container top padding
+    var videoHeight = $('.video-container iframe').height();
+    var xplacement = ((windowHeight-videoHeight)/2)-currentContainerMargin;
 
     $('.main-image').hide(); // hide image if click on video
     $('.video-container').show();
+    $('.close-button').css('margin-top', xplacement);
 
   });
-  
 }
 
 // On Click Function for the images
@@ -147,7 +151,7 @@ $('.picture, .video').on('click', function() {
   
   $(".page-overlay").fadeIn(300);
   $('.video-container').hide(); // hide video if click on image only
-  $('.image-container .main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
+  $('.main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
 
   //add image the first time
   if ( $('.image-container').hasClass('move-out') !== true ) {
@@ -175,7 +179,7 @@ $('.picture, .video').on('click', function() {
   var captionPadding = (paddingLeft - paddingRight)/2;
 
   $('.move-in').css('top', scrollPosition);
-  $('.close-button').show().css('margin-top', closeMargin);
+  $('.close-button').css('margin-top', closeMargin);
   $('.caption').css({
     'top': captionMargin,
     'width': thisImageWidth,
@@ -209,12 +213,22 @@ function closeResisze() {
     var paddingRight = parseFloat($('.move-in').css('padding-right')); //get image right padding
     var captionPadding = (paddingLeft - paddingRight)/2;
 
-    $('.close-button').css('margin-top', closeMargin);
-    $('.caption').css({
-    'top': captionMargin,
-    'width': thisImageWidth,
-    'margin-left': -captionPadding+'px'
-  });
+    if ( $('.video-container').is(':visible') === true ) {
+      var windowWidth = $(window).width();
+      var currentContainerMargin = parseFloat($('.image-container.move-in').css('padding-top')); //current container top padding
+      var videoHeight = $('.video-container iframe').height();
+      var xplacement = ((windowHeight-videoHeight)/2)-currentContainerMargin;
+
+      $('.close-button').css('margin-top', xplacement);
+    } else {
+
+      $('.close-button').css('margin-top', closeMargin);
+      $('.caption').css({
+        'top': captionMargin,
+        'width': thisImageWidth,
+        'margin-left': -captionPadding+'px'
+      });
+    }
   }
 }
 
