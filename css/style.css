@@ -436,16 +436,15 @@ table {
   width: 100%;
 }
 
-/* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
-  max-width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  max-width: 100%;
 }
 
 .page-overlay {
@@ -461,6 +460,15 @@ object {
 
 .no-scroll {
   overflow: hidden;
+}
+
+iframe {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+  max-width: none;
 }
 
 /*Story Pages*/
@@ -1505,4 +1513,24 @@ body {
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
+}
+
+.story-page .video-container {
+  display: none;
+  height: 563px;
+  width: 1000px;
+}
+
+@media screen and (max-width: 1150px) {
+  .story-page .video-container {
+    height: 464px;
+    width: 825px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .story-page .video-container {
+    height: 381px;
+    width: 678px;
+  }
 }

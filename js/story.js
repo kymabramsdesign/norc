@@ -105,6 +105,36 @@ function extraResize() {
 function popUpTop () {
   var windowWidth = $(window).width();
   $('.image-container').css('left', -windowWidth);
+
+  // Video iframe resizing
+  if ( windowWidth > 1151 ) {
+    $('.video-container iframe').css({
+      'height': '563px',
+      'width': '1000px'
+    });
+  } else if ( windowWidth <= 1150 && windowWidth > 901 ) {
+    $('.video-container iframe').css({
+      'height': '464px',
+      'width': '825px'
+    });
+  } else if ( windowWidth <= 900 ) {
+    $('.video-container iframe').css({
+      'height': '381px',
+      'width': '678px'
+    });
+  }
+}
+
+// On Click Function for the videos/charts
+function videoPopup () {
+  $('.video').on('click', function() {
+    var windowWidth = $(window).width();
+
+    $('.main-image').hide(); // hide image if click on video
+    $('.video-container').show();
+
+  });
+  
 }
 
 // On Click Function for the images
@@ -116,14 +146,8 @@ $('.picture, .video').on('click', function() {
   var windowHeight = $(window).height(); // Get window height
   
   $(".page-overlay").fadeIn(300);
-
-  //Check if the user has clicked on a video
-  if ( $(this).hasClass('video') === true ) {
-    $('.image-container .main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
-    
-  } else {
-    $('.image-container .main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
-  }
+  $('.video-container').hide(); // hide video if click on image only
+  $('.image-container .main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
 
   //add image the first time
   if ( $('.image-container').hasClass('move-out') !== true ) {
@@ -200,6 +224,7 @@ function initialize() {
   columns();
   subNav();
   popUpTop();
+  videoPopup();
 }
 
 // Collect all functions to execute on Resize

@@ -1,9 +1,10 @@
-/* Make sure embeds and iframes fit their containers. */
+// Make sure embeds and iframes fit their containers.
 embed,
 iframe,
 object {
-	max-width: 100%;
   @include transition(all .3s ease-in-out);
+  max-width: 100%;
+  
 }
 
 .page-overlay {
@@ -19,4 +20,9 @@ object {
 
 .no-scroll {
   overflow: hidden;
+}
+
+iframe {
+  @include transition(none);
+  max-width: none;
 }
