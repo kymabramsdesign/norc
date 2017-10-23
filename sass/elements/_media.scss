@@ -8,10 +8,20 @@ object {
 }
 
 .page-overlay {
-  background-color: $white;
   display: none;
   height: 100vh;
   opacity: .91;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 201;
+}
+
+.white-page-overlay {
+  background-color: $white;
+  display: none;
+  height: 100vh;
+  opacity: .8;
   position: fixed;
   top: 0;
   width: 100vw;

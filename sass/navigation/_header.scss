@@ -41,11 +41,16 @@
 }
 
 .menu-button {
+  @include transition(transform .3s ease-in-out);
   cursor: pointer;
   position: fixed;
   right: 30px;
   top: 25px;
   z-index: 200;
+
+  &.menu-open {
+    transform: rotateZ(-180deg);
+  }
 }
 
 .share-button {

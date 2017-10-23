@@ -1,52 +1,143 @@
 .menu-container {
+  @include transition(right .25s ease-in-out);
   background: $white;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   position: absolute;
-  right: 0;
+  right: -2700px;
   top: 0;
   width: 50vw;
   z-index: 205;
 
+  @media screen and (max-width: 900px) {
+    width: 60vw;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100vw;
+  }
+
+  &.moved {
+    @include transition(right .35s ease-in-out);
+    right: 0 !important;
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
-    margin: 135px 48px 0;
+    margin: 135px 30px 50px 48px;
     padding: 0;
 
     @media screen and (max-width: 1024px) {
-      margin: 135px 30px 0;
+      margin: 135px 30px 30px;
     }
 
     @media screen and (max-width: 767px) {
-      margin: 135px 20px 0;
+      margin: 135px 20px 20px;
     }
 
     li {
-      color: $text-grey;
-      cursor: pointer;
-      font-size: 22px;
-      line-height: 22px;
+      font-size: 21px;
+      line-height: 52px;
       list-style: none;
-      min-height: 52px;
       width: 100%;
 
       @media screen and (max-width: 1024px) {
         font-size: 18px;
-        line-height: 20px;
+        line-height: 42px;
       }
 
       @media screen and (max-width: 767px) {
         font-size: 16px;
-        line-height: 18px;
+        line-height: 32px;
       }
 
-      &.divider {
-        height: 25px;
-        min-height: 0;
+      a {
+        @include transition(color .2s ease-in-out);
+        color: $text-grey;
 
-        hr {
-          background-color: $black-12;
-          margin: -3px 0 0;
+        &:hover {
+          @include transition(color .3s ease-in-out);
+          color: $orange;
+          
+        }
+
+        &.active {
+          color: $orange;
+        }
+      }
+
+      &.divider hr {
+        background-color: $black-12;
+        margin: 12px 0;
+      }
+
+      img {
+        @include transition(transform .3s ease-in-out);
+        cursor: pointer;
+        margin-left: 10px;
+        padding-bottom: 5px;
+
+        @media screen and (max-width: 1024px) {
+          height: 13px;
+          margin-left: 14px;
+          padding-bottom: 1px;
+        }
+
+        @media screen and (max-width: 767px) {
+          float: right;
+          height: 40%;
+          margin-left: 0;
+          padding-bottom: 0;
+        }
+
+        &.open {
+          transform: rotate(-180deg) translateY(6px);
+        }
+      }
+
+      ul {
+        background-color: $black-3;
+        display: none;
+        margin: 1px -30px 0 -48px;
+        padding: 15px 0 15px 78px;
+
+        @media screen and (max-width: 1024px) {
+          margin: 1px -30px;
+          padding: 20px 0 20px 50px;
+        }
+
+        @media screen and (max-width: 767px) {
+          margin: 1px -20px;
+          padding: 20px 0 20px 40px;
+        }
+
+        li {
+          font-size: 19px;
+          line-height: 23px;
+          padding-right: 30px;
+          margin-bottom: 21px;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 16px;
+            line-height: 18px;
+          }
+
+          &:first-of-type {
+            margin-top: 10px;
+
+            @media screen and (max-width: 1024px) {
+              margin-top: 7px;
+            }
+          }
+
+          &:last-of-type {
+            margin-bottom: 11px;
+
+            @media screen and (max-width: 1024px) {
+              margin-bottom: 7px;
+            }
+          }
         }
       }
     }
