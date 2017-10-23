@@ -254,5 +254,3 @@ function initializeResize() {
 $(document).ready(initialize);
 $(window).resize(initializeResize);
 
-
-

@@ -15,6 +15,7 @@
   <a class="a2a_dd share-button" href="https://www.addtoany.com/share">
     <img src="img/share-button.svg" alt="Share Button" />
   </a>
+
   <object class="menu-button" type="image/svg+xml" data="img/menu-button.svg">Your browser does not support SVGs</object>
   <div class="header-background"></div>
   <object class="header-logo" type="image/svg+xml" data="img/norc-color-logo.svg">Your browser does not support SVGs</object>
@@ -61,18 +62,25 @@
   <script src="js/story.js"></script>
   <!-- AddToAny BEGIN -->
   <script>
-  var a2a_config = a2a_config || {};
-  a2a_config.onclick = 1;
-  a2a_config.color_main = "2476a5";
-  a2a_config.color_border = "000000";
-  a2a_config.color_link_text = "5362a4";
-  a2a_config.color_link_text_hover = "b7df92";
-  a2a_config.color_bg = "c32f2f";
-  a2a_config.color_arrow = "fff";
-  a2a_config.color_arrow_hover = "fff";
-  a2a_config.prioritize = ["facebook", "google_plus", "pinterest", "twitter", "linkedin", "email", "reddit", "sms"];
+    var a2a_config = a2a_config || {};
+    a2a_config.track_links = 'ga';
+    a2a_config.num_services = 4;
+    a2a_config.onclick = 1;
+    a2a_config.color_main = "CCBFCD";
+    a2a_config.color_border = "CCBFCD";
+    a2a_config.color_link_text = "613064";
+    a2a_config.color_link_text_hover = "000";
+    a2a_config.color_bg = "e8e2e8";
+    a2a_config.color_arrow = "fff";
+    a2a_config.color_arrow_hover = "fff";
+    a2a_config.icon_color = "#e8e2e8, #613064";
+    a2a_config.prioritize = ["facebook", "pinterest", "twitter", "linkedin", "email", "reddit", "google_plus", "tumblr"];
+    a2a_config.exclude_services = ["amazon_wish_list", "printfriendly", "whatsapp", "skype", "yahoo_messenger", "print", "line", "aim", "aol_mail", "viber", "houzz"];
   </script>
   <script async src="https://static.addtoany.com/menu/page.js"></script>
+  <style type="text/css">
+    .a2a_svg, .a2a_menu  { border-radius: 0 !important; } .a2a_mini {margin-top: 15px;}
+  </style>
   <!-- AddToAny END -->
 </footer>
 
