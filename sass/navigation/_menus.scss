@@ -1,22 +1,79 @@
+.menu-container {
+  background: $white;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  z-index: 205;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 135px 48px 0;
+    padding: 0;
+
+    @media screen and (max-width: 1024px) {
+      margin: 135px 30px 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 135px 20px 0;
+    }
+
+    li {
+      color: $text-grey;
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 22px;
+      list-style: none;
+      min-height: 52px;
+      width: 100%;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      &.divider {
+        height: 25px;
+        min-height: 0;
+
+        hr {
+          background-color: $black-12;
+          margin: -3px 0 0;
+        }
+      }
+    }
+  }
+}
+
+
+
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+  ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+    ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      left: -999em;
+      position: absolute;
+      top: 100%;
+      z-index: 99999;
 
 			ul {
 				left: -999em;

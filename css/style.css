@@ -746,6 +746,69 @@ a:hover, a:focus, a:active, a:visited {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.menu-container {
+  background: #fff;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  z-index: 205;
+}
+
+.menu-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 135px 48px 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-container ul {
+    margin: 135px 30px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container ul {
+    margin: 135px 20px 0;
+  }
+}
+
+.menu-container ul li {
+  color: rgba(0, 0, 0, 0.43);
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 22px;
+  list-style: none;
+  min-height: 52px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-container ul li {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container ul li {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.menu-container ul li.divider {
+  height: 25px;
+  min-height: 0;
+}
+
+.menu-container ul li.divider hr {
+  background-color: rgba(0, 0, 0, 0.12);
+  margin: -3px 0 0;
+}
+
 .main-navigation {
   clear: both;
   display: block;
@@ -763,9 +826,9 @@ a:hover, a:focus, a:active, a:visited {
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
+  left: -999em;
   position: absolute;
   top: 100%;
-  left: -999em;
   z-index: 99999;
 }
 
@@ -831,24 +894,25 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 #color-logo .nrc {
-  fill: #A9A09A;
+  fill: #a9a09a;
 }
 
 #color-logo .star {
-  fill: #E87424;
+  fill: #e87424;
 }
 
 .menu-button {
+  cursor: pointer;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  right: 30px;
+  top: 25px;
   z-index: 200;
 }
 
 .share-button {
   position: fixed;
-  right: 40px;
-  top: 10px;
+  right: 83px;
+  top: 25px;
   z-index: 200;
 }
 
@@ -1149,7 +1213,7 @@ body {
 }
 
 .intro-left {
-  color: #E87424;
+  color: #e87424;
   width: 410px;
 }
 
@@ -1393,7 +1457,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
-  z-index: 106;
+  z-index: 206;
 }
 
 .story-page .image-container img {

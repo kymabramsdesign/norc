@@ -149,7 +149,7 @@ $('.picture, .video').on('click', function() {
   var caption = $(this).find('img').attr('caption'); // Get image caption
   var windowHeight = $(window).height(); // Get window height
   
-  $(".page-overlay").fadeIn(300);
+  $(".page-overlay").fadeIn(300).css('z-index','205');
   $('.video-container').hide(); // hide video if click on image only
   $('.main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
 
@@ -190,7 +190,7 @@ $('.picture, .video').on('click', function() {
   // close the popup when user clicks Close Button
   $('.close-button').on('click', function() {
     var windowWidth = $(window).width();
-    $('.page-overlay').fadeOut(400); // remove overlay
+    $('.page-overlay').fadeOut(400).css('z-index','105'); // remove overlay
     $('move-out').css('left', -windowWidth);
     $('.image-container').removeClass('move-in').addClass('move-out');
     $("body").removeClass('no-scroll'); // body to scroll again
