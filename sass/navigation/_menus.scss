@@ -25,7 +25,10 @@
   }
 
   ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin: 135px 30px 50px 48px;
     padding: 0;
@@ -94,6 +97,7 @@
         }
 
         &.open {
+          -webkit-transform: rotate(-180deg) translateY(6px);
           transform: rotate(-180deg) translateY(6px);
         }
       }
