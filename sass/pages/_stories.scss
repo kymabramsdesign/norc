@@ -136,6 +136,78 @@
     }
   }
 
+  // Society, Media, and Public Affairs Stories
+  &_society {
+    background-color: $pink-background;
+
+    .header-background {
+      background-color: $pink-background;
+    }
+
+    .sub-nav {
+      background-color: $pink-subhead;
+
+      .story-item {
+        width: 25vw;
+
+        &:hover {
+          background-color: $pink-hover;
+          color: $pink;
+        }
+
+        &.active {
+          background-color: $pink-hover;
+          color: $pink;
+        }
+      }
+    }
+
+    h1 {
+      color: $pink;
+    }
+
+    .page-overlay {
+      background-color: $pink-background;
+      opacity: .91;
+    }
+  }
+
+  // Society, Media, and Public Affairs Stories
+  &_economics {
+    background-color: $green-background;
+
+    .header-background {
+      background-color: $green-background;
+    }
+
+    .sub-nav {
+      background-color: $green-subhead;
+
+      .story-item {
+        width: 25vw;
+
+        &:hover {
+          background-color: $green-hover;
+          color: $green;
+        }
+
+        &.active {
+          background-color: $green-hover;
+          color: $green;
+        }
+      }
+    }
+
+    h1 {
+      color: $green;
+    }
+
+    .page-overlay {
+      background-color: $pink-background;
+      opacity: .91;
+    }
+  }
+
   .image-container {
     @include transition(left .3s ease-in-out);
     -webkit-box-align: center;
