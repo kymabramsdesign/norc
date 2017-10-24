@@ -1,9 +1,11 @@
 .menu-container {
   @include transition(right .25s ease-in-out);
   background: $white;
+  bottom: 0;
   height: auto;
   min-height: 100vh;
-  position: absolute;
+  overflow-y: scroll;
+  position: fixed;
   right: -2700px;
   top: 0;
   width: 50vw;
@@ -110,6 +112,10 @@
         @media screen and (max-width: 767px) {
           margin: 1px -20px;
           padding: 20px 0 20px 40px;
+        }
+
+        &.last-one {
+          margin-bottom: 17px;
         }
 
         li {
