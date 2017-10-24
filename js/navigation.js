@@ -74,14 +74,14 @@ $(window).bind("load", function() {
       '<li><a href="/vulnerable-populations">Reaching vulnerable populations in fragile environments</a></li>' +
       '<li><a href="/closed-societies">Peering into closed societies</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="#">Health and Wellbeing</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="#">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
-      '<li><a href="#">Making medicare and medicaid more effective</a></li>' +
-      '<li><a href="#">Using data to improve safety and quality</a></li>' +
-      '<li><a href="#">Working with providers, payers and other stakeholders</a></li>' +
-      '<li><a href="#">Visualizing disease vulnerability</a></li>' +
-      '<li><a href="#">Cultivating a culture of health</a></li>' +
-      '<li><a href="#">Testing americans’ zika awareness</a></li>' +
+      '<li><a href="/medicare-medicaid">Making medicare and medicaid more effective</a></li>' +
+      '<li><a href="/patient-risk">Using data to improve safety and quality</a></li>' +
+      '<li><a href="/diverse-clients">Working with providers, payers and other stakeholders</a></li>' +
+      '<li><a href="/opioid-epidemic">Visualizing disease vulnerability</a></li>' +
+      '<li><a href="/health-culture">Cultivating a culture of health</a></li>' +
+      '<li><a href="/zika-awareness">Testing Americans’ Zika awareness</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="#">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +

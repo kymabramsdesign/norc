@@ -26,6 +26,29 @@
     }
   }
 
+  ul {
+    color: $text-grey;
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0 0 20px;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 18px;
+      line-height: 28px;
+      margin: 0 0 16px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0 0 14px;
+    }
+
+    li {
+      margin-bottom: 16px;
+    } 
+  }
+
   .data {
     color: $black;
     font-size: 18px;
@@ -41,7 +64,7 @@
       line-height: 21px;
     }
   }
-
+  // Global Development Stories
   &_global {
     background-color: $purple-background;
 
@@ -73,6 +96,42 @@
 
     .page-overlay {
       background-color: $purple-background;
+      opacity: .91;
+    }
+  }
+
+  // Health & Well-Being Stories
+  &_health {
+    background-color: $teal-background;
+
+    .header-background {
+      background-color: $teal-background;
+    }
+
+    .sub-nav {
+      background-color: $teal-subhead;
+
+      .story-item {
+        width: 25vw;
+
+        &:hover {
+          background-color: $teal-hover;
+          color: $teal;
+        }
+
+        &.active {
+          background-color: $teal-hover;
+          color: $teal;
+        }
+      }
+    }
+
+    h1 {
+      color: $teal;
+    }
+
+    .page-overlay {
+      background-color: $teal-background;
       opacity: .91;
     }
   }
