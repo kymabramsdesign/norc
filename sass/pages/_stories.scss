@@ -9,8 +9,8 @@
   }
 
   p {
-    font-size: 22px;
-    line-height: 33px;
+    font-size: 21px;
+    line-height: 32px;
     margin-bottom: 20px;
 
     @media screen and (max-width: 1024px) {
@@ -26,10 +26,10 @@
     }
   }
 
-  ul {
+  .body-list {
     color: $text-grey;
-    font-size: 22px;
-    line-height: 33px;
+    font-size: 21px;
+    line-height: 32px;
     margin: 0 0 20px;
 
     @media screen and (max-width: 1024px) {

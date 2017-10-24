@@ -722,7 +722,7 @@ iframe {
 
 /* line 114, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .right-50 {
-  padding: 34px 48px;
+  padding: 34px 30px 34px 36px;
   position: absolute;
   right: 0;
   width: 50%;
@@ -1666,8 +1666,8 @@ body {
 
 /* line 11, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
 .story-page p {
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 21px;
+  line-height: 32px;
   margin-bottom: 20px;
 }
 
@@ -1690,16 +1690,16 @@ body {
 }
 
 /* line 29, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
-.story-page ul {
+.story-page .body-list {
   color: rgba(0, 0, 0, 0.43);
-  font-size: 22px;
-  line-height: 33px;
+  font-size: 21px;
+  line-height: 32px;
   margin: 0 0 20px;
 }
 
 @media screen and (max-width: 1024px) {
   /* line 29, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
-  .story-page ul {
+  .story-page .body-list {
     font-size: 18px;
     line-height: 28px;
     margin: 0 0 16px;
@@ -1708,7 +1708,7 @@ body {
 
 @media screen and (max-width: 767px) {
   /* line 29, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
-  .story-page ul {
+  .story-page .body-list {
     font-size: 16px;
     line-height: 26px;
     margin: 0 0 14px;
@@ -1716,7 +1716,7 @@ body {
 }
 
 /* line 47, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
-.story-page ul li {
+.story-page .body-list li {
   margin-bottom: 16px;
 }
 
