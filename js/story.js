@@ -232,6 +232,24 @@ function closeResisze() {
   }
 }
 
+// Functions for the Dot Navigation on Story Pages
+function dotNav() {
+  var page = $('body').attr('class'); // get the page user is on
+  page = page.replace('story-page story-page_', ''); //gets the page
+
+  $('.dot-nav svg').hover(function() {
+    var location = $(this).attr('class');
+    location = location.replace('nav-dot ', '');
+
+    // if () {}
+
+    alert(location);
+  }, function() {
+
+  });
+
+}
+
 
 // Collect all functions to execute at once on Load
 function initialize() {
@@ -239,6 +257,7 @@ function initialize() {
   subNav();
   popUpTop();
   videoPopup();
+  dotNav();
 }
 
 // Collect all functions to execute on Resize
