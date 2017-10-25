@@ -1199,17 +1199,18 @@ a:hover, a:focus, a:active, a:visited {
 /* line 17, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .dot-nav .section-title {
   font-size: 19px;
+  font-weight: 400;
   margin: 4px 0 5px;
   text-align: center;
   width: 100vw;
 }
 
-/* line 25, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 26, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot .object .dot {
   cursor: pointer;
 }
 
-/* line 28, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 29, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot .object .dot .outer {
   -webkit-transition: fill 0.2s ease-in-out;
   transition: fill 0.2s ease-in-out;
@@ -1217,80 +1218,80 @@ a:hover, a:focus, a:active, a:visited {
   stroke: #989a9d;
 }
 
-/* line 34, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 35, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot .object .dot .inner {
   fill: #989a9d;
 }
 
-/* line 38, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 39, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot .object .dot:hover .outer {
   -webkit-transition: fill 0.3s ease-in-out;
   transition: fill 0.3s ease-in-out;
   fill: #c8c6ca;
 }
 
-/* line 44, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 45, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.active .object .dot {
   cursor: initial;
 }
 
-/* line 47, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 48, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.active .object .dot .outer {
   fill: transparent;
   stroke: #989a9d;
 }
 
-/* line 51, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 52, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.active .object .dot .outer:hover {
   fill: transparent;
 }
 
-/* line 58, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 59, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.global-dot.active .object .dot .inner {
   fill: #613064;
 }
 
-/* line 62, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 63, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_global .dot-nav h3 {
   color: #613064;
 }
 
-/* line 67, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 68, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.health-dot.active .object .dot .inner {
   fill: #195b7c;
 }
 
-/* line 71, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 72, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_health .dot-nav h3 {
   color: #195b7c;
 }
 
-/* line 76, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 77, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.society-dot.active .object .dot .inner {
   fill: #f27e71;
 }
 
-/* line 80, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 81, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_society .dot-nav h3 {
   color: #f27e71;
 }
 
-/* line 85, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 86, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.education-dot.active .object .dot.education .inner {
   fill: #9e525d;
 }
 
-/* line 89, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 90, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_education .dot-nav h3 {
   color: #9e525d;
 }
 
-/* line 94, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 95, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.economics-dot.active .object .dot .inner {
   fill: #6fa387;
 }
 
-/* line 98, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 99, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_economics .dot-nav h3 {
   color: #6fa387;
 }
