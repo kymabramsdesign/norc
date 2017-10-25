@@ -2,4 +2,99 @@
 
 .dot-nav {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  svg {
+    height: 16px;
+    margin: 25px 3.5px 0;
+  }
+
+  .section-title {
+    font-size: 19px;
+    margin: 4px 0 5px;
+    text-align: center;
+    width: 100vw;
+  }
+}
+
+.nav-dot .object .dot {
+  cursor: pointer;
+
+  .outer {
+    @include transition(fill .2s ease-in-out);
+    fill: transparent;
+    stroke: $dot-grey;
+  }
+
+  .inner {
+    fill: $dot-grey;
+  }
+
+  &:hover .outer {
+    @include transition(fill .3s ease-in-out);
+    fill: #c8c6ca;
+  }
+}
+
+.nav-dot.active .object .dot {
+  cursor: initial;
+
+  .outer {
+    fill: transparent;
+    stroke: $dot-grey;
+
+    &:hover {
+      fill: transparent;
+    }
+  }
+}
+
+// Global
+.nav-dot.global-dot.active .object .dot .inner {
+  fill: $purple;
+}
+
+.story-page_global .dot-nav h3 {
+  color: $purple;
+}
+
+// Health
+.nav-dot.health-dot.active .object .dot .inner {
+  fill: $teal;
+}
+
+.story-page_health .dot-nav h3 {
+  color: $teal;
+}
+
+// Society
+.nav-dot.society-dot.active .object .dot .inner {
+  fill: $pink;
+}
+
+.story-page_society .dot-nav h3 {
+  color: $pink;
+}
+
+// Education
+.nav-dot.education-dot.active .object .dot.education .inner {
+  fill: $maroon;
+}
+
+.story-page_education .dot-nav h3 {
+  color: $maroon;
+}
+
+// Economics
+.nav-dot.economics-dot.active .object .dot .inner {
+  fill: $green;
+}
+
+.story-page_economics .dot-nav h3 {
+  color: $green;
 }
