@@ -23,26 +23,27 @@
   }
 }
 
-.nav-dot .object .dot {
+.nav-dot {
   cursor: pointer;
-
-  .outer {
-    @include transition(fill .2s ease-in-out);
-    fill: transparent;
-    stroke: $dot-grey;
-  }
 
   .inner {
     fill: $dot-grey;
-  }
+  } 
 
-  &:hover .outer {
-    @include transition(fill .3s ease-in-out);
-    fill: #c8c6ca;
+  .outer {
+  @include transition(fill .2s ease-in-out);
+  fill: transparent;
+  stroke: $dot-grey;
+  stroke-miterlimit:10;
+
+    &:hover {
+      @include transition(fill .3s ease-in-out);
+      fill: #c8c6ca;
+    }
   }
 }
 
-.nav-dot.active .object .dot {
+.nav-dot.active {
   cursor: initial;
 
   .outer {
@@ -56,7 +57,7 @@
 }
 
 // Global
-.nav-dot.global-dot.active .object .dot .inner {
+.nav-dot.global-dot.active .inner {
   fill: $purple;
 }
 
@@ -65,7 +66,7 @@
 }
 
 // Health
-.nav-dot.health-dot.active .object .dot .inner {
+.nav-dot.health-dot.active .inner {
   fill: $teal;
 }
 
@@ -74,7 +75,7 @@
 }
 
 // Society
-.nav-dot.society-dot.active .object .dot .inner {
+.nav-dot.society-dot.active .inner {
   fill: $pink;
 }
 
@@ -83,7 +84,7 @@
 }
 
 // Education
-.nav-dot.education-dot.active .object .dot.education .inner {
+.nav-dot.education-dot.active .inner {
   fill: $maroon;
 }
 
@@ -92,7 +93,7 @@
 }
 
 // Economics
-.nav-dot.economics-dot.active .object .dot .inner {
+.nav-dot.economics-dot.active .inner {
   fill: $green;
 }
 
