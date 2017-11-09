@@ -243,7 +243,7 @@ function dotNav() {
 
     // if () {}
 
-    alert(location);
+    // alert(location);
   }, function() {
 
   });

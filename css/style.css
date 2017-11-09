@@ -1212,10 +1212,12 @@ a:hover, a:focus, a:active, a:visited {
 
 /* line 29, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot .inner {
-  fill: #989a9d;
+  -webkit-transition: fill 0.2s ease-in-out;
+  transition: fill 0.2s ease-in-out;
+  fill: transparent;
 }
 
-/* line 33, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 34, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot .outer {
   -webkit-transition: fill 0.2s ease-in-out;
   transition: fill 0.2s ease-in-out;
@@ -1224,75 +1226,82 @@ a:hover, a:focus, a:active, a:visited {
   stroke-miterlimit: 10;
 }
 
-/* line 39, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
-.nav-dot .outer:hover {
+/* line 43, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+.nav-dot:hover .inner {
   -webkit-transition: fill 0.3s ease-in-out;
   transition: fill 0.3s ease-in-out;
-  fill: #c8c6ca;
+  fill: #989a9d;
 }
 
-/* line 46, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 48, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+.nav-dot:hover .outer {
+  -webkit-transition: fill 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out;
+  fill: rgba(0, 0, 0, 0.075);
+}
+
+/* line 55, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.active {
   cursor: initial;
 }
 
-/* line 49, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 58, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.active .outer {
   fill: transparent;
   stroke: #989a9d;
 }
 
-/* line 53, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 62, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.active .outer:hover {
   fill: transparent;
 }
 
-/* line 60, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 69, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.global-dot.active .inner {
   fill: #613064;
 }
 
-/* line 64, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 73, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_global .dot-nav h3 {
   color: #613064;
 }
 
-/* line 69, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 78, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.health-dot.active .inner {
   fill: #195b7c;
 }
 
-/* line 73, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 82, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_health .dot-nav h3 {
   color: #195b7c;
 }
 
-/* line 78, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 87, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.society-dot.active .inner {
   fill: #f27e71;
 }
 
-/* line 82, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 91, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_society .dot-nav h3 {
   color: #f27e71;
 }
 
-/* line 87, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 96, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.education-dot.active .inner {
   fill: #9e525d;
 }
 
-/* line 91, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 100, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_education .dot-nav h3 {
   color: #9e525d;
 }
 
-/* line 96, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 105, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.economics-dot.active .inner {
   fill: #6fa387;
 }
 
-/* line 100, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 109, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_economics .dot-nav h3 {
   color: #6fa387;
 }

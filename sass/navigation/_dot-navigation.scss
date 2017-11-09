@@ -27,18 +27,27 @@
   cursor: pointer;
 
   .inner {
-    fill: $dot-grey;
-  } 
+    @include transition(fill .2s ease-in-out);
+    fill: transparent;
+  }
 
   .outer {
-  @include transition(fill .2s ease-in-out);
-  fill: transparent;
-  stroke: $dot-grey;
-  stroke-miterlimit:10;
+    @include transition(fill .2s ease-in-out);
+    fill: transparent;
+    stroke: $dot-grey;
+    stroke-miterlimit:10;
+  }
 
-    &:hover {
+  &:hover {
+
+    .inner {
       @include transition(fill .3s ease-in-out);
-      fill: #c8c6ca;
+      fill: $dot-grey;
+    }
+
+    .outer {
+      @include transition(fill .3s ease-in-out);
+      fill: rgba(0,0,0,.075);
     }
   }
 }
