@@ -238,16 +238,97 @@ function dotNav() {
   page = page.replace('story-page story-page_', ''); //gets the page
 
   $('.dot-nav svg').hover(function() {
+    $('.section-title').hide().css('color', '#989a9d');
+
     var location = $(this).attr('class');
     location = location.replace('nav-dot ', '');
 
-    // if () {}
-
-    // alert(location);
+    if ( location == 'insight-dot') {
+      $('.section-title.one').fadeIn();
+      $(this).on('click', function() {
+        window.location = '/insight';
+      });
+    }
+    else if ( location == 'president-dot') {
+      $('.section-title.two').fadeIn();
+      $(this).on('click', function() {
+        window.location = '/president';
+      });
+    }
+    else if ( location == 'economics-dot') {
+      $('.section-title.three').fadeIn();
+      $(this).on('click', function() {
+        window.location = '/economics';
+      });
+    }
+    else if ( location == 'education-dot') {
+      $('.section-title.four').fadeIn();
+      $(this).on('click', function() {
+        window.location = '/education';
+      });
+    }
+    else  if ( location == 'global-dot') {
+      $('.section-title.five').fadeIn();
+      $(this).on('click', function() {
+        window.location = '/global';
+      });
+    }
+    else if ( location == 'health-dot') {
+      $('.section-title.six').fadeIn();
+      $(this).on('click', function() {
+        window.location = '/health';
+      });
+    }
+    else if ( location == 'society-dot') {
+      $('.section-title.seven').fadeIn();
+      $(this).on('click', function() {
+        window.location = '/society';
+      });
+    }
+    else if ( location == 'leadership-dot') {
+      $('.section-title.eight').fadeIn();
+      $(this).on('click', function() {
+        window.location = '/leadership';
+      });
+    }
+    else if ( location == 'more-dot') {
+      $('.section-title.nine').fadeIn();
+      $(this).on('click', function() {
+        window.location = '/more';
+      });
+    }
   }, function() {
+    $('.section-title').hide();
+    $('.section-title.current').show();
 
+    if (page == 'insights') {
+      $('.section-title').css('color', '#989a9d');
+    }
+    else if (page == 'president') {
+      $('.section-title').css('color', '#989a9d');
+    }
+    else if (page == 'economics') {
+      $('.section-title').css('color', '#6fa387');
+    }
+    else if (page == 'education') {
+      $('.section-title').css('color', '#9e525d');
+    }
+    else if (page == 'global') {
+      $('.section-title').css('color', '#613064');
+    }
+    else if (page == 'health') {
+      $('.section-title').css('color', '#195b7c');
+    }
+    else if (page == 'society') {
+      $('.section-title').css('color', '#f27e71');
+    }
+    else if (page == 'leadership') {
+      $('.section-title').css('color', '#989a9d');
+    }
+    else if (page == 'more') {
+      $('.section-title').css('color', '#989a9d');
+    }
   });
-
 }
 
 

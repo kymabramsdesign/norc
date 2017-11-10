@@ -11,13 +11,15 @@
 
   svg {
     height: 16px;
-    margin: 25px 3.5px 0;
+    margin: 25px 0 0;
+    padding: 0 3.5px;
   }
 
   .section-title {
+    display: none;
     font-size: 19px;
     font-weight: 400;
-    margin: 7px 0 5px;
+    margin: 6px 0 5px;
     text-align: center;
     width: 100vw;
   }
