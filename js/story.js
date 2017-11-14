@@ -125,24 +125,37 @@ function popUpTop () {
   }
 }
 
+//Gif controls
+window.onscroll = function() {
+  var animate = $('.chart img').attr('src');
+  if ( animate === 'img/sample-static.png' ) {
+    $('.chart img:visible').attr("src", "img/sample.gif");
+  }
+};
+
+$('.chart').on('click', function() {
+  setTimeout(function() {
+      $('.chart img').attr("src", "img/sample-static-complete.png");
+    }, 1000);
+});
+
 // On Click Function for the videos/charts
 function videoPopup () {
-  $('.video').on('click', function() {
+  $('.video, .chart').on('click', function() {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
     var currentContainerMargin = parseFloat($('.image-container.move-in').css('padding-top')); //current container top padding
-    var videoHeight = $('.video-container iframe').height();
+    var videoHeight = $('.video-container').height();
     var xplacement = ((windowHeight-videoHeight)/2)-currentContainerMargin;
 
     $('.main-image').hide(); // hide image if click on video
     $('.video-container').show();
     $('.close-button').css('margin-top', xplacement);
-
   });
 }
 
 // On Click Function for the images
-$('.picture, .video').on('click', function() {
+$('.picture, .video, .chart').on('click', function() {
   var scrollPosition = $(window).scrollTop();
   var imageSrc = $(this).find('img').attr('src'); // Get image src
   var imageAlt = $(this).find('img').attr('alt'); // Get image alt

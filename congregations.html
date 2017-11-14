@@ -60,21 +60,52 @@
   <div class="page-overlay"></div>
   <div class="image-container">
     <img src="" alt="" class="main-image" />
+
+    <div class="video-container">
+      
+      <div id="charts">
+        <div id="bubbleContainer">
+          <h2>Risk Assessment Ratings</h2>
+          <div id="overallRatings" class="btn-group btn-info top-btn" data-toggle="buttons">
+            <label class="btn active ratingBtn" id="reset">
+            <input type="radio" name="options">Reset</label>
+             <label class="btn ratingBtn" id="riskCategory1">
+            <input type="radio" name="options">Risk Category 1</label>
+            <label class="btn ratingBtn" id="riskCategory2">
+            <input type="radio" name="options">Risk Category 2</label>
+            <label class="btn ratingBtn" id="ratingCategory">
+            <input type="radio" name="options">Both Categories</label>
+          </div>
+          <div id="RiskCycle" class="btn-group btn-default top-btn" data-toggle="buttons">
+            <label class="btn cycleBtn" id="2014">
+            <input type="radio" name="options">2014</label>
+             <label class="btn active cycleBtn" id="2015">
+            <input type="radio" name="options">2015</label>
+          </div>
+          <div id="bubbleChart">
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <div class="story-content">
 
     <div class="left-50">
       <div class="picture"><img src="img/cuba-3.jpg" alt="Cuba Image 3" caption="Olupta tiuntib erepuda eaqui ipiditas nos mint enditi alibeatiusae pore omni quos et eaqui nonseque volorer ior ione." /></div>
-    </div>
+      <div class="picture"><img src="img/cuba-3.jpg" alt="Cuba Image 3" caption="Olupta tiuntib erepuda eaqui ipiditas nos mint enditi alibeatiusae pore omni quos et eaqui nonseque volorer ior ione." /></div>
+      <div class="chart"><img src="img/sample-static.png" alt="play button" caption="Olupta tiuntib erepuda eaqui ipiditas nos mint enditi alibeatiusae pore omni quos et eaqui nonseque volorer ior ione." /></div>
+    </div><!-- End of .left-50 -->
 
     <div class="right-50">
       <!-- <p class="data"></p> -->
       <h1>Tracking the Professional and Economic Health of Churches</h1>
       <h2>NORC’s congregation studies explore America’s places of worship</h2>
       <p>Churches, synagogues and other places of worship provide a social and spiritual anchor in the communities that they serve, but they are also economic entities with staff to pay, and debts, income, and properties to manage. Since 1998, when NORC conducted the first wave of data collection for the <strong>National Congregations Study (NCS)</strong>, NORC has examined places of worship from a variety of angles, including the professional and economic. NORC is about to begin the fourth wave of data collection for the NCS. The study, which is funded by the Lilly Endowment, has gathered data on a range of congregational characteristics, including worship activities, finances, staff configurations and connections with other religious and community groups. The latest wave will also explore such topics as congregations’ social media use, leadership challenges, and wellness activities. As part of the fourth wave of the NCS, NORC is conducting the <strong>National Survey of Religious Leaders (NSRL)</strong>, the first ever nationally representative survey of religious leaders from across the religious spectrum. The subjects the NSRL will explore include attitudes and practices related to mental health and the relationship between science and religion, as well as features of the religious leaders’ jobs and careers, including their community and political involvement and their engagement with the larger religious world. In a separate but related study, NORC is conducting the National Study of Congregations’ Economic Practices (NSCEP), which will help scholars, clergy, and lay leaders better understand how American congregations receive, manage, and spend resources, as well as their theological, cultural, and practical orientations toward money.</p>
-    </div>
-  </div>
+    </div><!-- End of .right-50 -->
+
+  </div><!-- End of .story-content -->
 
 </main>
 
@@ -82,6 +113,14 @@
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/story.js"></script>
   <script src="js/navigation.js"></script>
+
+  <!-- BEGIN Scripts for interactive animated graphs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/bubbles.js"></script>
+  <!-- END Scripts for interactive animated graphs -->
+
   <!-- AddToAny BEGIN -->
   <script>
     var a2a_config = a2a_config || {};
