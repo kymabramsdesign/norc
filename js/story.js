@@ -249,6 +249,7 @@ function closeResisze() {
 function dotNav() {
   var page = $('body').attr('class'); // get the page user is on
   page = page.replace('story-page story-page_', ''); //gets the page
+  var currentColor = $('h1').css('color'); //gets main color on page
 
   $('.dot-nav svg').hover(function() {
     $('.section-title').hide().css('color', '#989a9d');
@@ -256,56 +257,62 @@ function dotNav() {
     var location = $(this).attr('class');
     location = location.replace('nav-dot ', '');
 
-    if ( location == 'insight-dot') {
-      $('.section-title.one').fadeIn();
+    if ( location.indexOf('active') >= 0 ) {
+      $('.section-title.current').show().css('color', currentColor);
+      $(this).on('click', function() {
+        window.location = '/'+ page;
+      });
+    }
+    else if ( location.indexOf('insight-dot') >= 0 ) {
+      $('.section-title.one').fadeIn(300);
       $(this).on('click', function() {
         window.location = '/insight';
       });
     }
-    else if ( location == 'president-dot') {
-      $('.section-title.two').fadeIn();
+    else if ( location.indexOf('president-dot') >= 0 ) {
+      $('.section-title.two').fadeIn(300);
       $(this).on('click', function() {
         window.location = '/president';
       });
     }
-    else if ( location == 'economics-dot') {
-      $('.section-title.three').fadeIn();
+    else if ( location.indexOf('economics-dot') >= 0 ) {
+      $('.section-title.three').fadeIn(300);
       $(this).on('click', function() {
         window.location = '/economics';
       });
     }
-    else if ( location == 'education-dot') {
-      $('.section-title.four').fadeIn();
+    else if ( location.indexOf('education-dot') >= 0 ) {
+      $('.section-title.four').fadeIn(300);
       $(this).on('click', function() {
         window.location = '/education';
       });
     }
-    else  if ( location == 'global-dot') {
-      $('.section-title.five').fadeIn();
+    else  if ( location.indexOf('global-dot') >= 0 ) {
+      $('.section-title.five').fadeIn(300);
       $(this).on('click', function() {
         window.location = '/global';
       });
     }
-    else if ( location == 'health-dot') {
-      $('.section-title.six').fadeIn();
+    else if ( location.indexOf('health-dot') >= 0 ) {
+      $('.section-title.six').fadeIn(300);
       $(this).on('click', function() {
         window.location = '/health';
       });
     }
-    else if ( location == 'society-dot') {
-      $('.section-title.seven').fadeIn();
+    else if ( location.indexOf('society-dot') >= 0 ) {
+      $('.section-title.seven').fadeIn(300);
       $(this).on('click', function() {
         window.location = '/society';
       });
     }
-    else if ( location == 'leadership-dot') {
-      $('.section-title.eight').fadeIn();
+    else if ( location.indexOf('leadership-dot') >= 0 ) {
+      $('.section-title.eight').fadeIn(300);
       $(this).on('click', function() {
         window.location = '/leadership';
       });
     }
-    else if ( location == 'more-dot') {
-      $('.section-title.nine').fadeIn();
+    else if ( location.indexOf('more-dot') >= 0 ) {
+      $('.section-title.nine').fadeIn(300);
       $(this).on('click', function() {
         window.location = '/more';
       });
@@ -313,34 +320,7 @@ function dotNav() {
   }, function() {
     $('.section-title').hide();
     $('.section-title.current').show();
-
-    if (page == 'insights') {
-      $('.section-title').css('color', '#989a9d');
-    }
-    else if (page == 'president') {
-      $('.section-title').css('color', '#989a9d');
-    }
-    else if (page == 'economics') {
-      $('.section-title').css('color', '#6fa387');
-    }
-    else if (page == 'education') {
-      $('.section-title').css('color', '#9e525d');
-    }
-    else if (page == 'global') {
-      $('.section-title').css('color', '#613064');
-    }
-    else if (page == 'health') {
-      $('.section-title').css('color', '#195b7c');
-    }
-    else if (page == 'society') {
-      $('.section-title').css('color', '#f27e71');
-    }
-    else if (page == 'leadership') {
-      $('.section-title').css('color', '#989a9d');
-    }
-    else if (page == 'more') {
-      $('.section-title').css('color', '#989a9d');
-    }
+    $('.section-title').css('color', currentColor);
   });
 }
 

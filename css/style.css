@@ -1374,68 +1374,63 @@ a:hover, a:focus, a:active, a:visited {
   fill: rgba(0, 0, 0, 0.075);
 }
 
-/* line 61, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
-.nav-dot.active {
-  cursor: initial;
-}
-
-/* line 64, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 63, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.active .outer {
   fill: transparent;
   stroke: #989a9d;
 }
 
-/* line 68, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 67, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.active .outer:hover {
   fill: transparent;
 }
 
-/* line 75, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 74, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.global-dot.active .inner {
   fill: #613064;
 }
 
-/* line 79, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 78, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_global .dot-nav h3 {
   color: #613064;
 }
 
-/* line 84, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 83, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.health-dot.active .inner {
   fill: #195b7c;
 }
 
-/* line 88, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 87, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_health .dot-nav h3 {
   color: #195b7c;
 }
 
-/* line 93, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 92, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.society-dot.active .inner {
   fill: #f27e71;
 }
 
-/* line 97, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 96, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_society .dot-nav h3 {
   color: #f27e71;
 }
 
-/* line 102, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 101, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.education-dot.active .inner {
   fill: #9e525d;
 }
 
-/* line 106, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 105, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_education .dot-nav h3 {
   color: #9e525d;
 }
 
-/* line 111, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 110, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.economics-dot.active .inner {
   fill: #6fa387;
 }
 
-/* line 115, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
+/* line 114, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page_economics .dot-nav h3 {
   color: #6fa387;
 }
