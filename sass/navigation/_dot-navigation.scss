@@ -65,13 +65,14 @@
 .main {
 
   .section-title {
-    color: $white;
+    color: $white-85;
+    font-weight: 300;
   }
   
   .nav-dot {
 
     .outer {
-      stroke: $white;
+      stroke: $white-70;
     }
 
     &:hover {

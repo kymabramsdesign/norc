@@ -14,6 +14,18 @@
   }
 }
 
+.story-page,
+.main {
+
+  .header-logo {
+    width: 164px;
+
+    @media screen and (max-width: 767px) {
+      width: 140px;
+    }
+  }
+}
+
 #logo {
 
   .tagline {
@@ -62,12 +74,17 @@
 }
 
 .header-background {
-  background-color: $black-41;
+  @include transition(background-color .3s ease-in-out)
+  background-color: transparent;
   height: 80px;
   position: fixed;
   top: 0;
   width: 100vw;
   z-index: 10;
+
+  &.scrolled {
+    background-color: $black-32;
+  }
 }
 
 /* Sub Navigation for Story Pages*/

@@ -5,6 +5,25 @@ p {
 	@include transition(font-size .3s ease-in-out);
 }
 
+.main p {
+	color: $white-85;
+	font-size: 25px;
+	font-weight: 300;
+	line-height: 44px;
+
+
+	@media screen and (max-width: 1024px) {
+    font-size: 22px;
+    line-height: 36px;
+    letter-spacing: .5px;
+  }
+
+  @media screen and (max-width: 767px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
 dfn, cite, em, i {
 	font-style: italic;
 }

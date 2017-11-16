@@ -2,13 +2,13 @@
 function dotNav() {
 
   $('.dot-nav svg').hover(function() {
-    $('.section-title').hide().css('color', 'rgba(255,255,255,.6');
+    $('.section-title').hide().css('color', 'rgba(255,255,255,.6)');
 
     var location = $(this).attr('class');
     location = location.replace('nav-dot ', '');
 
     if ( location.indexOf('active') >= 0 ) {
-      $('.section-title.current').show().css('color', '#fff');
+      $('.section-title.current').show().css('color', 'rgba(255,255,255,.85)');
       $(this).on('click', function() {
         window.location = '/'+ page;
       });
@@ -70,7 +70,7 @@ function dotNav() {
   }, function() {
     $('.section-title').hide();
     $('.section-title.current').show();
-    $('.section-title').css('color', '#fff');
+    $('.section-title').css('color', 'rgba(255,255,255,.85)');
   });
 }
 

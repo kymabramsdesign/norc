@@ -13,9 +13,16 @@ $('.menu-button').on('click', function() {
   if ( $('.menu-button').hasClass('menu-open') ) {
     $('.white-page-overlay').fadeOut(300);
     $('.share-button').css('z-index',200);
-    $(this).removeClass('menu-open').attr('src', 'img/menu-button.svg');
     $('.menu-container').removeClass('moved');
     $("body").removeClass('no-scroll'); // body to scroll again
+
+    var whatPage = $('body').attr('class');
+    if ( whatPage === 'main' ) {
+      $('.menu-button').removeClass('menu-open').attr('src', 'img/menu-button-white.svg');
+    }
+    else {
+      $('.menu-button').removeClass('menu-open').attr('src', 'img/menu-button.svg');
+    }
   }
   else {
     $('.white-page-overlay').fadeIn(300);
@@ -32,12 +39,19 @@ $('.menu-button').on('click', function() {
 $('.white-page-overlay').on('click', function() {
   $(this).fadeOut(300);
   $('.share-button').css('z-index',200);
-  $('.menu-button').removeClass('menu-open').attr('src', 'img/menu-button.svg');
   $('.menu-container').removeClass('moved');
   $("body").removeClass('no-scroll'); // body to scroll again
   $('.arrow a').removeClass('active');
   $('.arrow-img').attr('src', 'img/arrow.svg').removeClass('open');
   $('.dropdown-menu').slideUp(200);
+
+  var whatPage = $('body').attr('class');
+    if ( whatPage === 'main' ) {
+      $('.menu-button').removeClass('menu-open').attr('src', 'img/menu-button-white.svg');
+    }
+    else {
+      $('.menu-button').removeClass('menu-open').attr('src', 'img/menu-button.svg');
+    }
 });
 
 // Wait until page is fully loaded to initialize the menu
