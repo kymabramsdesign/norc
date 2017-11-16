@@ -40,77 +40,136 @@
   .outer {
     @include transition(fill .2s ease-in-out);
     fill: transparent;
-    stroke: $dot-grey;
-    stroke-miterlimit:10;
+    stroke-miterlimit: 10;
   }
 
   &:hover {
 
     .inner {
       @include transition(fill .3s ease-in-out);
-      fill: $dot-grey;
     }
 
     .outer {
       @include transition(fill .3s ease-in-out);
-      fill: rgba(0,0,0,.075);
     }
   }
-}
 
-.nav-dot.active {
+  &.active {
 
-  .outer {
-    fill: transparent;
-    stroke: $dot-grey;
-
-    &:hover {
+    .outer {
       fill: transparent;
     }
   }
 }
 
-// Global
-.nav-dot.global-dot.active .inner {
-  fill: $purple;
+.main {
+
+  .section-title {
+    color: $white;
+  }
+  
+  .nav-dot {
+
+    .outer {
+      stroke: $white;
+    }
+
+    &:hover {
+
+      .inner {
+        fill: $white-85;
+      }
+
+      .outer {
+        fill: $white-35;
+      }
+    }
+  }
+
+  .nav-dot.active {
+    .inner {
+      fill: $white;
+    }
+
+    .outer {
+      stroke: $white;
+
+      &:hover {
+        fill: transparent;
+      }
+    }
+  }
 }
 
-.story-page_global .dot-nav h3 {
-  color: $purple;
-}
+.story-page {
+  .nav-dot {
 
-// Health
-.nav-dot.health-dot.active .inner {
-  fill: $teal;
-}
+    .outer {
+      stroke: $dot-grey;
+    }
 
-.story-page_health .dot-nav h3 {
-  color: $teal;
-}
+    &:hover {
 
-// Society
-.nav-dot.society-dot.active .inner {
-  fill: $pink;
-}
+      .inner {
+        fill: $dot-grey;
+      }
 
-.story-page_society .dot-nav h3 {
-  color: $pink;
-}
+      .outer {
+        fill: rgba(0,0,0,.075);
+      }
+    }
 
-// Education
-.nav-dot.education-dot.active .inner {
-  fill: $maroon;
-}
+    &.active .outer {
+      stroke: $dot-grey;
 
-.story-page_education .dot-nav h3 {
-  color: $maroon;
-}
+      &:hover {
+        fill: transparent;
+      }
+    }
+  }
 
-// Economics
-.nav-dot.economics-dot.active .inner {
-  fill: $green;
-}
+  // Global
+  .nav-dot.global-dot.active .inner {
+    fill: $purple;
+  }
 
-.story-page_economics .dot-nav h3 {
-  color: $green;
+  &.story-page_global .dot-nav h3 {
+    color: $purple;
+  }
+
+  // Health
+  .nav-dot.health-dot.active .inner {
+    fill: $teal;
+  }
+
+  &.story-page_health .dot-nav h3 {
+    color: $teal;
+  }
+
+  // Society
+  .nav-dot.society-dot.active .inner {
+    fill: $pink;
+  }
+
+  &.story-page_society .dot-nav h3 {
+    color: $pink;
+  }
+
+  // Education
+  .nav-dot.education-dot.active .inner {
+    fill: $maroon;
+  }
+
+  &.story-page_education .dot-nav h3 {
+    color: $maroon;
+  }
+
+  // Economics
+  .nav-dot.economics-dot.active .inner {
+    fill: $green;
+  }
+
+  &.story-page_economics .dot-nav h3 {
+    color: $green;
+  }
 }
