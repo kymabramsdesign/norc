@@ -260,61 +260,61 @@ function dotNav() {
     if ( location.indexOf('active') >= 0 ) {
       $('.section-title.current').show().css('color', currentColor);
       $(this).on('click', function() {
-        window.location = '/'+ page;
+        window.location = '/#ar/'+ page;
       });
     }
     else if ( location.indexOf('insight-dot') >= 0 ) {
       $('.section-title.one').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/insight';
+        window.location = '/#ar/insight';
       });
     }
     else if ( location.indexOf('president-dot') >= 0 ) {
       $('.section-title.two').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/president';
+        window.location = '/#ar/president';
       });
     }
     else if ( location.indexOf('economics-dot') >= 0 ) {
       $('.section-title.three').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/economics';
+        window.location = '/#ar/economics';
       });
     }
     else if ( location.indexOf('education-dot') >= 0 ) {
       $('.section-title.four').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/education';
+        window.location = '/#ar/education';
       });
     }
     else  if ( location.indexOf('global-dot') >= 0 ) {
       $('.section-title.five').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/global';
+        window.location = '#ar/global';
       });
     }
     else if ( location.indexOf('health-dot') >= 0 ) {
       $('.section-title.six').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/health';
+        window.location = '/#ar/health';
       });
     }
     else if ( location.indexOf('society-dot') >= 0 ) {
       $('.section-title.seven').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/society';
+        window.location = '/#ar/society';
       });
     }
     else if ( location.indexOf('leadership-dot') >= 0 ) {
       $('.section-title.eight').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/leadership';
+        window.location = '/#ar/leadership';
       });
     }
     else if ( location.indexOf('more-dot') >= 0 ) {
       $('.section-title.nine').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/more';
+        window.location = '/#ar/gain-more-insight';
       });
     }
   }, function() {

@@ -65,6 +65,7 @@
 .main {
 
   .section-title {
+    @include transition(color .2s ease-in-out);
     color: $white-85;
     font-weight: 300;
   }
@@ -100,8 +101,189 @@
       }
     }
   }
+
+  &.fp-viewing-ar-insight {
+    .section-title.one {
+      display: block !important;
+    }
+
+    .insight-dot {
+      .inner {
+        fill: $white;
+      }
+
+      .outer {
+        stroke: $white;
+
+        &:hover {
+          fill: transparent;
+        }
+      }
+    }
+  }
+
+  &.fp-viewing-ar-president {
+    .section-title.two {
+      display: block !important;
+    }
+
+    .president-dot {
+      .inner {
+        fill: $white;
+      }
+
+      .outer {
+        stroke: $white;
+
+        &:hover {
+          fill: transparent;
+        }
+      }
+    }
+  }
+
+  &.fp-viewing-ar-economics {
+    .section-title.three {
+      display: block !important;
+    }
+
+    .economics-dot {
+      .inner {
+        fill: $white;
+      }
+
+      .outer {
+        stroke: $white;
+
+        &:hover {
+          fill: transparent;
+        }
+      }
+    }
+  }
+
+  &.fp-viewing-ar-education {
+    .section-title.four {
+      display: block !important;
+    }
+
+    .education-dot {
+      .inner {
+        fill: $white;
+      }
+
+      .outer {
+        stroke: $white;
+
+        &:hover {
+          fill: transparent;
+        }
+      }
+    }
+  }
+
+  &.fp-viewing-ar-global {
+    .section-title.five {
+      display: block !important;
+    }
+
+    .global-dot {
+      .inner {
+        fill: $white;
+      }
+
+      .outer {
+        stroke: $white;
+
+        &:hover {
+          fill: transparent;
+        }
+      }
+    }
+  }
+
+  &.fp-viewing-ar-health {
+    .section-title.six {
+      display: block !important;
+    }
+
+    .health-dot {
+      .inner {
+        fill: $white;
+      }
+
+      .outer {
+        stroke: $white;
+
+        &:hover {
+          fill: transparent;
+        }
+      }
+    }
+  }
+
+  &.fp-viewing-ar-society {
+    .section-title.seven {
+      display: block !important;
+    }
+
+    .society-dot {
+      .inner {
+        fill: $white;
+      }
+
+      .outer {
+        stroke: $white;
+
+        &:hover {
+          fill: transparent;
+        }
+      }
+    }
+  }
+
+  &.fp-viewing-ar-leadership {
+    .section-title.eight {
+      display: block !important;
+    }
+
+    .leadership-dot {
+      .inner {
+        fill: $white;
+      }
+
+      .outer {
+        stroke: $white;
+
+        &:hover {
+          fill: transparent;
+        }
+      }
+    }
+  }
+
+  &.fp-viewing-ar-gain-more {
+    .section-title.nine {
+      display: block !important;
+    }
+
+    .more-dot {
+      .inner {
+        fill: $white;
+      }
+
+      .outer {
+        stroke: $white;
+
+        &:hover {
+          fill: transparent;
+        }
+      }
+    }
+  }
 }
 
+// Nav Dots on Story Pages
 .story-page {
   .nav-dot {
 
