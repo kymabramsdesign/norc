@@ -7,22 +7,23 @@ function activateSlider() {
     navigation: false,
 
     //Scrolling
-    scrollingSpeed: 700,
+    scrollingSpeed: 400,
     autoScrolling: true,
     fitToSection: true,
     fitToSectionDelay: 1000,
     loopHorizontal: false,
     normalScrollElements: '#element1, .element2',
-    scrollOverflow: false,
+    scrollOverflow: true,
     scrollOverflowReset: false,
     scrollOverflowOptions: null,
     touchSensitivity: 15,
+    interlockedSlides: true,
 
     //Design
     controlArrows: true,
     verticalCentered: true,
     paddingTop: '0',
-    paddingBottom: '10px',
+    paddingBottom: '0',
     responsiveWidth: 0,
     responsiveHeight: 0,
     responsiveSlides: false,
@@ -40,7 +41,7 @@ function activateSlider() {
     afterLoad: function(){},
     afterRender: function(){},
     afterResize: function(){},
-    afterResponsive: function(isResponsive){},
+    afterResponsive: function(){},
     afterSlideLoad: function(){
       $('.section-title').removeClass('current').show();
       var whichSlide = $('body').attr('class'); // gets the current slide
@@ -54,47 +55,6 @@ function activateSlider() {
 
 // Functions for the Dot Navigation on Main Pages
 function dotNav() {
-
-  //Assigns 'current' to h3 on click of left arrow
-  $('.fp-prev').on('click', function() {
-
-    var gere = $('body').attr('class');
-    gere = gere.replace('main fp-viewing-ar-', '');
-
-    if ( gere === 'gain-more' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.eight').addClass('current');
-    }
-    else if ( gere === 'leadership' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.seven').addClass('current');
-    }
-    else if ( gere === 'society' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.six').addClass('current');
-    }
-    else if ( gere === 'health' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.five').addClass('current');
-    }
-    else if ( gere === 'global' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.four').addClass('current');
-    }
-    else if ( gere === 'education' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.three').addClass('current');
-    }
-    else if ( gere === 'economics' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.two').addClass('current');
-    }
-    else if ( gere === 'president' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.one').addClass('current');
-    }
-  });
-
 
   $('.dot-nav svg').hover(function() {
 
