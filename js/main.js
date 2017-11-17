@@ -42,20 +42,13 @@ function activateSlider() {
     afterResize: function(){},
     afterResponsive: function(isResponsive){},
     afterSlideLoad: function(){
-      // $('.section-title').removeClass('current').show();
+      $('.section-title').removeClass('current').show();
       var whichSlide = $('body').attr('class'); // gets the current slide
       whichSlide = whichSlide.replace('main fp-viewing-ar-', '');
-      // $('.section-title').hide();
+      $('.section-title').hide();
       $('.section-title.' + whichSlide).show().css('color', 'rgba(255,255,255,.85)');
     },
-    onSlideLeave: function(){
-      $('.section-title.current').fadeOut();
-      $('.section-title').removeClass('current').show();
-      // var whichSlide = $('body').attr('class'); // gets the current slide
-      // whichSlide = whichSlide.replace('main fp-viewing-ar-', '');
-      $('.section-title').hide();
-      // $('.section-title.' + whichSlide).show().css('color', 'rgba(255,255,255,.85)');
-    }
+    onSlideLeave: function(){}
   });
 }
 
