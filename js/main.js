@@ -6,7 +6,6 @@ function activateSlider() {
     anchors: ['ar'],
     navigation: false,
 
-
     //Scrolling
     scrollingSpeed: 700,
     autoScrolling: true,
@@ -37,13 +36,26 @@ function activateSlider() {
     lazyLoading: true,
 
     //events
-    onLeave: function(index, nextIndex, direction){},
-    afterLoad: function(anchorLink, index){},
+    onLeave: function(){},
+    afterLoad: function(){},
     afterRender: function(){},
     afterResize: function(){},
     afterResponsive: function(isResponsive){},
-    afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-    onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    afterSlideLoad: function(){
+      // $('.section-title').removeClass('current').show();
+      var whichSlide = $('body').attr('class'); // gets the current slide
+      whichSlide = whichSlide.replace('main fp-viewing-ar-', '');
+      // $('.section-title').hide();
+      $('.section-title.' + whichSlide).show().css('color', 'rgba(255,255,255,.85)');
+    },
+    onSlideLeave: function(){
+      $('.section-title.current').fadeOut();
+      $('.section-title').removeClass('current').show();
+      // var whichSlide = $('body').attr('class'); // gets the current slide
+      // whichSlide = whichSlide.replace('main fp-viewing-ar-', '');
+      $('.section-title').hide();
+      // $('.section-title.' + whichSlide).show().css('color', 'rgba(255,255,255,.85)');
+    }
   });
 }
 
@@ -52,6 +64,7 @@ function dotNav() {
 
   //Assigns 'current' to h3 on click of left arrow
   $('.fp-prev').on('click', function() {
+
     var gere = $('body').attr('class');
     gere = gere.replace('main fp-viewing-ar-', '');
 
@@ -89,92 +102,84 @@ function dotNav() {
     }
   });
 
-  //Assigns 'current' to h3 on click of right arrow
-  $('.fp-next').on('click', function() {
-    var gere = $('body').attr('class');
-    gere = gere.replace('main fp-viewing-ar-', '');
-
-    if ( gere === 'leadership' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.nine').addClass('current');
-    }
-    else if ( gere === 'society' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.eight').addClass('current');
-    }
-    else if ( gere === 'health' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.seven').addClass('current');
-    }
-    else if ( gere === 'global' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.six').addClass('current');
-    }
-    else if ( gere === 'education' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.five').addClass('current');
-    }
-    else if ( gere === 'economics' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.four').addClass('current');
-    }
-    else if ( gere === 'president' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.three').addClass('current');
-    }
-    else if ( gere === 'insight' ) {
-      $('.section-title').removeClass('current');
-      $('.section-title.two').addClass('current');
-    }
-  });
-
 
   $('.dot-nav svg').hover(function() {
 
-    // if ( location.indexOf('active') >= 0 ) {
-    //   $('.section-title.current').show().css('color', currentColor);
-    //   $(this).on('click', function() {
-    //     window.location = '/#ar/'+ page;
-    //   });
-    // }
-
     $('.section-title').hide().css('color', 'rgba(255,255,255,.6)');
-    $('.section-title.current').css('color', 'rgba(255,255,255,.85)');
 
-    var location = $(this).attr('class');
+    var whichSlide = $('body').attr('class');
+    whichSlide = whichSlide.replace('main fp-viewing-ar-', '');
+    $('.section-title.' + whichSlide).css('color', 'rgba(255,255,255,.85)');
+
+    var location = $(this).attr('class'); // Gets which dot you are hovering on
     location = location.replace('nav-dot ', '');
+    locationTrim = location.replace('-dot', '');
 
-    if ( location.indexOf('insight-dot') >= 0 ) {
-      $('.section-title.one').fadeIn(300);
+    if ( whichSlide === locationTrim ) {
+      $('.section-title.' + whichSlide).show();
+    }
+    else if ( location.indexOf('insight-dot') >= 0 ) {
+      $('.section-title.insight').fadeIn(300);
+      $(this).on('click', function() {
+        $('.section-title.insight').css('color', 'rgba(255,255,255,.85)');
+      });
     }
     else if ( location.indexOf('president-dot') >= 0 ) {
-      $('.section-title.two').fadeIn(300);
+      $('.section-title.president').fadeIn(300);
+      $(this).on('click', function() {
+
+        $('.section-title.president').css('color', 'rgba(255,255,255,.85)');
+      });
     }
     else if ( location.indexOf('economics-dot') >= 0 ) {
-      $('.section-title.three').fadeIn(300);
+      $('.section-title.economics').fadeIn(300);
+      $(this).on('click', function() {
+        $('.section-title.economics').css('color', 'rgba(255,255,255,.85)');
+      });
     }
     else if ( location.indexOf('education-dot') >= 0 ) {
-      $('.section-title.four').fadeIn(300);
+      $('.section-title.education').fadeIn(300);
+      $(this).on('click', function() {
+        $('.section-title.education').css('color', 'rgba(255,255,255,.85)');
+      });
     }
     else  if ( location.indexOf('global-dot') >= 0 ) {
-      $('.section-title.five').fadeIn(300);
+      $('.section-title.global').fadeIn(300);
+      $(this).on('click', function() {
+        $('.section-title.global').css('color', 'rgba(255,255,255,.85)');
+      });
     }
     else if ( location.indexOf('health-dot') >= 0 ) {
-      $('.section-title.six').fadeIn(300);
+      $('.section-title.health').fadeIn(300);
+      $(this).on('click', function() {
+        $('.section-title.health').css('color', 'rgba(255,255,255,.85)');
+      });
     }
     else if ( location.indexOf('society-dot') >= 0 ) {
-      $('.section-title.seven').fadeIn(300);
+      $('.section-title.society').fadeIn(300);
+      $(this).on('click', function() {
+        $('.section-title.society').css('color', 'rgba(255,255,255,.85)');
+      });
     }
     else if ( location.indexOf('leadership-dot') >= 0 ) {
-      $('.section-title.eight').fadeIn(300);
+      $('.section-title.leadership').fadeIn(300);
+      $(this).on('click', function() {
+        $('.section-title.leadership').css('color', 'rgba(255,255,255,.85)');
+      });
     }
     else if ( location.indexOf('more-dot') >= 0 ) {
-      $('.section-title.nine').fadeIn(300);
+      $('.section-title.gain-more').fadeIn(300);
+      $(this).on('click', function() {
+        $('.section-title.gain-more').css('color', 'rgba(255,255,255,.85)');
+      });
     }
   }, function() {
-    $('.section-title').hide();
-    $('.section-title.current').show();
-    $('.section-title').css('color', 'rgba(255,255,255,.85)');
+
+    var whichSlide = $('body').attr('class'); // gets the current slide
+    whichSlide = whichSlide.replace('main fp-viewing-ar-', '');
+
+    $('.section-title').hide().removeClass('current');
+    $('.section-title.' + whichSlide).show().addClass('current').css('color', 'rgba(255,255,255,.85)');
   });
 }
 

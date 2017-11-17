@@ -17,7 +17,7 @@ $('.menu-button').on('click', function() {
     $("body").removeClass('no-scroll'); // body to scroll again
 
     var whatPage = $('body').attr('class');
-    if ( whatPage === 'main' ) {
+    if ( whatPage.indexOf('main') >= 0 ) {
       $('.menu-button').removeClass('menu-open').attr('src', 'img/menu-button-white.svg');
     }
     else {
@@ -46,7 +46,7 @@ $('.white-page-overlay').on('click', function() {
   $('.dropdown-menu').slideUp(200);
 
   var whatPage = $('body').attr('class');
-    if ( whatPage === 'main' ) {
+    if ( whatPage.indexOf('main') >= 0 ) {
       $('.menu-button').removeClass('menu-open').attr('src', 'img/menu-button-white.svg');
     }
     else {
