@@ -1,0 +1,21 @@
+//Safari and Chrome
+.main p:not(*:root),
+.area .h2 p:not(*:root),
+.main .section-title:not(*:root),
+.dot-nav .section-title:not(*:root) {
+  font-weight: 400;
+}
+
+
+//Firefox
+@media screen and (min--moz-device-pixel-ratio:0) {
+  .main p,
+  .area .h2 p,
+  .main .section-title {
+    font-weight: 300;
+  }
+
+  .dot-nav .section-title {
+    font-weight: 400;
+  }
+}

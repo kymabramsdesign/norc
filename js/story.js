@@ -324,9 +324,17 @@ function dotNav() {
   });
 }
 
+function checkBrowser() {
+  var isChromium = !!window.chrome;
+  if ( isChromium === true ) {
+    $('.main p, .area .h2 p, .main .section-title').css('font-weight', '300');
+  }
+}
+
 
 // Collect all functions to execute at once on Load
 function initialize() {
+  checkBrowser();
   columns();
   subNav();
   popUpTop();

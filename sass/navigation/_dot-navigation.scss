@@ -67,7 +67,6 @@
   .section-title {
     @include transition(color .2s ease-in-out);
     color: $white-85;
-    font-weight: 300;
   }
   
   .nav-dot {
