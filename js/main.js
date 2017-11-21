@@ -136,6 +136,12 @@ function dotNav() {
   });
 }
 
+function verticalPosition() {
+  var windowHeight = $(window).height();
+  var areaHeight = $('.area p').height();
+  // alert(areaHeight);
+}
+
 //Check Browser and adjust font-weights for Chrome
 function checkBrowser() {
   var isChromium = !!window.chrome;
@@ -146,13 +152,15 @@ function checkBrowser() {
 
 // Collect all functions to execute at once on Load
 function initialize() {
-  checkBrowser()
+  checkBrowser();
+  verticalPosition();
   activateSlider();
   dotNav();
 }
 
 // Collect all functions to execute on Resize
 function initializeResize() {
+  verticalPosition();
 }
 
 
