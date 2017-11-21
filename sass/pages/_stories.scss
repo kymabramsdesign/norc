@@ -128,6 +128,42 @@
     }
   }
 
+  /* Education Stories*/
+  &_education {
+    background-color: $maroon-background;
+
+    .header-background {
+      background-color: $maroon-background;
+    }
+
+    .sub-nav {
+      background-color: $maroon-subhead;
+
+      .story-item {
+        width: 25vw;
+
+        &:hover {
+          background-color: $maroon-hover;
+          color: $maroon;
+        }
+
+        &.active {
+          background-color: $maroon-hover;
+          color: $maroon;
+        }
+      }
+    }
+
+    h1 {
+      color: $maroon;
+    }
+
+    .page-overlay {
+      background-color: $maroon-background;
+      opacity: .91;
+    }
+  }
+
   /* Society, Media, and Public Affairs Stories*/
   &_society {
     background-color: $pink-background;

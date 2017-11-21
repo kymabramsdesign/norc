@@ -1,7 +1,6 @@
 p {
 	color: $text-grey;
 	font-weight: 400;
-	margin: 0;
 	@include transition(font-size .3s ease-in-out);
 }
 

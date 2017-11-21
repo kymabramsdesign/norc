@@ -136,6 +136,7 @@ function dotNav() {
   });
 }
 
+//Check Browser and adjust font-weights for Chrome
 function checkBrowser() {
   var isChromium = !!window.chrome;
   if ( isChromium === true ) {
