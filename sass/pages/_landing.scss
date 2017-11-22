@@ -25,7 +25,7 @@
   }
 
   &.health {
-    background-image: url('/img/health-background.jpg');
+    // background-image: url('/img/health-background.jpg');
   }
 
   &.society {
@@ -103,6 +103,7 @@
       display: flex;
       flex-wrap: wrap;
       height: 405px;
+      margin-bottom: 40px;
       padding: 10px;
       width: 48%;
 
@@ -116,6 +117,7 @@
 
       @media screen and (max-width: 900px) {
         height: 385px;
+        margin-bottom: 26px;
         width: 98%;
       }
 
@@ -129,6 +131,34 @@
           width: auto;
           max-width: none;
         }
+
+        .large.caption {
+          line-height: 28px;
+          margin: 8px 0 0;
+          position: absolute;
+          width: 42%;
+
+          @media screen and (max-width: 900px) {
+            font-size: 19px;
+            line-height: 23px;
+            margin: -5px 0 0;
+            padding: 8px 0 0;
+            width: 75%;
+          }
+        }
+      }
+    }
+
+    .mobile-tiles {
+      display: none;
+
+      @media screen and (max-width: 900px) {
+        align-content: space-between;
+        display: flex;
+        flex-wrap: wrap;
+        height: 385px;
+        padding: 10px;
+        width: 49%;
       }
     }
 
@@ -147,8 +177,9 @@
         height: 355px;
       }
       @media screen and (max-width: 900px) {
-        height: 385px;
-        width: 49%;
+        display: none;
+        // height: 385px;
+        // width: 49%;
       }
 
       .one {
@@ -156,6 +187,10 @@
         overflow: hidden;
         width: 100%;
         height: 47.5%;
+
+        @media screen and (max-width: 900px) {
+          margin-bottom: 70px;
+        }
 
         img {
           height: 100%;
@@ -168,6 +203,52 @@
 
           @media screen and (max-width: 900px) {
             display: none;
+          }
+        }
+
+        .small.caption {
+          font-size: 21px;
+          line-height: 25px;
+          margin: -174px 0 0;
+          padding: 0 14px;
+          position: absolute;
+          width: 20%;
+
+          @media screen and (max-width: 1200px) {
+            margin: -164px 0 0;
+          }
+
+          @media screen and (max-width: 1024px) {
+            font-size: 19px;
+            line-height: 24px;
+            margin: -154px 0 0;
+          }
+
+          @media screen and (max-width: 900px) {
+            margin: -5px 0 0;
+            padding: 8px 0 0;
+            width: 38%;
+          }
+
+          @media screen and (max-width: 767px) {
+            font-size: 18px;
+            line-height: 30px;
+          }
+
+          &.white {
+            color: $white;
+          }
+
+          &.black {
+            color: $black;
+            font-weight: 400 !important;
+            letter-spacing: .25px;
+
+            @media screen and (max-width: 900px) {
+              color: $white-85;
+              font-weight: 300 !important;
+              letter-spacing: .75px;
+            }
           }
         }
       }
