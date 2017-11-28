@@ -12,12 +12,12 @@ function activateSlider() {
     fitToSection: true,
     fitToSectionDelay: 1000,
     loopHorizontal: false,
-    normalScrollElements: '#element1, .element2',
     scrollOverflow: true,
     scrollOverflowReset: false,
     scrollOverflowOptions: null,
     touchSensitivity: 15,
     interlockedSlides: true,
+    normalScrollElements: '.area, .thumbnails, .landing-text',
 
     //Design
     controlArrows: true,
@@ -29,6 +29,7 @@ function activateSlider() {
     responsiveSlides: false,
     parallax: false,
     parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+    animateAnchor: false, // stops the site from scrolling to the landing pages from stories
 
     //Custom selectors
     sectionSelector: '.section',
@@ -139,7 +140,39 @@ function dotNav() {
 function verticalPosition() {
   var windowHeight = $(window).height();
   var areaHeight = $('.area p').height();
-  // alert(areaHeight);
+}
+
+// Bottom Arrow Functions
+function explore() {
+  $('.down-arrow').hover( function() {
+    $('.explore').css('color', 'rgba(255,255,255,.85)');
+  }, function() {
+    $('.explore').css('color', 'rgba(255,255,255,.65)');
+  });
+
+  $('.down-arrow').click( function() {
+    var tilePosition = $('.thumbnails').offset().top; //gets position of thumbnails section
+    tilePosition = tilePosition - 100;
+
+    $('.thumbnails').animate({
+      scrollTop: tilePosition
+    }, 700);
+    // $('.fp-scroller').css('transform', 'translate(0px, -910px');
+
+  });
+
+   //   $(window).bind('mousewheel', function(e){
+   //   if(e.originalEvent.wheelDelta /120 > 0) {
+   //     console.log('scrolling up');
+   //     var windowPosition = $('.active').scrollTop();
+   //     var thiis = window.location;
+   //     // alert(windowPosition);
+   //   }
+   //   else{
+   //     console.log('scrolling down');
+   //     $('.bottom-arrow').fadeOut(200);
+   //   }
+   // });
 }
 
 //Check Browser and adjust font-weights for Chrome
@@ -156,6 +189,7 @@ function initialize() {
   verticalPosition();
   activateSlider();
   dotNav();
+  explore();
 }
 
 // Collect all functions to execute on Resize

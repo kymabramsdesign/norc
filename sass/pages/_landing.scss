@@ -4,6 +4,52 @@
   }
 }
 
+.fp-viewing-ar-insight .bottom-arrow,
+.fp-viewing-ar-president .bottom-arrow,
+.fp-viewing-ar-leadership .bottom-arrow,
+.fp-viewing-ar-gain-more .bottom-arrow {
+  display: none;
+}
+
+.bottom-arrow {
+  bottom: 21px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  z-index: 1000;
+
+  .explore {
+    @include transition(all .2s ease-in-out);
+    color: $white-65;
+    cursor: default;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    line-height: 14px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100vw;
+  }
+
+  .down-arrow {
+    @include transition(all .2s ease-in-out);
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    transform: rotate(45deg) skew(-2deg, -2deg);
+    border: solid $white-65;
+    border-width: 0 2px 2px 0;
+    padding: 14px;
+
+    &:hover {
+      @include transition(all .3s ease-in-out);
+      border-color: $white-85;
+    }
+  }
+}
+
 .slide {
   background-position: center;
   background-size: cover;
@@ -119,8 +165,8 @@
       }
 
       @media screen and (max-width: 900px) {
-        height: auto;
         margin-bottom: 26px;
+        height: auto;
         padding: 0 10px 10px;
         width: 98%;
       }
@@ -243,9 +289,9 @@
       align-content: space-between;
       display: flex;
       flex-wrap: wrap;
+      max-height: 409px;
       padding: 7px;
       width: 25%;
-      max-height: 409px;
 
       @media screen and (max-width: 1200px) {
         // height: 385px;
@@ -277,6 +323,7 @@
 
         .small.caption {
           font-size: 21px;
+          height: 100px;
           line-height: 25px;
           margin: -63px 0 0;
           padding: 0 14px;
