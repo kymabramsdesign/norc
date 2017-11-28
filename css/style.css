@@ -3328,7 +3328,7 @@ body {
   flex-wrap: wrap;
   max-height: 409px;
   padding: 7px;
-  width: 25%;
+  width: 50%;
 }
 
 @media screen and (max-width: 900px) {
@@ -3340,44 +3340,51 @@ body {
 
 /* line 308, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one {
-  background-color: #9e525d;
   height: 48%;
   overflow: hidden;
-  width: 100%;
+  width: 50%;
 }
 
-/* line 314, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
-.area .thumbnails .two-vertical .one img {
-  height: 100%;
-  width: auto;
-  max-width: none;
+/* line 313, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+.area .thumbnails .two-vertical .one.left {
+  padding-right: 7px;
+}
+
+/* line 316, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+.area .thumbnails .two-vertical .one.right {
+  padding-left: 7px;
 }
 
 /* line 320, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+.area .thumbnails .two-vertical .one img {
+  height: auto;
+  width: 100%;
+}
+
+/* line 325, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one.blank {
   background-color: transparent;
 }
 
-/* line 324, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 329, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one .small.caption {
-  font-size: 21px;
-  height: 100px;
+  font-size: 20px;
   line-height: 25px;
-  margin: -63px 0 0;
+  margin: -182px 0 0;
   padding: 0 14px;
   position: absolute;
   width: 20%;
 }
 
 @media screen and (max-width: 1200px) {
-  /* line 324, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+  /* line 329, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .two-vertical .one .small.caption {
     margin: -164px 0 0;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 324, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+  /* line 329, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .two-vertical .one .small.caption {
     font-size: 19px;
     line-height: 24px;
@@ -3385,12 +3392,12 @@ body {
   }
 }
 
-/* line 343, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 347, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one .small.caption.white {
   color: #fff;
 }
 
-/* line 347, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 351, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one .small.caption.black {
   color: #000;
   font-weight: 400 !important;

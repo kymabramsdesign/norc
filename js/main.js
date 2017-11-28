@@ -17,7 +17,7 @@ function activateSlider() {
     scrollOverflowOptions: null,
     touchSensitivity: 15,
     interlockedSlides: true,
-    normalScrollElements: '.area, .thumbnails, .landing-text',
+    normalScrollElements: '.area, .thumbnails, .landing-text, .fp-scrollable, .fp-scroller',
 
     //Design
     controlArrows: true,
@@ -142,6 +142,14 @@ function verticalPosition() {
   var areaHeight = $('.area p').height();
 }
 
+// image heights
+function matchHeight() {
+  var largeSize = $('.four img').height();
+  largeSize = largeSize + 13;
+
+  $('.two-vertical').css('max-height', largeSize);
+}
+
 // Bottom Arrow Functions
 function explore() {
   $('.down-arrow').hover( function() {
@@ -154,10 +162,11 @@ function explore() {
     var tilePosition = $('.thumbnails').offset().top; //gets position of thumbnails section
     tilePosition = tilePosition - 100;
 
-    $('.thumbnails').animate({
+    $('.fp-scrollable').animate({
       scrollTop: tilePosition
-    }, 700);
-    // $('.fp-scroller').css('transform', 'translate(0px, -910px');
+    }, 400);
+    $('.fp-scroller').css('transform', 'translate(0px, -910px');
+    // $('.fp-scrollable, .fp-tableCell').css('height', 0);
 
   });
 
@@ -190,11 +199,13 @@ function initialize() {
   activateSlider();
   dotNav();
   explore();
+  matchHeight()
 }
 
 // Collect all functions to execute on Resize
 function initializeResize() {
   verticalPosition();
+  matchHeight()
 }
 
 
