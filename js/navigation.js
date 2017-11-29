@@ -72,8 +72,8 @@ $(window).bind("load", function() {
     '</ul></li>' +
     '<li class="arrow"><a href="#">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
-      '<li><a href="/higher-education">Making Higher Education More Accessible and Achievable</a></li>' +
-      '<li><a href="/early-childhood">Assessing and Shaping the Impact of Early Childhood Education</a></li>' +
+      '<li><a href="/higher-education">Making higher education more accessible and achievable</a></li>' +
+      '<li><a href="/early-childhood">Assessing and shaping the impact of early childhood education</a></li>' +
       '<li><a href="/science-and-technology">Tracking the careers of STEM doctorates</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="#">Global Development</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +

@@ -104,17 +104,9 @@ function verticalPosition() {
 // image heights
 function matchHeight() {
   var largeSize = $('.one-vertical img').height();
-  largeSize = largeSize;
-  var smallHeight = $('.thumbnails').height();
-  // alert(largeSize);
-  smallHeight = (-smallHeight)+'px 0 0';
-  var smallWidth = $('.two-vertical .one').width();
+  largeSize = largeSize+5;
 
   $('.two-vertical').css('max-height', largeSize);
-  // $('.area .thumbnails .two-vertical .one .small.caption').css({
-  //   'margin': smallHeight,
-  //   'width': smallWidth
-  // });
 }
 
 // Bottom Arrow Functions
