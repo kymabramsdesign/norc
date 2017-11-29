@@ -1,0 +1,86 @@
+/* line 4, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+#slides {
+  position: relative;
+}
+
+/* line 6, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+#slides .slides-container {
+  display: none;
+}
+
+/* line 9, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+#slides .scrollable {
+  *zoom: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+
+/* line 38, /Applications/Scout-App.app/Contents/Resources/app.nw/bower_components/compass-mixins/lib/compass/utilities/general/_clearfix.scss */
+#slides .scrollable:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 21, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+}
+
+/* line 27, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}
+
+/* line 30, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+.slides-navigation a.prev {
+  left: 0;
+}
+
+/* line 33, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+.slides-navigation a.next {
+  right: 0;
+}
+
+/* line 38, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+.slides-pagination {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 44, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+.slides-pagination a {
+  border: 2px solid #222;
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+  margin: 2px;
+  overflow: hidden;
+  text-indent: -100%;
+}
+
+/* line 54, /Users/kadimac/Desktop/norc-repo/sass/navigation/superslides.scss */
+.slides-pagination a.current {
+  background: #222;
+}
+
+/*# sourceMappingURL=../../css/navigation/superslides.map */

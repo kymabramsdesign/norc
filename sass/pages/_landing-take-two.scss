@@ -1,0 +1,396 @@
+.two-column {
+  &.insight {
+    background-color: $orange;
+  }
+}
+
+.fp-viewing-ar-insight .bottom-arrow,
+.fp-viewing-ar-president .bottom-arrow,
+.fp-viewing-ar-leadership .bottom-arrow,
+.fp-viewing-ar-gain-more .bottom-arrow {
+  display: none;
+}
+
+.bottom-arrow {
+  bottom: 21px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  width: 100vw;
+  z-index: 1000;
+
+  .explore {
+    @include transition(all .2s ease-in-out);
+    color: $white-65;
+    cursor: default;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    line-height: 14px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100vw;
+  }
+
+  .down-arrow {
+    @include transition(all .2s ease-in-out);
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    -webkit-transform: rotate(45deg) skew(-2deg, -2deg);
+    transform: rotate(45deg) skew(-2deg, -2deg);
+    border: solid $white-65;
+    border-width: 0 2px 2px 0;
+    padding: 14px;
+
+    &:hover {
+      @include transition(all .3s ease-in-out);
+      border-color: $white-85;
+    }
+  }
+}
+
+.slide {
+  background-position: center;
+  background-size: cover;
+  overflow: scroll !important;
+
+  &.president {
+    background-image: url('/img/president-background.jpg');
+  }
+
+  &.economics {
+    background-image: url('/img/economics-background.jpg');
+  }
+
+  &.education {
+    background-image: url('/img/education-background.jpg');
+  }
+
+  &.global {
+    background-image: url('/img/global-background.jpg');
+  }
+
+  &.health {
+    background-image: url('/img/health-background.jpg');
+  }
+
+  &.society {
+    background-image: url('/img/society-background.jpg');
+  }
+
+  &.leadership {
+    background-color: $navy;
+  }
+
+  &.gain-more {
+    background-color: $navy;
+  }
+}
+
+.area {
+
+  .landing-text {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 100vh;
+    padding: 0 16.5vw;
+
+    @media screen and (min-width: 1600px) {
+      padding: 0 20vw;
+    }
+
+    @media screen and (max-width: 1300px) {
+      padding: 0 13vw;
+    }
+
+    @media screen and (max-width: 1100px) {
+      padding: 0 10vw;
+    }
+
+    @media screen and (max-width: 800px) {
+      padding: 0 13vw;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 0 30px;
+    }
+
+    .slide-title {
+      color: $white;
+      display: inline-block;
+      font-size: 30px;
+      text-align: center;
+      width: 100%;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 26px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .thumbnails {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 60px 60px;
+    width: 100%;
+
+    @media screen and (min-width: 1600px) {
+      padding: 0 10vw;
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 0 20px;
+    }
+
+    .one-vertical {
+      -ms-flex-line-pack: justify;
+      align-content: space-between;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      padding: 7px;
+      width: 50%;
+      height: 100%;
+
+      @media screen and (max-width: 900px) {
+        margin-bottom: 0;
+        height: auto;
+        padding: 0 10px 5px;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .four {
+        overflow: hidden;
+        width: 100%;
+
+        @media screen and (max-width: 900px) {
+          overflow: visible;
+        }
+
+        @media screen and (max-width: 767px) {
+          height: auto;
+          margin-bottom: 15px;
+          width: 100%;
+        }
+
+        img {
+          width: 100%;
+          max-width: none;
+
+          @media screen and (max-width: 767px) {
+            height: auto;
+            max-width: 100%;
+          }
+        }
+
+        .large.caption {
+          line-height: 28px;
+          margin: 8px 0 0;
+          position: absolute;
+          width: 42%;
+
+          @media screen and (max-width: 1000px) {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 3px 0 0;
+          }
+
+          @media screen and (max-width: 900px) {
+            font-size: 18px;
+            line-height: 25px;
+            margin: 0;
+            padding: 1px 8px 0 0;
+            position: relative;
+            width: 100%;
+          }
+
+          @media screen and (max-width: 767px) {
+            margin: -1px 0 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    .mobile-tiles {
+      display: none;
+
+      @media screen and (max-width: 900px) {
+        -ms-flex-line-pack: justify;
+        align-content: space-between;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 10px 10px 0;
+        width: 100%;
+      }
+
+      @media screen and (max-width: 767px) {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+      }
+
+      .one {
+        overflow: hidden;
+        width: 50%;
+
+        &.left {
+          padding-right: 6px;
+        }
+
+        &.right {
+          padding-left: 6px;
+        }
+
+        @media screen and (max-width: 767px) {
+          height: auto;
+          margin-bottom: 15px;
+          width: 100%;
+
+          &.left {
+            padding-right: 0;
+          }
+
+          &.right {
+            padding-left: 0;
+          }
+
+          img {
+            height: auto;
+            width: 100%;
+          }
+        }
+
+        .small.caption {
+          font-size: 18px;
+          line-height: 25px;
+          margin: 0;
+          padding: 1px 8px 14px 0;
+          position: relative;
+
+          @media screen and (max-width: 767px) {
+            margin: -1px 0 0;
+            padding: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .two-vertical {
+      -ms-flex-line-pack: justify;
+      align-content: space-between;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      height: 100%;
+      padding: 7px;
+      width: 50%;
+
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+
+      .one {
+        padding-bottom: 12.5px;
+        width: 50%;
+
+        &.left {
+          padding-right: 7px;
+        }
+        &.right {
+          padding-left: 7px;
+        }
+
+        img {
+          align-content: space-between;
+          display: flex;
+          height: auto;
+          width: 100%;
+        }
+
+        &.blank {
+          background-color: transparent;
+        }
+
+        .small.caption {
+          font-size: 22px;
+          letter-spacing: .75px;
+          line-height: 28px;
+          margin: -17.45vh 0 0;
+          padding: 0 14px;
+          position: absolute;
+          width: 21.029vw;
+
+          @media screen and (max-width: 1440px) {
+            font-size: 20px;
+            letter-spacing: .75px;
+            line-height: 25px;
+          }
+
+          @media screen and (max-width: 1100px) {
+            font-size: 18px;
+            letter-spacing: .75px;
+            line-height: 23px;
+          }
+
+          @media screen and (max-width: 1000px) {
+            font-size: 16px;
+            line-height: 21px;
+            padding: 2px 9px 0 9px;
+          }
+
+          &.white {
+            color: $white;
+          }
+
+          &.black {
+            color: $black;
+            font-weight: 400 !important;
+            letter-spacing: .25px;
+          }
+        }
+      }
+    }
+  }
+}

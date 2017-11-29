@@ -55,8 +55,8 @@
     <p class="explore">Explore our work</p>
     <div class="down-arrow"></div>
   </div>
-  <div id="fullpage">
-    <div class="section">
+  <div id="slides">
+    <div class="slides-container">
 
       <div class="slide two-column insight" data-anchor="insight">
         <h2>Slide 1</h2>
@@ -112,9 +112,27 @@
             Can text messages help children learn to read? Can voter education reduce political corruption? What are the most effective ways to measure the prevalence and impact of human trafficking? Leveraging experience in more than 70 countries around the world, NORC helps government agencies, NGOs, and stakeholders of all kinds to maximize the effectiveness of their global development efforts. NORC’s country- and subject-matter expertise, cultural sensitivity, and innovative, adaptive data-collection methods have made us a sought after partner. And increasingly, we are becoming the all-inclusive in-country resource for program design, implementation, and evaluation in countries like Senegal, El Salvador, and Tanzania.</p>
           </div><!-- End of .landing-text div -->
           <div class="thumbnails">
-            <p>How are Americans preparing for aging and retirement? What can social media tell us about the effectiveness of local tobacco regulation? How does political affiliation influence media consumption, and vice versa? Since probing American attitudes towards rationing during the Second World War, NORC has provided politicians, policymakers, and scholars with a clear and unbiased perspective on American social and cultural attitudes and behavior. The foundation of this work is the General Social Survey, which NORC has conducted since 1972. Its branches include explorations of issues as diverse as traffic safety and arts participation.</p>
-            <p>How are Americans preparing for aging and retirement? What can social media tell us about the effectiveness of local tobacco regulation? How does political affiliation influence media consumption, and vice versa? Since probing American attitudes towards rationing during the Second World War, NORC has provided politicians, policymakers, and scholars with a clear and unbiased perspective on American social and cultural attitudes and behavior. The foundation of this work is the General Social Survey, which NORC has conducted since 1972. Its branches include explorations of issues as diverse as traffic safety and arts participation.</p>
-            <p>How are Americans preparing for aging and retirement? What can social media tell us about the effectiveness of local tobacco regulation? How does political affiliation influence media consumption, and vice versa? Since probing American attitudes towards rationing during the Second World War, NORC has provided politicians, policymakers, and scholars with a clear and unbiased perspective on American social and cultural attitudes and behavior. The foundation of this work is the General Social Survey, which NORC has conducted since 1972. Its branches include explorations of issues as diverse as traffic safety and arts participation.</p>
+            <div class="one-vertical">
+              <div class="four">
+                <a href="/health-culture"><img src="/img/health-large-1.jpg" alt="Health Image" />
+                <p class="large caption">Cultivating a Culture of Health</p></a>
+              </div>
+            </div>
+            <div class="two-vertical">
+              <div class="one left">
+                <a href="/medicare-medicaid"><img src="/img/health-small-2.jpg" alt="Health Image" />
+                <p class="small caption white">Exploring the intersection between social life and successful aging</p></a>
+              </div>
+              <div class="one right">
+                <a href="/opioid-epidemic"><img src="/img/health-small-4.jpg" alt="Health Image" />
+                <p class="small caption black">Visualizing Disease Vulnerability</p></a>
+              </div>
+              <div class="one left">
+                <a href="/zika-awareness"><img src="/img/health-small-3.jpg" alt="Health Image" />
+                <p class="small caption white">Testing Americans’ Zika Awareness</p></a>
+              </div>
+              <div class="one blank right"></div>
+            </div>
           </div><!-- End of .thumbnails div -->
         </div><!-- End of .area div -->
       </div><!-- End of Global Slide -->
@@ -212,20 +230,24 @@
         <h2>Slide 9</h2>
         <p>How do the circumstances of childhood and adolescence influence career and earnings outcomes? What attributes promote resilience in communities faced with entrenched poverty or natural disaster? How do congregations function as economic entities? NORC researchers are adept at identifying, measuring, and drawing insight from a complex web of socio-economic indicators—from weekly surveys of the price of gas to longitudinal studies of the intersection between childhood circumstance and professional success—and provide reliable, unbiased data that inform important family, business, and government decisions.</p>
       </div><!-- End of More Slide -->
-    </div><!-- End of .section -->
+    </div><!-- End of .slides-container -->
+
+    <nav class="slides-navigation">
+      <a href="#" class="next"></a>
+      <a href="#" class="prev"></a>
+    </nav>
 
 
 
-  </div><!-- End of #fullpage -->
+  </div><!-- End of #slides -->
 
 </main>
 
 <footer>
   <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/scrolloverflow.min.js"></script>
-  <script src="js/jquery.fullPage.js"></script>
   <script src="js/navigation.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/jquery.superslides.js"></script>
+  <script src="js/custom-slider.js"></script>
 
   <!-- AddToAny BEGIN -->
   <script>
