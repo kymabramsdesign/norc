@@ -115,12 +115,6 @@ function dotNav() {
         $('.section-title.society').css('color', 'rgba(255,255,255,.85)');
       });
     }
-    else if ( location.indexOf('leadership-dot') >= 0 ) {
-      $('.section-title.leadership').fadeIn(300);
-      $(this).on('click', function() {
-        $('.section-title.leadership').css('color', 'rgba(255,255,255,.85)');
-      });
-    }
     else if ( location.indexOf('more-dot') >= 0 ) {
       $('.section-title.gain-more').fadeIn(300);
       $(this).on('click', function() {

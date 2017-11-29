@@ -1,3 +1,27 @@
+.slider {
+  /* line them up horizontally */
+  display: flex;
+  height: 100vh;
+
+  /* make it smooth on iOS */
+  -webkit-overflow-scrolling: touch;
+  /* each slide snaps into place on iOS */
+  scroll-snap-points-x: repeat(1000px);
+  scroll-snap-type: mandatory;
+}
+
+.slider > div {
+  /* make sure the width is honored */
+  // flex-shrink: 0;
+  width: 100vw;
+}
+
+.area {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
 .two-column {
   &.insight {
     background-color: $orange;
@@ -217,7 +241,6 @@
         .large.caption {
           line-height: 28px;
           margin: 8px 0 0;
-          position: absolute;
           width: 42%;
 
           @media screen and (max-width: 1000px) {
@@ -329,6 +352,9 @@
       }
 
       .one {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         height: 48%;
         overflow: hidden;
         width: 50%;
@@ -355,7 +381,6 @@
           line-height: 28px;
           margin: 0;
           padding: 0 14px;
-          position: absolute;
 
           @media screen and (max-width: 1440px) {
             font-size: 20px;

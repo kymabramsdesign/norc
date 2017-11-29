@@ -1,8 +1,12 @@
 // Initialize the full page slider for landing pages
-$('#slides').superslides({
-  hashchange: true,
-  animation_speed: 400
-});
+
+
+
+
+// $('#slides').superslides({
+//   hashchange: true,
+//   animation_speed: 400
+// });
 
 
 
@@ -99,14 +103,14 @@ function verticalPosition() {
 
 // image heights
 function matchHeight() {
-  var largeSize = $('.one-vertical').height();
+  var largeSize = $('.one-vertical img').height();
   largeSize = largeSize;
   var smallHeight = $('.thumbnails').height();
-  // alert(smallHeight);
+  // alert(largeSize);
   smallHeight = (-smallHeight)+'px 0 0';
   var smallWidth = $('.two-vertical .one').width();
 
-  // $('.two-vertical').css('max-height', largeSize);
+  $('.two-vertical').css('max-height', largeSize);
   // $('.area .thumbnails .two-vertical .one .small.caption').css({
   //   'margin': smallHeight,
   //   'width': smallWidth

@@ -103,7 +103,6 @@ $(window).bind("load", function() {
       '<li><a href="/smoking-and-social-media">Mapping smoking policies and behavior</a></li>' +
     '</ul></li>' +
     '<li class="divider"><hr /></li>' +
-    '<li class="arrow"><a href="#">Leadership and Trustees</a></li>' +
     '<li><a href="#">Gain More Insight</a></li>' +
     '</ul>'
   );

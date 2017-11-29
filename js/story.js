@@ -305,12 +305,6 @@ function dotNav() {
         window.location = '/#ar/society';
       });
     }
-    else if ( location.indexOf('leadership-dot') >= 0 ) {
-      $('.section-title.eight').fadeIn(300);
-      $(this).on('click', function() {
-        window.location = '/#ar/leadership';
-      });
-    }
     else if ( location.indexOf('more-dot') >= 0 ) {
       $('.section-title.nine').fadeIn(300);
       $(this).on('click', function() {
