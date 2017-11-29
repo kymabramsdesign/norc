@@ -156,26 +156,16 @@
       padding: 7px;
       width: 50%;
 
-      @media screen and (max-width: 1200px) {
-        height: 385px;
-      }
-
-      @media screen and (max-width: 1024px) {
-        height: 355px;
-      }
-
       @media screen and (max-width: 900px) {
-        margin-bottom: 26px;
+        margin-bottom: 0;
         height: auto;
-        padding: 0 10px 10px;
-        width: 98%;
+        padding: 0 10px 5px;
+        width: 100%;
       }
 
       @media screen and (max-width: 767px) {
         justify-content: center;
-        margin-bottom: 0;
         padding: 0;
-        width: 100%;
       }
 
       .four {
@@ -208,19 +198,24 @@
           position: absolute;
           width: 42%;
 
+          @media screen and (max-width: 1000px) {
+            font-size: 18px;
+            line-height: 24px;
+            margin: 3px 0 0;
+          }
+
           @media screen and (max-width: 900px) {
             font-size: 18px;
             line-height: 25px;
-            margin: -5px 0 0;
-            padding: 8px 0 0;
-            width: 75%;
+            margin: 0;
+            padding: 1px 8px 0 0;
+            position: relative;
+            width: 100%;
           }
 
           @media screen and (max-width: 767px) {
             margin: -1px 0 0;
             padding: 0;
-            position: relative;
-            width: 100%;
           }
         }
       }
@@ -230,12 +225,11 @@
       display: none;
 
       @media screen and (max-width: 900px) {
+        align-content: space-between;
         display: flex;
         flex-wrap: wrap;
-        height: 100%;
-        justify-content: space-between;
         padding: 10px 10px 0;
-        width: 98%;
+        width: 100%;
       }
 
       @media screen and (max-width: 767px) {
@@ -245,23 +239,31 @@
       }
 
       .one {
-        height: auto;
-        margin-bottom: 70px;
         overflow: hidden;
-        width: 48%;
+        width: 50%;
+
+        &.left {
+          padding-right: 6px;
+        }
+
+        &.right {
+          padding-left: 6px;
+        }
 
         @media screen and (max-width: 767px) {
           height: auto;
           margin-bottom: 15px;
           width: 100%;
-        }
 
-        img {
-          height: 225px;
-          max-width: none;
-          width: auto;
+          &.left {
+            padding-right: 0;
+          }
 
-          @media screen and (max-width: 767px) {
+          &.right {
+            padding-left: 0;
+          }
+
+          img {
             height: auto;
             width: 100%;
           }
@@ -270,15 +272,13 @@
         .small.caption {
           font-size: 18px;
           line-height: 25px;
-          margin: -5px 0 0;
-          padding: 8px 0 0;
-          position: absolute;
-          width: 38%;
+          margin: 0;
+          padding: 1px 8px 14px 0;
+          position: relative;
 
           @media screen and (max-width: 767px) {
             margin: -1px 0 0;
             padding: 0;
-            position: relative;
             width: 100%;
           }
         }
@@ -289,17 +289,8 @@
       align-content: space-between;
       display: flex;
       flex-wrap: wrap;
-      max-height: 409px;
       padding: 7px;
       width: 50%;
-
-      @media screen and (max-width: 1200px) {
-        // height: 385px;
-      }
-
-      @media screen and (max-width: 1024px) {
-        // height: 355px;
-      }
 
       @media screen and (max-width: 900px) {
         display: none;
@@ -327,21 +318,29 @@
         }
 
         .small.caption {
-          font-size: 20px;
-          line-height: 25px;
-          margin: -182px 0 0;
+          font-size: 22px;
+          letter-spacing: .75px;
+          line-height: 28px;
+          margin: 0;
           padding: 0 14px;
           position: absolute;
-          width: 20%;
 
-          @media screen and (max-width: 1200px) {
-            margin: -164px 0 0;
+          @media screen and (max-width: 1440px) {
+            font-size: 20px;
+            letter-spacing: .75px;
+            line-height: 25px;
           }
 
-          @media screen and (max-width: 1024px) {
-            font-size: 19px;
-            line-height: 24px;
-            margin: -154px 0 0;
+          @media screen and (max-width: 1100px) {
+            font-size: 18px;
+            letter-spacing: .75px;
+            line-height: 23px;
+          }
+
+          @media screen and (max-width: 1000px) {
+            font-size: 16px;
+            line-height: 21px;
+            padding: 2px 9px 0 9px;
           }
 
           &.white {

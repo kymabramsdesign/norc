@@ -146,8 +146,15 @@ function verticalPosition() {
 function matchHeight() {
   var largeSize = $('.four img').height();
   largeSize = largeSize + 13;
+  var smallHeight = $('.two-vertical .one').height();
+  smallHeight = (-smallHeight)+'px 0 0';
+  var smallWidth = $('.two-vertical .one').width();
 
   $('.two-vertical').css('max-height', largeSize);
+  $('.area .thumbnails .two-vertical .one .small.caption').css({
+    'margin': smallHeight,
+    'width': smallWidth
+  });
 }
 
 // Bottom Arrow Functions
@@ -199,13 +206,13 @@ function initialize() {
   activateSlider();
   dotNav();
   explore();
-  matchHeight()
+  matchHeight();
 }
 
 // Collect all functions to execute on Resize
 function initializeResize() {
   verticalPosition();
-  matchHeight()
+  matchHeight();
 }
 
 
