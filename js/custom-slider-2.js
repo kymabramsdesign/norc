@@ -127,6 +127,54 @@ function explore() {
   });
 }
 
+
+function slides() {
+
+  var windowWidth = $(window).width();
+  var slide1 = 0;
+  var slide2 = windowWidth;
+  var slide3 = windowWidth*2;
+  var slide4 = windowWidth*3;
+  var slide5 = windowWidth*4;
+  var slide6 = windowWidth*5;
+  var slide7 = windowWidth*6;
+  var slide8 = windowWidth*7;
+  var sliderLocation = $('.slider').offset().left;
+
+  if ( sliderLocation === 0) {
+    $('.arrow.prev').hide();
+  }
+  else if ( sliderLocation === -slide8 ) {
+    $('.arrow.next').hide();
+  }
+
+  $('.arrow.next').click( function() {
+    var currentSlidePosition = $('.slider').offset().left;
+    $('.slider').animate({ left: currentSlidePosition-windowWidth }, 300);
+
+    $('.arrow.prev').show();
+
+    if ( currentSlidePosition === -slide7 ) {
+      $('.arrow.next').hide();
+    }
+  });
+
+  $('.arrow.prev').click( function() {
+    var currentSlidePosition = $('.slider').offset().left;
+    $('.slider').animate({ left: currentSlidePosition+windowWidth }, 300);
+
+    if ( currentSlidePosition === -slide8 ) {
+      $('.arrow.next').show();
+    } 
+    else if ( currentSlidePosition === -slide2 ) {
+      $('.arrow.prev').hide();
+    }
+  });
+
+
+  var element = $('.slide.society').offset().left;
+}
+
 //Check Browser and adjust font-weights for Chrome
 function checkBrowser() {
   var isChromium = !!window.chrome;
@@ -143,6 +191,7 @@ function initialize() {
   dotNav();
   explore();
   matchHeight();
+  slides();
 }
 
 // Collect all functions to execute on Resize

@@ -14,12 +14,14 @@
   -webkit-scroll-snap-type: mandatory;
   -ms-scroll-snap-type: mandatory;
   scroll-snap-type: mandatory;
+  position: absolute;
 }
 
 .slider > div {
-  /* make sure the width is honored */
-  /* flex-shrink: 0;*/
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 100vw;
+  
 }
 
 .area {
@@ -34,11 +36,34 @@
   }
 }
 
-.fp-viewing-ar-insight .bottom-arrow,
-.fp-viewing-ar-president .bottom-arrow,
-.fp-viewing-ar-leadership .bottom-arrow,
-.fp-viewing-ar-gain-more .bottom-arrow {
-  display: none;
+.arrow {
+  @include transition(all .2s ease-in-out);
+  border: solid $white-65;
+  border-width: 0 2px 2px 0;
+  cursor: pointer;
+  height: 0;
+  padding: 14px;
+  position: fixed;
+  top: 48%;
+  width: 0;
+  z-index: 2000;
+
+  &.prev {
+    left: 35px;
+    -webkit-transform: rotate(135deg) skew(-2deg, -2deg);
+    transform: rotate(135deg) skew(-2deg, -2deg);
+  }
+
+  &.next {
+    right: 35px;
+    -webkit-transform: rotate(-45deg) skew(-2deg, -2deg);
+    transform: rotate(-45deg) skew(-2deg, -2deg);
+  }
+
+  &:hover {
+    @include transition(all .3s ease-in-out);
+    border-color: $white-85;
+  }
 }
 
 .bottom-arrow {
@@ -70,14 +95,14 @@
 
   .down-arrow {
     @include transition(all .2s ease-in-out);
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    -webkit-transform: rotate(45deg) skew(-2deg, -2deg);
-    transform: rotate(45deg) skew(-2deg, -2deg);
     border: solid $white-65;
     border-width: 0 2px 2px 0;
+    cursor: pointer;
+    height: 0;
     padding: 14px;
+    -webkit-transform: rotate(45deg) skew(-2deg, -2deg);
+    transform: rotate(45deg) skew(-2deg, -2deg);
+    width: 0;
 
     &:hover {
       @include transition(all .3s ease-in-out);
@@ -202,7 +227,7 @@
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      margin-bottom: 10px;
+      margin-bottom: 4px;
       padding: 7px;
       width: 50%;
 
