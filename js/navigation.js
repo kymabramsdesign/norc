@@ -95,7 +95,7 @@ $(window).bind("load", function() {
     '</ul></li>' +
     '<li class="arrow"><a href="#">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu last-one">' +
-      '<li><a href="/successful-aging">Exploring the intersection between social life and successful aging</a></li>' +
+      '<li><a href="/successful-aging">Informing policy on retirement and aging</a></li>' +
       '<li><a href="/intimate-partner-violence">Combating intimate partner violence</a></li>' +
       '<li><a href="/minds-and-media">Tracking American’s concerns and the media that inform them</a></li>' +
       '<li><a href="/teen-surveys">Tapping into the minds and behaviors of teens</a></li>' +

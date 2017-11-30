@@ -1,15 +1,3 @@
-// Initialize the full page slider for landing pages
-
-
-
-
-// $('#slides').superslides({
-//   hashchange: true,
-//   animation_speed: 400
-// });
-
-
-
 
 function activateSlider() {
   //     $('.section-title').removeClass('current').show();
@@ -142,38 +130,93 @@ function slides() {
   var sliderLocation = $('.slider').offset().left;
 
   if ( sliderLocation === 0) {
-    $('.arrow.prev').hide();
+    $('.nav-arrow.prev').hide();
   }
   else if ( sliderLocation === -slide8 ) {
-    $('.arrow.next').hide();
+    $('.nav-arrow.next').hide();
   }
 
-  $('.arrow.next').click( function() {
+  // Functions for click on right arrow
+  $('.nav-arrow.next').click( function() {
     var currentSlidePosition = $('.slider').offset().left;
     $('.slider').animate({ left: currentSlidePosition-windowWidth }, 300);
 
-    $('.arrow.prev').show();
+    $('.nav-arrow.prev').show();
 
     if ( currentSlidePosition === -slide7 ) {
-      $('.arrow.next').hide();
+      $('.nav-arrow.next').hide();
     }
+
+    whichSlide();
+
   });
 
-  $('.arrow.prev').click( function() {
+  // Functions for click on left arrow
+  $('.nav-arrow.prev').click( function() {
     var currentSlidePosition = $('.slider').offset().left;
     $('.slider').animate({ left: currentSlidePosition+windowWidth }, 300);
 
     if ( currentSlidePosition === -slide8 ) {
-      $('.arrow.next').show();
+      $('.nav-arrow.next').show();
     } 
     else if ( currentSlidePosition === -slide2 ) {
-      $('.arrow.prev').hide();
+      $('.nav-arrow.prev').hide();
     }
   });
-
-
-  var element = $('.slide.society').offset().left;
 }
+
+//Function to get the active section
+function whichSlide() {
+  var windowWidth = $(window).width();
+  var slide1 = '0px';
+  var slide2 = windowWidth;
+  var slide3 = windowWidth*2;
+  var slide4 = windowWidth*3;
+  var slide5 = windowWidth*4;
+  var slide6 = windowWidth*5;
+  var slide7 = windowWidth*6;
+  var slide8 = windowWidth*7;
+  var sliderLocation = $('.slider').offset().left;
+
+  $('.section-title').removeClass('active');
+
+
+
+  if ( sliderLocation === slide1 ) {
+    alert('Insight');
+  }
+  if ( sliderLocation === -slide2 ) {
+    $('.economics').addClass('active');
+  }
+}
+
+
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().left;
+  var elementBottom = elementTop + $(this).outerWidth();
+
+  var viewportTop = $(window).left;
+  var viewportBottom = viewportTop + $(window).width();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$('.slider').on('load', function() {
+  $('.slide').each(function() {
+      var activeColor = $(this).attr('id');
+    if ($(this).isInViewport()) {
+      alert('helo');
+      $('#fixed-' + activeColor).addClass(activeColor + '-active');
+    } else {
+      $('#fixed-' + activeColor).removeClass(activeColor + '-active');
+    }
+  });
+});
+
+
+
+
+
 
 //Check Browser and adjust font-weights for Chrome
 function checkBrowser() {
@@ -198,17 +241,8 @@ function initialize() {
 function initializeResize() {
   verticalPosition();
   matchHeight();
+  slides();
 }
 
 $(document).ready(initialize);
 $(window).resize(initializeResize);
-
-// gets proper image tile heights on first scroll
-// var firstScroll = false;
-// $('.slide').scroll( function() {
-//    if ( firstScroll !== true ) {
-//     firstScroll = true;
-
-//     matchHeight();
-//    }
-// });

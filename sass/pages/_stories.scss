@@ -56,6 +56,31 @@
       line-height: 21px;
     }
   }
+
+  .percent {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px 30px;
+
+    .number {
+
+      img {
+        height: 105px;
+        width: auto;
+      }
+    }
+
+    .text {
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: .25px;
+      line-height: 20px;
+      padding-left: 24px;
+      width: 60%;
+    }
+  }
+
   /* Global Development Stories*/
   &_global {
     background-color: $purple-background;
@@ -82,7 +107,8 @@
       }
     }
 
-    h1 {
+    h1,
+    .text {
       color: $purple;
     }
 
@@ -118,7 +144,8 @@
       }
     }
 
-    h1 {
+    h1,
+    .text {
       color: $teal;
     }
 
@@ -154,7 +181,8 @@
       }
     }
 
-    h1 {
+    h1,
+    .text {
       color: $maroon;
     }
 
@@ -190,7 +218,8 @@
       }
     }
 
-    h1 {
+    h1,
+    .text {
       color: $pink;
     }
 
@@ -226,7 +255,8 @@
       }
     }
 
-    h1 {
+    h1,
+    .text {
       color: $green;
     }
 

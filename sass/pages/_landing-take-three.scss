@@ -1,9 +1,15 @@
+.main .section-title.active {
+  display: inline-block;
+  color: $white;
+}
+
 .slider {
   /* line them up horizontally */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
+  left: 0px;
 
   /* make it smooth on iOS */
   -webkit-overflow-scrolling: touch;
@@ -21,7 +27,6 @@
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 100vw;
-  
 }
 
 .area {
@@ -36,7 +41,7 @@
   }
 }
 
-.arrow {
+.nav-arrow {
   @include transition(all .2s ease-in-out);
   border: solid $white-65;
   border-width: 0 2px 2px 0;
@@ -331,6 +336,11 @@
 
         &.right {
           padding-left: 6px;
+        }
+
+        img {
+          height: auto;
+          width: 100%;
         }
 
         @media screen and (max-width: 767px) {
