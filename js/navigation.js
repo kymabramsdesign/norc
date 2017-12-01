@@ -100,7 +100,7 @@ $(window).bind("load", function() {
       '<li><a href="/minds-and-media">Tracking American’s concerns and the media that inform them</a></li>' +
       '<li><a href="/teen-surveys">Tapping into the minds and behaviors of teens</a></li>' +
       '<li><a href="/disaster-fatalities">Understanding how disasters kill</a></li>' +
-      '<li><a href="/smoking-and-social-media">Mapping smoking policies and behavior</a></li>' +
+      '<li><a href="/smoking-and-social-media">Mapping smoking policies to behavior</a></li>' +
     '</ul></li>' +
     '<li class="divider"><hr /></li>' +
     '<li><a href="#">Gain More Insight</a></li>' +
