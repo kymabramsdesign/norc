@@ -59,7 +59,7 @@ $(window).bind("load", function() {
   // Full Menu
   $('.menu-container').html(
     '<ul>'+
-    '<li><a href="#">Insight 2017</a></li>' +
+    '<li><a href="#">Introduction</a></li>' +
     '<li><a href="#">President’s Essay</a></li>' +
     '<li class="divider"><hr /></li>' +
     '<li class="arrow"><a href="#">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
