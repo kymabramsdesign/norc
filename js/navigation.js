@@ -64,43 +64,43 @@ $(window).bind("load", function() {
     '<li class="divider"><hr /></li>' +
     '<li class="arrow"><a href="#">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
-      '<li><a href="/congregations">Tracking the professional and economic health of churches</a></li>' +
-      '<li><a href="/gas-prices">Tracking gasoline and diesel prices</a></li>' +
-      '<li><a href="/poverty-research">Exploring poverty and resilience</a></li>' +
-      '<li><a href="/consumer-finances">Monitoring the financial health of American families</a></li>' +
-      '<li><a href="/youth-data">Serving diverse purposes with rich data</a></li>' +
+      '<li><a href="/congregations">Tracking the Professional and Economic Health of Churches</a></li>' +
+      '<li><a href="/gas-prices">Tracking Gasoline and Diesel Prices</a></li>' +
+      '<li><a href="/poverty-research">Exploring Poverty and Resilience</a></li>' +
+      '<li><a href="/consumer-finances">Monitoring the Financial Health of American Families</a></li>' +
+      '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="#">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
-      '<li><a href="/higher-education">Making higher education more accessible and achievable</a></li>' +
-      '<li><a href="/early-childhood">Assessing and shaping the impact of early childhood education</a></li>' +
-      '<li><a href="/science-and-technology">Tracking the careers of STEM doctorates</a></li>' +
+      '<li><a href="/higher-education">Making Higher Education More Accessible and Achievable</a></li>' +
+      '<li><a href="/early-childhood">Assessing and Shaping the Impact of Early Childhood Education</a></li>' +
+      '<li><a href="/science-and-technology">Tracking the Careers of STEM Doctorates</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="#">Global Development</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
-      '<li><a href="/usaid-evaluations">Measuring impact and improving performance</a></li>' +
-      '<li><a href="/complex-projects">Assessing the impact of complex projects</a></li>' +
-      '<li><a href="/real-time-adaptability">Adapting timelines and methodologies to conditions on the ground</a></li>' +
-      '<li><a href="/vulnerable-populations">Reaching vulnerable populations in fragile environments</a></li>' +
-      '<li><a href="/closed-societies">Peering into closed societies</a></li>' +
+      '<li><a href="/usaid-evaluations">Measuring Impact and Improving Performance</a></li>' +
+      '<li><a href="/complex-projects">Assessing the Impact of Complex Projects</a></li>' +
+      '<li><a href="/real-time-adaptability">Adapting Timelines and Methodologies to Conditions on the Ground</a></li>' +
+      '<li><a href="/vulnerable-populations">Reaching Vulnerable Populations in Fragile Environments</a></li>' +
+      '<li><a href="/closed-societies">Peering Into Closed Societies</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="#">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
-      '<li><a href="/medicare-medicaid">Making medicare and medicaid more effective</a></li>' +
-      '<li><a href="/patient-risk">Using data to improve safety and quality</a></li>' +
-      '<li><a href="/diverse-clients">Working with providers, payers and other stakeholders</a></li>' +
-      '<li><a href="/opioid-epidemic">Visualizing disease vulnerability</a></li>' +
+      '<li><a href="/medicare-medicaid">Making Medicare and Medicaid More Effective</a></li>' +
+      '<li><a href="/patient-risk">Using Data to Improve Safety and Quality</a></li>' +
+      '<li><a href="/diverse-clients">Working with Providers, Payers and Other Stakeholders</a></li>' +
+      '<li><a href="/opioid-epidemic">Visualizing Disease Vulnerability</a></li>' +
       '<li><a href="/health-culture">Cultivating a culture of health</a></li>' +
-      '<li><a href="/zika-awareness">Testing Americans’ Zika awareness</a></li>' +
+      '<li><a href="/zika-awareness">Testing Americans’ Zika Awareness</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="#">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu last-one">' +
-      '<li><a href="/successful-aging">Informing policy on retirement and aging</a></li>' +
-      '<li><a href="/intimate-partner-violence">Combating intimate partner violence</a></li>' +
-      '<li><a href="/minds-and-media">Tracking American’s concerns and the media that inform them</a></li>' +
-      '<li><a href="/teen-surveys">Tapping into the minds and behaviors of teens</a></li>' +
-      '<li><a href="/disaster-fatalities">Understanding how disasters kill</a></li>' +
-      '<li><a href="/smoking-and-social-media">Mapping smoking policies to behavior</a></li>' +
+      '<li><a href="/successful-aging">Informing Policy on Retirement and Aging</a></li>' +
+      '<li><a href="/intimate-partner-violence">Combating Intimate Partner Violence</a></li>' +
+      '<li><a href="/minds-and-media">Tracking American’s Concerns and the Media That Inform Them</a></li>' +
+      '<li><a href="/teen-surveys">Tapping into the Minds and Behaviors of Teens</a></li>' +
+      '<li><a href="/disaster-fatalities">Understanding How Disasters Kill</a></li>' +
+      '<li><a href="/smoking-and-social-media">Mapping Smoking Policies to Behavior</a></li>' +
     '</ul></li>' +
     '<li class="divider"><hr /></li>' +
     '<li><a href="#">Gain More Insight</a></li>' +
