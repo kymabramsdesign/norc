@@ -26,6 +26,11 @@
     width: 1000vw;
   }
 
+  img {
+    height: 100%;
+    width: 50vw;
+  }
+
   .picture, .chart {
     img {
       height: 100%;
@@ -34,16 +39,15 @@
 
     &:before {
       content: url('/img/zoom.svg');
-      height: 27px;
-      left: 92.5%;
+      left: 93.5%;
       margin-top: 15px;
-      opacity: .8;
+      opacity: .55;
       position: absolute;
-      width: 26px;
+      width: 24px;
       @include transition(opacity .3s ease-in-out, left .3s ease-in-out);
 
       @media screen and (max-width: 1024px) {
-        left: 90%;
+        left: 91%;
       }
     }
 
