@@ -125,15 +125,15 @@ function popUpTop () {
   }
 }
 
-//Gif controls
-window.onscroll = function() {
-  var animate = $('.chart img').attr('src');
-  if ( animate === 'img/sample-static.png' ) {
-    $('.chart img:visible').attr("src", "img/sample.gif");
-  }
-};
+//Gif controls for when to trigger gif on scroll
+// window.onscroll = function() {
+//   var animate = $('.chart img').attr('src');
+//   if ( animate === 'img/sample-static.png' ) {
+//     $('.chart img:visible').attr("src", "img/sample.gif");
+//   }
+// };
 
-$('.chart').on('click', function() {
+$('.chart.bubble').on('click', function() {
   setTimeout(function() {
       $('.chart img').attr("src", "img/sample-static-complete.png");
     }, 1000);

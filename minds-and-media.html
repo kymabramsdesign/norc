@@ -58,20 +58,47 @@
 
   <div class="page-overlay"></div>
   <div class="image-container">
-    <img src="" alt="" class="main-image" />
+
+    <div class="video-container">
+      
+      <div id="charts">
+        <div id="bubbleContainer">
+          <h2>Risk Assessment Ratings</h2>
+          <div id="overallRatings" class="btn-group btn-info top-btn" data-toggle="buttons">
+            <label class="btn active ratingBtn" id="reset">
+            <input type="radio" name="options">Reset</label>
+             <label class="btn ratingBtn" id="riskCategory1">
+            <input type="radio" name="options">Risk Category 1</label>
+            <label class="btn ratingBtn" id="riskCategory2">
+            <input type="radio" name="options">Risk Category 2</label>
+            <label class="btn ratingBtn" id="ratingCategory">
+            <input type="radio" name="options">Both Categories</label>
+          </div>
+          <div id="RiskCycle" class="btn-group btn-default top-btn" data-toggle="buttons">
+            <label class="btn cycleBtn" id="2014">
+            <input type="radio" name="options">2014</label>
+             <label class="btn active cycleBtn" id="2015">
+            <input type="radio" name="options">2015</label>
+          </div>
+          <div id="bubbleChart">
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <div class="story-content">
 
     <div class="left-50">
-      <div class="picture"><img src="img/minds-1.jpg" alt="Minds and Media Image 1" caption="" /></div>
-      <div class="picture"><img src="img/minds-2.jpg" alt="Minds and Media Image 3" caption="" /></div>
-      <div class="picture"><img src="img/patient-1.jpg" alt="Minds and Media Image 2" caption="" /></div>
+      <div class="chart bubble"><img src="img/sample.gif" alt="Congregations Image 4" caption="Optional Caption Here." /></div>
+      <div><img src="img/minds-1.jpg" alt="Minds and Media Image 1" /></div>
+      <div><img src="img/minds-2.jpg" alt="Minds and Media Image 3" /></div>
+      
 
     </div>
 
     <div class="right-50">
-      <!-- <p class="data"></p> -->
       <h1>Tracking American’s Concerns and the Media That Inform Them</h1>
       <h2>Timely polls and long-term studies probe American attitudes today and over time</h2>
       <p>In a social and political climate in which the validity of the news itself is a topic of contentious debate, understanding how Americans consume and interpret news media is an increasingly compelling concern. <strong>The Media Insight Project</strong>, an ongoing collaboration between the American Press Institute and The Associated Press-NORC Center for Public Affairs Research, conducts high-quality, innovative research meant to inform the news industry and the public about various important issues facing journalism and the news business.</p>
@@ -99,6 +126,14 @@
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/story.js"></script>
   <script src="js/navigation.js"></script>
+
+  <!-- BEGIN Scripts for interactive animated graphs -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="js/bubbles.js"></script>
+  <!-- END Scripts for interactive animated graphs -->
+
   <!-- AddToAny BEGIN -->
   <script>
     var a2a_config = a2a_config || {};

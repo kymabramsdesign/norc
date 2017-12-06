@@ -65,7 +65,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background-image: url('/img/patient-1.jpg');
+    background-image: url('');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,13 +79,17 @@
     width: 50vw;
     @include transition(height .3s ease-in-out);
 
+    &.aging {
+      background-image: url('/img/video-placeholder.jpg');
+    }
+
     @media screen and (max-width: 1000px) {
       height: 30vw;
     }
 
     img {
-      height: 125px;
-      opacity: .8;
+      height: 150px;
+      opacity: .7;
       @include transition(opacity .3s ease-in-out, height .3s ease-in-out);
 
       @media screen and (min-width: 1441px) {

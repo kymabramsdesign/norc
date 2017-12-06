@@ -675,7 +675,7 @@ iframe {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url("/img/patient-1.jpg");
+  background-image: url("");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -691,6 +691,11 @@ iframe {
   transition: height 0.3s ease-in-out;
 }
 
+/* line 82, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+.left-50 .video.aging {
+  background-image: url("/img/video-placeholder.jpg");
+}
+
 @media screen and (max-width: 1000px) {
   /* line 64, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video {
@@ -698,41 +703,41 @@ iframe {
   }
 }
 
-/* line 86, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 90, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video img {
-  height: 125px;
-  opacity: .8;
+  height: 150px;
+  opacity: .7;
   -webkit-transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 1441px) {
-  /* line 86, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 90, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 150px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 86, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 90, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 115px;
   }
 }
 
-/* line 100, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 104, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover {
   cursor: pointer;
 }
 
-/* line 103, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 107, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover img {
   opacity: 1;
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
 
-/* line 111, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 115, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .right-50 {
   padding: 34px 30px 34px 36px;
   position: absolute;
@@ -743,14 +748,14 @@ iframe {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 111, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 115, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .right-50 {
     padding: 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 111, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 115, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .right-50 {
     padding: 20px;
     width: 100vw;

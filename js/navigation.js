@@ -90,7 +90,7 @@ $(window).bind("load", function() {
       '<li><a href="/patient-risk">Using Data to Improve Safety and Quality</a></li>' +
       '<li><a href="/diverse-clients">Working with Providers, Payers and Other Stakeholders</a></li>' +
       '<li><a href="/opioid-epidemic">Visualizing Disease Vulnerability</a></li>' +
-      '<li><a href="/health-culture">Cultivating a culture of health</a></li>' +
+      '<li><a href="/health-culture">Cultivating a Culture of Health</a></li>' +
       '<li><a href="/zika-awareness">Testing Americans’ Zika Awareness</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="#">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
