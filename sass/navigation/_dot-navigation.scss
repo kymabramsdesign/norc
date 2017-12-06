@@ -315,7 +315,7 @@
     fill: $purple;
   }
 
-  &.story-page_global .dot-nav h3 {
+  &.story-page_global .dot-nav h3 a {
     color: $purple;
   }
 
@@ -324,7 +324,7 @@
     fill: $teal;
   }
 
-  &.story-page_health .dot-nav h3 {
+  &.story-page_health .dot-nav h3 a {
     color: $teal;
   }
 
@@ -333,7 +333,7 @@
     fill: $pink;
   }
 
-  &.story-page_society .dot-nav h3 {
+  &.story-page_society .dot-nav h3 a {
     color: $pink;
   }
 
@@ -342,7 +342,7 @@
     fill: $maroon;
   }
 
-  &.story-page_education .dot-nav h3 {
+  &.story-page_education .dot-nav h3 a {
     color: $maroon;
   }
 
@@ -351,7 +351,7 @@
     fill: $green;
   }
 
-  &.story-page_economics .dot-nav h3 {
+  &.story-page_economics .dot-nav h3 a {
     color: $green;
   }
 }

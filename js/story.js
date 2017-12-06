@@ -342,7 +342,6 @@ function initialize() {
   popUpTop();
   videoPopup();
   dotNav();
-  videoPlayback();
 }
 
 // Collect all functions to execute on Resize

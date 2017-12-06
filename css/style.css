@@ -706,7 +706,7 @@ iframe {
 /* line 90, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video img {
   height: 150px;
-  opacity: .7;
+  opacity: .65;
   -webkit-transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
 }
@@ -732,7 +732,7 @@ iframe {
 
 /* line 107, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover img {
-  opacity: 1;
+  opacity: .95;
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
@@ -1722,7 +1722,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 /* line 318, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
-.story-page.story-page_global .dot-nav h3 {
+.story-page.story-page_global .dot-nav h3 a {
   color: #613064;
 }
 
@@ -1732,7 +1732,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 /* line 327, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
-.story-page.story-page_health .dot-nav h3 {
+.story-page.story-page_health .dot-nav h3 a {
   color: #5a7f94;
 }
 
@@ -1742,7 +1742,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 /* line 336, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
-.story-page.story-page_society .dot-nav h3 {
+.story-page.story-page_society .dot-nav h3 a {
   color: #F27E71;
 }
 
@@ -1752,7 +1752,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 /* line 345, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
-.story-page.story-page_education .dot-nav h3 {
+.story-page.story-page_education .dot-nav h3 a {
   color: #9e525d;
 }
 
@@ -1762,7 +1762,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 /* line 354, /Users/kadimac/Desktop/norc-repo/sass/navigation/_dot-navigation.scss */
-.story-page.story-page_economics .dot-nav h3 {
+.story-page.story-page_economics .dot-nav h3 a {
   color: #6fa387;
 }
 
