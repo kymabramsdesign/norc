@@ -149,6 +149,8 @@ function videoPopup () {
     var xplacement = ((windowHeight-videoHeight)/2)-currentContainerMargin;
 
     $('.main-image').hide(); // hide image if click on video
+    $('.video').on('click', function() {
+  }); 
     $('.video-container').show();
     $('.close-button').css('margin-top', xplacement);
   });
@@ -207,6 +209,11 @@ $('.picture, .video, .chart').on('click', function() {
     $('move-out').css('left', -windowWidth);
     $('.image-container').removeClass('move-in').addClass('move-out');
     $("body").removeClass('no-scroll'); // body to scroll again
+
+    if ( $('iframe').is(':visible')) {
+
+      $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=0');
+    }
   });
 });
 
@@ -335,6 +342,7 @@ function initialize() {
   popUpTop();
   videoPopup();
   dotNav();
+  videoPlayback();
 }
 
 // Collect all functions to execute on Resize
