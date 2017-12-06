@@ -57,6 +57,20 @@
         line-height: 32px;
       }
 
+      &.menu-title {
+        font-size: 16px;
+        letter-spacing: 2.5px;
+        line-height: 16px;
+        margin-top: -103px;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 15px;
+          line-height: 15px;
+          margin-top: -102px;
+        }
+      }
+
       a {
         @include transition(color .2s ease-in-out);
         color: $text-grey;

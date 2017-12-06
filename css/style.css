@@ -1088,31 +1088,49 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 /* line 60, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+.menu-container ul li.menu-title {
+  font-size: 16px;
+  letter-spacing: 2.5px;
+  line-height: 16px;
+  margin-top: -103px;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+  /* line 60, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+  .menu-container ul li.menu-title {
+    font-size: 15px;
+    line-height: 15px;
+    margin-top: -102px;
+  }
+}
+
+/* line 74, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li a {
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
   color: rgba(0, 0, 0, 0.43);
 }
 
-/* line 64, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 78, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li a:hover {
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
   color: #e97200;
 }
 
-/* line 70, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 84, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li a.active {
   color: #e97200;
 }
 
-/* line 75, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 89, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li.divider hr {
   background-color: rgba(0, 0, 0, 0.12);
   margin: 12px 0;
 }
 
-/* line 80, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 94, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li img {
   -webkit-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
@@ -1122,7 +1140,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 80, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+  /* line 94, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li img {
     height: 13px;
     margin-left: 14px;
@@ -1131,7 +1149,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 80, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+  /* line 94, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li img {
     float: right;
     height: 40%;
@@ -1140,13 +1158,13 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
-/* line 99, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 113, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li img.open {
   -webkit-transform: rotate(-180deg) translateY(6px);
   transform: rotate(-180deg) translateY(6px);
 }
 
-/* line 105, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 119, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul {
   background-color: rgba(0, 0, 0, 0.03);
   display: none;
@@ -1155,7 +1173,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 105, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+  /* line 119, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul {
     margin: 1px -30px;
     padding: 20px 0 20px 50px;
@@ -1163,19 +1181,19 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 105, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+  /* line 119, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul {
     margin: 1px -20px;
     padding: 20px 0 20px 40px;
   }
 }
 
-/* line 121, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 135, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul.last-one {
   margin-bottom: 17px;
 }
 
-/* line 125, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 139, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul li {
   font-size: 19px;
   line-height: 23px;
@@ -1184,32 +1202,32 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 125, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+  /* line 139, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul li {
     font-size: 16px;
     line-height: 18px;
   }
 }
 
-/* line 136, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 150, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul li:first-of-type {
   margin-top: 10px;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 136, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+  /* line 150, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul li:first-of-type {
     margin-top: 7px;
   }
 }
 
-/* line 144, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+/* line 158, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul li:last-of-type {
   margin-bottom: 11px;
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 144, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
+  /* line 158, /Users/kadimac/Desktop/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul li:last-of-type {
     margin-bottom: 7px;
   }

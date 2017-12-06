@@ -59,6 +59,7 @@ $(window).bind("load", function() {
   // Full Menu
   $('.menu-container').html(
     '<ul>'+
+    '<li class="menu-title">Insight 2017</li>' +
     '<li><a href="#">Introduction</a></li>' +
     '<li><a href="#">President’s Essay</a></li>' +
     '<li class="divider"><hr /></li>' +
