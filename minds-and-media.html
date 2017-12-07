@@ -59,30 +59,33 @@
   <div class="page-overlay"></div>
   <div class="image-container">
 
-    <div class="video-container">
+    <div class="video-container chart-scroll">
       
       <div id="charts">
         <div id="bubbleContainer">
-          <h2>Risk Assessment Ratings</h2>
+          <div class="heading-box">
+            <p class="chart-title">Partisanship and the Media</p>
+            <p class="chart-body">There are 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (Independent). Each circle represents 1/100, or 1%, for each political party.</p>
+          </div>
+<div id="bubbleChart"></div>
           <div id="overallRatings" class="btn-group btn-info top-btn" data-toggle="buttons">
-            <label class="btn active ratingBtn" id="reset">
-            <input type="radio" name="options">Reset</label>
-             <label class="btn ratingBtn" id="riskCategory1">
-            <input type="radio" name="options">Risk Category 1</label>
-            <label class="btn ratingBtn" id="riskCategory2">
-            <input type="radio" name="options">Risk Category 2</label>
-            <label class="btn ratingBtn" id="ratingCategory">
-            <input type="radio" name="options">Both Categories</label>
+
+            <label class="btn ratingBtn" id="Informed">
+            <input type="radio" name="options">Media keeps them very well informed on important issues</label>
+            <label class="btn ratingBtn" id="CNN">
+            <input type="radio" name="options">Get news from CNN</label>
+            <label class="btn ratingBtn" id="Fox">
+            <input type="radio" name="options">Get news from Fox News</label>
+            <label class="btn ratingBtn" id="Social Media">
+            <input type="radio" name="options">Get news on Social Media</label>
+            <label class="btn ratingBtn" id="Accurate">
+            <input type="radio" name="options">News from media is very accurate</label>
+            <label class="btn ratingBtn" id="Prevent">
+            <input type="radio" name="options">News organizations prevent political leaders from doing their job</label>
+
           </div>
-          <div id="RiskCycle" class="btn-group btn-default top-btn" data-toggle="buttons">
-            <label class="btn cycleBtn" id="2014">
-            <input type="radio" name="options">2014</label>
-             <label class="btn active cycleBtn" id="2015">
-            <input type="radio" name="options">2015</label>
-          </div>
-          <div id="bubbleChart">
-          </div>
-          <div>Optional Caption Here</div>
+
+          
         </div>
       </div>
 

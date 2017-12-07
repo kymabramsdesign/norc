@@ -6,42 +6,24 @@ function columns() {
   var scrollPosition = $(window).scrollTop();
   var subnavHeight = $('.sub-nav').height();
   var rightHeight = $('.right-50').height();
+  var windowWidth = $(window).width();
 
-  if ( (rightHeight + 20) < ( windowHeight - (subnavHeight+80)) ) {
-    $('.right-50').css({
-      'position': 'fixed',
-      'top': subnavHeight+80
-    });
-  } else {
-    $('.right-50').css({
-      'position': 'absolute',
-      'top': 'initial'
-    });
-  }
+  // Only do the following on screens larger than Mobile
+  if ( windowWidth >= 768 ) {
 
-  if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
-    $('.left-50').css({
-      'position': 'fixed',
-      'top': subnavHeight+80
-    });
-  } else if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
-    $('.left-50').css({
-      'position': 'fixed',
-      'bottom': 0
-    });
-  }
+    if ( (rightHeight + 20) < ( windowHeight - (subnavHeight+80)) ) {
+      $('.right-50').css({
+        'position': 'fixed',
+        'top': subnavHeight+80
+      });
+    } else {
+      $('.right-50').css({
+        'position': 'absolute',
+        'top': 'initial'
+      });
+    }
 
-  $(window).on( 'scroll', function() {
-    var leftBottom = $('.left-50').position().top + $('.left-50').outerHeight(true);
-    var windowHeight = $(window).height();
-    var scrollPosition = $(window).scrollTop();
-    var subnavHeight = $('.sub-nav').height();
-    var rightHeight = $('.right-50').height();
-    var leftHeight = $('.left-50').height();
-
-    if ( rightHeight <= leftHeight ) {
-      $('.left-50 .picture img').css('margin-bottom', '-4px');
-    } else if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
+    if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
       $('.left-50').css({
         'position': 'fixed',
         'top': subnavHeight+80
@@ -53,13 +35,36 @@ function columns() {
       });
     }
 
-    if ( (windowHeight + scrollPosition) <= (leftHeight + leftOffset) ) {
-      $('.left-50').css({
-        'position': 'absolute',
-        'bottom': 'initial'
-      });
-    }
-  });
+    $(window).on( 'scroll', function() {
+      var leftBottom = $('.left-50').position().top + $('.left-50').outerHeight(true);
+      var windowHeight = $(window).height();
+      var scrollPosition = $(window).scrollTop();
+      var subnavHeight = $('.sub-nav').height();
+      var rightHeight = $('.right-50').height();
+      var leftHeight = $('.left-50').height();
+
+      if ( rightHeight <= leftHeight ) {
+        $('.left-50 .picture img').css('margin-bottom', '-4px');
+      } else if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
+        $('.left-50').css({
+          'position': 'fixed',
+          'top': subnavHeight+80
+        });
+      } else if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
+        $('.left-50').css({
+          'position': 'fixed',
+          'bottom': 0
+        });
+      }
+
+      if ( (windowHeight + scrollPosition) <= (leftHeight + leftOffset) ) {
+        $('.left-50').css({
+          'position': 'absolute',
+          'bottom': 'initial'
+        });
+      }
+    });
+  }
 }
 
 // Adjusts the height of the Subnav

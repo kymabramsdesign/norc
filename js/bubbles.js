@@ -1,72 +1,54 @@
-//Entire function needs to be wrapped in an on click so that it fires every time that the user clicks
+//Entire function needs to be wrapped in an on click if you want it to fire every time that the user clicks
 $('.chart').on('click', function() {
 
-  if ( $('.video-container').is(':visible') !== true ) {
+  //Change image container padding for Special Chart
+  $('.story-page .image-container.move-in').css('padding', '80px 25px 80px 70px');
+
+  if ( $('#primarySVG').length === 0 ) {
 
     // Sets the height depending on the screen size
     var screenWidth = $(window).width();
+    var screenHeight = $(window).height();
+
     if (screenWidth >= 1440 ) {
       var width = 1000,
-      height = 560 - 70;
+      height = 525;
     }
     else if (screenWidth < 1440 && screenWidth > 1024) {
       var width = 800,
-      height = 448 - 70;
+      height = 525;
     }
     else if (screenWidth < 1025 && screenWidth > 767) {
       var width = 678,
-      height = 380;
+      height = 525;
     }
     else {
       var width = 320,
-      height = 500;
+      height = 525;
     }
-
      
     d3.select("#bubbleChart").append("svg")
         .attr("width", width)
         .attr("height", height)
       .attr("id", "primarySVG");
      
+    var dataSource = 'data/bubbleChart.csv';
      
-    changeYear('2015');
-     
-    $("label.cycleBtn").click(function() {
-      changeYear(this.id);
-      
-      });
-     
-      
-    function changeYear(year){
-      var CSV2015 = 'data/bubbleChart2015.csv';
-      var CSV2014 = 'data/bubbleChart2014.csv';
-      if (year === '2015'){
-        var dataSource = CSV2015;
-      } else {
-        var dataSource = CSV2014;
-      }
-     
-     
+    function initProgram(data) {
     d3.csv(dataSource, function(error, data) {
      
-    data.sort(function(a,b) {return b.ratingClassValue - a.ratingClassValue;});
-     
-     
     var svg = d3.select("#primarySVG");
-      
      
-     
-    //set bubble padding
+    //set bubble padding - space btw bubbles
     var padding = 4;
      
       for (var j = 0; j < data.length; j++) {
-        data[j].radius = 10;
+        data[j].radius = 8;//size of bubbles
         data[j].x = Math.random() * width;
         data[j].y = Math.random() * height;
       }
      
       var maxRadius = d3.max(_.pluck(data, 'radius'));
-     
      
       var getCenters = function(vname, size) {
         var centers, map;
@@ -85,36 +67,35 @@ $('.chart').on('click', function() {
      
       var nodes = svg.selectAll("circle")
         .data(data);
-      
+     
       nodes.enter().append("circle")
-        //.attr("class", "node")
          .attr("class", function(d) {
-          return d.ratingCategory;
-        })
-        .attr("cx", function(d) {
+          return d.Pol;
+        })   
+         .attr("cx", function(d) {
           return d.x;
         })
         .attr("cy", function(d) {
           return d.y;
         })
         .attr("r", 2)
-      .attr("id", function(d){return d.objectName;})
-        .on("mouseover", function(d) {
-          showPopover.call(this, d);
-        })
-        .on("mouseout", function(d) {
-          removePopovers();
-        })
+      // .attr("id", function(d){return d.objectName;})
+      //   .on("mouseover", function(d) {
+      //     showPopover.call(this, d);
+      //   })
+      //   .on("mouseout", function(d) {
+      //     removePopovers();
+      //   })
       ;
      
       var text = nodes.append("text")
-        .attr("dx",12)
+        .attr("dx",14)
         .attr("dy",".35em")
         .text(function(d){
           return d.objectName;
         });
      
-        
+       
       
       nodes.transition()
       .duration(500)
@@ -123,29 +104,29 @@ $('.chart').on('click', function() {
       ;
      
       var force = d3.layout.force();
-      
+     
      
       draw('reset');
      
-     $("label.ratingBtn").click(function() {
+    $("label.ratingBtn").click(function() {
         draw(this.id);
       });
-      
-      
      
+      
      function draw(varname) {
-      d3.selectAll("circle").attr("r",10);
-      var centers = getCenters(varname, [width, height]);
+      d3.selectAll("circle").attr("r",8);
+      var centers = getCenters(varname, [width, height+160]);//separates the bubble blobs
         force.on("tick", tick(centers, varname));
         labels(centers);
       nodes.attr("class", function(d) {
-          return d[varname];
+          // return d[varname];
+          return d.Pol;
         });
         force.start();
-      makeClickable();
+      // makeClickable();
       }
      
-      
+     
       function tick (centers, varname) {
         var foci = {};
         for (var i = 0; i < centers.length; i++) {
@@ -163,7 +144,7 @@ $('.chart').on('click', function() {
            .attr("cy", function (d) { return d.y; });
         }
       }
-      
+     
         
       function labels(centers) {
         svg.selectAll(".label").remove();
@@ -175,31 +156,37 @@ $('.chart').on('click', function() {
             return d.name;
           })
       .attr("transform", function (d) {
-                return "translate(" + (d.x - ((d.name.length)*3)) + ", " + (d.y + 15 - d.r) + ")";
-              });     
-     
-     
+                return "translate(" + (d.x - ((d.name.length)*10)) + ", " + (d.y + 15 - d.r) + ")";
+              });    
       }
      
-      function removePopovers() {
-        $('.popover').each(function() {
-          $(this).remove();
-        });
-      }
+      // function removePopovers() {
+      //   $('.popover').each(function() {
+      //     $(this).remove();
+      //   });
+      // }
      
-      function showPopover(d) {
-        $(this).popover({
-          placement: 'auto top',
-          container: 'body',
-          trigger: 'manual',
-          html: true,
-          content: function() {
-            return "Assessment ID: " + d.objectName + "</br>Risk Category 1: " + d.riskCategory1 + "</br>Risk Category 2: " + d.riskCategory2;
-          }
-        });
-        $(this).popover('show');
-      }
       
+     //for hoverover popups
+     
+   //   function showPopover(d) {
+   //    var category = $('.btn.active').attr('id');
+   //    // alert(category);
+
+   //    if ( category === 'Social Media') {
+   //     $(this).popover({
+   //       placement: 'auto top',
+   //       container: 'body',
+   //       trigger: 'manual',
+   //       html: true,
+   //       content: function() {
+   //         return "N " + d.percent;
+   //       }
+   //     });
+   //     $(this).popover('show');
+   //   }
+   // }
+    
       function collide(alpha) {
         var quadtree = d3.geom.quadtree(data);
         return function(d) {
@@ -226,88 +213,33 @@ $('.chart').on('click', function() {
           });
         };
       }
-      
-       var lowModGrad = svg.append("svg:defs")
-        .append("svg:linearGradient")
-        .attr("id", "lowModGrad")
-        .attr("x1", "0%")
-        .attr("y1", "0%")
-        .attr("x2", "100%")
-        .attr("y2", "100%")
-        .attr("spreadMethod", "pad");
      
-      // Define the gradient colors
-      lowModGrad.append("svg:stop")
-        .attr("offset", "0%")
-        .attr("stop-color", "#88DB54")
-        .attr("stop-opacity", 1);
-     
-      lowModGrad.append("svg:stop")
-        .attr("offset", "100%")
-        .attr("stop-color", "#FE9A2E")
-        .attr("stop-opacity", 1);
-     
-      var modHighGrad = svg.append("svg:defs")
-        .append("svg:linearGradient")
-        .attr("id", "modHighGrad")
-        .attr("x1", "0%")
-        .attr("y1", "0%")
-        .attr("x2", "100%")
-        .attr("y2", "100%")
-        .attr("spreadMethod", "pad");
-     
-      // Define the gradient colors
-      modHighGrad.append("svg:stop")
-        .attr("offset", "0%")
-        .attr("stop-color", "#FE9A2E")
-        .attr("stop-opacity", 1);
-     
-      modHighGrad.append("svg:stop")
-        .attr("offset", "100%")
-        .attr("stop-color", "#FE2E2E")
-        .attr("stop-opacity", 1);
-        
-      var lowHighGrad = svg.append("svg:defs")
-        .append("svg:linearGradient")
-        .attr("id", "lowHighGrad")
-        .attr("x1", "0%")
-        .attr("y1", "0%")
-        .attr("x2", "100%")
-        .attr("y2", "100%")
-        .attr("spreadMethod", "pad");
-     
-      // Define the gradient colors
-      lowHighGrad.append("svg:stop")
-        .attr("offset", "0%")
-        .attr("stop-color", "#88DB54")
-        .attr("stop-opacity", 1);
-     
-      lowHighGrad.append("svg:stop")
-        .attr("offset", "100%")
-        .attr("stop-color", "#FE2E2E")
-        .attr("stop-opacity", 1);
-     
-      
-     
-      function makeClickable () {
-        
+      // function makeClickable () {
+       
             
-      $("circle").click(function() {
-        console.log(this.id);
-      });
+      //   $("circle").click(function() {
+      //     console.log(this.id);
+      //   });
+     
+      //   var nest = d3.nest()
+      //     .key(function(d){return d.objectName;})
+      //     .entries(data);
+       
       
-      var nest = d3.nest()
-        .key(function(d){return d.objectName;})
-        .entries(data);
-        
-      
-      }
+      // }
+
       nodes.exit().remove();
-        
+       
       
     });
     }
+     
+    initProgram(dataSource);
 
   }
+
+  // //Make buttons same width as heading Box
+  // var headingWidth = $('#bubbleChart').width();
+  // $('#bubbleContainer .btn-group').css('width', headingWidth);
 
 });

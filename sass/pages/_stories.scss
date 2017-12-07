@@ -486,17 +486,17 @@
 
   .video-container {
     display: none;
-    height: 563px;
-    width: 1000px;
+    height: 90vh;
+    // width: 90vw;
 
-    @media screen and (max-width: 1150px) {
-      height: 464px;
-      width: 825px;
-    }
+    // @media screen and (max-width: 1150px) {
+    //   height: 464px;
+    //   width: 825px;
+    // }
 
-    @media screen and (max-width: 900px) {
-      height: 381px;
-      width: 678px;
-    }
+    // @media screen and (max-width: 900px) {
+    //   height: 381px;
+    //   width: 678px;
+    // }
   }
 }

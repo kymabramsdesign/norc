@@ -23,12 +23,18 @@
   position: absolute;
 
   @media screen and (max-width: 767px) {
-    width: 1000vw;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 100vw;
   }
 
   img {
     height: 100%;
     width: 50vw;
+
+    @media screen and (max-width: 767px) {
+      // height: 200%;
+    }
   }
 
   .picture, .chart {
@@ -125,6 +131,7 @@
 
   @media screen and (max-width: 767px) {
     padding: 20px;
+    position: relative;
     width: 100vw;
   }
 }
