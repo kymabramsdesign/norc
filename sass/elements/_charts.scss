@@ -1,10 +1,14 @@
-//Global Chart Styles
+/*Global Chart Styles*/
 .video-container.chart-scroll {
   overflow: scroll;
 }
 
 .heading-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 
   .chart-title {
@@ -17,26 +21,22 @@
   }
 
   .chart-body {
-    color: #303030;
+    color: $dark-grey;
     font-size: 16px;
     line-height: 20px;
-    width: 48%;
     margin-top: 0;
+    width: 48%;
   }
 }
 
-// .popover {
-//   z-index: 10000;
-// }
-
-//Bubble Chart
+// Bubble Chart 
 #bubbleContainer {
   background-color: #6e6e6e;
-  padding: 30px 30px 8px;
+  padding: 30px;
 
   #bubbleChart {
-    text-align: center;
     margin-top: -160px;
+    text-align: center;
   }
 
   input[type="radio"] {
@@ -44,22 +44,29 @@
   }
 
   .btn-group {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    width: 100%;
     padding: 0 5%;
+    width: 100%;
 
     .btn {
       @include transition(all .2s ease-in-out);
+      border: 2px solid $dark-grey;
+      border-radius: 14px;
+      color: $black;
       cursor: pointer;
       font-size: 14px;
-      color: $black;
-      border: 2px solid #303030;
-      border-radius: 14px;
-      padding: 7px 14px;
       margin: 5px;
+      padding: 7px 14px;
       text-align: center;
 
       &.active {
@@ -75,17 +82,12 @@
 }
     
 circle {
-  fill:red;
-  stroke: #303030;
-  stroke-width: 1px;
+  fill: red;
   opacity: .85;
+  stroke-width: 1px;
+  stroke: $dark-grey;
 }
- 
-// circle:hover {
-//   stroke: #F7DC6F;
-// }
 
-/*yes/no labels*/
 .label {
   fill: white;
   font-size: 25px;

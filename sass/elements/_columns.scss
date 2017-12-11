@@ -22,19 +22,9 @@
   left: 0;
   position: absolute;
 
-  @media screen and (max-width: 767px) {
-    flex-wrap: nowrap;
-    position: relative;
-    width: 100vw;
-  }
-
   img {
     height: 100%;
     width: 50vw;
-
-    @media screen and (max-width: 767px) {
-      // height: 200%;
-    }
   }
 
   .picture, .chart {
@@ -54,6 +44,10 @@
 
       @media screen and (max-width: 1024px) {
         left: 91%;
+      }
+
+      @media screen and (max-width: 767px) {
+        display: none;
       }
     }
 

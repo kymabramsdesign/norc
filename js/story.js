@@ -8,6 +8,27 @@ function columns() {
   var rightHeight = $('.right-50').height();
   var windowWidth = $(window).width();
 
+  // Only do the following on Mobile screens
+  if ( windowWidth <= 767 ) {
+
+    // Adds carousel library for mobile touch
+    var script = document.createElement( 'script' );
+    script.src = 'js/owl.carousel.min.js';
+    $("footer").append( script ); 
+
+
+    // Initialize mobile carousel
+    $(document).ready(function(){
+      $(".left-50").owlCarousel({
+        items: 1,
+        autoHeight:true,
+        lazyload: true,
+        dots: true,
+        loop: true
+      });
+    });
+  }
+
   // Only do the following on screens larger than Mobile
   if ( windowWidth >= 768 ) {
 
