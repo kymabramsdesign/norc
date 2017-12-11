@@ -1,7 +1,7 @@
 .left-50 {
   display: none;
   -webkit-tap-highlight-color: transparent;
-  // position relative and z-index fix webkit rendering fonts issue
+  /* position relative and z-index fix webkit rendering fonts issue*/
   position: relative;
   width: 100%;
   z-index: 1;
@@ -94,6 +94,7 @@
 
   &.owl-grab {
     cursor: move;
+    cursor: -webkit-grab;
     cursor: grab;
   }
 
@@ -110,9 +111,11 @@
     display: block;
   }
 
- // Owl Carousel - Animate Plugin
+ /* Owl Carousel - Animate Plugin*/
   .animated {
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
   }
 
@@ -125,7 +128,18 @@
   }
 
   .fadeOut {
+    -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
+  }
+
+  @-webkit-keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
   }
 
   @keyframes fadeOut {
@@ -138,7 +152,7 @@
     }
   }
 
-  //Owl Carousel - Lazy Load Plugin
+  /*Owl Carousel - Lazy Load Plugin*/
   .owl-item {
 
     .owl-lazy {
@@ -147,11 +161,12 @@
     }
 
     img.owl-lazy {
+      -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
     }
   }
 
-  // Owl Carousel - Video Plugin
+  /* Owl Carousel - Video Plugin*/
   .owl-video-wrapper {
     background: $black;
     height: 100%;
@@ -199,7 +214,7 @@
     z-index: 1;
   }
 
-  // Dots
+  /* Dots */
 
   .owl-nav.disabled + .owl-dots {
     margin-top: 10px; }
@@ -214,19 +229,14 @@
       zoom: 1;
 
       span {
+        @include transition(opacity .2s ease-in-out);
         -webkit-backface-visibility: visible;
         background: $black-12;
         border-radius: 30px;
         display: block;
         height: 10px;
         margin: 8px 8px 0;
-        transition: opacity 200ms ease;
         width: 10px;
-      }
-
-      &.active span,
-      &:hover span {
-        // background: $purple;
       }
     }
   }
@@ -270,7 +280,7 @@
   }
 }
 
-// Owl Carousel - Auto Height Plugin
+/* Owl Carousel - Auto Height Plugin*/
 .owl-height {
   @include transition (height .5s ease-in-out);
 }

@@ -1,10 +1,10 @@
 /*Story Pages*/
 .story-content {
-  margin-top: 114px;
+  @include transition(margin .3s ease-in-out);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  @include transition(margin .3s ease-in-out);
+  margin-top: 114px;
 
   @media screen and (max-width: 767px) {
     -ms-flex-wrap: wrap;
@@ -34,13 +34,13 @@
     }
 
     &:before {
+      @include transition(opacity .3s ease-in-out, left .3s ease-in-out);
       content: url('/img/zoom.svg');
       left: 93.5%;
       margin-top: 15px;
       opacity: .55;
       position: absolute;
       width: 24px;
-      @include transition(opacity .3s ease-in-out, left .3s ease-in-out);
 
       @media screen and (max-width: 1024px) {
         left: 91%;
@@ -55,13 +55,14 @@
       cursor: pointer;
 
       &:before {
-        opacity: 1;
         @include transition(opacity .4s ease-in-out);
+        opacity: 1;
       }
     }
   }
 
   .video {
+    @include transition(height .3s ease-in-out);
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -77,8 +78,7 @@
     -ms-flex-pack: center;
     justify-content: center;
     width: 50vw;
-    @include transition(height .3s ease-in-out);
-
+    
     &.aging {
       background-image: url('/img/video-placeholder.jpg');
     }
@@ -88,10 +88,10 @@
     }
 
     img {
+      @include transition(opacity .3s ease-in-out, height .3s ease-in-out);
       height: 150px;
       opacity: .65;
-      @include transition(opacity .3s ease-in-out, height .3s ease-in-out);
-
+      
       @media screen and (min-width: 1441px) {
         height: 150px;
       }
@@ -105,19 +105,20 @@
       cursor: pointer;
 
       img {
-        opacity: .95;
         @include transition(opacity .4s ease-in-out);
+        opacity: .95;
       }
     }
   }
 }
 
 .right-50 {
+  @include transition(padding .3s ease-in-out);
   padding: 34px 30px 34px 36px;
   position: absolute;
   right: 0;
   width: 50%;
-  @include transition(padding .3s ease-in-out);
+  
 
   @media screen and (max-width: 1024px) {
     padding: 30px;
