@@ -22,8 +22,7 @@ function columns() {
         items: 1,
         autoHeight:true,
         lazyload: true,
-        dots: true,
-        loop: true
+        dots: true
       });
     });
 
@@ -129,6 +128,67 @@ function columns() {
         });
       }
     });
+
+    // On Click Function for the images
+    $('.picture, .video, .chart').on('click', function() {
+      var scrollPosition = $(window).scrollTop();
+      var imageSrc = $(this).find('img').attr('src'); // Get image src
+      var imageAlt = $(this).find('img').attr('alt'); // Get image alt
+      var caption = $(this).find('img').attr('caption'); // Get image caption
+      var windowHeight = $(window).height(); // Get window height
+      
+      $(".page-overlay").fadeIn(300).css('z-index','205');
+      $('.video-container').hide(); // hide video if click on image only
+      $('.main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
+
+      //add image the first time
+      if ( $('.image-container').hasClass('move-out') !== true ) {
+        $('.image-container').addClass('move-in').append('<img src="img/close.svg" alt="Close" class="close-button" />');
+      } else {
+        $('.image-container').addClass('move-in');
+      }
+
+      // Add caption
+      if ( $('.image-container').hasClass('move-out') !== true ) {
+          $('.image-container').append('<p class="caption">'+ caption + '</p>');
+      } else {
+        $('.caption').text(caption);
+      }
+
+      var thisImageHeight = $('.main-image').innerHeight(); // Get the height of the displayed image
+      var thisImageWidth = $('.main-image').innerWidth(); // Get the width of the displayed image
+      var currentMargin = $('.image-container.move-in').css('padding-top'); //current container top padding
+      currentMargin = parseFloat(currentMargin)*2; // total container top and bottom padding
+      var closeMargin = ((windowHeight-thisImageHeight-currentMargin)/2) + 'px'; //gets margin for top of close
+      var captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
+      captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
+      var paddingLeft = parseFloat($('.move-in').css('padding-left')); //get image left padding
+      var paddingRight = parseFloat($('.move-in').css('padding-right')); //get image right padding
+      var captionPadding = (paddingLeft - paddingRight)/2;
+
+      $('.move-in').css('top', scrollPosition);
+      $('.close-button').css('margin-top', closeMargin);
+      $('.caption').css({
+        'top': captionMargin,
+        'width': thisImageWidth,
+        'margin-left': -captionPadding+'px'
+      });
+      $("body").addClass('no-scroll'); // stop body from scrolling
+
+      // close the popup when user clicks Close Button
+      $('.close-button').on('click', function() {
+        var windowWidth = $(window).width();
+        $('.page-overlay').fadeOut(400).css('z-index','105'); // remove overlay
+        $('move-out').css('left', -windowWidth);
+        $('.image-container').removeClass('move-in').addClass('move-out');
+        $("body").removeClass('no-scroll'); // body to scroll again
+
+        if ( $('iframe').is(':visible')) {
+
+          $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=0');
+        }
+      });
+    });
   }
 }
 
@@ -225,68 +285,6 @@ function videoPopup () {
     $('.close-button').css('margin-top', xplacement);
   });
 }
-
-// // On Click Function for the images
-// $('.picture, .video, .chart').on('click', function() {
-//   var scrollPosition = $(window).scrollTop();
-//   var imageSrc = $(this).find('img').attr('src'); // Get image src
-//   var imageAlt = $(this).find('img').attr('alt'); // Get image alt
-//   var caption = $(this).find('img').attr('caption'); // Get image caption
-//   var windowHeight = $(window).height(); // Get window height
-  
-//   $(".page-overlay").fadeIn(300).css('z-index','205');
-//   $('.video-container').hide(); // hide video if click on image only
-//   $('.main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
-
-//   //add image the first time
-//   if ( $('.image-container').hasClass('move-out') !== true ) {
-//     $('.image-container').addClass('move-in').append('<img src="img/close.svg" alt="Close" class="close-button" />');
-//   } else {
-//     $('.image-container').addClass('move-in');
-//   }
-
-//   // Add caption
-//   if ( $('.image-container').hasClass('move-out') !== true ) {
-//       $('.image-container').append('<p class="caption">'+ caption + '</p>');
-//   } else {
-//     $('.caption').text(caption);
-//   }
-
-//   var thisImageHeight = $('.main-image').innerHeight(); // Get the height of the displayed image
-//   var thisImageWidth = $('.main-image').innerWidth(); // Get the width of the displayed image
-//   var currentMargin = $('.image-container.move-in').css('padding-top'); //current container top padding
-//   currentMargin = parseFloat(currentMargin)*2; // total container top and bottom padding
-//   var closeMargin = ((windowHeight-thisImageHeight-currentMargin)/2) + 'px'; //gets margin for top of close
-//   var captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
-//   captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
-//   var paddingLeft = parseFloat($('.move-in').css('padding-left')); //get image left padding
-//   var paddingRight = parseFloat($('.move-in').css('padding-right')); //get image right padding
-//   var captionPadding = (paddingLeft - paddingRight)/2;
-
-//   $('.move-in').css('top', scrollPosition);
-//   $('.close-button').css('margin-top', closeMargin);
-//   $('.caption').css({
-//     'top': captionMargin,
-//     'width': thisImageWidth,
-//     'margin-left': -captionPadding+'px'
-//   });
-//   $("body").addClass('no-scroll'); // stop body from scrolling
-
-//   // close the popup when user clicks Close Button
-//   $('.close-button').on('click', function() {
-//     var windowWidth = $(window).width();
-//     $('.page-overlay').fadeOut(400).css('z-index','105'); // remove overlay
-//     $('move-out').css('left', -windowWidth);
-//     $('.image-container').removeClass('move-in').addClass('move-out');
-//     $("body").removeClass('no-scroll'); // body to scroll again
-
-//     if ( $('iframe').is(':visible')) {
-
-//       $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=0');
-//     }
-//   });
-// });
-
 
 // Keeps the close X lined up with the image on resize
 function closeResisze() {

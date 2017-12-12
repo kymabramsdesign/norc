@@ -1,14 +1,78 @@
+.main {
+  overflow-x: hidden;
+  
+  .section-title.active {
+    display: inline-block;
+    color: $white !important;
+  }
+}
+
+.slider {
+  /* line them up horizontally */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  left: 0;
+
+  /* make it smooth on iOS */
+  -webkit-overflow-scrolling: touch;
+  /* each slide snaps into place on iOS */
+  -webkit-scroll-snap-points-x: repeat(1000px);
+  -ms-scroll-snap-points-x: repeat(1000px);
+  scroll-snap-points-x: repeat(1000px);
+  -webkit-scroll-snap-type: mandatory;
+  -ms-scroll-snap-type: mandatory;
+  scroll-snap-type: mandatory;
+  position: absolute;
+}
+
+.slider > div {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100vw;
+}
+
+.area {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+}
+
 .two-column {
   &.insight {
     background-color: $orange;
   }
 }
 
-.fp-viewing-ar-insight .bottom-arrow,
-.fp-viewing-ar-president .bottom-arrow,
-.fp-viewing-ar-leadership .bottom-arrow,
-.fp-viewing-ar-gain-more .bottom-arrow {
-  display: none;
+.nav-arrow {
+  @include transition(all .2s ease-in-out);
+  border: solid $white-65;
+  border-width: 0 2px 2px 0;
+  cursor: pointer;
+  height: 0;
+  padding: 14px;
+  position: fixed;
+  top: 48%;
+  width: 0;
+  z-index: 2000;
+
+  &.prev {
+    left: 35px;
+    -webkit-transform: rotate(135deg) skew(-2deg, -2deg);
+    transform: rotate(135deg) skew(-2deg, -2deg);
+  }
+
+  &.next {
+    right: 35px;
+    -webkit-transform: rotate(-45deg) skew(-2deg, -2deg);
+    transform: rotate(-45deg) skew(-2deg, -2deg);
+  }
+
+  &:hover {
+    @include transition(all .3s ease-in-out);
+    border-color: $white-85;
+  }
 }
 
 .bottom-arrow {
@@ -40,14 +104,14 @@
 
   .down-arrow {
     @include transition(all .2s ease-in-out);
-    cursor: pointer;
-    width: 0;
-    height: 0;
-    -webkit-transform: rotate(45deg) skew(-2deg, -2deg);
-    transform: rotate(45deg) skew(-2deg, -2deg);
     border: solid $white-65;
     border-width: 0 2px 2px 0;
+    cursor: pointer;
+    height: 0;
     padding: 14px;
+    -webkit-transform: rotate(45deg) skew(-2deg, -2deg);
+    transform: rotate(45deg) skew(-2deg, -2deg);
+    width: 0;
 
     &:hover {
       @include transition(all .3s ease-in-out);
@@ -153,7 +217,7 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 0 60px 60px;
+    padding: 0 60px 80px;
     width: 100%;
 
     @media screen and (min-width: 1600px) {
@@ -172,7 +236,7 @@
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      margin-bottom: 40px;
+      margin-bottom: 4px;
       padding: 7px;
       width: 50%;
 
@@ -217,8 +281,8 @@
         .large.caption {
           line-height: 28px;
           margin: 8px 0 0;
-          position: absolute;
-          width: 42%;
+          padding-right: 10px;
+          width: 100%;
 
           @media screen and (max-width: 1000px) {
             font-size: 18px;
@@ -278,6 +342,11 @@
           padding-left: 6px;
         }
 
+        img {
+          height: auto;
+          width: 100%;
+        }
+
         @media screen and (max-width: 767px) {
           height: auto;
           margin-bottom: 15px;
@@ -321,7 +390,10 @@
       display: flex;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      padding: 7px;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 7px 6px 0;
       width: 50%;
 
       @media screen and (max-width: 900px) {
@@ -329,21 +401,12 @@
       }
 
       .one {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         height: 48%;
         overflow: hidden;
-        width: 50%;
-
-        &.left {
-          padding-right: 7px;
-        }
-        &.right {
-          padding-left: 7px;
-        }
-
-        img {
-          height: auto;
-          width: 100%;
-        }
+        width: 49%;
 
         &.blank {
           background-color: transparent;
@@ -354,8 +417,7 @@
           letter-spacing: .75px;
           line-height: 28px;
           margin: 0;
-          padding: 0 14px;
-          position: absolute;
+          padding: 12px 14px;
 
           @media screen and (max-width: 1440px) {
             font-size: 20px;
@@ -367,12 +429,13 @@
             font-size: 18px;
             letter-spacing: .75px;
             line-height: 23px;
+            padding: 6px 12px;
           }
 
           @media screen and (max-width: 1000px) {
             font-size: 16px;
-            line-height: 21px;
-            padding: 2px 9px 0 9px;
+            line-height: 22px;
+            padding: 6px 10px;
           }
 
           &.white {

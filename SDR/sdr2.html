@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />  
+    <title>SDR Sankey</title>
+    <script src="sankey2.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.2.0/d3.min.js"></script>
+    <script src="sankey.js" type="text/javascript"></script>    
+		<link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+  
+    <script type='text/javascript'>
+    
+    //DATA
+      $(document).ready(function() {
+
+       var raw_data = [
+       
+             ["Social & Related Sciences ",0.48,                     "Biological, Agricultural & Other Life Scientists"], 
+      ["Social & Related Sciences ",0.61,                     "Computer & Mathematical Scientists"],              
+      ["Social & Related Sciences ",0.1,                      "Engineers"],              
+      ["Social & Related Sciences ",7.16,                     "Non-S & E Occupations"],              
+      ["Social & Related Sciences ",0.19,                     "Physical & Related Scientists"], 
+      ["Social & Related Sciences ",1.1,                      "S & E Related Occupations"],       
+      ["Social & Related Sciences ",17.19,                    "Social & Related Scientists"],     
+       
+       
+       
+       
+       
+       ["Biological, Agricultural & Environmental Life Sciences ",15.2,     "Biological, Agricultural & Other Life Scientists"],
+       ["Biological, Agricultural & Environmental Life Sciences ",0.69,     "Computer & Mathematical Scientists"],
+       ["Biological, Agricultural & Environmental Life Sciences ",0.23,     "Engineers"],       
+       ["Biological, Agricultural & Environmental Life Sciences ",3.84,     "Non-S & E Occupations"],
+       ["Biological, Agricultural & Environmental Life Sciences ",0.77,     "Physical & Related Scientists"],       
+       ["Biological, Agricultural & Environmental Life Sciences ",4.42,     "S & E Related Occupations"],       
+       ["Biological, Agricultural & Environmental Life Sciences ",0.27,     "Social & Related Scientists"],       
+       
+               
+       
+       ["Computer & Mathematical Sciences ",0.05,                "Biological, Agricultural & Other Life Scientists"],
+       ["Computer & Mathematical Sciences ",5.9,                "Computer & Mathematical Scientists"],       
+       ["Computer & Mathematical Sciences ",0.25,                "Engineers"],       
+       ["Computer & Mathematical Sciences ",0.89,                "Non-S & E Occupations"],       
+       ["Computer & Mathematical Sciences ",0.03,                "Physical & Related Scientists"],       
+       ["Computer & Mathematical Sciences ",0.39,                "S & E Related Occupations"],       
+        ["Computer & Mathematical Sciences ",0.05,                "Social & Related Scientists"],      
+       
+	
+       ["Engineering ",0.59,                                    "Biological, Agricultural & Other Life Scientists"],     	
+       ["Engineering ",1.96,                                    "Computer & Mathematical Scientists"],     
+       ["Engineering ",11.09,                                    "Engineers"],     	
+       ["Engineering ",2.76,                                    "Non-S & E Occupations"],     
+       ["Engineering ",0.82,                                    "Physical & Related Scientists"],     	
+       ["Engineering ",1.28,                                    "S & E Related Occupations"],     	
+       ["Engineering ",0.04,                                    "Social & Related Scientists"], 
+        
+  	
+       ["Physical & Related Sciences ",1.49,                    "Biological, Agricultural & Other Life Scientists"],	
+       ["Physical & Related Sciences ",0.87,                    "Computer & Mathematical Scientists"],		
+       ["Physical & Related Sciences ",1.29,                    "Engineers"],	
+       ["Physical & Related Sciences ",2.55,                    "Non-S & E Occupations"],	
+       ["Physical & Related Sciences ",9.38,                    "Physical & Related Scientists"],	
+       ["Physical & Related Sciences ",1.31,                    "S & E Related Occupations"],	
+       ["Physical & Related Sciences ",0.05,                    "Social & Related Scientists"],	
+
+	
+       ["Health",0.77,                           "Biological, Agricultural & Other Life Scientists"],	
+       ["Health",0.14,                           "Computer & Mathematical Scientists"],  	
+       ["Health",0.03,                           "Engineers"],	
+       ["Health",0.98,                           "Non-S & E Occupations"],	
+       ["Health",0.07,                           "Physical & Related Scientists"],	
+       ["Health",2.44,                           "S & E Related Occupations"],
+       ["Health",0.25,                           "Social & Related Scientists"],	
+    
+	
+     
+    ];
+       
+
+      //order of the bars 
+      var sankey = new Sankey();
+      
+       sankey.stack(0,[
+        "Health",        
+      "Computer & Mathematical Sciences ",    
+      "Physical & Related Sciences ",       
+       "Engineering ",        
+       "Biological, Agricultural & Environmental Life Sciences ", 
+     "Social & Related Sciences ",  
+
+         
+      ]);
+      
+     
+       sankey.stack(1,[
+      "Computer & Mathematical Scientists",    
+       "Physical & Related Scientists",        
+       "S & E Related Occupations",   
+       "Engineers",          
+          "Non-S & E Occupations",         
+          "Social & Related Scientists",      
+         "Biological, Agricultural & Other Life Scientists",    
+      
+      
+      ]);
+      
+   
+      // Nudge -- aligns top boxes?????
+      sankey.nudge_boxes_callback = function() {
+        sankey.boxes["Biological, Agricultural & Other Life Scientists"].y = (sankey.boxes["Biological, Agricultural & Other Life Scientists"].b() - sankey.boxes["Biological, Agricultural & Other Life Scientists"].size());
+  
+  
+     
+      }
+      
+      // Colours
+      sankey.setColors({
+        "Biological, Agricultural & Environmental Life Sciences ":"#A93226",
+        "Computer & Mathematical Sciences ":"#884EA0", 
+        "Engineering ":"#2471A3",
+        "Physical & Related Sciences ":"#17A589", 
+        "Health":"#229954",
+        "Social & Related Sciences ":"#D4AC0D", 
+        "S & E Related Occupations":"#CA6F1E",        
+              });
+      
+      // Add the emissions
+       
+      // Fix some of the colours
+      //sankey.nudge_colours_callback = function() {
+        //this.recolour(this.boxes["Computer & Mathematical Scientists"].left_lines,"#AAAAAA");
+ 
+     // };
+      
+      sankey.y_space = 15;
+      sankey.right_margin = 350;
+      sankey.left_margin = 280;
+
+            
+      sankey.convert_flow_values_callback = function(flow) {
+        return flow * 2; // Pixels per percent
+      };
+      
+      //rounds number to remove deciamls
+      //sankey.convert_flow_labels_callback = function(flow) {
+      //  return Math.round(flow);
+     // };
+          //rounds number to remove deciamls
+      sankey.convert_flow_labels_callback = function(flow) {
+        return Math.round(flow)+"%";
+      };  
+      sankey.convert_box_value_labels_callback = function(flow) {
+        return (""+Math.round(flow)+"%");
+      };
+      
+      sankey.setData(raw_data);
+      sankey.draw();
+    });
+      
+    </script>
+    <h1 style='width:1000px; height:80px;text-align: center; margin-bottom: 80'>In what occupations do the nation's science, engineering and health doctorates work?</h1>
+    <h2 style='width:1000px; height:50px;text-align: center; margin-bottom: 80'>Graduates by Field of Degree and Current Occupation</h2>
+    <p style='width:1000px; height:80px; text-align: center; margin-bottom: 80'>This graphic shows (1) the percent of doctorate recipients by field of degree (bars on the left), (2) the percent of doctorate recipients by current occupation classification (bars on the right), and (3) the flow from field of degree to occupation (colored lines). Move your cursor to interact with the graphic.</p>   
+ 
+
+
+<div style 	='position: left;
+	float: left;
+	margin-top: 10px;
+		margin-left: 200px;
+	width: 10%;
+	height: 30px;
+	background-color: white;
+	margin-bottom: 10px'      
+                 
+         >Percent by Field of Degree</div>
+         
+         
+<div style  	=' position: relative;
+	float: right;
+	margin-top: 10px;
+		margin-right: 500px;
+	width: 15%;
+	height: 30px;
+	background-color: white;
+	margin-bottom: 10px'
+  >Percent by Occupation (<0.5% round down to 0%)</div>
+
+    <div id='sankey' style="width:1000px;height:800px">
+      &nbsp;
+    </div>
+  </body>
+</html>
