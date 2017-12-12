@@ -31,36 +31,42 @@ function slides() {
       $('.nav-arrow.prev').show();
       $('.slider').animate({ left: slide2 }, 300);
       $('.president').show().addClass('active');
+      window.location.hash = 'president';
     }
     else if ( currentSlidePosition === slide2 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide3 }, 300);
       $('.economics').show().addClass('active');
+      window.location.hash = 'economics';
     }
     else if ( currentSlidePosition === slide3 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide4 }, 300);
       $('.education').show().addClass('active');
+      window.location.hash = 'education';
     }
     else if ( currentSlidePosition === slide4 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide5 }, 300);
       $('.global').show().addClass('active');
+      window.location.hash = 'global';
     }
     else if ( currentSlidePosition === slide5 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide6 }, 300);
       $('.health').show().addClass('active');
+      window.location.hash = 'health';
     }
     else if ( currentSlidePosition === slide6 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide7 }, 300);
       $('.society').show().addClass('active');
+      window.location.hash = 'society';
     }
     else if ( currentSlidePosition === slide7 ) {
       $('.section-title').hide();
@@ -68,6 +74,7 @@ function slides() {
       $('.slider').animate({ left: slide8 }, 300);
       $('.nav-arrow.next').hide();
       $('.gain-more').show().addClass('active');
+      window.location.hash = 'gain-more';
     }
   });
 
@@ -81,36 +88,42 @@ function slides() {
       $('.nav-arrow.prev').hide();
       $('.slider').animate({ left: slide1 }, 300);
       $('.insight').show().addClass('active');
+      window.location.hash = 'insight';
     }
     else if ( currentSlidePosition === slide3 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide2 }, 300);
       $('.president').show().addClass('active');
+      window.location.hash = 'president';
     }
     else if ( currentSlidePosition === slide4 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide3 }, 300);
       $('.economics').show().addClass('active');
+      window.location.hash = 'economics';
     }
     else if ( currentSlidePosition === slide5 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide4 }, 300);
       $('.education').show().addClass('active');
+      window.location.hash = 'education';
     }
     else if ( currentSlidePosition === slide6 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide5 }, 300);
       $('.global').show().addClass('active');
+      window.location.hash = 'global';
     }
     else if ( currentSlidePosition === slide7 ) {
       $('.section-title').hide();
       $('.nav-dot, .section-title').removeClass('active');
       $('.slider').animate({ left: slide6 }, 300);
       $('.health').show().addClass('active');
+      window.location.hash = 'health';
     }
     else if ( currentSlidePosition === slide8 ) {
       $('.section-title').hide();
@@ -118,6 +131,7 @@ function slides() {
       $('.slider').animate({ left: slide7 }, 300);
       $('.nav-arrow.next').show();
       $('.society').show().addClass('active');
+      window.location.hash = 'society';
     }
   });
 
@@ -207,6 +221,62 @@ function slides() {
     $('.section-title').hide();
     $('.section-title.active').show();
   });
+
+  // Moves the slide to the correct location via hash
+  var hash = location.hash.substr(1);
+  if ( hash === '') {
+    $('.nav-arrow.next').show();
+    $('.nav-arrow.prev').hide();
+  }
+  else if ( hash === 'president') {
+    $('.slider').animate({ left: slide2 }, 400);
+    $('.section-title').hide();
+    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-arrow').show();
+    $('.president').show().addClass('active');
+  }
+  else if ( hash === 'economics') {
+    $('.slider').animate({ left: slide3 }, 525);
+    $('.section-title').hide();
+    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-arrow').show();
+    $('.economics').show().addClass('active');
+  }
+  else if ( hash === 'education') {
+    $('.slider').animate({ left: slide4 }, 650);
+    $('.section-title').hide();
+    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-arrow').show();
+    $('.education').show().addClass('active');
+  }
+  else if ( hash === 'global') {
+    $('.slider').animate({ left: slide5 }, 775);
+    $('.section-title').hide();
+    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-arrow').show();
+    $('.global').show().addClass('active');
+  }
+  else if ( hash === 'health') {
+    $('.slider').animate({ left: slide6 }, 900);
+    $('.section-title').hide();
+    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-arrow').show();
+    $('.health').show().addClass('active');
+  }
+  else if ( hash === 'society') {
+    $('.slider').animate({ left: slide7 }, 1025);
+    $('.section-title').hide();
+    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-arrow').show();
+    $('.society').show().addClass('active');
+  }
+  else if ( hash === 'gain-more') {
+    $('.slider').animate({ left: slide8 }, 1150);
+    $('.section-title').hide();
+    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-arrow').show();
+    $('.gain-more').show().addClass('active');
+  }
 }
 
 function verticalPosition() {
