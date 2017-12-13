@@ -161,6 +161,7 @@
 .area {
 
   .landing-text {
+    @include transition(opacity .3s ease-in-out);
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -450,6 +451,14 @@
           }
         }
       }
+    }
+  }
+
+  // Behaviors when user is scrolling
+  &.scrolled {
+    .landing-text {
+      @include transition(opacity 1s ease-in-out);
+      opacity: 0;
     }
   }
 }
