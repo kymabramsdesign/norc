@@ -27,7 +27,7 @@ function slides() {
 
     if ( currentSlidePosition === slide1 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.nav-arrow.prev').show();
       $('.slider').animate({ left: slide2 }, 300);
       $('.president').show().addClass('active');
@@ -35,42 +35,42 @@ function slides() {
     }
     else if ( currentSlidePosition === slide2 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide3 }, 300);
       $('.economics').show().addClass('active');
       window.location.hash = 'economics';
     }
     else if ( currentSlidePosition === slide3 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide4 }, 300);
       $('.education').show().addClass('active');
       window.location.hash = 'education';
     }
     else if ( currentSlidePosition === slide4 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide5 }, 300);
       $('.global').show().addClass('active');
       window.location.hash = 'global';
     }
     else if ( currentSlidePosition === slide5 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide6 }, 300);
       $('.health').show().addClass('active');
       window.location.hash = 'health';
     }
     else if ( currentSlidePosition === slide6 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide7 }, 300);
       $('.society').show().addClass('active');
       window.location.hash = 'society';
     }
     else if ( currentSlidePosition === slide7 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide8 }, 300);
       $('.nav-arrow.next').hide();
       $('.gain-more').show().addClass('active');
@@ -84,7 +84,7 @@ function slides() {
 
     if ( currentSlidePosition === slide2 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.nav-arrow.prev').hide();
       $('.slider').animate({ left: slide1 }, 300);
       $('.insight').show().addClass('active');
@@ -92,42 +92,42 @@ function slides() {
     }
     else if ( currentSlidePosition === slide3 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide2 }, 300);
       $('.president').show().addClass('active');
       window.location.hash = 'president';
     }
     else if ( currentSlidePosition === slide4 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide3 }, 300);
       $('.economics').show().addClass('active');
       window.location.hash = 'economics';
     }
     else if ( currentSlidePosition === slide5 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide4 }, 300);
       $('.education').show().addClass('active');
       window.location.hash = 'education';
     }
     else if ( currentSlidePosition === slide6 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide5 }, 300);
       $('.global').show().addClass('active');
       window.location.hash = 'global';
     }
     else if ( currentSlidePosition === slide7 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide6 }, 300);
       $('.health').show().addClass('active');
       window.location.hash = 'health';
     }
     else if ( currentSlidePosition === slide8 ) {
       $('.section-title').hide();
-      $('.nav-dot, .section-title').removeClass('active');
+      $('.nav-dot, .section-title, .slide').removeClass('active');
       $('.slider').animate({ left: slide7 }, 300);
       $('.nav-arrow.next').show();
       $('.society').show().addClass('active');
@@ -146,7 +146,7 @@ function slides() {
    if ( location.indexOf('insight-dot') >= 0 ) {
       $('.section-title.insight').fadeIn(300);
       $(this).on('click', function() {
-        $('.nav-dot, .section-title').removeClass('active');
+        $('.nav-dot, .section-title, .slide').removeClass('active');
         $('.slider').animate({ left: slide1 }, 200);
         $('.insight').show().addClass('active');
         $('.nav-arrow.next').show();
@@ -156,7 +156,7 @@ function slides() {
     else if ( location.indexOf('president-dot') >= 0 ) {
       $('.section-title.president').fadeIn(300);
       $(this).on('click', function() {
-        $('.nav-dot, .section-title').removeClass('active');
+        $('.nav-dot, .section-title, .slide').removeClass('active');
         $('.slider').animate({ left: slide2 }, 200);
         $('.president').show().addClass('active');
         $('.nav-arrow').show();
@@ -165,7 +165,7 @@ function slides() {
     else if ( location.indexOf('economics-dot') >= 0 ) {
       $('.section-title.economics').fadeIn(300);
       $(this).on('click', function() {
-        $('.nav-dot, .section-title').removeClass('active');
+        $('.nav-dot, .section-title, .slide').removeClass('active');
         $('.slider').animate({ left: slide3 }, 200);
         $('.economics').show().addClass('active');
         $('.nav-arrow').show();
@@ -174,7 +174,7 @@ function slides() {
     else if ( location.indexOf('education-dot') >= 0 ) {
       $('.section-title.education').fadeIn(300);
       $(this).on('click', function() {
-        $('.nav-dot, .section-title').removeClass('active');
+        $('.nav-dot, .section-title, .slide').removeClass('active');
         $('.slider').animate({ left: slide4 }, 200);
         $('.education').show().addClass('active');
         $('.nav-arrow').show();
@@ -183,7 +183,7 @@ function slides() {
     else  if ( location.indexOf('global-dot') >= 0 ) {
       $('.section-title.global').fadeIn(300);
       $(this).on('click', function() {
-        $('.nav-dot, .section-title').removeClass('active');
+        $('.nav-dot, .section-title, .slide').removeClass('active');
         $('.slider').animate({ left: slide5 }, 200);
         $('.global').show().addClass('active');
         $('.nav-arrow').show();
@@ -192,7 +192,7 @@ function slides() {
     else if ( location.indexOf('health-dot') >= 0 ) {
       $('.section-title.health').fadeIn(300);
       $(this).on('click', function() {
-        $('.nav-dot, .section-title').removeClass('active');
+        $('.nav-dot, .section-title, .slide').removeClass('active');
         $('.slider').animate({ left: slide6 }, 200);
         $('.health').show().addClass('active');
         $('.nav-arrow').show();
@@ -201,7 +201,7 @@ function slides() {
     else if ( location.indexOf('society-dot') >= 0 ) {
       $('.section-title.society').fadeIn(300);
       $(this).on('click', function() {
-        $('.nav-dot, .section-title').removeClass('active');
+        $('.nav-dot, .section-title, .slide').removeClass('active');
         $('.slider').animate({ left: slide7 }, 200);
         $('.society').show().addClass('active');
         $('.nav-arrow').show();
@@ -210,7 +210,7 @@ function slides() {
     else if ( location.indexOf('more-dot') >= 0 ) {
       $('.section-title.gain-more').fadeIn(300);
       $(this).on('click', function() {
-        $('.nav-dot, .section-title').removeClass('active');
+        $('.nav-dot, .section-title, .slide').removeClass('active');
         $('.slider').animate({ left: slide8 }, 200);
         $('.gain-more').show().addClass('active');
         $('.nav-arrow.prev').show();
@@ -230,49 +230,49 @@ function slides() {
   else if ( hash === 'president') {
     $('.slider').animate({ left: slide2 }, 400);
     $('.section-title').hide();
-    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-dot, .section-title, .slide').removeClass('active');
     $('.nav-arrow').show();
     $('.president').show().addClass('active');
   }
   else if ( hash === 'economics') {
     $('.slider').animate({ left: slide3 }, 525);
     $('.section-title').hide();
-    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-dot, .section-title, .slide').removeClass('active');
     $('.nav-arrow').show();
     $('.economics').show().addClass('active');
   }
   else if ( hash === 'education') {
     $('.slider').animate({ left: slide4 }, 650);
     $('.section-title').hide();
-    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-dot, .section-title, .slide').removeClass('active');
     $('.nav-arrow').show();
     $('.education').show().addClass('active');
   }
   else if ( hash === 'global') {
     $('.slider').animate({ left: slide5 }, 775);
     $('.section-title').hide();
-    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-dot, .section-title, .slide').removeClass('active');
     $('.nav-arrow').show();
     $('.global').show().addClass('active');
   }
   else if ( hash === 'health') {
     $('.slider').animate({ left: slide6 }, 900);
     $('.section-title').hide();
-    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-dot, .section-title, .slide').removeClass('active');
     $('.nav-arrow').show();
     $('.health').show().addClass('active');
   }
   else if ( hash === 'society') {
     $('.slider').animate({ left: slide7 }, 1025);
     $('.section-title').hide();
-    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-dot, .section-title, .slide').removeClass('active');
     $('.nav-arrow').show();
     $('.society').show().addClass('active');
   }
   else if ( hash === 'gain-more') {
     $('.slider').animate({ left: slide8 }, 1150);
     $('.section-title').hide();
-    $('.nav-dot, .section-title').removeClass('active');
+    $('.nav-dot, .section-title, .slide').removeClass('active');
     $('.nav-arrow.next').hide();
     $('.nav-arrow.prev').show();
     $('.gain-more').show().addClass('active');
@@ -290,6 +290,29 @@ function matchHeight() {
   largeSize = largeSize+5;
 
   $('.two-vertical').css('max-height', largeSize);
+}
+
+// On Scroll functions
+function scrollTime() {
+  var windowHeight = $(window).height();
+
+  var textHeight = $('.active .area .landing-text').height(); //gets height of thumbnail section of active slide
+  var tileHeight = $('.active .area .thumbnails').height(); //gets height of thumbnail section of active slide
+  var totalHeight = textHeight+tileHeight;
+
+  $('.area').on('scroll', function() {
+    
+    
+
+    console.log(totalHeight);
+
+    if ( windowHeight >= 80 ) {
+      // console.log('over 80px');
+    }
+
+
+    // console.log($('.area').scrollTop());
+  });
 }
 
 // Bottom Arrow Functions
@@ -310,30 +333,6 @@ function explore() {
   });
 }
 
-
-$.fn.isInViewport = function() {
-  var elementTop = $(this).offset().left;
-  var elementBottom = elementTop + $(this).outerWidth();
-
-  var viewportTop = $(window).left;
-  var viewportBottom = viewportTop + $(window).width();
-
-  return elementBottom > viewportTop && elementTop < viewportBottom;
-};
-
-$('.slider').on('load', function() {
-  $('.slide').each(function() {
-      var activeColor = $(this).attr('id');
-    if ($(this).isInViewport()) {
-      alert('helo');
-      $('#fixed-' + activeColor).addClass(activeColor + '-active');
-    } else {
-      $('#fixed-' + activeColor).removeClass(activeColor + '-active');
-    }
-  });
-});
-
-
 //Check Browser and adjust font-weights for Chrome
 function checkBrowser() {
   var isChromium = !!window.chrome;
@@ -349,6 +348,7 @@ function initialize() {
   explore();
   matchHeight();
   slides();
+  scrollTime();
 }
 
 // Collect all functions to execute on Resize

@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type' />  
+    <title>SDR Sankey</title>
+    <script src="ext/raphael.js" type="text/javascript"></script>
+    <script src="ext/jquery.js" type="text/javascript"></script>
+    <script src="ext/sankey.js" type="text/javascript"></script>    
+    <style>
+      * {
+        -webkit-transition: opacity 0.75s;
+        transition: opacity 0.75s;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <script type='text/javascript'>
+    
+    //DATA
+      $(document).ready(function() {
+    
+       var raw_data = [
+       
+["Biological, Agricultural & Environmental Life Sciences", 15.2, "Biological, Agricultural & Other Life Scientists"],
+["Biological, Agricultural & Environmental Life Sciences", 0.69, "Computer & Mathematical Scientists"],
+["Biological, Agricultural & Environmental Life Sciences", 0.23, "Engineers"],
+["Biological, Agricultural & Environmental Life Sciences", 2.83, "Health-Related Occupations"],
+["Biological, Agricultural & Environmental Life Sciences", 3.84, "Non-S & E Occupations"],
+["Biological, Agricultural & Environmental Life Sciences", 0.77, "Physical & Related Scientists"],
+["Biological, Agricultural & Environmental Life Sciences", 0.03, "Psychologists"],
+["Biological, Agricultural & Environmental Life Sciences", 1.6, "S & E Related Occupations"],
+["Biological, Agricultural & Environmental Life Sciences", 0.24, "Social & Related Scientists"],
+["Computer & Mathematical Sciences", 0.05, "Biological, Agricultural & Other Life Scientists"],
+["Computer & Mathematical Sciences", 5.9, "Computer & Mathematical Scientists"],
+["Computer & Mathematical Sciences", 0.25, "Engineers"],
+["Computer & Mathematical Sciences", 0.04, "Health-Related Occupations"],
+["Computer & Mathematical Sciences", 0.89, "Non-S & E Occupations"],
+["Computer & Mathematical Sciences", 0.03, "Physical & Related Scientists"],
+["Computer & Mathematical Sciences", 0, "Psychologists"],
+["Computer & Mathematical Sciences", 0.35, "S & E Related Occupations"],
+["Computer & Mathematical Sciences", 0.05, "Social & Related Scientists"],
+["Engineering", 0.59, "Biological, Agricultural & Other Life Scientists"],
+["Engineering", 1.96, "Computer & Mathematical Scientists"],
+["Engineering", 11.09, "Engineers"],
+["Engineering", 0.15, "Health-Related Occupations"],
+["Engineering", 2.76, "Non-S & E Occupations"],
+["Engineering", 0.82, "Physical & Related Scientists"],
+["Engineering", 0.01, "Psychologists"],
+["Engineering", 1.13, "S & E Related Occupations"],
+["Engineering", 0.04, "Social & Related Scientists"],
+["Health", 0.77, "Biological, Agricultural & Other Life Scientists"],
+["Health", 0.14, "Computer & Mathematical Scientists"],
+["Health", 0.03, "Engineers"],
+["Health", 2.23, "Health-Related Occupations"],
+["Health", 0.98, "Non-S & E Occupations"],
+["Health", 0.07, "Physical & Related Scientists"],
+["Health", 0.02, "Psychologists"],
+["Health", 0.2, "S & E Related Occupations"],
+["Health", 0.23, "Social & Related Scientists"],
+["Physical & Related Sciences", 1.49, "Biological, Agricultural & Other Life Scientists"],
+["Physical & Related Sciences", 0.87, "Computer & Mathematical Scientists"],
+["Physical & Related Sciences", 1.29, "Engineers"],
+["Physical & Related Sciences", 0.22, "Health-Related Occupations"],
+["Physical & Related Sciences", 2.55, "Non-S & E Occupations"],
+["Physical & Related Sciences", 9.38, "Physical & Related Scientists"],
+["Physical & Related Sciences", 0, "Psychologists"],
+["Physical & Related Sciences", 1.08, "S & E Related Occupations"],
+["Physical & Related Sciences", 0.04, "Social & Related Scientists"],
+["Psychology", 0.3, "Biological, Agricultural & Other Life Scientists"],
+["Psychology", 0.29, "Computer & Mathematical Scientists"],
+["Psychology", 0.06, "Engineers"],
+["Psychology", 0.34, "Health-Related Occupations"],
+["Psychology", 3.19, "Non-S & E Occupations"],
+["Psychology", 0.01, "Physical & Related Scientists"],
+["Psychology", 6.9, "Psychologists"],
+["Psychology", 0.35, "S & E Related Occupations"],
+["Psychology", 3.11, "Social & Related Scientists"],
+["Social & Related Sciences", 0.18, "Biological, Agricultural & Other Life Scientists"],
+["Social & Related Sciences", 0.32, "Computer & Mathematical Scientists"],
+["Social & Related Sciences", 0.04, "Engineers"],
+["Social & Related Sciences", 0.26, "Health-Related Occupations"],
+["Social & Related Sciences", 3.97, "Non-S & E Occupations"],
+["Social & Related Sciences", 0.18, "Physical & Related Scientists"],
+["Social & Related Sciences", 0.04, "Psychologists"],
+["Social & Related Sciences", 0.16, "S & E Related Occupations"],
+["Social & Related Sciences", 7.14, "Social & Related Scientists"],
+	
+    
+       
+      	
+	
+	
+     
+    ];
+       
+
+      //order of the bars 
+      var sankey = new Sankey();
+      
+       sankey.stack(0,[
+   
+      "Health",        
+            "Computer & Mathematical Sciences",     
+        "Social & Related Sciences",     
+        "Psychology",    
+       "Physical & Related Sciences",  
+       "Engineering",  
+       "Biological, Agricultural & Environmental Life Sciences",      
+  
+  
+  
+        
+      ]);
+      
+     
+       sankey.stack(1,[
+  
+
+   
+       "S & E Related Occupations",   
+     
+        "Health-Related Occupations",        
+                "Psychologists",   
+      "Computer & Mathematical Scientists",                    
+              "Social & Related Scientists",     
+     
+        "Physical & Related Scientists",                
+                              
+         "Engineers", 
+    
+    
+           "Non-S & E Occupations",            
+         "Biological, Agricultural & Other Life Scientists",      
+      ]);
+      
+   
+      // Nudge -- aligns top boxes?????
+      sankey.nudge_boxes_callback = function() {
+        sankey.boxes["Biological, Agricultural & Other Life Scientists"].y = (sankey.boxes["Biological, Agricultural & Other Life Scientists"].b() - sankey.boxes["Biological, Agricultural & Other Life Scientists"].size());
+  
+  
+     
+      }
+      
+      // Colours
+      sankey.setColors({
+        "Biological, Agricultural & Environmental Life Sciences":"#CD5C5C",
+        "Computer & Mathematical Sciences":"#FFA07A", 
+        "Engineering":"#FFD700",
+        "Physical & Related Sciences":"#7FFF00", 
+        "Health":"#229954",
+        "Social & Related Sciences":"#D4AC0D", 
+        "S & E Related Occupations":"#CA6F1E",    
+        "Psychology":"#CA6F1E",       
+              });
+      
+      // Add the emissions
+       
+      // Fix some of the colours
+      //sankey.nudge_colours_callback = function() {
+        //this.recolour(this.boxes["Computer & Mathematical Scientists"].left_lines,"#AAAAAA");
+ 
+     // };
+      
+      sankey.y_space = 15;
+      sankey.right_margin = 350;
+      sankey.left_margin = 280;
+
+            
+      sankey.convert_flow_values_callback = function(flow) {
+        return flow * 2; // Pixels per percent
+      };
+      
+      //rounds number to remove deciamls
+      //sankey.convert_flow_labels_callback = function(flow) {
+      //  return Math.round(flow);
+     // };
+          //rounds number to remove deciamls
+      sankey.convert_flow_labels_callback = function(flow) {
+        return Math.round(flow)+"%";
+      };  
+      sankey.convert_box_value_labels_callback = function(flow) {
+        return (""+Math.round(flow)+"%");
+      };
+      
+      sankey.setData(raw_data);
+      sankey.draw();
+    });
+      
+    </script>
+    <h1 style='width:1000px; height:80px;text-align: center; margin-bottom: 80'>In what occupations do the nation's science, engineering and health doctorates work?</h1>
+    <h2 style='width:1000px; height:50px;text-align: center; margin-bottom: 80'>Graduates by Field of Degree and Current Occupation</h2>
+    <p style='width:1000px; height:80px; text-align: center; margin-bottom: 80'>This graphic shows (1) the percent of doctorate recipients by field of degree (bars on the left), (2) the percent of doctorate recipients by current occupation classification (bars on the right), and (3) the flow from field of degree to occupation (colored lines). Move your cursor to interact with the graphic.</p>   
+ 
+
+
+<div style 	='position: left;
+	float: left;
+	margin-top: 10px;
+		margin-left: 200px;
+	width: 10%;
+	height: 30px;
+	background-color: white;
+	margin-bottom: 10px'      
+                 
+         >Percent by Field of Degree</div>
+         
+         
+<div style  	=' position: relative;
+	float: right;
+	margin-top: 10px;
+		margin-right: 500px;
+	width: 15%;
+	height: 30px;
+	background-color: white;
+	margin-bottom: 10px'
+  >Percent by Occupation </div>
+
+    <div id='sankey' style="width:1000px;height:800px">
+      &nbsp;
+    </div>
+  </body>
+</html>

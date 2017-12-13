@@ -1694,7 +1694,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 /* Sub Navigation for Story Pages*/
-/* line 108, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+/* line 109, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
 .sub-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1706,7 +1706,7 @@ a:hover, a:focus, a:active, a:visited {
   display: none;
 }
 
-/* line 118, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+/* line 119, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
 .sub-nav .story-item {
   color: rgba(0, 0, 0, 0.3);
   font-size: 14px;
@@ -1719,7 +1719,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 118, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+  /* line 119, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
   .sub-nav .story-item {
     font-size: 13px;
     padding: 10px;
@@ -1727,7 +1727,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 860px) {
-  /* line 118, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+  /* line 119, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
   .sub-nav .story-item {
     font-size: 12px;
     padding: 10px 6px;
@@ -1735,7 +1735,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 118, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+  /* line 119, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
   .sub-nav .story-item {
     font-size: 16px;
     padding: 9px;
@@ -1743,14 +1743,14 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
-/* line 143, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+/* line 144, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
 .sub-nav .story-item:hover {
   -webkit-transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
   transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 108, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
+  /* line 109, /Users/kadimac/Desktop/norc-repo/sass/navigation/_header.scss */
   .sub-nav {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
