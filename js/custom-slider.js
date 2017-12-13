@@ -296,18 +296,22 @@ function matchHeight() {
 function scrollTime() {
   var windowHeight = $(window).height();
 
-  var textHeight = $('.active .area .landing-text').height(); //gets height of thumbnail section of active slide
-  var tileHeight = $('.active .area .thumbnails').height(); //gets height of thumbnail section of active slide
-  var totalHeight = textHeight+tileHeight;
+  
 
   $('.area').on('scroll', function() {
-    
-    
+    var textHeight = $('.active .area .landing-text').height(); //gets height of thumbnail section of active slide
+    var tileHeight = $('.active .area .thumbnails').height(); //gets height of thumbnail section of active slide
+    var totalHeight = textHeight+tileHeight;
 
-    console.log(totalHeight);
+    var text = $('.active .area .landing-text').offset().top;
+    var thumb = $('.active .area .thumbnails').offset().top;
 
-    if ( windowHeight >= 80 ) {
-      // console.log('over 80px');
+    console.log("total height " + totalHeight);
+    console.log('top of text '+ text);
+    console.log('top of thumbs '+ thumb);
+
+    if ( text <= -80 && text >= -100) {
+      alert('over 80px');
     }
 
 
