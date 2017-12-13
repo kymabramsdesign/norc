@@ -62,10 +62,10 @@ $(window).bind("load", function() {
   $('.menu-container').html(
     '<ul>'+
     '<li class="menu-title">Insight 2017</li>' +
-    '<li><a href="/">Introduction</a></li>' +
-    '<li><a href="/#president">President’s Essay</a></li>' +
+    '<li><a href="/#introduction" onclick="location.reload()">Introduction</a></li>' +
+    '<li><a href="/#president" onclick="location.reload()">President’s Essay</a></li>' +
     '<li class="divider"><hr /></li>' +
-    '<li class="arrow"><a href="/#economics">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/#economics" onclick="location.reload()">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/congregations">Tracking the Professional and Economic Health of Churches</a></li>' +
       '<li><a href="/gas-prices">Tracking Gasoline and Diesel Prices</a></li>' +
@@ -73,13 +73,13 @@ $(window).bind("load", function() {
       '<li><a href="/consumer-finances">Monitoring the Financial Health of American Families</a></li>' +
       '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/#education">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/#education" onclick="location.reload()">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/higher-education">Making Higher Education More Accessible and Achievable</a></li>' +
       '<li><a href="/early-childhood">Assessing and Shaping the Impact of Early Childhood Education</a></li>' +
       '<li><a href="/science-and-technology">Tracking the Careers of STEM Doctorates</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/#global">Global Development</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/#global" onclick="location.reload()">Global Development</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/usaid-evaluations">Measuring Impact and Improving Performance</a></li>' +
       '<li><a href="/complex-projects">Assessing the Impact of Complex Projects</a></li>' +
@@ -87,7 +87,7 @@ $(window).bind("load", function() {
       '<li><a href="/vulnerable-populations">Reaching Vulnerable Populations in Fragile Environments</a></li>' +
       '<li><a href="/closed-societies">Peering Into Closed Societies</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/#health">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/#health" onclick="location.reload()">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/medicare-medicaid">Making Medicare and Medicaid More Effective</a></li>' +
       '<li><a href="/patient-risk">Using Data to Improve Safety and Quality</a></li>' +
@@ -96,7 +96,7 @@ $(window).bind("load", function() {
       '<li><a href="/health-culture">Cultivating a Culture of Health</a></li>' +
       '<li><a href="/zika-awareness">Testing Americans’ Zika Awareness</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/#society">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/#society" onclick="location.reload()">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu last-one">' +
       '<li><a href="/successful-aging">Informing Policy on Retirement and Aging</a></li>' +
       '<li><a href="/intimate-partner-violence">Combating Intimate Partner Violence</a></li>' +
@@ -106,7 +106,7 @@ $(window).bind("load", function() {
       '<li><a href="/smoking-and-social-media">Mapping Smoking Policies to Behavior</a></li>' +
     '</ul></li>' +
     '<li class="divider"><hr /></li>' +
-    '<li><a href="/#gain-more">Gain More Insight</a></li>' +
+    '<li><a href="/#gain-more" onclick="location.reload()">Gain More Insight</a></li>' +
     '</ul>'
   );
 

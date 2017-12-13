@@ -341,7 +341,7 @@ function dotNav() {
     else if ( location.indexOf('insight-dot') >= 0 ) {
       $('.section-title.one').fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/#insight';
+        window.location = '/#introduction';
       });
     }
     else if ( location.indexOf('president-dot') >= 0 ) {

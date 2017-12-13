@@ -225,8 +225,7 @@ function slides() {
   // Moves the slide to the correct location via hash
   var hash = location.hash.substr(1);
   if ( hash === '') {
-    $('.nav-arrow.next').show();
-    $('.nav-arrow.prev').hide();
+    // do nothing, just start on the first slide
   }
   else if ( hash === 'president') {
     $('.slider').animate({ left: slide2 }, 400);
@@ -274,7 +273,8 @@ function slides() {
     $('.slider').animate({ left: slide8 }, 1150);
     $('.section-title').hide();
     $('.nav-dot, .section-title').removeClass('active');
-    $('.nav-arrow').show();
+    $('.nav-arrow.next').hide();
+    $('.nav-arrow.prev').show();
     $('.gain-more').show().addClass('active');
   }
 }

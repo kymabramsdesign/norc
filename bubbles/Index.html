@@ -1,0 +1,144 @@
+<!-- <!DOCTYPE html>
+<html>
+
+  <head>
+		<meta charset="utf-8">
+		<title>Interactive Bubble Chart</title>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="style.css">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+	</head>
+
+	<body>
+		<div id="container">
+
+			<div id="header">
+				<h1>Sources of Media by Political Party</h1>
+			</div>
+
+			<div id="headerBand">
+				</br>
+			</div>
+
+			<div id="charts">
+
+				<div id="bubbleContainer">
+				<h2>Do you get your news from this media source?</h2>
+
+				<div id="overallRatings" class="btn-group btn-info top-btn" data-toggle="buttons">
+
+				  <label class="btn active ratingBtn" id="reset">
+					<input type="radio" name="options">Reset</label>
+				   <label class="btn ratingBtn" id="Fox">
+					<input type="radio" name="options">Fox</label>
+				  <label class="btn ratingBtn" id="CNN">
+					<input type="radio" name="options">CNN</label>
+				</div>
+				
+				<div id="RiskCycle" class="btn-group btn-default top-btn" data-toggle="buttons">
+
+				</div>
+
+				<div id="bubbleChart"></div>
+
+				</div>
+			</div>
+		</div>
+		<script src="bubbles.js"></script>
+  </body>
+
+</html>
+ -->
+
+<!DOCTYPE html>
+<html>
+ 
+  <head>
+		<meta charset="utf-8">
+		<title>NORC Political Party Bubbles</title>
+			
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="style.css">
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	 
+	</head>
+ 
+	<body>
+		<div id="container">
+			<div id="header">
+			<h1 align="left">Partisanship and the Media</h1>
+			</div>
+			
+			<div id="headerBand">
+			</br>
+			</div>
+			<div id="charts">
+			
+				<div id="bubbleContainer">
+				<h2 align="left">The Media Insight Project, a collaboration between the American Press Institute and The AP-NORC Center, investigates how Americans of different partisan stripes get news and their attitudes toward the news media.</h2>
+				<h3 align="left">Click on the buttons to learn more about the findings</h3>
+				<p align="left">There are 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (Independent). Each circle represents 1/100, or 1%, for each political party. For example, one red circle represents 1% of respondents identifiying as belonging to the Republican Party; six blue circles represents 6% of respondents who are Democrat </p>
+			
+            	<div id="overallRatings" class="btn-group btn-info top-btn" data-toggle="buttons" style="background:black">
+				
+        <!--          <label class="btn ratingBtn" id="ratingCategory" >
+					<input type="radio" name="options">Political Party Identification</label>				
+				
+				  <label class="btn active ratingBtn" id="reset">
+					<input type="radio" name="options">Reset</label>    -->
+					
+      			  <label class="btn ratingBtn" id="Informed">
+					<input type="radio" name="options">Media keeps them very well informed on important issues</label>   					
+					
+					
+					
+				   <label class="btn ratingBtn" id="CNN">
+					<input type="radio" name="options">Get news from CNN</label>
+				  <label class="btn ratingBtn" id="Fox">
+					<input type="radio" name="options">Get news from Fox News</label>
+
+
+
+				  <label class="btn ratingBtn" id="Social Media">
+					<input type="radio" name="options">Get news on Social Media</label>
+
+			  <label class="btn ratingBtn" id="Accurate">
+					<input type="radio" name="options">News from media is very accurate</label>
+					
+			<label class="btn ratingBtn" id="Prevent">
+					<input type="radio" name="options">News organizations prevent political leaders from doing their job</label>
+                    
+           		
+		
+
+				</div>
+
+<!-- 				<div id="RiskCycle" class="btn-group btn-default top-btn" data-toggle="buttons">
+				  <label class="btn cycleBtn" id="2014">
+					<input type="radio" name="options">2014</label>
+				   <label class="btn active cycleBtn" id="2015">
+					<input type="radio" name="options">2015</label>
+				</div> -->
+
+				<div id="bubbleChart">
+				</div>
+				</div>
+		</div>
+		<script src="bubbles2.js"></script>
+  </body>
+ 
+</html>
