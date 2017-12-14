@@ -307,11 +307,13 @@ function scrollTime() {
 
     if ( text <= -80 ) {
       $(this).addClass('scrolled');
+      $(this).find('.grey-box').addClass('scrolled');
       // alert('over 80px');
     }
 
     else {
       $(this).removeClass('scrolled');
+      $(this).find('.grey-box').removeClass('scrolled');
     }
 
 
