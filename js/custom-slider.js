@@ -295,29 +295,19 @@ function matchHeight() {
 // On Scroll functions
 function scrollTime() {
   $('.area').on('scroll', function() {
-    // var textHeight = $('.active .area .landing-text').height(); //gets height of thumbnail section of active slide
-    // var tileHeight = $('.active .area .thumbnails').height(); //gets height of thumbnail section of active slide
-    // var totalHeight = textHeight+tileHeight;
-
     var text = $('.active .area .landing-text').offset().top;
     var thumb = $('.active .area .thumbnails').offset().top;
-
-    // console.log('top of text '+ text);
-    // console.log('top of thumbs '+ thumb);
 
     if ( text <= -80 ) {
       $(this).addClass('scrolled');
       $(this).find('.grey-box').addClass('scrolled');
-      // alert('over 80px');
     }
-
     else {
-      $(this).removeClass('scrolled');
-      $(this).find('.grey-box').removeClass('scrolled');
+      if ( $('.landing-text').hasClass('button-scrolled') === false ) {
+        $(this).removeClass('scrolled');
+        $(this).find('.grey-box').removeClass('scrolled');
+      }
     }
-
-
-    // console.log($('.area').scrollTop());
   });
 }
 
@@ -330,14 +320,18 @@ function explore() {
   });
 
   $('.down-arrow').click( function() {
-    var tilePosition = $('.thumbnails').offset().top; //gets position of thumbnails section
-    tilePosition = tilePosition - 100;
-
-    $('.fp-scrollable').animate({
-      scrollTop: tilePosition
+    
+    $('.active .area').addClass('scrolled');
+    $('.active .area .grey-box').addClass('scrolled');
+    $('.active .area .landing-text').addClass('button-scrolled');
+    $('.active .area .thumbnails').animate({
+      "top": "-=450px"
     }, 400);
+var thumb = $('.active .area .thumbnails').offset().top; //gets position of thumbnails section
+console.log(thumb);
   });
 }
+
 
 //Check Browser and adjust font-weights for Chrome
 function checkBrowser() {

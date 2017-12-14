@@ -460,6 +460,11 @@
       @include transition(opacity 1.5s ease-in-out, height 1s ease-in-out);
       opacity: 0;
       height: 65vh;
+
+      &.button-scrolled {
+        @include transition(opacity .75s ease-in-out, height .75s ease-in-out);
+        height: 98px;
+      }
     }
   }
 }

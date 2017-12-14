@@ -4174,7 +4174,14 @@ body.intro {
   height: 65vh;
 }
 
-/* line 467, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 464, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+.area.scrolled .landing-text.button-scrolled {
+  -webkit-transition: opacity 0.75s ease-in-out, height 0.75s ease-in-out;
+  transition: opacity 0.75s ease-in-out, height 0.75s ease-in-out;
+  height: 98px;
+}
+
+/* line 472, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .grey-box {
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
@@ -4184,7 +4191,7 @@ body.intro {
   width: 100vw;
 }
 
-/* line 474, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 479, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .grey-box.scrolled {
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
