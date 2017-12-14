@@ -298,6 +298,8 @@ function scrollTime() {
     var text = $('.active .area .landing-text').offset().top;
     var thumb = $('.active .area .thumbnails').offset().top;
 
+    console.log(thumb);
+
     if ( text <= -80 ) {
       $(this).addClass('scrolled');
       $(this).find('.grey-box').addClass('scrolled');
@@ -324,11 +326,13 @@ function explore() {
     $('.active .area').addClass('scrolled');
     $('.active .area .grey-box').addClass('scrolled');
     $('.active .area .landing-text').addClass('button-scrolled');
-    $('.active .area .thumbnails').animate({
-      "top": "-=450px"
-    }, 400);
+    // $('.active .area .thumbnails').css('display', 'flex');
+    // $( ".active .area .thumbnails" ).offset({ top: 95 });
+    // $('.active .area .thumbnails').animate({
+    //   "margin-top": "-100"
+    // }, 400);
 var thumb = $('.active .area .thumbnails').offset().top; //gets position of thumbnails section
-console.log(thumb);
+console.log($('.active .area .thumbnails').scrollHeight);
   });
 }
 

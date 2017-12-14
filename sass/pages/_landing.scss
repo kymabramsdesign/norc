@@ -211,6 +211,7 @@
   }
 
   .thumbnails {
+    @include transition(all .5s ease-in-out);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -221,6 +222,8 @@
     justify-content: center;
     padding: 0 60px 80px;
     width: 100%;
+    opacity: 0;
+    display: none;
 
     @media screen and (min-width: 1600px) {
       padding: 0 10vw;
@@ -459,15 +462,28 @@
     .landing-text {
       @include transition(opacity 1.5s ease-in-out, height 1s ease-in-out);
       opacity: 0;
-      height: 65vh;
+      // height: 65vh;
 
       &.button-scrolled {
         @include transition(opacity .75s ease-in-out, height .75s ease-in-out);
-        height: 98px;
+        // height: 98px;
       }
+    }
+
+    .thumbnails {
+      @include transition(all 1s ease-in-out);
+      opacity: 1;
     }
   }
 }
+
+// .slide.active {
+//   .area {
+//     .landing-text {
+//       position: absolute;
+//     }
+//   }
+// }
 
 .grey-box {
   @include transition(all .7s ease-in-out);
