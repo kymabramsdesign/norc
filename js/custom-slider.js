@@ -310,6 +310,13 @@ function scrollTime() {
         $(this).find('.grey-box').removeClass('scrolled');
       }
     }
+
+    // if  ( thumb >= 95 ) {
+    //   var ele = $('.slide.active .thumbnails').offset().top;
+    //   $('.slide.active .landing-text').animate({
+    //     'margin-top': ele - (ele*2-95)
+    // }, 300);
+    // }
   });
 }
 
@@ -322,17 +329,48 @@ function explore() {
   });
 
   $('.down-arrow').click( function() {
-    
-    $('.active .area').addClass('scrolled');
+
+    var ele = $('.slide.active .thumbnails').offset().top;
+    var screenHeight = $(window).height();
+
+    // alert( ele);
+
+    // $('.slide.active .thumbnails').animate({
+    //     'margin-top': ele - (ele*2-80)
+    // }, 300);
+    $('.slide.active .landing-text').animate({
+        // 'margin-top': ele - (ele*2-95),
+        // 'margin-top': -screenHeight
+        // 'height': screenHeight*2
+        'opacity': 0
+    }, 300);
+    $('.slide.active .thumbnails').animate({
+        // 'margin-top': ele - (ele*2-95),
+        'margin-top': -screenHeight+95
+    }, 300);
+
+     $('.active .area').addClass('scrolled');
     $('.active .area .grey-box').addClass('scrolled');
     $('.active .area .landing-text').addClass('button-scrolled');
+
+    return false;
+
+     // // Scroll the element up
+     //    scrolling = window.setInterval(function() {
+     //        $('.slide.active').scrollTop( -300 );
+     //    }, 300);
+    
+    // $('.active .area').addClass('scrolled');
+    // $('.active .area .grey-box').addClass('scrolled');
+    // $('.active .area .landing-text').addClass('button-scrolled');
     // $('.active .area .thumbnails').css('display', 'flex');
     // $( ".active .area .thumbnails" ).offset({ top: 95 });
+    // $( ".active .area .landing-text" ).offset({ top: -1000 });
     // $('.active .area .thumbnails').animate({
-    //   "margin-top": "-100"
+    //   scrollTop: -95
     // }, 400);
-var thumb = $('.active .area .thumbnails').offset().top; //gets position of thumbnails section
-console.log($('.active .area .thumbnails').scrollHeight);
+    var thumb = $('.active .area .thumbnails').offset().top; //gets position of thumbnails section
+    console.log( $('.active .area .thumbnails').scrollHeight );
   });
 }
 
