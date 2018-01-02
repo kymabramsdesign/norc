@@ -28,16 +28,10 @@
 
 #logo {
 
-  .tagline {
-    fill: $white-85;
-  }
-
-  .nrc {
-    fill: $white-85;
-  }
-
+  .tagline,
+  .nrc,
   .star {
-    fill: $white;
+    fill: $white-85;
   }
 }
 
@@ -100,7 +94,7 @@
   z-index: 10;
 
   &.scrolled {
-    background-color: $black-32;
+    background-color: $black;
   }
 }
 
@@ -114,7 +108,7 @@
   top: 80px;
   width: 100vw;
   z-index: 12;
-  display: none; // Just for working on Mobile
+  // display: none; // Just for working on Mobile
 
   .story-item {
     color: $black-50;

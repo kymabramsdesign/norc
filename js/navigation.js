@@ -61,7 +61,7 @@ $(window).bind("load", function() {
   // Full Menu
   $('.menu-container').html(
     '<ul>'+
-    '<li class="menu-title">Insight 2017</li>' +
+    '<li class="menu-title">2017 Annual Report</li>' +
     '<li><a href="/#introduction" onclick="location.reload()">Introduction</a></li>' +
     '<li><a href="/#president" onclick="location.reload()">President’s Essay</a></li>' +
     '<li class="divider"><hr /></li>' +
@@ -86,6 +86,7 @@ $(window).bind("load", function() {
       '<li><a href="/real-time-adaptability">Adapting Timelines and Methodologies to Conditions on the Ground</a></li>' +
       '<li><a href="/vulnerable-populations">Reaching Vulnerable Populations in Fragile Environments</a></li>' +
       '<li><a href="/closed-societies">Peering Into Closed Societies</a></li>' +
+      '<li><a href="/map-page">Interactive Map Title</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="/#health" onclick="location.reload()">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +

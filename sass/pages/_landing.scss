@@ -325,6 +325,10 @@
         flex-wrap: wrap;
         padding: 10px 10px 0;
         width: 100%;
+
+        &.one-vertical {
+          padding:  0 10px 5px;
+        }
       }
 
       @media screen and (max-width: 767px) {
@@ -478,14 +482,6 @@
   }
 }
 
-// .slide.active {
-//   .area {
-//     .landing-text {
-//       position: absolute;
-//     }
-//   }
-// }
-
 .grey-box {
   @include transition(all .7s ease-in-out);
   position: fixed;
@@ -493,9 +489,12 @@
   background-color: transparent;
   width: 100vw;
 
-  &.scrolled {
-    @include transition(all .6s ease-in-out);
-    background-color: $black-70;
+  @media screen and (max-width: 767px) {
+    background-color: $black !important;
   }
 
+  &.scrolled {
+    @include transition(all .6s ease-in-out);
+    background-color: $black-90;
+  }
 }

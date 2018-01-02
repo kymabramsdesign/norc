@@ -73,14 +73,14 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 27vw;
+    height: 33vw;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     width: 50vw;
     
     &.aging {
-      background-image: url('/img/video-placeholder.jpg');
+      background-image: url('/img/aging-3.jpg');
     }
 
     @media screen and (max-width: 1000px) {
