@@ -67,7 +67,7 @@ $(window).bind("load", function() {
     '<li class="divider"><hr /></li>' +
     '<li class="arrow"><a href="/#economics" onclick="location.reload()">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
-      '<li><a href="/congregations">Tracking the Professional and Economic Health of Churches</a></li>' +
+      '<li><a href="/congregations">Tracking the Professional and Economic Outlook of Congregations</a></li>' +
       '<li><a href="/gas-prices">Tracking Gasoline and Diesel Prices</a></li>' +
       '<li><a href="/poverty-research">Exploring Poverty and Resilience</a></li>' +
       '<li><a href="/consumer-finances">Monitoring the Financial Health of American Families</a></li>' +
