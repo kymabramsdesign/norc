@@ -99,9 +99,9 @@ $(window).bind("load", function() {
     '</ul></li>' +
     '<li class="arrow"><a href="/#society" onclick="location.reload()">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu last-one">' +
-      '<li><a href="/successful-aging">Informing Policy on Retirement and Aging</a></li>' +
+      '<li><a href="/aging">Informing Policy on Retirement and Aging</a></li>' +
       '<li><a href="/intimate-partner-violence">Combating Intimate Partner Violence</a></li>' +
-      '<li><a href="/minds-and-media">Tracking American’s Concerns and the Media That Inform Them</a></li>' +
+      '<li><a href="/minds-and-media">Tracking Americans\' Opinions and the Media That Inform Them</a></li>' +
       '<li><a href="/teen-surveys">Tapping into the Minds and Behaviors of Teens</a></li>' +
       '<li><a href="/disaster-fatalities">Understanding How Disasters Kill</a></li>' +
       '<li><a href="/smoking-and-social-media">Mapping Smoking Policies to Behavior</a></li>' +
