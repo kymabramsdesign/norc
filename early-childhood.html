@@ -45,12 +45,28 @@
     <h3 class="section-title nine">Gain More Insight</h3>
   </div>
 
-  <!--   Story Page Sub Navigation -->
-  <div class="sub-nav">
+  <!--   Story Page Sub Desktop Navigation -->
+  <div class="sub-nav desktop">
     <a href="/higher-education" class="story-item">Higher Education</a>
     <a href="/early-childhood" class="story-item active">Early Childhood</a>
     <a href="/science-and-technology" class="story-item">Science &amp; Technology</a>
   </div>
+
+  <!--   Story Page Sub Mobile Navigation -->
+  <div class="mobile sub-nav">
+    <div class="menu-items">
+      <div class="menu-wrapper">
+        <a href="/higher-education" class="story-item">Making Higher Education More Accessible and Achievable</a>
+        <a href="/early-childhood" class="story-item active">Assessing and Shaping the Impact of Early Childhood Education</a>
+        <a href="/science-and-technology" class="story-item">Tracking the Careers of STEM Doctorates</a>
+      </div>
+    </div>
+    <div class="load-more">
+      <p class="load-more-text">stories</p>
+      <img class="arrow" src="img/arrow.svg" />
+    </div>
+  </div>
+
 </header>
 <main>
   <div class="page-overlay"></div>
@@ -111,6 +127,7 @@
   <script async src="https://static.addtoany.com/menu/page.js"></script>
   <style type="text/css">
     .a2a_svg, .a2a_menu  {border-radius: 0 !important;} .a2a_mini {margin-top: 15px;margin-left: 57px;}
+    @media screen and (max-width:767px) {.a2a_full {left: -1px;} .a2a_mini { left: initial !important; margin-left: 0; margin-top: 8px; right: 20px; }}
   </style>
   <!-- AddToAny END -->
 </footer>

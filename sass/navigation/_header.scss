@@ -7,9 +7,9 @@
   z-index: 100;
 
   @media screen and (max-width:767px) {
-    left: 19px;
+    left: 20px;
     position: fixed;
-    top: 18px;
+    top: 20px;
     width: 175px;
   }
 }
@@ -21,7 +21,7 @@
     width: 164px;
 
     @media screen and (max-width: 767px) {
-      width: 150px;
+      width: 120px;
     }
   }
 }
@@ -55,9 +55,10 @@
   z-index: 200;
 
   @media screen and (max-width: 767px) {
-    height: 22px;
-    right: 20px;
-    top: 18px;
+    height: 38px;
+    right: 10px;
+    padding: 10px;
+    top: 10px;
     width: auto;
   }
 
@@ -74,11 +75,12 @@
   z-index: 200;
 
   @media screen and (max-width: 767px) {
-    right: 76px;
-    top: 18px;
+    right: 59px;
+    top: 10px;
 
     img {
-      height: 22px;
+      height: 38px;
+      padding: 10px;
       width: auto;
     }
   }
@@ -92,6 +94,10 @@
   top: 0;
   width: 100vw;
   z-index: 10;
+
+  @media screen and (max-width: 767px) {
+    height: 58px;
+  }
 
   &.scrolled {
     background-color: $black;
@@ -108,7 +114,82 @@
   top: 80px;
   width: 100vw;
   z-index: 12;
-  // display: none; // Just for working on Mobile
+
+  &.mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    &.desktop {
+      display: none !important;
+    }
+
+    &.mobile {
+      display: block;
+      padding: 0;
+      top: 82px;
+
+      &.open-menu {
+        @include transition(all .1s ease-in-out);
+        box-shadow: 0 3px 15px $black-12;
+      }
+
+      .menu-items {
+        display: none;
+
+        .menu-wrapper {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          padding: 18px 0 0;
+        }
+      }
+
+      .load-more {
+        margin: 10px 0 0;
+        text-align: center;
+        width: 100vw;
+
+        &-text {
+          @include transition(opacity .4s ease-in-out);
+          color: $mobile-menu-grey;
+          font-size: 10px;
+          letter-spacing: 2px;
+          line-height: 10px;
+          margin: 0 0 -9px;
+          opacity: 1;
+          text-transform: uppercase;
+        }
+
+        .arrow {
+          @include transition(transform .2s ease-in-out);
+          height: 24px;
+          margin-left: 0;
+          padding: 12px 0 4px;
+          -webkit-transform: scaleX(2);
+          transform: scaleX(2);
+          width: 22px;
+        }
+
+        &.open-menu {
+          margin: 15px 0 0;
+          
+          .load-more-text {
+            @include transition(opacity .2s ease-in-out);
+            opacity: 0;
+          }
+
+          .arrow {
+            @include transition(transform .3s ease-in-out);
+            -webkit-transform: rotate(-180deg) translateY(4px) scaleX(2);
+            transform: rotate(-180deg) translateY(4px) scaleX(2);
+          }
+        }
+      }
+    }
+  }
 
   .story-item {
     color: $black-50;
@@ -130,19 +211,16 @@
     }
 
     @media screen and (max-width: 767px) {
-      font-size: 16px;
-      padding: 9px;
+      color: $mobile-menu-grey;
+      font-size: 15px;
+      line-height: 20px;
+      padding: 10px 20px;
+      text-align: left;
       width: 100vw !important;
     }
 
     &:hover {
       @include transition(color .4s ease-in-out, background-color .4s ease-in-out);
     }
-  }
-
-  @media screen and (max-width: 767px) {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 10px 0 45px;
   }
 }

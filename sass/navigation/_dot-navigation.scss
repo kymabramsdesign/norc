@@ -27,7 +27,9 @@
       display: block;
 
       @media screen and (max-width: 767px) {
-        margin: 65px 0 5px;
+        font-size: 15px;
+        margin: 58px 0 5px;
+        padding: 8px 0 0;
       }
     }
   }
@@ -318,6 +320,24 @@
     }
   }
 
+  // Economics
+  .nav-dot.economics-dot.active .inner {
+    fill: $green;
+  }
+
+  &.story-page_economics .dot-nav h3 a {
+    color: $green;
+  }
+
+  // Education
+  .nav-dot.education-dot.active .inner {
+    fill: $maroon;
+  }
+
+  &.story-page_education .dot-nav h3 a {
+    color: $maroon;
+  }
+
   // Global
   .nav-dot.global-dot.active .inner {
     fill: $purple;
@@ -344,22 +364,52 @@
   &.story-page_society .dot-nav h3 a {
     color: $pink;
   }
+}
 
-  // Education
-  .nav-dot.education-dot.active .inner {
-    fill: $maroon;
-  }
-
-  &.story-page_education .dot-nav h3 a {
-    color: $maroon;
-  }
+@media screen and (max-width:767px) {
 
   // Economics
-  .nav-dot.economics-dot.active .inner {
-    fill: $green;
+  .story-page_economics .dot-nav .section-title.current {
+    background-color: $green-subhead;
+
+    a {
+      color: $mobile-menu-grey;
+    }
   }
 
-  &.story-page_economics .dot-nav h3 a {
-    color: $green;
+  // Education
+  .story-page_education .dot-nav .section-title.current {
+    background-color: $maroon-subhead;
+
+    a {
+      color: $mobile-menu-grey;
+    }
+  }
+
+  // Global
+  .story-page_global .dot-nav .section-title.current {
+    background-color: $purple-subhead;
+
+    a {
+      color: $mobile-menu-grey;
+    }
+  }
+
+  // Health
+  .story-page_health .dot-nav .section-title.current {
+    background-color: $teal-subhead;
+
+    a {
+      color: $mobile-menu-grey;
+    }
+  }
+
+  // Society
+  .story-page_society .dot-nav .section-title.current {
+    background-color: $pink-subhead;
+
+    a {
+      color: $mobile-menu-grey;
+    }
   }
 }

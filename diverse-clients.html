@@ -45,7 +45,8 @@
     <h3 class="section-title nine">Gain More Insight</h3>
   </div>
 
-  <div class="sub-nav">
+  <!--   Story Page Sub Desktop Navigation -->
+  <div class="sub-nav desktop">
     <a href="/medicare-medicaid" class="story-item">Medicare &amp; Medicaid</a>
     <a href="/patient-risk" class="story-item">Patient Risk</a>
     <a href="/diverse-clients" class="story-item active">Diverse Clients</a>
@@ -53,6 +54,25 @@
     <a href="/health-culture" class="story-item">Health Culture</a>
     <a href="/zika-awareness" class="story-item">Zika Awareness</a>
   </div>
+
+  <!--   Story Page Sub Mobile Navigation -->
+  <div class="mobile sub-nav">
+    <div class="menu-items">
+      <div class="menu-wrapper">
+        <a href="/medicare-medicaid" class="story-item">Making Medicare and Medicaid More Effective</a>
+        <a href="/patient-risk" class="story-item">Using Data to Improve Safety and Quality</a>
+        <a href="/diverse-clients" class="story-item active">Working with Providers, Payers and Other Stakeholders</a>
+        <a href="/opioid-epidemic" class="story-item">Visualizing Disease Vulnerability</a>
+        <a href="/health-culture" class="story-item">Cultivating a Culture of Health</a>
+        <a href="/zika-awareness" class="story-item">Testing Americans’ Zika Awareness</a>
+      </div>
+    </div>
+    <div class="load-more">
+      <p class="load-more-text">stories</p>
+      <img class="arrow" src="img/arrow.svg" />
+    </div>
+  </div>
+
 </header>
 <main>
   <div class="page-overlay"></div>
@@ -105,6 +125,7 @@
   <script async src="https://static.addtoany.com/menu/page.js"></script>
   <style type="text/css">
     .a2a_svg, .a2a_menu  {border-radius: 0 !important;} .a2a_mini {margin-top: 15px;margin-left: 57px;}
+    @media screen and (max-width:767px) {.a2a_full {left: -1px;} .a2a_mini { left: initial !important; margin-left: 0; margin-top: 8px; right: 20px; }}
   </style>
   <!-- AddToAny END -->
 </footer>

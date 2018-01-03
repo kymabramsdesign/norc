@@ -14,6 +14,7 @@ h1 {
 
   @media screen and (max-width: 767px) {
     font-size: 22px;
+    line-height: 26px;
   }
 }
 
@@ -29,8 +30,9 @@ h2 {
   }
 
   @media screen and (max-width: 767px) {
-    color: $mobile-text-grey;
+    color: $mobile-menu-grey;
     font-size: 20px;
+    margin: 0;
   }
 }
 

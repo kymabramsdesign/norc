@@ -401,6 +401,27 @@ function checkBrowser() {
   }
 }
 
+// Functions for the sub-nav on mobile devices
+function mobileMenu() {
+  var windowWidth = $(window).width();
+  if ( windowWidth <= 767 ) {
+    $('.dot-nav .section-title.current').on('click', function(e) {
+      e.preventDefault(); // stops click from taking you to the homepage section
+    });
+
+    $('.load-more, .dot-nav .section-title.current').on('click', function() {
+      if ( $('.load-more').hasClass('open-menu') ) {
+        $('.menu-items').slideUp(150);
+        $('.menu-items, .load-more, .sub-nav').removeClass('open-menu');
+      } else {
+        $('.menu-items').slideDown(250, function() {
+          $('.menu-items, .load-more, .sub-nav').addClass('open-menu');
+        });
+      }
+    });
+  }
+}
+
 
 // Collect all functions to execute at once on Load
 function initialize() {
@@ -410,6 +431,7 @@ function initialize() {
   popUpTop();
   videoPopup();
   dotNav();
+  mobileMenu();
 }
 
 // Collect all functions to execute on Resize

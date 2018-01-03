@@ -56,6 +56,11 @@
         font-size: 16px;
         line-height: 20px;
         margin: 10px 0;
+
+        &.arrow {
+          margin: 4px 0;
+          line-height: 30px;
+        }
       }
 
       &.menu-title {
@@ -68,7 +73,7 @@
         @media screen and (max-width: 1024px) {
           font-size: 15px;
           line-height: 15px;
-          margin-top: -96px;
+          margin-top: -99px;
         }
       }
 
@@ -110,14 +115,27 @@
 
         @media screen and (max-width: 767px) {
           float: right;
-          height: 13px;
+          height: 32px;
           margin-left: 0;
-          padding-bottom: 0;
+          padding: 12px 0;
+          -webkit-transform: scaleX(2);
+          transform: scaleX(2);
+          width: 22px;
         }
 
         &.open {
           -webkit-transform: rotate(-180deg) translateY(6px);
           transform: rotate(-180deg) translateY(6px);
+
+          @media screen and (max-width: 767px) {
+            float: right;
+            height: 32px;
+            margin-left: 0;
+            padding: 12px 0;
+            -webkit-transform: rotate(-180deg) translateY(4px) scaleX(2);
+            transform: rotate(-180deg) translateY(4px) scaleX(2);
+            width: 22px;
+          }
         }
       }
 
@@ -134,7 +152,7 @@
 
         @media screen and (max-width: 767px) {
           margin: 10px -20px 0;
-          padding: 20px 0 20px 40px;
+          padding: 20px 0 20px 30px;
         }
 
         &.last-one {
@@ -149,7 +167,8 @@
 
           @media screen and (max-width: 1024px) {
             font-size: 16px;
-            line-height: 18px;
+            line-height: 20px;
+            margin-bottom: 18px;
           }
 
           &:first-of-type {
