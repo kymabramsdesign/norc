@@ -333,72 +333,64 @@ function dotNav() {
     location = location.replace('nav-dot ', '');
 
     if ( location.indexOf('active') >= 0 ) {
-      $('.section-title.current').show().css('color', currentColor);
+      $('.section-title.current').stop(true,true).show().css('color', currentColor);
       $(this).on('click', function() {
         window.location = '/#'+ page;
       });
     }
     else if ( location.indexOf('insight-dot') >= 0 ) {
-      $('.section-title.one').fadeIn(300);
+      $('.section-title.one').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
         window.location = '/#introduction';
       });
     }
     else if ( location.indexOf('president-dot') >= 0 ) {
-      $('.section-title.two').fadeIn(300);
+      $('.section-title.two').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
         window.location = '/#president';
       });
     }
     else if ( location.indexOf('economics-dot') >= 0 ) {
-      $('.section-title.three').fadeIn(300);
+      $('.section-title.three').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
         window.location = '/#economics';
       });
     }
     else if ( location.indexOf('education-dot') >= 0 ) {
-      $('.section-title.four').fadeIn(300);
+      $('.section-title.four').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
         window.location = '/#education';
       });
     }
     else  if ( location.indexOf('global-dot') >= 0 ) {
-      $('.section-title.five').fadeIn(300);
+      $('.section-title.five').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
         window.location = '/#global';
       });
     }
     else if ( location.indexOf('health-dot') >= 0 ) {
-      $('.section-title.six').fadeIn(300);
+      $('.section-title.six').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
         window.location = '/#health';
       });
     }
     else if ( location.indexOf('society-dot') >= 0 ) {
-      $('.section-title.seven').fadeIn(300);
+      $('.section-title.seven').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
         window.location = '/#society';
       });
     }
     else if ( location.indexOf('more-dot') >= 0 ) {
-      $('.section-title.nine').fadeIn(300);
+      $('.section-title.nine').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
         window.location = '/#gain-more';
       });
     }
   }, function() {
     $('.section-title').hide();
-    $('.section-title.current').show();
+    $('.section-title.current').stop(true,true).show();
     $('.section-title').css('color', currentColor);
   });
-}
-
-//Check Browser and adjust font-weights for Chrome
-function checkBrowser() {
-  var isChromium = !!window.chrome;
-  if ( isChromium === true ) {
-    $('.main p, .area .h2 p, .main .section-title').css('font-weight', '300');
-  }
 }
 
 // Functions for the sub-nav on mobile devices
@@ -422,10 +414,55 @@ function mobileMenu() {
   }
 }
 
+// Functions for Special Share buttons on charts
+function specialShare() {
+  var checkUrl = window.location.hash.substr(1);
+
+  if ( checkUrl === 'chart' ) {
+    var imageSrc = $('.picture').find('img').attr('src'); // Get image src
+    var imageAlt = $('.picture').find('img').attr('alt'); // Get image alt
+    var caption = $('.picture').find('img').attr('caption'); // Get image caption
+    
+    $(".page-overlay").show().css('z-index','205');
+    $('.main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
+
+    // Add Close Buttons and Social Shares
+    $('.image-container').addClass('move-in').append('<img src="img/close.svg" alt="Close" class="close-button" />');
+    // Add caption
+    $('.image-container').append('<p class="caption">'+ caption + '</p>');
+    // Stop body from scrolling
+    $("body").addClass('no-scroll');
+
+    closeResisze();
+
+    // close the popup when user clicks Close Button
+    $('.close-button').on('click', function() {
+      var windowWidth = $(window).width();
+      $('.page-overlay').fadeOut(800).css('z-index','105'); // remove overlay
+      $('move-out').css('left', -windowWidth*2);
+      $('.image-container').removeClass('move-in').addClass('move-out');
+      $("body").removeClass('no-scroll'); // body to scroll again
+
+      if ( $('iframe').is(':visible')) {
+        $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=0');
+      }
+    });
+  }
+}
+
+//Check Browser and adjust font-weights for Chrome
+function checkBrowser() {
+  var isChromium = !!window.chrome;
+  if ( isChromium === true ) {
+    $('.main p, .area .h2 p, .main .section-title').css('font-weight', '300');
+  }
+}
+
 
 // Collect all functions to execute at once on Load
 function initialize() {
   checkBrowser();
+  specialShare();
   columns();
   subNav();
   popUpTop();
