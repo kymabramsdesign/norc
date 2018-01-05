@@ -541,6 +541,11 @@
       }
     }
 
+    .special-share {
+      display: flex;
+      align-items: flex-start;
+    }
+
     .close-button {
       @include transition(opacity .3s ease-in-out);
       -ms-flex-item-align: start;
@@ -561,6 +566,12 @@
       &:hover {
         @include transition(opacity .3s ease-in-out);
         opacity: 1;
+      }
+
+      &.facebook,
+      &.twitter,
+      &.linkedin {
+        padding: 10px;
       }
     }
   }

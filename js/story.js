@@ -427,7 +427,8 @@ function specialShare() {
     $('.main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
 
     // Add Close Buttons and Social Shares
-    $('.image-container').addClass('move-in').append('<img src="img/close.svg" alt="Close" class="close-button" />');
+    $('.image-container').addClass('move-in');
+    $('.image-container .special-share').append('<img src="img/close.svg" alt="Close" class="close-button" />');
     // Add caption
     $('.image-container').append('<p class="caption">'+ caption + '</p>');
     // Stop body from scrolling
