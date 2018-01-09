@@ -8,22 +8,30 @@ p {
   }
 }
 
-.main p {
-	color: $white-85;
-	font-size: 22px;
-	font-weight: 400;
-  letter-spacing: .75px;
-	line-height: 40px;
-  text-shadow: 1px 1px 100px rgba(0,0,0,.6);
+.main {
+  p {
+  	color: $white-85;
+  	font-size: 22px;
+  	font-weight: 400;
+    letter-spacing: .75px;
+  	line-height: 40px;
+    text-shadow: 1px 1px 100px rgba(0,0,0,.6);
 
-	@media screen and (max-width: 1024px) {
-    font-size: 21px;
-    line-height: 36px;
+  	@media screen and (max-width: 1024px) {
+      font-size: 21px;
+      line-height: 36px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 30px;
+    }
   }
 
-  @media screen and (max-width: 767px) {
-    font-size: 18px;
-    line-height: 30px;
+  .president p,
+  .insight p,
+  .gain-more p {
+    text-shadow: none;
   }
 }
 

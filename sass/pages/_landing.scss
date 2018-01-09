@@ -222,8 +222,6 @@
     justify-content: center;
     padding: 0 60px 80px;
     width: 100%;
-    // opacity: 0;
-    // display: none;
 
     @media screen and (min-width: 1600px) {
       padding: 0 10vw;
@@ -329,6 +327,12 @@
         &.one-vertical {
           padding:  0 10px 5px;
         }
+
+        &.essay-container {
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+        }
       }
 
       @media screen and (max-width: 767px) {
@@ -349,6 +353,17 @@
 
         &.right {
           padding-left: 6px;
+        }
+
+        &.essay {
+          height: 25vw;
+          padding: 5px 10px;
+          width: 49%;
+
+          @media screen and (max-width: 767px) {
+            height: 50vw;
+            width: 100%;
+          }
         }
 
         img {
