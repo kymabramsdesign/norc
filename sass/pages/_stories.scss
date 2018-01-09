@@ -492,11 +492,6 @@
       padding: 80px 130px 80px 175px;
       top: 0;
       width: 100vw;
-      
-
-      @media screen and (min-width: 1441px) {
-        padding: 100px 160px 100px 205px;
-      }
 
       @media screen and (max-width: 1210px) {
         padding: 80px 100px 80px 145px;
@@ -542,8 +537,46 @@
     }
 
     .special-share {
+      -ms-flex-line-pack: start;
+      align-content: flex-start;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: flex-start;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      margin: 66px 0 0 23px;
+      width: 22px;
+
+      @media screen and (max-width: 900px) {
+        margin: 66px 0 0 11px;
+      }
+
+      a {
+        width: 22px;
+      }
+
+      .facebook,
+      .twitter,
+      .linkedin {
+        @include transition(opacity .3s ease-in-out);
+        margin: 10px 0;
+        opacity: .55;
+        padding: 0;
+        width: 22px;
+
+        &:hover {
+          @include transition(opacity .3s ease-in-out);
+          opacity: 1;
+        }
+      }
+
+      .facebook {
+        padding: 0 4px;
+      }
+
+      .linkedin {
+        padding: 0 1px;
+      }
     }
 
     .close-button {
@@ -552,11 +585,7 @@
       align-self: flex-start;
       cursor: pointer;
       opacity: .55;
-      margin: 0 0 0 23px;
-
-      @media screen and (max-width: 900px) {
-        margin: 0 0 0 13px;
-      }
+      margin: 0 0 0 -20px;
 
       @media screen and (max-width:767px) {
         margin: 18px;
@@ -566,12 +595,6 @@
       &:hover {
         @include transition(opacity .3s ease-in-out);
         opacity: 1;
-      }
-
-      &.facebook,
-      &.twitter,
-      &.linkedin {
-        padding: 10px;
       }
     }
   }
