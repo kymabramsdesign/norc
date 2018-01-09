@@ -420,40 +420,40 @@ function mobileMenu() {
 // Functions for Special Share buttons on charts
 function specialShare() {
   var checkUrl = window.location.hash.substr(1);
+  var scrollPosition = $(window).scrollTop();
+  var windowHeight = $(window).height(); // Get window height
 
   if ( checkUrl === 'chart' ) {
 
-      var scrollPosition = $(window).scrollTop();
-      var windowHeight = $(window).height(); // Get window height
-      var caption = $('.picture').find('img').attr('caption'); // Get image caption
-      var imageSrc = $('.picture').find('img').attr('src'); // Get image src
-      var imageAlt = $('.picture').find('img').attr('alt'); // Get image alt
+    var caption = $('.picture').find('img').attr('caption'); // Get image caption
+    var imageSrc = $('.picture').find('img').attr('src'); // Get image src
+    var imageAlt = $('.picture').find('img').attr('alt'); // Get image alt
 
-      //add image
-      $('.image-container').addClass('move-in').append('<img src="img/close.svg" alt="Close" class="close-button" />');
-      // Add caption
-      $('.image-container').append('<p class="caption">'+ caption + '</p>');
+    //add image
+    $('.image-container').addClass('move-in').append('<img src="img/close.svg" alt="Close" class="close-button" />');
+    // Add caption
+    $('.image-container').append('<p class="caption">'+ caption + '</p>');
 
-      var thisImageHeight = $('.main-image').innerHeight(); // Get the height of the displayed image
-      var thisImageWidth = $('.main-image').innerWidth(); // Get the width of the displayed image
-      var currentMargin = $('.image-container.move-in').css('padding-top'); //current container top padding
-      currentMargin = parseFloat(currentMargin)*2; // total container top and bottom padding
-      var closeMargin = ((windowHeight-thisImageHeight-currentMargin)/2) + 'px'; //gets margin for top of close
-      var captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
-      captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
-      var paddingLeft = parseFloat($('.move-in').css('padding-left')); //get image left padding
-      var paddingRight = parseFloat($('.move-in').css('padding-right')); //get image right padding
-      var captionPadding = (paddingLeft - paddingRight)/2;
+    var thisImageHeight = $('.main-image').innerHeight(); // Get the height of the displayed image
+    var thisImageWidth = $('.main-image').innerWidth(); // Get the width of the displayed image
+    var currentMargin = $('.image-container.move-in').css('padding-top'); //current container top padding
+    currentMargin = parseFloat(currentMargin)*2; // total container top and bottom padding
+    var closeMargin = ((windowHeight-thisImageHeight-currentMargin)/2) + 'px'; //gets margin for top of close
+    var captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
+    captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
+    var paddingLeft = parseFloat($('.move-in').css('padding-left')); //get image left padding
+    var paddingRight = parseFloat($('.move-in').css('padding-right')); //get image right padding
+    var captionPadding = (paddingLeft - paddingRight)/2;
 
-      $('.move-in').css('top', scrollPosition);
-      $('.close-button').css('margin-top', closeMargin);
-      $('.caption').css({
-        'top': captionMargin,
-        'width': thisImageWidth,
-        'margin-left': -captionPadding+'px'
-      });
-      $('body').addClass('no-scroll'); // stop body from scrolling
-      $('.special-share').css('height', thisImageHeight);
+    $('.move-in').css('top', scrollPosition);
+    $('.close-button').css('margin-top', closeMargin);
+    $('.caption').css({
+      'top': captionMargin,
+      'width': thisImageWidth,
+      'margin-left': -captionPadding+'px'
+    });
+    $('body').addClass('no-scroll'); // stop body from scrolling
+    $('.special-share').css('height', thisImageHeight);
 
     $(window).bind("load", function() {
     
@@ -473,6 +473,55 @@ function specialShare() {
         if ( $('iframe').is(':visible')) {
           $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=0');
         }
+      });
+    });
+  }
+
+  else if ( checkUrl === 'charttwo') {
+    var caption = $('.picture.charttwo').find('img').attr('caption'); // Get image caption
+    var imageSrc = $('.picture.charttwo').find('img').attr('src'); // Get image src
+    var imageAlt = $('.picture.charttwo').find('img').attr('alt'); // Get image alt
+
+    //add image
+    $('.image-container').addClass('move-in').append('<img src="img/close.svg" alt="Close" class="close-button" />');
+    // Add caption
+    $('.image-container').append('<p class="caption">'+ caption + '</p>');
+
+    var thisImageHeight = $('.main-image').innerHeight(); // Get the height of the displayed image
+    var thisImageWidth = $('.main-image').innerWidth(); // Get the width of the displayed image
+    var currentMargin = $('.image-container.move-in').css('padding-top'); //current container top padding
+    currentMargin = parseFloat(currentMargin)*2; // total container top and bottom padding
+    var closeMargin = ((windowHeight-thisImageHeight-currentMargin)/2) + 'px'; //gets margin for top of close
+    var captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
+    captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
+    var paddingLeft = parseFloat($('.move-in').css('padding-left')); //get image left padding
+    var paddingRight = parseFloat($('.move-in').css('padding-right')); //get image right padding
+    var captionPadding = (paddingLeft - paddingRight)/2;
+
+    $('.move-in').css('top', scrollPosition);
+    $('.close-button').css('margin-top', closeMargin);
+    $('.caption').css({
+      'top': captionMargin,
+      'width': thisImageWidth,
+      'margin-left': -captionPadding+'px'
+    });
+    $('body').addClass('no-scroll'); // stop body from scrolling
+    $('.special-share').css('height', thisImageHeight);
+
+    $(window).bind("load", function() {
+    
+      $(".page-overlay").show().css('z-index','205');
+      $('.main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
+
+      closeResisze();
+
+      // close the popup when user clicks Close Button
+      $('.close-button').on('click', function() {
+        var windowWidth = $(window).width();
+        $('.page-overlay').fadeOut(800).css('z-index','105'); // remove overlay
+        $('move-out').css('left', -windowWidth*2);
+        $('.image-container').removeClass('move-in').addClass('move-out');
+        $("body").removeClass('no-scroll'); // body to scroll again
       });
     });
   }
