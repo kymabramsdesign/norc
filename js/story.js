@@ -80,11 +80,17 @@ function columns() {
         'position': 'fixed',
         'top': subnavHeight+80
       });
+      $('.left-50 div:last-of-type img').css('margin-bottom', '-5px');
+      $('.left-50').css({
+        'position': 'absolute',
+        'top': subnavHeight+80
+      });
     } else {
       $('.right-50').css({
         'position': 'absolute',
         'top': 'initial'
       });
+      $('.left-50 div:last-of-type img').css('margin-bottom', '-5px');
     }
 
     if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
@@ -117,7 +123,8 @@ function columns() {
       } else if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
         $('.left-50').css({
           'position': 'fixed',
-          'bottom': 0
+          'bottom': 0,
+          'top': 'initial'
         });
       }
 
