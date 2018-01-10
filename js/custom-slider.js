@@ -374,6 +374,14 @@ function explore() {
   });
 }
 
+// Prevent hyperlink blocks on the President's essay from being clickable
+function preventEssay() {
+  $('.president a').click( function(essay) {
+    essay.preventDefault();
+  });
+  
+}
+
 
 //Check Browser and adjust font-weights for Chrome
 function checkBrowser() {
@@ -391,6 +399,7 @@ function initialize() {
   matchHeight();
   slides();
   scrollTime();
+  preventEssay();
 }
 
 // Collect all functions to execute on Resize
