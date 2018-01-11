@@ -128,8 +128,53 @@
   &.president {
     background-image: url('/img/president-background.jpg');
 
+    .area {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100vw;
+    }
+
     a {
       cursor: default;
+    }
+
+    .landing-text {
+      display: inline-block;
+      height: auto;
+      margin-bottom: 50px;
+      margin-top: 125px;
+      padding: 0;
+      width: 50vw;
+
+      p {
+        color: $black-55;
+      }
+    }
+
+    .slide-heading {
+      color: $white;
+      display: inline-block;
+      font-size: 30px;
+      margin: 0;
+      width: 100%;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 26px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 22px;
+      }
+    }
+
+    .thumbnails {
+      padding: 0;
+      width: 50vw;
+    }
+
+    .one-vertical {
+      min-height: 50vh;
     }
   }
 
