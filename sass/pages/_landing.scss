@@ -128,54 +128,42 @@
   &.president {
     background-image: url('/img/president-background.jpg');
 
-    .area {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      width: 100vw;
-    }
-
     a {
       cursor: default;
     }
 
     .landing-text {
-      display: inline-block;
       height: auto;
-      margin-bottom: 50px;
-      margin-top: 125px;
-      padding: 0;
-      width: 50vw;
+      margin: 155px 0 40px;
+      padding: 0 60px 0 50vw;
 
       p {
         color: $black-55;
-      }
-    }
-
-    .slide-heading {
-      color: $white;
-      display: inline-block;
-      font-size: 30px;
-      margin: 0;
-      width: 100%;
-
-      @media screen and (max-width: 1024px) {
-        font-size: 26px;
+        font-size: 21px;
+        line-height: 32px;
+        margin-bottom: 20px;
+        margin-top: 0;
       }
 
-      @media screen and (max-width: 767px) {
-        font-size: 22px;
+      .slide-title {
+        color: $black-55;
+        padding-bottom: 15px;
+        text-align: left;
       }
     }
 
     .thumbnails {
-      padding: 0;
+      bottom: 0;
+      padding: 0 0 0 74px;
+      // position: fixed;
       width: 50vw;
+
+      .one-vertical {
+        width: 100%;
+      }
     }
 
-    .one-vertical {
-      min-height: 50vh;
-    }
+    
   }
 
   &.economics {
@@ -298,7 +286,7 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 0 60px 80px;
+    padding: 0 74px 80px;
     width: 100%;
 
     @media screen and (min-width: 1600px) {
