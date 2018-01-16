@@ -26,26 +26,6 @@
   }
 }
 
-#logo {
-
-  .tagline,
-  .nrc,
-  .star {
-    fill: $white-85;
-  }
-}
-
-#color-logo {
-
-  .nrc {
-    fill: $putty;
-  }
-
-  .star {
-    fill: $orange;
-  }
-}
-
 .menu-button {
   @include transition(transform .3s ease-in-out);
   cursor: pointer;
