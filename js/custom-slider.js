@@ -386,35 +386,39 @@ function presidentEssay() {
   var dataPointHeight = imageHeight/2; // Height of small images
   var columnHeight = (imageHeight*2) + (dataPointHeight*3); // Height of all images on the President slide
 
-  columnHeight = columnHeight+160; // Add room for text and vertical spacing here
+  columnHeight = columnHeight+132; // Add room for text and vertical spacing here
 
   var windowHeight = $(window).height();
+  var windowWidth = $(window).width();
 
-  $('.president .area').on('scroll', function() {
-    var thumb = $('.active .area .landing-text').offset().top;
-    console.log(thumb);
+  if ( windowWidth >= 768 ) {
 
-    if ( thumb <= 80 ) {
-      $(this).addClass('scrolled');
-      $(this).find('.grey-box').addClass('scrolled');
-    }
-    else {
-      if ( $('.landing-text').hasClass('button-scrolled') === false ) {
-        $(this).removeClass('scrolled');
-        $(this).find('.grey-box').removeClass('scrolled');
+    $('.president .area').on('scroll', function() {
+      var thumb = $('.active .area .landing-text').offset().top;
+      console.log(thumb);
+
+      if ( thumb <= 80 ) {
+        $(this).addClass('scrolled');
+        $(this).find('.grey-box').addClass('scrolled');
       }
-    }
+      else {
+        if ( $('.landing-text').hasClass('button-scrolled') === false ) {
+          $(this).removeClass('scrolled');
+          $(this).find('.grey-box').removeClass('scrolled');
+        }
+      }
 
-    if ( (windowHeight-columnHeight) >= thumb+80 ) {
-      // alert('end');
-      $('.president .thumbnails').css('position', 'fixed');
-      $('.president .landing-text').css('margin-left', '50vw');
-    }
-    else {
-      $('.president .thumbnails').css('position', 'initial');
-      $('.president .landing-text').css('margin-left', 'initial');
-    }
-  });
+      if ( (windowHeight-columnHeight) >= thumb+80 ) {
+        // alert('end');
+        $('.president .thumbnails').css('position', 'fixed');
+        $('.president .landing-text').css('margin-left', '50vw');
+      }
+      else {
+        $('.president .thumbnails').css('position', 'initial');
+        $('.president .landing-text').css('margin-left', 'initial');
+      }
+    });
+  }
 }
 
 

@@ -129,8 +129,16 @@
     background-image: url('/img/president-background.jpg');
 
     .area {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+
+      @media screen and (max-width: 767px) {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }
     }
 
     a {
@@ -142,8 +150,12 @@
       margin-top: 155px;
       padding: 0 60px 0 30px;
       width: 50vw;
-      // margin: 155px 0 40px;
-      // padding: 0 60px 0 50vw;
+
+      @media screen and (max-width: 767px) {
+        margin-top: 0;
+        padding: 0 20px;
+        width: 100vw;
+      }
 
       p {
         color: $black-55;
@@ -152,8 +164,44 @@
         margin-bottom: 20px;
         margin-top: 0;
 
+        @media screen and (max-width: 1024px) {
+          font-size: 18px;
+          line-height: 28px;
+          margin-bottom: 16px;
+        }
+
+        @media screen and (max-width: 767px) {
+          color: $mobile-text-grey;
+          font-size: 16px;
+          line-height: 25px;
+          margin-bottom: 14px;
+        }
+
         &:last-of-type {
           margin-bottom: 23px;
+
+          @media screen and (max-width: 1024px) {
+            margin-bottom: 24px;
+          }
+        }
+      }
+
+      .mobile-video {
+        display: none;
+        margin: 15px 0;
+
+        @media screen and (max-width: 767px) {
+          display: inline-block;
+        }
+
+        .four .caption {
+          color: $white;
+          font-size: 18px;
+          line-height: 25px;
+          margin: -1px 0 0;
+          padding: 0;
+          position: relative;
+          width: 100%;
         }
       }
 
@@ -168,12 +216,36 @@
       margin-top: 144px;
       bottom: 20px;
       padding: 0 0 0 74px;
-      // position: fixed;
       width: 50vw;
+
+      &.mobile {
+        display: none;
+      }
+
+      @media screen and (max-width: 767px) {
+        padding: 0 20px;
+        margin-top: 102px;
+        width: 100vw;
+
+        &.mobile {
+          display: inline-block;
+        }
+
+        &:last-of-type {
+          margin-bottom: 20px;
+          margin-top: 10px;
+        }
+      }
 
       .one-vertical {
         margin-top: 8px;
         width: 100%;
+
+        @media screen and (max-width: 767px) {
+          &.desktop-video {
+            display: none;
+          }
+        }
       }
 
       .two-vertical {
@@ -570,16 +642,16 @@
     }
   }
 
-  // Behaviors when user is scrolling
+  /* Behaviors when user is scrolling*/
   &.scrolled {
     .landing-text {
       @include transition(opacity 1.5s ease-in-out, height 1s ease-in-out);
-      // opacity: 0;
-      // height: 65vh;
+      /* opacity: 0;*/
+      /* height: 65vh;*/
 
       &.button-scrolled {
         @include transition(opacity .75s ease-in-out, height .75s ease-in-out);
-        // height: 98px;
+        /* height: 98px;*/
       }
     }
 
