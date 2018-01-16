@@ -151,6 +151,10 @@
         line-height: 32px;
         margin-bottom: 20px;
         margin-top: 0;
+
+        &:last-of-type {
+          margin-bottom: 23px;
+        }
       }
 
       .slide-title {
@@ -162,7 +166,7 @@
 
     .thumbnails {
       margin-top: 144px;
-      bottom: 0;
+      bottom: 20px;
       padding: 0 0 0 74px;
       // position: fixed;
       width: 50vw;
@@ -601,5 +605,6 @@
   &.scrolled {
     @include transition(all .6s ease-in-out);
     background-color: $black-90;
+    z-index: 1;
   }
 }

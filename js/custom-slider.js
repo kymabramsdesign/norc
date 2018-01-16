@@ -299,18 +299,18 @@ function scrollTime() {
     var text = $('.active .area .landing-text').offset().top;
     var thumb = $('.active .area .thumbnails').offset().top;
 
-    console.log(thumb);
+    // console.log(thumb);
 
-    if ( text <= -80 ) {
-      $(this).addClass('scrolled');
-      $(this).find('.grey-box').addClass('scrolled');
-    }
-    else {
-      if ( $('.landing-text').hasClass('button-scrolled') === false ) {
-        $(this).removeClass('scrolled');
-        $(this).find('.grey-box').removeClass('scrolled');
-      }
-    }
+    // if ( text <= -80 ) {
+    //   $(this).addClass('scrolled');
+    //   $(this).find('.grey-box').addClass('scrolled');
+    // }
+    // else {
+    //   if ( $('.landing-text').hasClass('button-scrolled') === false ) {
+    //     $(this).removeClass('scrolled');
+    //     $(this).find('.grey-box').removeClass('scrolled');
+    //   }
+    // }
 
     // if  ( thumb >= 95 ) {
     //   var ele = $('.slide.active .thumbnails').offset().top;
@@ -375,14 +375,46 @@ function explore() {
   });
 }
 
-// Prevent hyperlink blocks on the President's essay from being clickable
-function preventEssay() {
+// Special scroll Action for the President's Essay Page
+function presidentEssay() {
   $('.president a').click( function(essay) {
     essay.preventDefault();
   });
 
-  var dataPointHeight = $('.president .one-vertical').innerHeight();
-  // alert(dataPointHeight);
+  var imageHeight = $('.president .one-vertical img').height();
+  imageHeight = imageHeight-7; // Height of large images
+  var dataPointHeight = imageHeight/2; // Height of small images
+  var columnHeight = (imageHeight*2) + (dataPointHeight*3); // Height of all images on the President slide
+
+  columnHeight = columnHeight+160; // Add room for text and vertical spacing here
+
+  var windowHeight = $(window).height();
+
+  $('.president .area').on('scroll', function() {
+    var thumb = $('.active .area .landing-text').offset().top;
+    console.log(thumb);
+
+    if ( thumb <= 80 ) {
+      $(this).addClass('scrolled');
+      $(this).find('.grey-box').addClass('scrolled');
+    }
+    else {
+      if ( $('.landing-text').hasClass('button-scrolled') === false ) {
+        $(this).removeClass('scrolled');
+        $(this).find('.grey-box').removeClass('scrolled');
+      }
+    }
+
+    if ( (windowHeight-columnHeight) >= thumb+80 ) {
+      // alert('end');
+      $('.president .thumbnails').css('position', 'fixed');
+      $('.president .landing-text').css('margin-left', '50vw');
+    }
+    else {
+      $('.president .thumbnails').css('position', 'initial');
+      $('.president .landing-text').css('margin-left', 'initial');
+    }
+  });
 }
 
 
@@ -402,7 +434,7 @@ function initialize() {
   matchHeight();
   slides();
   scrollTime();
-  preventEssay();
+  presidentEssay();
 }
 
 // Collect all functions to execute on Resize
@@ -410,6 +442,7 @@ function initializeResize() {
   verticalPosition();
   matchHeight();
   slides();
+  presidentEssay();
 }
 
 $(document).ready(initialize);
