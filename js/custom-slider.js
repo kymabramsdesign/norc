@@ -287,9 +287,10 @@ function verticalPosition() {
 // image heights
 function matchHeight() {
   var largeSize = $('.one-vertical img').height();
-  largeSize = largeSize+5;
+  largeSize = largeSize+7;
 
-  $('.two-vertical').css('max-height', largeSize);
+  $('.two-vertical').css('height', largeSize);
+  $('.president .two-vertical').css('height', (largeSize/2));
 }
 
 // On Scroll functions
@@ -379,7 +380,9 @@ function preventEssay() {
   $('.president a').click( function(essay) {
     essay.preventDefault();
   });
-  
+
+  var dataPointHeight = $('.president .one-vertical').innerHeight();
+  // alert(dataPointHeight);
 }
 
 
