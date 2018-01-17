@@ -315,6 +315,17 @@
 
 .area {
 
+  img,
+  a {
+    @include transition(filter .3s ease-in-out);
+
+    &:hover {
+      @include transition(all .2s ease-in-out);
+      -webkit-filter: brightness(1.05);
+      filter: brightness(1.05);
+    }
+  }
+
   .landing-text {
     @include transition(opacity 1.8s ease-in-out, height .65s ease-in-out);
     -webkit-box-align: center;
