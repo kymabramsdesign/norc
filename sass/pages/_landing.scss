@@ -34,14 +34,110 @@
 }
 
 .area {
-  width: 100vw;
   height: 100vh;
   overflow: scroll;
+  width: 100vw;
 }
 
-.two-column {
-  &.insight {
-    background-color: $orange;
+.slide.insight {
+  background-color: $orange;
+
+  .left {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    padding: 34px 74px 0;
+    position: fixed;
+    width: 50vw;
+
+    @media screen and (max-width: 900px) {
+      padding: 34px 50px 0 0;
+      width: 40vw;
+    }
+
+    @media screen and (max-width: 767px) {
+      height: auto;
+      padding: 103px 20px 0;
+      position: relative;
+      width: 100vw;
+    }
+
+    h2 {
+      font-size: 77px;
+      font-weight: 400;
+      line-height: 86px;
+      margin: 0;
+      text-align: right;
+      width: 100%;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 65px;
+        line-height: 78px;
+      }
+
+      @media screen and (max-width: 900px) {
+        font-size: 50px;
+        line-height: 64px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 36px;
+        line-height: 44px;
+        text-align: left;
+      }
+    }
+  }
+
+  .right {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    padding: 34px 74px 0 50vw;
+    width: 100%;
+
+    @media screen and (max-width: 900px) {
+      padding-left: 40vw;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: inline-block;
+      height: auto;
+      padding: 20px 20px 40px;
+    }
+
+    p {
+      font-size: 28px;
+      line-height: 42px;
+      margin: 0;
+
+      @media screen and (max-width: 1200px) {
+        font-size: 24px;
+        line-height: 38px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        font-size: 22px;
+        line-height: 34px;
+      }
+
+      @media screen and (max-width: 900px) {
+        font-size: 21px;
+        line-height: 36px;
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
   }
 }
 
