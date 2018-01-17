@@ -394,11 +394,11 @@ function presidentEssay() {
 
   if ( windowWidth >= 901 ) {
 
-    $('.president .area').on('scroll', function() {
+    $('.president .area, .gain-more .area').on('scroll', function() {
       var thumb = $('.active .area .landing-text').offset().top;
       console.log(thumb);
 
-      if ( thumb <= 80 ) {
+      if ( thumb <= 100 ) {
         $(this).addClass('scrolled');
         $(this).find('.grey-box').addClass('scrolled');
       }
@@ -417,6 +417,25 @@ function presidentEssay() {
       else {
         $('.president .thumbnails').css('position', 'initial');
         $('.president .landing-text').css('margin-left', 'initial');
+      }
+    });
+  }
+  else if ( windowWidth <= 900 && windowWidth >= 768 ) {
+
+    $('.president .area, .gain-more .area').on('scroll', function() {
+      var thumb = $('.active .area .thumbnails').offset().top;
+      var text = $('.active .area .landing-text').offset().top;
+      console.log(thumb);
+
+      if ( thumb <= 75 || text <= 100 ) {
+        $(this).addClass('scrolled');
+        $(this).find('.grey-box').addClass('scrolled');
+      }
+      else {
+        if ( $('.landing-text').hasClass('button-scrolled') === false ) {
+          $(this).removeClass('scrolled');
+          $(this).find('.grey-box').removeClass('scrolled');
+        }
       }
     });
   }
