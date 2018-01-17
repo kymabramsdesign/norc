@@ -291,6 +291,7 @@ function matchHeight() {
 
   $('.two-vertical').css('height', largeSize);
   $('.president .two-vertical').css('height', (largeSize/2));
+  $('.gain-more .two-vertical.first').css('height', (largeSize/2));
 }
 
 // On Scroll functions
@@ -391,7 +392,7 @@ function presidentEssay() {
   var windowHeight = $(window).height();
   var windowWidth = $(window).width();
 
-  if ( windowWidth >= 768 ) {
+  if ( windowWidth >= 901 ) {
 
     $('.president .area').on('scroll', function() {
       var thumb = $('.active .area .landing-text').offset().top;
