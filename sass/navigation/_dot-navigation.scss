@@ -11,7 +11,7 @@
   justify-content: center;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 99;
 
   svg {
@@ -45,7 +45,7 @@
   cursor: pointer;
 
   @media screen and (max-width: 767px) {
-    display: none;
+    display: none !important;
   }
 
   .inner {

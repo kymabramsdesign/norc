@@ -4,6 +4,35 @@
   .section-title.active {
     display: inline-block;
     color: $white !important;
+
+    @media screen and (max-width:767px) {
+      background-color: $white-15;
+      color: $white-85 !important;
+      font-size: 15px;
+      letter-spacing: .5px;
+      margin: 55px 0 0;
+      padding: 10px 0 9px;
+
+      &.economics {
+        color: $green-mobile  !important;
+      }
+
+      &.education {
+        color: $maroon-mobile  !important;
+      }
+
+      &.global {
+        color: $purple-mobile !important;
+      }
+
+      &.health {
+        color: $teal-mobile  !important;
+      }
+
+      &.society {
+        color: $pink-mobile  !important;
+      }
+    }
   }
 }
 
@@ -24,7 +53,8 @@
   -webkit-scroll-snap-type: mandatory;
   -ms-scroll-snap-type: mandatory;
   scroll-snap-type: mandatory;
-  position: absolute;
+  position: fixed;
+  width: 100vw;
 }
 
 .slider > div {
@@ -153,17 +183,36 @@
   width: 0;
   z-index: 2000;
 
+  @media screen and (max-width:767px) {
+    border: solid $white-85;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    top: 67px;
+  }
+
   &.prev {
     display: none;
     left: 35px;
     -webkit-transform: rotate(135deg) skew(-2deg, -2deg);
     transform: rotate(135deg) skew(-2deg, -2deg);
+
+    @media screen and (max-width:767px) {
+      left: 10px;
+      -webkit-transform: rotate(135deg) skew(-10deg, -10deg);
+      transform: rotate(135deg) skew(-10deg, -10deg);
+    }
   }
 
   &.next {
     right: 35px;
     -webkit-transform: rotate(-45deg) skew(-2deg, -2deg);
     transform: rotate(-45deg) skew(-2deg, -2deg);
+
+    @media screen and (max-width:767px) {
+      right: 10px;
+      -webkit-transform: rotate(-45deg) skew(-10deg, -10deg);
+      transform: rotate(-45deg) skew(-10deg, -10deg);
+    }
   }
 
   &:hover {
@@ -598,10 +647,15 @@
 
     .credits {
       background-color: $white-5;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       padding: 62px 74px 110px;
       width: 100vw;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
 
       @media screen and (max-width: 1024px) {
@@ -618,10 +672,12 @@
       }
 
       a {
-        color: $white-85;
+        @include transition(color .3s ease-in-out);
+        color: $white-75;
         text-decoration: underline;
 
         &:hover {
+          @include transition(color .2s ease-in-out);
           color: $white;
         }
       }
@@ -646,6 +702,7 @@
       }
 
       .column-heading {
+        color: $white-85;
         font-size: 21px;
         margin-top: 25px;
 
@@ -657,7 +714,7 @@
       }
 
       p {
-        color: $white-85;
+        color: $white-75;
         font-size: 16px;
         line-height: 26px;
 

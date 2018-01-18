@@ -297,8 +297,8 @@ function matchHeight() {
 // On Scroll functions
 function scrollTime() {
   $('.area').on('scroll', function() {
-    var text = $('.active .area .landing-text').offset().top;
-    var thumb = $('.active .area .thumbnails').offset().top;
+    // var text = $('.active .area .landing-text').offset().top;
+    // var thumb = $('.active .area .thumbnails').offset().top;
 
     // console.log(thumb);
 
