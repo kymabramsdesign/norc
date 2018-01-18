@@ -425,22 +425,42 @@
 
   &.economics {
     background-image: url('/img/economics-background.jpg');
+
+    @media screen and (max-width: 767px) {
+      background-image: url('/img/economics-background-mobile.jpg');
+    }
   }
 
   &.education {
     background-image: url('/img/education-background.jpg');
+
+    @media screen and (max-width: 767px) {
+      background-image: url('/img/education-background-mobile.jpg');
+    }
   }
 
   &.global {
     background-image: url('/img/global-background.jpg');
+
+    @media screen and (max-width: 767px) {
+      background-image: url('/img/global-background.jpg');
+    }
   }
 
   &.health {
     background-image: url('/img/health-background.jpg');
+
+    @media screen and (max-width: 767px) {
+      background-image: url('/img/health-background.jpg');
+    }
   }
 
   &.society {
     background-image: url('/img/society-background.jpg');
+
+    @media screen and (max-width: 767px) {
+      background-image: url('/img/society-background.jpg');
+    }
   }
 
   &.gain-more {
