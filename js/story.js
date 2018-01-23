@@ -26,8 +26,13 @@ function columns() {
       });
     });
 
-    if( window.innerHeight > window.innerWidth ) {
-      //checks height vs. width for mobile
+    if( window.innerHeight < window.innerWidth ) {
+      $('.image-container').css('top', '57px');
+      $('.mobile-bar').css('background-color', '#fff');
+      $("body").removeClass('no-scroll');
+    } else {
+      $('.image-container').css('top', '34vh');
+      $('.mobile-bar').css('background-color', 'transparent');
     }
 
     // On Click Function for the images
@@ -42,7 +47,7 @@ function columns() {
 
       //add image the first time
       if ( $('.image-container').hasClass('move-out') !== true ) {
-        $('.image-container').addClass('move-in').prepend('<img src="img/close.svg" alt="Close" class="close-button" />');
+        $('.image-container').addClass('move-in').prepend('<div class="mobile-bar"><div class="close-arrow"></div></div>');
       } else {
         $('.image-container').addClass('move-in');
       }
@@ -54,22 +59,26 @@ function columns() {
         $('.caption').text(caption);
       }
 
-      $("body").addClass('no-scroll'); // stop body from scrolling
+      if( window.innerHeight < window.innerWidth ) {
+        $('.mobile-bar').css('background-color', '#fff');
+        // do nothing
+      } else {
+        $("body").addClass('no-scroll'); // stop body from scrolling
+      }
 
       // close the popup when user clicks Close Button
-      $('.close-button').on('click', function() {
+      $('.close-arrow').on('click', function() {
         var windowWidth = $(window).width();
-        $('.page-overlay').fadeOut(800).css('z-index','105'); // remove overlay
+        $('.page-overlay').fadeOut(600).css('z-index','105'); // remove overlay
         $('move-out').css('left', -windowWidth*2);
         $('.image-container').removeClass('move-in').addClass('move-out');
         $("body").removeClass('no-scroll'); // body to scroll again
 
         if ( $('iframe').is(':visible')) {
-          $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=0');
+          $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=1&modestbranding=1');
         }
       });
     });
-
   }
 
   // Only do the following on screens larger than Mobile
@@ -193,7 +202,7 @@ function columns() {
 
         if ( $('iframe').is(':visible')) {
 
-          $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=0');
+          $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=1&modestbranding=1');
         }
       });
     });
@@ -255,10 +264,16 @@ function popUpTop () {
       'height': '464px',
       'width': '825px'
     });
-  } else if ( windowWidth <= 900 ) {
+  } else if ( windowWidth <= 900 && windowWidth > 767) {
     $('.video-container iframe').css({
       'height': '381px',
       'width': '678px'
+    });
+  } else if ( windowWidth <= 767 ) {
+    $('.video-container iframe').css({
+      'height': '100%',
+      'width': '100vw',
+      'min-height': '230px'
     });
   }
 }
@@ -278,7 +293,7 @@ $('.chart.bubble').on('click', function() {
 });
 
 // On Click Function for the videos/charts
-function videoPopup () {
+function videoPopup() {
   $('.video, .chart').on('click', function() {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
@@ -286,12 +301,21 @@ function videoPopup () {
     var videoHeight = $('.video-container').height();
     var xplacement = ((windowHeight-videoHeight)/2)-currentContainerMargin;
 
-    $('.main-image').hide(); // hide image if click on video
-    $('.video').on('click', function() {
-      //code here
-    }); 
-    $('.video-container').show();
-    $('.close-button').css('margin-top', xplacement);
+    if ( windowWidth >= 768 ) {
+      $('.main-image').hide(); // hide image if click on video
+      $('.video-container').show();
+      $('.close-button').css('margin-top', xplacement);
+    }
+    else {
+      $('.main-image').hide(); // hide image if click on video
+      $('.video-container').show();
+      // $('.close-button').css({
+      //   'margin-top': 0,
+      //   'top': '18px',
+      //   'right': '21px',
+      //   'position': 'fixed'
+      // });
+    }
   });
 }
 
@@ -478,7 +502,7 @@ function specialShare() {
         $("body").removeClass('no-scroll'); // body to scroll again
 
         if ( $('iframe').is(':visible')) {
-          $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=0');
+          $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=1&modestbranding=1');
         }
       });
     });

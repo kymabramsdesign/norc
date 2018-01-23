@@ -474,10 +474,10 @@
       }
 
       @media screen and (max-width: 767px) {
-        @include transition(left .35s ease-in-out);
+        @include transition(left .15s ease-in-out, top .2s ease-in-out);
         height: auto;
         padding: 0;
-        top: initial;
+        top: 34vh;
 
         .main-image {
           max-width: 100vw;
@@ -510,10 +510,10 @@
       }
 
       @media screen and (max-width: 767px) {
-        @include transition(left .35s ease-in-out);
+        @include transition(left .35s ease-in-out, top .2s ease-in-out);
         height: auto;
         padding: 0;
-        top: initial;
+        top: 34vh;
 
         .main-image {
           max-width: 100vw;
@@ -551,8 +551,27 @@
         margin: 124px 0 0 11px;
       }
 
+      @media screen and (max-width: 767px) {
+        align-items: center; 
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        height: auto !important;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        margin: 0 5px 0 0;
+        position: fixed;
+        top: 0;
+        width: auto;
+      }
+
       a {
         width: 22px;
+
+        @media screen and (max-width: 767px) {
+          margin-right: 5px;
+          width: 35px;
+        }
       }
 
       .facebook,
@@ -564,6 +583,10 @@
         padding: 0;
         width: 22px;
 
+        @media screen and (max-width: 767px) {
+          margin: 17px 0;
+        }
+
         &:hover {
           @include transition(opacity .3s ease-in-out);
           opacity: 1;
@@ -572,6 +595,10 @@
 
       .facebook {
         padding: 0 4px;
+
+        @media screen and (max-width: 767px) {
+          padding: 0 5px;
+        }
       }
 
       .linkedin {
@@ -599,8 +626,35 @@
     }
   }
 
+  .contains-video .close-button {
+      margin: 0 0 0 23px;
+
+      @media screen and (max-width:767px) {
+        margin: 0;
+      }
+    }
+
   .video-container {
     display: none;
-    height: 90vh;
+  }
+
+  .mobile-bar {
+    @include transition(background-color .3s ease-in-out);
+    background-color: transparent;
+    height: 57px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+
+    .close-arrow {
+      border: solid $black-55;
+      border-width: 0 2px 2px 0;
+      height: 0;
+      margin: 20px 0 0 20px;
+      padding: 8px;
+      -webkit-transform: rotate(135deg) skew(-2deg, -2deg);
+      transform: rotate(135deg) skew(-2deg, -2deg);
+      width: 0;
+    }
   }
 }

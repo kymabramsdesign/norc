@@ -405,8 +405,61 @@
 
         @media screen and (max-width: 900px) {
           padding: 0 0 5px;
+        }
 
-          &.desktop-video {
+        &.desktop-video {
+
+          .caption {
+            line-height: 28px;
+            margin: 8px 0 0;
+            padding-right: 10px;
+            width: 100%;
+          }
+
+          .four {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            background-image: url('/img/president-video-4.jpg');
+            background-position: center;
+            background-size: cover;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+            img {
+              @include transition(opacity .3s ease-in-out, height .3s ease-in-out);
+              height: 180px;
+              opacity: .65;
+              
+              @media screen and (min-width: 1441px) {
+                height: 200px;
+              }
+
+              @media screen and (max-width: 1100px) {
+                height: 160px;
+              }
+
+              @media screen and (max-width: 900px) {
+                height: 140px;
+              }
+
+              @media screen and (max-width: 767px) {
+                opacity: .8;
+              }
+            }
+
+            &:hover {
+              cursor: pointer;
+
+              img {
+                @include transition(opacity .4s ease-in-out);
+                opacity: .95;
+              }
+            }
+          }
+
+          @media screen and (max-width: 900px) {
             display: none;
           }
         }
