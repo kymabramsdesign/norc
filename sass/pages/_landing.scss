@@ -443,7 +443,7 @@
     background-image: url('/img/global-background.jpg');
 
     @media screen and (max-width: 767px) {
-      background-image: url('/img/global-background.jpg');
+      background-image: url('/img/global-background-mobile.jpg');
     }
   }
 
@@ -451,7 +451,7 @@
     background-image: url('/img/health-background.jpg');
 
     @media screen and (max-width: 767px) {
-      background-image: url('/img/health-background.jpg');
+      background-image: url('/img/health-background-mobile.jpg');
     }
   }
 
@@ -459,7 +459,7 @@
     background-image: url('/img/society-background.jpg');
 
     @media screen and (max-width: 767px) {
-      background-image: url('/img/society-background.jpg');
+      background-image: url('/img/society-background-mobile.jpg');
     }
   }
 
@@ -611,11 +611,31 @@
       }
     }
 
+    .contact-link {
+      @include transition(opacity .3s ease-in-out);
+      color: $white;
+      opacity: .65;
+      text-decoration: underline;
+
+      @media screen and (max-width: 767px) {
+        opacity: .85;
+      }
+
+      &:hover {
+        @include transition(opacity .2s ease-in-out);
+        opacity: .9;
+      }
+    }
+
     .in-touch {
       @include transition(opacity .3s ease-in-out);
       color: $white;
       opacity: .75;
       margin-left: 8px;
+
+      @media screen and (max-width: 767px) {
+        font-size: 20px;
+      }
 
       &:hover {
         @include transition(opacity .2s ease-in-out);
@@ -630,7 +650,7 @@
       width: 10px;
 
       @media screen and (max-width: 900px) {
-        margin: 0 12px 20px 8px;
+        margin: 0 12px 26px 8px;
         width: 13px;
       }
 
@@ -647,7 +667,7 @@
       width: 22px;
 
       @media screen and (max-width: 900px) {
-        margin: 0 8px 20px 8px;
+        margin: 0 8px 26px 8px;
         width: 27px;
       }
 
@@ -664,6 +684,7 @@
       width: 19px;
 
       @media screen and (max-width: 900px) {
+        margin: 0 0 26px 8px;
         width: 24px;
       }
 
