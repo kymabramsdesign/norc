@@ -26,6 +26,10 @@ object {
   top: 0;
   width: 100vw;
   z-index: 105;
+
+  @media screen and (max-width:767px) {
+    opacity: .97;
+  }
 }
 
 .no-scroll {
@@ -35,4 +39,84 @@ object {
 iframe {
   @include transition(none);
   max-width: none;
+}
+
+// Video popup controls for Landing Page video
+.image-container {
+  @include transition(all .4s ease-in-out);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: -200vw;
+  position: fixed;
+  width: 100vw;
+  z-index: 10000;
+
+  @media screen and (max-width:767px) {
+    height: auto;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    top: 34vh;
+  }
+
+  &.visible-video {
+    @include transition(all .4s ease-in-out);
+    left: 22px; // Total width of close button
+
+    @media screen and (max-width:800px) {
+      left: 14px;
+    }
+
+    @media screen and (max-width:767px) {
+      left: 0;
+    }
+  }
+
+  .home-close {
+    @include transition(all .3s ease-in-out);
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    cursor: pointer;
+    margin-left: 23px;
+    opacity: .55;
+
+    @media screen and (max-width:800px) {
+      margin-left: 14px;
+    }
+
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+
+    &:hover {
+      @include transition(all .2s ease-in-out);
+      opacity: 1;
+    }
+  }
+
+  .close-arrow {
+    display: none;
+
+    @media screen and (max-width:767px) {
+      display: inline-block;
+      border: solid rgba(0, 0, 0, 0.55);
+      border-width: 0 2px 2px 0;
+      height: 0;
+      margin: 20px 0 0 20px;
+      padding: 8px;
+      position: fixed;
+      top: 0;
+      -webkit-transform: rotate(135deg) skew(-2deg, -2deg);
+      transform: rotate(135deg) skew(-2deg, -2deg);
+      width: 0;
+    }
+  }
 }

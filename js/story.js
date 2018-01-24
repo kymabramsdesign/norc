@@ -259,10 +259,10 @@ function popUpTop () {
       'height': '563px',
       'width': '1000px'
     });
-  } else if ( windowWidth <= 1150 && windowWidth > 901 ) {
+  } else if ( windowWidth <= 1150 && windowWidth > 900 ) {
     $('.video-container iframe').css({
-      'height': '464px',
-      'width': '825px'
+      'height': '450px',
+      'width': '800px'
     });
   } else if ( windowWidth <= 900 && windowWidth > 767) {
     $('.video-container iframe').css({

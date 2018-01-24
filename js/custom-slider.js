@@ -290,7 +290,7 @@ function matchHeight() {
   largeSize = largeSize+7;
 
   $('.two-vertical').css('height', largeSize);
-  $('.desktop-video .four').css('height', largeSize);
+  $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
   $('.president .two-vertical').css('height', (largeSize/2));
   $('.gain-more .two-vertical.first').css('height', (largeSize/2));
 }
@@ -442,6 +442,57 @@ function presidentEssay() {
   }
 }
 
+function landingVideo() {
+  var windowHeight = $(window).height();
+  var windowWidth = $(window).width();
+  var buttonOffset = 0;
+
+  // Video iframe resizing
+  if ( windowWidth > 1151 ) {
+    $('.image-container iframe').css({
+      'height': '563px',
+      'width': '1000px'
+    });
+    buttonOffset = (windowHeight - 563)/2;
+    $('.home-close').css('margin-top', buttonOffset);
+  }
+  else if ( windowWidth <= 1150 && windowWidth > 900 ) {
+    $('.image-container iframe').css({
+      'height': '450px',
+      'width': '800px'
+    });
+    buttonOffset = (windowHeight - 450)/2;
+    $('.home-close').css('margin-top', buttonOffset);
+  }
+  else if ( windowWidth <= 900 && windowWidth > 767) {
+    $('.image-container iframe').css({
+      'height': '381px',
+      'width': '678px'
+    });
+    buttonOffset = (windowHeight - 381)/2;
+    $('.home-close').css('margin-top', buttonOffset);
+  }
+  else if ( windowWidth <= 767 ) {
+    $('.image-container iframe').css({
+      'height': '100%',
+      'width': '100vw',
+      'min-height': '230px'
+    });
+  }
+  
+  $('.desktop-video, .mobile-video').on('click', function() {
+    $('.image-container').addClass('visible-video');
+    $('.white-page-overlay').fadeIn();
+  });
+
+  $('.home-close, .close-arrow').on('click', function() {
+    $('.image-container').removeClass('visible-video');
+    $('.white-page-overlay').fadeOut();
+    if ( $('iframe').is(':visible')) {
+      $('#welcome-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=1&modestbranding=1');
+    }
+  });
+}
 
 //Check Browser and adjust font-weights for Chrome
 function checkBrowser() {
@@ -460,6 +511,7 @@ function initialize() {
   slides();
   scrollTime();
   presidentEssay();
+  landingVideo();
 }
 
 // Collect all functions to execute on Resize
@@ -468,6 +520,7 @@ function initializeResize() {
   matchHeight();
   slides();
   presidentEssay();
+  landingVideo();
 }
 
 $(document).ready(initialize);

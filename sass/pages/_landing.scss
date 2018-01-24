@@ -337,20 +337,54 @@
 
       .mobile-video {
         display: none;
-        margin: 15px 0;
+        margin: 5px 0 20px;
+        width: 100%;
 
-        @media screen and (max-width: 900px) {
-          display: inline-block;
-        }
-
-        .four .caption {
+        .caption {
           color: $white;
           font-size: 18px;
           line-height: 25px;
-          margin: -1px 0 0;
-          padding: 0;
-          position: relative;
+          margin: 4px 0 0;
           width: 100%;
+        }
+
+        .four {
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          background-image: url('/img/president-video-2.jpg');
+          background-position: center;
+          background-size: cover;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+
+          img {
+            @include transition(opacity .3s ease-in-out, height .3s ease-in-out);
+            height: 180px;
+            opacity: .65;
+
+            @media screen and (max-width: 767px) {
+              height: 130px;
+              opacity: .8;
+            }
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            img {
+              @include transition(opacity .4s ease-in-out);
+              opacity: .95;
+            }
+          }
+        }
+
+        @media screen and (max-width: 900px) {
+          display: inline-block;
         }
       }
 
