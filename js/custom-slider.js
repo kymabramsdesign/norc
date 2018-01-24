@@ -295,18 +295,31 @@ function matchHeight() {
   $('.gain-more .two-vertical.first').css('height', (largeSize/2));
 }
 
+
 // On Scroll functions
 function scrollTime() {
   var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
 
   if ( windowWidth >= 768 ) {
 
     $('.economics .area, .education .area, .global .area, .health .area, .society .area').on('scroll', function() {
       var text = $('.active .area .landing-text p').offset().top;
       var thumb = $('.active .area .thumbnails').offset().top;
-      console.log(text);
+      var thumbsHeight = $('.active .area .thumbnails').innerHeight();
+      console.log($('.active .area').scrollTop());
+      console.log(thumbsHeight);
 
-      // $(this).find('.bottom-arrow').fadeOut();
+      if ( thumb === windowHeight ) {
+        $(this).find('.bottom-arrow').stop().delay(50).fadeIn(600);
+      }
+      else if ( $('.active .area').scrollTop()  >=  thumbsHeight) {
+        $(this).find('.bottom-arrow').stop().delay(200).fadeIn(600);
+        // do other stuff here
+      }
+      else {
+        $(this).find('.bottom-arrow').hide();
+      }
 
       if ( text <= 100 ) {
         $(this).addClass('scrolled');
@@ -322,6 +335,7 @@ function scrollTime() {
   }
 }
 
+
 // Bottom Arrow Functions
 function explore() {
   $('.down-arrow').hover( function() {
@@ -330,11 +344,44 @@ function explore() {
     $('.explore').css('color', 'rgba(255,255,255,.65)');
   });
 
-    var elem = document.getElementById("econ");
-    var topPos = elem.offsetTop;
+  $('.slide.active .area').on('scroll', function() {
+    console.log('scrolled');
+  });
+
+    var elem = 0;
+    var topPos = 0;
 
     $('.down-arrow').click( function() {
-      scrollTo(document.getElementById('econ-contain'), topPos-95, 400);
+      if ( $('.slide.active').hasClass('education') ) {
+        elem = document.getElementById("ed");
+        topPos = elem.offsetTop;
+        scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
+      }
+      else if ( $('.slide.active').hasClass('economics') ) {
+        elem = document.getElementById("econ");
+        topPos = elem.offsetTop;
+        scrollTo(document.getElementById('econ-contain'), topPos-95, 400);
+      }
+      else if ( $('.slide.active').hasClass('global') ) {
+        elem = document.getElementById("glo");
+        topPos = elem.offsetTop;
+        scrollTo(document.getElementById('glo-contain'), topPos-95, 400);
+      }
+      else if ( $('.slide.active').hasClass('health') ) {
+        elem = document.getElementById("heal");
+        topPos = elem.offsetTop;
+        scrollTo(document.getElementById('heal-contain'), topPos-95, 400);
+      }
+      else if ( $('.slide.active').hasClass('society') ) {
+        elem = document.getElementById("soc");
+        topPos = elem.offsetTop;
+        scrollTo(document.getElementById('soc-contain'), topPos-95, 400);
+      }
+
+      $('.active .area').addClass('scrolled');
+      $('.active .area .grey-box').addClass('scrolled');
+
+      return false;
 
     });
         
@@ -366,11 +413,7 @@ function explore() {
       return -c/2 * (t*(t-2) - 1) + b;
     };
 
-    $('.active .area').addClass('scrolled');
-    $('.active .area .grey-box').addClass('scrolled');
-    $('.active .area .landing-text').addClass('button-scrolled');
-
-    return false;
+    
 }
 
 // Special scroll Action for the President's Essay Page

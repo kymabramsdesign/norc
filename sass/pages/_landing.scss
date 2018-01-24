@@ -249,7 +249,7 @@
   }
 
   .down-arrow {
-    @include transition(all .2s ease-in-out);
+    @include transition(opacity .2s ease-in-out);
     border: solid $white-65;
     border-width: 0 2px 2px 0;
     cursor: pointer;
@@ -260,9 +260,23 @@
     width: 0;
 
     &:hover {
-      @include transition(all .3s ease-in-out);
+      @include transition(opacity .3s ease-in-out);
       border-color: $white-85;
     }
+  }
+}
+
+.scrolled .bottom-arrow {
+
+  .explore {
+    display: none;
+  }
+
+  .down-arrow {
+    delay-transition: 4s;
+    -webkit-transform: rotate(-135deg) skew(-2deg, -2deg);
+    transform: rotate(-135deg) skew(-2deg, -2deg);
+    width: 0;
   }
 }
 
@@ -952,7 +966,7 @@
     width: 100%;
 
     @media screen and (min-width: 1600px) {
-      padding: 0 10vw;
+      padding: 0 10vw 80px;
     }
 
     @media screen and (max-width: 767px) {
