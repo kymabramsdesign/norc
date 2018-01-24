@@ -297,30 +297,29 @@ function matchHeight() {
 
 // On Scroll functions
 function scrollTime() {
-  $('.area').on('scroll', function() {
-    // var text = $('.active .area .landing-text').offset().top;
-    // var thumb = $('.active .area .thumbnails').offset().top;
+  var windowWidth = $(window).width();
 
-    // console.log(thumb);
+  if ( windowWidth >= 768 ) {
 
-    // if ( text <= -80 ) {
-    //   $(this).addClass('scrolled');
-    //   $(this).find('.grey-box').addClass('scrolled');
-    // }
-    // else {
-    //   if ( $('.landing-text').hasClass('button-scrolled') === false ) {
-    //     $(this).removeClass('scrolled');
-    //     $(this).find('.grey-box').removeClass('scrolled');
-    //   }
-    // }
+    $('.economics .area, .education .area, .global .area, .health .area, .society .area').on('scroll', function() {
+      var text = $('.active .area .landing-text p').offset().top;
+      var thumb = $('.active .area .thumbnails').offset().top;
+      console.log(text);
 
-    // if  ( thumb >= 95 ) {
-    //   var ele = $('.slide.active .thumbnails').offset().top;
-    //   $('.slide.active .landing-text').animate({
-    //     'margin-top': ele - (ele*2-95)
-    // }, 300);
-    // }
-  });
+      // $(this).find('.bottom-arrow').fadeOut();
+
+      if ( text <= 100 ) {
+        $(this).addClass('scrolled');
+        $(this).find('.grey-box').addClass('scrolled');
+      }
+      else {
+        if ( $('.landing-text').hasClass('button-scrolled') === false ) {
+          $(this).removeClass('scrolled');
+          $(this).find('.grey-box').removeClass('scrolled');
+        }
+      }
+    });
+  }
 }
 
 // Bottom Arrow Functions
@@ -331,50 +330,47 @@ function explore() {
     $('.explore').css('color', 'rgba(255,255,255,.65)');
   });
 
-  $('.down-arrow').click( function() {
+    var elem = document.getElementById("econ");
+    var topPos = elem.offsetTop;
 
-    var ele = $('.slide.active .thumbnails').offset().top;
-    var screenHeight = $(window).height();
+    $('.down-arrow').click( function() {
+      scrollTo(document.getElementById('econ-contain'), topPos-95, 400);
 
-    // alert( ele);
+    });
+        
+    function scrollTo(element, to, duration) {
+      var start = element.scrollTop,
+        change = to - start,
+        currentTime = 0,
+        increment = 20;
+          
+      var animateScroll = function(){        
+        currentTime += increment;
+        var val = Math.easeInOutQuad(currentTime, start, change, duration);
+        element.scrollTop = val;
+        if(currentTime < duration) {
+            setTimeout(animateScroll, increment);
+        }
+      };
+      animateScroll();
+    }
 
-    // $('.slide.active .thumbnails').animate({
-    //     'margin-top': ele - (ele*2-80)
-    // }, 300);
-    $('.slide.active .landing-text').animate({
-        // 'margin-top': ele - (ele*2-95),
-        // 'margin-top': -screenHeight
-        // 'height': screenHeight*2
-        'opacity': 0
-    }, 300);
-    $('.slide.active .thumbnails').animate({
-        // 'margin-top': ele - (ele*2-95),
-        'margin-top': -screenHeight+95
-    }, 300);
+    //t = current time
+    //b = start value
+    //c = change in value
+    //d = duration
+    Math.easeInOutQuad = function (t, b, c, d) {
+      t /= d/2;
+      if (t < 1) return c/2*t*t + b;
+      t--;
+      return -c/2 * (t*(t-2) - 1) + b;
+    };
 
-     $('.active .area').addClass('scrolled');
+    $('.active .area').addClass('scrolled');
     $('.active .area .grey-box').addClass('scrolled');
     $('.active .area .landing-text').addClass('button-scrolled');
 
     return false;
-
-     // // Scroll the element up
-     //    scrolling = window.setInterval(function() {
-     //        $('.slide.active').scrollTop( -300 );
-     //    }, 300);
-    
-    // $('.active .area').addClass('scrolled');
-    // $('.active .area .grey-box').addClass('scrolled');
-    // $('.active .area .landing-text').addClass('button-scrolled');
-    // $('.active .area .thumbnails').css('display', 'flex');
-    // $( ".active .area .thumbnails" ).offset({ top: 95 });
-    // $( ".active .area .landing-text" ).offset({ top: -1000 });
-    // $('.active .area .thumbnails').animate({
-    //   scrollTop: -95
-    // }, 400);
-    var thumb = $('.active .area .thumbnails').offset().top; //gets position of thumbnails section
-    console.log( $('.active .area .thumbnails').scrollHeight );
-  });
 }
 
 // Special scroll Action for the President's Essay Page
@@ -394,10 +390,8 @@ function presidentEssay() {
   var windowWidth = $(window).width();
 
   if ( windowWidth >= 901 ) {
-
     $('.president .area, .gain-more .area').on('scroll', function() {
       var thumb = $('.active .area .landing-text').offset().top;
-      console.log(thumb);
 
       if ( thumb <= 100 ) {
         $(this).addClass('scrolled');
@@ -411,7 +405,6 @@ function presidentEssay() {
       }
 
       if ( (windowHeight-columnHeight) >= thumb+80 ) {
-        // alert('end');
         $('.president .thumbnails').css('position', 'fixed');
         $('.president .landing-text').css('margin-left', '50vw');
       }
@@ -421,8 +414,8 @@ function presidentEssay() {
       }
     });
   }
-  else if ( windowWidth <= 900 && windowWidth >= 768 ) {
 
+  else if ( windowWidth <= 900 && windowWidth >= 768 ) {
     $('.president .area, .gain-more .area').on('scroll', function() {
       var thumb = $('.active .area .thumbnails').offset().top;
       var text = $('.active .area .landing-text').offset().top;
@@ -507,20 +500,20 @@ function initialize() {
   checkBrowser();
   verticalPosition();
   explore();
-  matchHeight();
   slides();
   scrollTime();
   presidentEssay();
   landingVideo();
+  matchHeight();
 }
 
 // Collect all functions to execute on Resize
 function initializeResize() {
   verticalPosition();
-  matchHeight();
   slides();
   presidentEssay();
   landingVideo();
+  matchHeight();
 }
 
 $(document).ready(initialize);
