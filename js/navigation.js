@@ -12,7 +12,7 @@ $('.menu-button').on('click', function() {
 
   if ( $('.menu-button').hasClass('menu-open') ) {
     $('.white-page-overlay').fadeOut(300);
-    $('.share-button').css('z-index',200);
+    $('.share-button, .menu-button').css('z-index',200);
     $('.menu-container').removeClass('moved');
     $("body").removeClass('no-scroll'); // body to scroll again
 
@@ -43,7 +43,7 @@ var windowWidth = $(window).width();
 if ( windowWidth >= 768 ) {
   $('.white-page-overlay').on('click', function() {
     $(this).fadeOut(300);
-    $('.share-button').css('z-index',200);
+    $('.share-button, .menu-button').css('z-index',200);
     $('.menu-container').removeClass('moved');
     $("body").removeClass('no-scroll'); // body to scroll again
     $('.arrow a').removeClass('active');
