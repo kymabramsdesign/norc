@@ -310,14 +310,18 @@ function scrollTime() {
 
       if ( thumb === windowHeight ) {
         $(this).find('.bottom-arrow').stop().delay(50).fadeIn(400);
+
       }
-      else if ( $('.active .area').scrollTop()  >=  thumbsHeight) {
+      // else if ( $('.active .area').scrollTop() >= thumbsHeight ) {
+        else if ( (thumb-10) <= (windowHeight-thumbsHeight) ) {
         $(this).find('.bottom-arrow').stop().delay(100).fadeIn(400);
       }
       else {
         $(this).find('.bottom-arrow').hide();
-      }
 
+      }
+console.log(thumb);
+        console.log(windowHeight-thumbsHeight);
       if ( text <= 100 ) {
         $(this).addClass('scrolled');
         $(this).find('.grey-box').addClass('scrolled');
@@ -341,95 +345,95 @@ function explore() {
     $('.explore').css('color', 'rgba(255,255,255,.75)');
   });
 
-    var elem = 0;
-    var topPos = 0;
+  var elem = 0;
+  var topPos = 0;
 
-    $('.down-arrow').click( function() {
-      if ( $('.slide.active').hasClass('education') ) {
-        elem = document.getElementById("ed");
-        topPos = elem.offsetTop;
+  $('.down-arrow').click( function() {
+    if ( $('.slide.active').hasClass('education') ) {
+      elem = document.getElementById("ed");
+      topPos = elem.offsetTop;
 
-        if ( $('.slide.active .area').hasClass('scrolled') ) {
-          scrollTo(document.getElementById('ed-contain'), -topPos, 600);
-        } else {
-          scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
-        }
+      if ( $('.slide.active .area').hasClass('scrolled') ) {
+        scrollTo(document.getElementById('ed-contain'), -topPos, 600);
+      } else {
+        scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
       }
-      else if ( $('.slide.active').hasClass('economics') ) {
-        elem = document.getElementById("econ");
-        topPos = elem.offsetTop;
-        
-        if ( $('.slide.active .area').hasClass('scrolled') ) {
-          scrollTo(document.getElementById('econ-contain'), -topPos, 600);
-        } else {
-          scrollTo(document.getElementById('econ-contain'), topPos-95, 400);
-        }
+    }
+    else if ( $('.slide.active').hasClass('economics') ) {
+      elem = document.getElementById("econ");
+      topPos = elem.offsetTop;
+      
+      if ( $('.slide.active .area').hasClass('scrolled') ) {
+        scrollTo(document.getElementById('econ-contain'), -topPos, 600);
+      } else {
+        scrollTo(document.getElementById('econ-contain'), topPos-95, 400);
       }
-      else if ( $('.slide.active').hasClass('global') ) {
-        elem = document.getElementById("glo");
-        topPos = elem.offsetTop;
-        
-        if ( $('.slide.active .area').hasClass('scrolled') ) {
-          scrollTo(document.getElementById('glo-contain'), -topPos, 600);
-        } else {
-          scrollTo(document.getElementById('glo-contain'), topPos-95, 400);
-        }
+    }
+    else if ( $('.slide.active').hasClass('global') ) {
+      elem = document.getElementById("glo");
+      topPos = elem.offsetTop;
+      
+      if ( $('.slide.active .area').hasClass('scrolled') ) {
+        scrollTo(document.getElementById('glo-contain'), -topPos, 600);
+      } else {
+        scrollTo(document.getElementById('glo-contain'), topPos-95, 400);
       }
-      else if ( $('.slide.active').hasClass('health') ) {
-        elem = document.getElementById("heal");
-        topPos = elem.offsetTop;
-        
-        if ( $('.slide.active .area').hasClass('scrolled') ) {
-          scrollTo(document.getElementById('heal-contain'), -topPos, 600);
-        } else {
-          scrollTo(document.getElementById('heal-contain'), topPos-95, 400);
-        }
+    }
+    else if ( $('.slide.active').hasClass('health') ) {
+      elem = document.getElementById("heal");
+      topPos = elem.offsetTop;
+      
+      if ( $('.slide.active .area').hasClass('scrolled') ) {
+        scrollTo(document.getElementById('heal-contain'), -topPos, 600);
+      } else {
+        scrollTo(document.getElementById('heal-contain'), topPos-95, 400);
       }
-      else if ( $('.slide.active').hasClass('society') ) {
-        elem = document.getElementById("soc");
-        topPos = elem.offsetTop;
-        
-        if ( $('.slide.active .area').hasClass('scrolled') ) {
-          scrollTo(document.getElementById('soc-contain'), -topPos, 600);
-        } else {
-          scrollTo(document.getElementById('soc-contain'), topPos-95, 400);
-        }
+    }
+    else if ( $('.slide.active').hasClass('society') ) {
+      elem = document.getElementById("soc");
+      topPos = elem.offsetTop;
+      
+      if ( $('.slide.active .area').hasClass('scrolled') ) {
+        scrollTo(document.getElementById('soc-contain'), -topPos, 600);
+      } else {
+        scrollTo(document.getElementById('soc-contain'), topPos-95, 400);
       }
-
-      $('.active .area').addClass('scrolled');
-      $('.active .area .grey-box').addClass('scrolled');
-
-      return false;
-
-    });
-        
-    function scrollTo(element, to, duration) {
-      var start = element.scrollTop,
-        change = to - start,
-        currentTime = 0,
-        increment = 20;
-          
-      var animateScroll = function(){        
-        currentTime += increment;
-        var val = Math.easeInOutQuad(currentTime, start, change, duration);
-        element.scrollTop = val;
-        if(currentTime < duration) {
-            setTimeout(animateScroll, increment);
-        }
-      };
-      animateScroll();
     }
 
-    //t = current time
-    //b = start value
-    //c = change in value
-    //d = duration
-    Math.easeInOutQuad = function (t, b, c, d) {
-      t /= d/2;
-      if (t < 1) return c/2*t*t + b;
-      t--;
-      return -c/2 * (t*(t-2) - 1) + b;
+    $('.active .area').addClass('scrolled');
+    $('.active .area .grey-box').addClass('scrolled');
+
+    return false;
+  });
+      
+  function scrollTo(element, to, duration) {
+    var start = element.scrollTop,
+      change = to - start,
+      currentTime = 0,
+      increment = 20;
+        
+    var animateScroll = function(){        
+      currentTime += increment;
+      var val = Math.easeInOutQuad(currentTime, start, change, duration);
+      element.scrollTop = val;
+      if(currentTime < duration) {
+          setTimeout(animateScroll, increment);
+      }
     };
+
+    animateScroll();
+  }
+
+  //t = current time
+  //b = start value
+  //c = change in value
+  //d = duration
+  Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d/2;
+    if (t < 1) return c/2*t*t + b;
+    t--;
+    return -c/2 * (t*(t-2) - 1) + b;
+  };
 }
 
 // Special scroll Action for the President's Essay Page
