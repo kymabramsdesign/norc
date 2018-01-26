@@ -90,7 +90,7 @@ $(window).bind("load", function() {
       '<li><a href="/real-time-adaptability">Adapting Timelines and Methodologies to Conditions on the Ground</a></li>' +
       '<li><a href="/vulnerable-populations">Reaching Vulnerable Populations in Fragile Environments</a></li>' +
       '<li><a href="/closed-societies">Peering Into Closed Societies</a></li>' +
-      '<li><a href="/global-portfolio">Global Portfolio</a></li>' +
+      '<li><a href="/global-portfolio">NORC\'s Global Portfolio</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="/#health" onclick="location.reload()">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
