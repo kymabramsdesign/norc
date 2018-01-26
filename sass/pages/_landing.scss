@@ -462,6 +462,11 @@
             margin: 8px 0 0;
             padding-right: 10px;
             width: 100%;
+
+            @media screen and (max-width: 1000px) {
+              font-size: 18px;
+              line-height: 24px;
+            }
           }
 
           .four {
