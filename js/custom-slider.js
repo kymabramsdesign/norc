@@ -309,19 +309,16 @@ function scrollTime() {
       var thumbsHeight = $('.active .area .thumbnails').innerHeight();
 
       if ( thumb === windowHeight ) {
-        $(this).find('.bottom-arrow').stop().delay(50).fadeIn(400);
+        $(this).find('.bottom-arrow').stop().delay(50).fadeIn(600);
 
       }
-      // else if ( $('.active .area').scrollTop() >= thumbsHeight ) {
-        else if ( (thumb-10) <= (windowHeight-thumbsHeight) ) {
-        $(this).find('.bottom-arrow').stop().delay(100).fadeIn(400);
+      else if ( (thumb-10) <= (windowHeight-thumbsHeight) ) {
+        $(this).find('.bottom-arrow').stop().delay(100).fadeIn(600);
       }
       else {
         $(this).find('.bottom-arrow').hide();
-
       }
-console.log(thumb);
-        console.log(windowHeight-thumbsHeight);
+
       if ( text <= 100 ) {
         $(this).addClass('scrolled');
         $(this).find('.grey-box').addClass('scrolled');
@@ -335,7 +332,6 @@ console.log(thumb);
     });
   }
 }
-
 
 // Bottom Arrow Functions
 function explore() {

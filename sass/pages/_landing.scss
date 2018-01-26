@@ -190,6 +190,18 @@
     top: 67px;
   }
 
+  // .preview-text {
+  //   background-color: $black-70;
+  //   color: $white;
+  //   font-size: 12px;
+  //   font-weight: 300;
+  //   letter-spacing: .5px;
+  //   padding: 3px 10px 4px ;
+  //   position: fixed;
+  //   right: 14px;
+  //   top: -39px;
+  // }
+
   &.prev {
     display: none;
     left: 35px;
@@ -199,6 +211,10 @@
     @media screen and (max-width:767px) {
       left: 20px;
     }
+
+    // .preview-text {
+    //   transform: rotate(-135deg);
+    // }
   }
 
   &.next {
@@ -209,6 +225,10 @@
     @media screen and (max-width:767px) {
       right: 20px;
     }
+
+    // .preview-text {
+    //   transform: rotate(45deg);
+    // }
   }
 
   &:hover {
