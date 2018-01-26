@@ -232,6 +232,7 @@
   z-index: 1000;
 
   @media screen and (max-width:767px) {
+    @include transition(all .3s ease-in-out);
     display: none;
   }
 
@@ -246,6 +247,10 @@
     text-align: center;
     text-transform: uppercase;
     width: 100vw;
+
+    @media screen and (max-width:767px) {
+      display: none;
+    }
   }
 
   .down-arrow {
@@ -258,6 +263,11 @@
     -webkit-transform: rotate(45deg) skew(-2deg, -2deg);
     transform: rotate(45deg) skew(-2deg, -2deg);
     width: 0;
+
+    @media screen and (max-width:767px) {
+      -webkit-transform: rotate(-135deg) skew(-2deg, -2deg);
+      transform: rotate(-135deg) skew(-2deg, -2deg);
+    }
 
     &:hover {
       @include transition(opacity .3s ease-in-out);
@@ -273,10 +283,8 @@
   }
 
   .down-arrow {
-    delay-transition: 4s;
     -webkit-transform: rotate(-135deg) skew(-2deg, -2deg);
     transform: rotate(-135deg) skew(-2deg, -2deg);
-    width: 0;
   }
 }
 

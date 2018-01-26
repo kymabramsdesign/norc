@@ -311,11 +311,10 @@ function scrollTime() {
       console.log(thumbsHeight);
 
       if ( thumb === windowHeight ) {
-        $(this).find('.bottom-arrow').stop().delay(50).fadeIn(600);
+        $(this).find('.bottom-arrow').stop().delay(50).fadeIn(500);
       }
       else if ( $('.active .area').scrollTop()  >=  thumbsHeight) {
-        $(this).find('.bottom-arrow').stop().delay(200).fadeIn(600);
-        // do other stuff here
+        $(this).find('.bottom-arrow').stop().delay(100).fadeIn(500);
       }
       else {
         $(this).find('.bottom-arrow').hide();
@@ -344,10 +343,6 @@ function explore() {
     $('.explore').css('color', 'rgba(255,255,255,.65)');
   });
 
-  $('.slide.active .area').on('scroll', function() {
-    console.log('scrolled');
-  });
-
     var elem = 0;
     var topPos = 0;
 
@@ -355,27 +350,52 @@ function explore() {
       if ( $('.slide.active').hasClass('education') ) {
         elem = document.getElementById("ed");
         topPos = elem.offsetTop;
-        scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
+
+        if ( $('.slide.active .area').hasClass('scrolled') ) {
+          scrollTo(document.getElementById('ed-contain'), -topPos, 600);
+        } else {
+          scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
+        }
       }
       else if ( $('.slide.active').hasClass('economics') ) {
         elem = document.getElementById("econ");
         topPos = elem.offsetTop;
-        scrollTo(document.getElementById('econ-contain'), topPos-95, 400);
+        
+        if ( $('.slide.active .area').hasClass('scrolled') ) {
+          scrollTo(document.getElementById('econ-contain'), -topPos, 600);
+        } else {
+          scrollTo(document.getElementById('econ-contain'), topPos-95, 400);
+        }
       }
       else if ( $('.slide.active').hasClass('global') ) {
         elem = document.getElementById("glo");
         topPos = elem.offsetTop;
-        scrollTo(document.getElementById('glo-contain'), topPos-95, 400);
+        
+        if ( $('.slide.active .area').hasClass('scrolled') ) {
+          scrollTo(document.getElementById('glo-contain'), -topPos, 600);
+        } else {
+          scrollTo(document.getElementById('glo-contain'), topPos-95, 400);
+        }
       }
       else if ( $('.slide.active').hasClass('health') ) {
         elem = document.getElementById("heal");
         topPos = elem.offsetTop;
-        scrollTo(document.getElementById('heal-contain'), topPos-95, 400);
+        
+        if ( $('.slide.active .area').hasClass('scrolled') ) {
+          scrollTo(document.getElementById('heal-contain'), -topPos, 600);
+        } else {
+          scrollTo(document.getElementById('heal-contain'), topPos-95, 400);
+        }
       }
       else if ( $('.slide.active').hasClass('society') ) {
         elem = document.getElementById("soc");
         topPos = elem.offsetTop;
-        scrollTo(document.getElementById('soc-contain'), topPos-95, 400);
+        
+        if ( $('.slide.active .area').hasClass('scrolled') ) {
+          scrollTo(document.getElementById('soc-contain'), -topPos, 600);
+        } else {
+          scrollTo(document.getElementById('soc-contain'), topPos-95, 400);
+        }
       }
 
       $('.active .area').addClass('scrolled');
@@ -412,8 +432,6 @@ function explore() {
       t--;
       return -c/2 * (t*(t-2) - 1) + b;
     };
-
-    
 }
 
 // Special scroll Action for the President's Essay Page
@@ -525,7 +543,7 @@ function landingVideo() {
     $('.image-container').removeClass('visible-video');
     $('.white-page-overlay').fadeOut();
     if ( $('iframe').is(':visible')) {
-      $('#welcome-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=1&modestbranding=1');
+      $('#welcome-video').attr('src', 'https://www.youtube.com/embed/TNeQXQ42qVA?rel=0&showinfo=1&modestbranding=1');
     }
   });
 }
