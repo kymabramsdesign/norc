@@ -307,14 +307,12 @@ function scrollTime() {
       var text = $('.active .area .landing-text p').offset().top;
       var thumb = $('.active .area .thumbnails').offset().top;
       var thumbsHeight = $('.active .area .thumbnails').innerHeight();
-      console.log($('.active .area').scrollTop());
-      console.log(thumbsHeight);
 
       if ( thumb === windowHeight ) {
-        $(this).find('.bottom-arrow').stop().delay(50).fadeIn(500);
+        $(this).find('.bottom-arrow').stop().delay(50).fadeIn(400);
       }
       else if ( $('.active .area').scrollTop()  >=  thumbsHeight) {
-        $(this).find('.bottom-arrow').stop().delay(100).fadeIn(500);
+        $(this).find('.bottom-arrow').stop().delay(100).fadeIn(400);
       }
       else {
         $(this).find('.bottom-arrow').hide();
@@ -340,7 +338,7 @@ function explore() {
   $('.down-arrow').hover( function() {
     $('.explore').css('color', '#fff');
   }, function() {
-    $('.explore').css('color', 'rgba(255,255,255,.65)');
+    $('.explore').css('color', 'rgba(255,255,255,.75)');
   });
 
     var elem = 0;

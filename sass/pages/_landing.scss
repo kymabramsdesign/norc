@@ -228,50 +228,42 @@
   -ms-flex-pack: center;
   justify-content: center;
   position: absolute;
-  width: 100vw;
+  width: 180px;
   z-index: 1000;
 
   @media screen and (max-width:767px) {
-    @include transition(all .3s ease-in-out);
     display: none;
   }
 
   .explore {
-    @include transition(all .2s ease-in-out);
-    color: $white-65;
+    @include transition(all .4s ease-in-out);
+    color: $white-75;
     cursor: default;
     font-size: 14px;
     letter-spacing: 2.5px;
     line-height: 14px;
     margin: 0;
     text-align: center;
+    text-shadow: none;
     text-transform: uppercase;
     width: 100vw;
-
-    @media screen and (max-width:767px) {
-      display: none;
-    }
   }
 
   .down-arrow {
-    @include transition(opacity .2s ease-in-out);
-    border: solid $white-65;
+    @include transition(opacity .4s ease-in-out);
+    border: solid $white;
     border-width: 0 2px 2px 0;
     cursor: pointer;
     height: 0;
+    opacity: .75;
     padding: 14px;
     -webkit-transform: rotate(45deg) skew(-2deg, -2deg);
     transform: rotate(45deg) skew(-2deg, -2deg);
     width: 0;
 
-    @media screen and (max-width:767px) {
-      -webkit-transform: rotate(-135deg) skew(-2deg, -2deg);
-      transform: rotate(-135deg) skew(-2deg, -2deg);
-    }
-
     &:hover {
-      @include transition(opacity .3s ease-in-out);
-      border-color: $white-85;
+      @include transition(opacity .4s ease-in-out);
+      opacity: 1;
     }
   }
 }
@@ -543,6 +535,10 @@
     @media screen and (max-width: 767px) {
       background-image: url('/img/economics-background-mobile.jpg');
     }
+
+    .bottom-arrow {
+      left: calc(250vw - 90px);
+    }
   }
 
   &.education {
@@ -550,6 +546,10 @@
 
     @media screen and (max-width: 767px) {
       background-image: url('/img/education-background-mobile.jpg');
+    }
+
+    .bottom-arrow {
+      left: calc(350vw - 90px);
     }
   }
 
@@ -559,6 +559,10 @@
     @media screen and (max-width: 767px) {
       background-image: url('/img/global-background-mobile.jpg');
     }
+
+    .bottom-arrow {
+      left: calc(450vw - 90px);
+    }
   }
 
   &.health {
@@ -567,6 +571,10 @@
     @media screen and (max-width: 767px) {
       background-image: url('/img/health-background-mobile.jpg');
     }
+
+    .bottom-arrow {
+      left: calc(550vw - 90px);
+    }
   }
 
   &.society {
@@ -574,6 +582,10 @@
 
     @media screen and (max-width: 767px) {
       background-image: url('/img/society-background-mobile.jpg');
+    }
+
+    .bottom-arrow {
+      left: calc(650vw - 90px);
     }
   }
 
