@@ -76,7 +76,7 @@ $(window).bind("load", function() {
       '<li><a href="/poverty-research">Exploring Poverty and Resilience</a></li>' +
       '<li><a href="/consumer-finances">Monitoring the Financial Health of American Families</a></li>' +
       '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
-      '<li><a href="/gss-data">GSS Survey Data</a></li>' +
+      '<li><a href="/gss-trends">GSS Trends</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="/#education" onclick="location.reload()">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
