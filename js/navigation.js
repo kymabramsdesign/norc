@@ -12,7 +12,8 @@ $('.menu-button').on('click', function() {
 
   if ( $('.menu-button').hasClass('menu-open') ) {
     $('.white-page-overlay').fadeOut(300);
-    $('.share-button, .menu-button').css('z-index',200);
+    $('.share-button').css('z-index',99);
+    $('.menu-button').css('z-index',200);
     $('.menu-container').removeClass('moved');
     $("body").removeClass('no-scroll'); // body to scroll again
 
@@ -28,7 +29,7 @@ $('.menu-button').on('click', function() {
   }
   else {
     $('.white-page-overlay').fadeIn(300);
-    $('.share-button').css('z-index',100);
+    $('.share-button').css('z-index',99);
     $(this).css('z-index',300).addClass('menu-open').attr('src', 'img/menu-button-orange.svg');
     $('.menu-container').addClass('moved');
     $("body").addClass('no-scroll'); // body to stop scroll
@@ -43,7 +44,8 @@ var windowWidth = $(window).width();
 if ( windowWidth >= 768 ) {
   $('.white-page-overlay').on('click', function() {
     $(this).fadeOut(300);
-    $('.share-button, .menu-button').css('z-index',200);
+    $('.share-button').css('z-index',99);
+    $('.menu-button').css('z-index',200);
     $('.menu-container').removeClass('moved');
     $("body").removeClass('no-scroll'); // body to scroll again
     $('.arrow a').removeClass('active');

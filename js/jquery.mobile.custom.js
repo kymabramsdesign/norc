@@ -43,7 +43,7 @@ var dataPropertyName = "virtualMouseBindings",
 	mouseHookProps = $.event.mouseHooks ? $.event.mouseHooks.props : [],
 /////////////////I had to take this line out, it was throwing an error!!!
 	// mouseEventProps = $.event.props.concat( mouseHookProps ),
-	/////////////////////////////////////////
+	//////////////////////////////////////////
 	activeDocHandlers = {},
 	resetTimerID = 0,
 	startX = 0,

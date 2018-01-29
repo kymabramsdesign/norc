@@ -9,10 +9,50 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
+<script src="js/jquery-3.2.1.min.js"></script><!-- Load jQuery -->
+<script src="js/js-cookie.js"></script><!-- Load cookie tracking plugin -->
+<script src="js/typeIt.min.js"></script><!-- Load cookie tracking plugin -->
+
+<!-- Intro Animation Script -->
+<script>
+  $(document).ready( function() {
+
+    if ( Cookies.get('intro-shown') == null) {
+      
+      // add cookie that expires in one day to site homepage
+      Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
+
+      // Load Intro Animation JS file
+      $.getScript('js/ticker.js');
+    }
+    else {
+      $('#intro-overlay').fadeOut(250); // Hides Intro Animation Overlay
+      $('.typed-first, .typed-second, .ti-cursor').remove();
+    }
+    
+    // Cookies.remove('intro-shown', { path: '/' }); // for testing, resets the cookies
+  });
+</script>
+<!-- End Intro Animation Script -->
+
 </head>
 
 <body class="main">
 <header>
+  <div id="intro-overlay">
+    <div class="entry-screen">
+    <object class="text-overlay" type="image/svg+xml" data="img/intro-grid.svg">Your browser does not support SVGs</object>
+
+    <div class="intro intro-left">
+      <div class="typed-first"></div>
+    </div><!-- end of .intro-left -->
+
+    <div class="intro intro-right">
+      <div class="typed-second"></div>
+    </div><!-- end of .intro-right -->
+
+  </div><!-- end of .entry-screen -->
+  </div>
   <div class="white-page-overlay"></div>
   <a class="a2a_dd share-button" href="https://www.addtoany.com/share">
     <img src="img/share-button-white.svg" alt="Share Button" />
@@ -586,6 +626,8 @@
           <div class="credits">
             <p class="slide-heading">Credits + Acknowledgments</p>
             <div class="two">
+              <p class="column-heading">Photos</p>
+              <p>Assessing Americans' Zika Awareness photo credit: 2016 AP Photo/Ricardo Mazalan</p>
               <p class="column-heading">Data Visualizations and Infographics</p>
               <p>Nola du Toit, Ying Li, Ed Mulrow, Meimeizi Zhu (NORC at the University of Chicago); <a href="http://www.kad.com" target="_blank">Kym Abrams Design</a>; Mu-Hsien Hsieh, <a href="http://www.muhsien.com/" target="_blank">MUHSIEN INC.</a><br />
               <i>Publicly available interactive code</i>:<br />
@@ -601,12 +643,12 @@
               <p class="column-heading">Acknowledgments</p>
               <p>Emily Alvarez, Lindsay Arends, Kate Bachtell, Lynette Bertsche, Kevin Brown, Alison Gross, Renee Hendley, Laurie Imhof, Greg Lanier, Kristina Lowell, Antonio Macias, Kristen Moorhead, Cynthia Simko, Amelia Solorio, <a href="https://www.linkedin.com/in/lisa-stein-2885425/" target="_blank">Lisa Stein</a>, Glen Szczypka, Eric Young</p>
             </div>
-            <div class="one">
+<!--             <div class="one">
               <p class="column-heading">Appendix and Footnotes</p>
               <p>Emily Alvarez, Lindsay Arends, Kate Bachtell, Lynette Bertsche, Kevin Brown, Alison Gross, Renee Hendley, Laurie Imhof, Greg Lanier, Kristina Lowell, Antonio Macias, Kristen Moorhead, Cynthia Simko, Amelia Solorio, <a href="https://www.linkedin.com/in/lisa-stein-2885425/" target="_blank">Lisa Stein</a>, Glen Szczypka, Eric Young</p>
               <p>Emily Alvarez, Lindsay Arends, Kate Bachtell, Lynette Bertsche, Kevin Brown, Alison Gross, Renee Hendley, Laurie Imhof, Greg Lanier, Kristina Lowell, Antonio Macias, Kristen Moorhead, Cynthia Simko, Amelia Solorio, <a href="https://www.linkedin.com/in/lisa-stein-2885425/" target="_blank">Lisa Stein</a>, Glen Szczypka, Eric Young</p>
               <p>Emily Alvarez, Lindsay Arends, Kate Bachtell, Lynette Bertsche, Kevin Brown, Alison Gross, Renee Hendley, Laurie Imhof, Greg Lanier, Kristina Lowell, Antonio Macias, Kristen Moorhead, Cynthia Simko, Amelia Solorio, <a href="https://www.linkedin.com/in/lisa-stein-2885425/" target="_blank">Lisa Stein</a>, Glen Szczypka, Eric Young</p>
-            </div>
+            </div> -->
           </div>
 
         </div><!-- End of .area div -->
@@ -617,7 +659,6 @@
 </main>
 
 <footer>
-  <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/custom-slider.js"></script>
 

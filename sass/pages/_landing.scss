@@ -181,7 +181,7 @@
   position: fixed;
   top: 48%;
   width: 0;
-  z-index: 2000;
+  z-index: 99;
 
   @media screen and (max-width:767px) {
     border: solid $white-85;
