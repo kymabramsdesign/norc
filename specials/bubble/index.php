@@ -11,8 +11,8 @@
 <body>
 	<div class="wrap">
 		<div id="intro">
-			<h1>Partisanship and the Media</h1>
-			<p>There are 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (Independent). Position of dots within <span>Yes</span> or <span>No</span> category is random.</p>
+			<h1 class="extra-apdding">Partisanship and the Media</h1>
+			<p>There are 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (independent). Position of dots within <span>Yes</span> or <span>No</span> category is random.</p>
 			<div class="clear"></div>
 		</div>
 		<div id="chart-types">
@@ -27,7 +27,7 @@
 			</label>
 
 			<label id="Social Media">
-				<input type="radio" name="options"><span>Get news on Social Media</span>
+				<input type="radio" name="options"><span>Get news on social media</span>
 			</label>
 
 			<label id="Accurate">
@@ -41,7 +41,7 @@
 		<div id="labels">
 			<span class="d">Democrat</span>
 			<span class="r">Republican</span>
-			<span class="i">Independent</span>
+			<span class="i">independent</span>
 		</div>
 	</div>
 
@@ -66,8 +66,8 @@
 		</div>
 	</div>
 	<div class="source wrap">
-	*Data comes from the Media Insight Project (2,199 American adults) and a study of people’s trust in news from the media (2,036
-American adults). Distribution of Respondents by Political Identification: 35% Democrat | 24% Republican | 41% Independent
+	*Data come from the Media Insight Project (2,199 American adults) and a study of people’s trust in news from the media (2,036
+American adults). Distribution of Respondents by Political Identification: 35% Democrat | 24% Republican | 41% independent
 	</div>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>

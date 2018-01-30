@@ -1,6 +1,6 @@
 jQuery(function() {
 	var bubble_popup_src = 'specials/bubble/index.php';
-	var bubble_popup_source = '*Data comes from the Media Insight Project (2,199 American adults) and a study of people’s trust in news from the media (2,036 American adults). Distribution of Respondents by Political Identification: 35% Democrat | 24% Republican | 41% Independent';
+	var bubble_popup_source = '*Data come from the Media Insight Project (2,199 American adults) and a study of people’s trust in news from the media (2,036 American adults). Distribution of Respondents by Political Identification: 35% Democrat | 24% Republican | 41% independent';
 	var line_popup_src = 'line/index.html';
 	var line_popup_source = '*Groups within each demographic category are comparable, for example, Black to White within Race. However, when selecting groups across demographic categories, the groups will not change. That is, selecting Black and Midwest will produce results for all Blacks compared to all respondents from the Midwest. Data are limited to 1998-2016. Number of respondents range from a low of 430 in 2004 to a high of 896 respondents in 2006. We did not control for current employment due to sample size.';
 	var graph3_src = 'chart3/index.php';
