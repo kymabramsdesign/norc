@@ -79,46 +79,50 @@ body.intro {
 
   .text-overlay {
     height: 100%;
-    left: 410px;
+    left: 423px;
     position: absolute;
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
-    width: 705px;
+    width: 860px;
     z-index: 1000;
 
     @media screen and (max-width: 1320px) {
-      left: 377px;
+      left: 390px;
+      width: 797px;
     }
 
     @media screen and (max-width: 1200px) {
-      left: 306px;
+      left: 315px;
+      width: 697px;
     }
 
     @media screen and (max-width: 1024px) {
-      left: 271px;
-      width: 554px;
+      left: 283px;
+      width: 629px;
     }
 
     @media screen and (max-width: 900px) {
       height: auto;
-      left: 0;
-      margin-top: 374px;
-      width: 100%;
+      left: 22px;
+      margin-top: 377px;
+      width: 96%;
     }
 
     @media screen and (max-width: 767px) {
-      margin-top: 49vh;
+      margin-top: 48vh;
+      left: 0;
+      width: 100%;
     }
   }
 }
 
 .intro {
   background-color: $navy;
-  margin-top: 40vh;
+  margin-top: 38vh;
 
   @media screen and (max-width: 1024px) {
-    margin-top: 43vh;
+    margin-top: 38vh;
   }
 
   @media screen and (max-width: 900px) {
