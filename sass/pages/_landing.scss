@@ -10,7 +10,7 @@
       color: $white-85 !important;
       font-size: 15px;
       letter-spacing: .25px;
-      margin: 55px 0 0;
+      margin: 57px 0 0;
       padding: 10px 0 9px;
 
       &.economics {
@@ -70,7 +70,11 @@
 }
 
 .slide.insight {
-  background-color: $orange;
+  background-image: url('/img/insight-background.png');
+
+  @media screen and (max-width: 767px) {
+      background-image: url('/img/insight-background-mobile.png');
+    }
 
   .left {
     -webkit-box-align: center;
@@ -305,7 +309,11 @@
   background-size: cover;
 
   &.president {
-    background-image: url('/img/president-background.jpg');
+    background-image: url('/img/president-background.png');
+
+    @media screen and (max-width: 767px) {
+      background-image: url('/img/president-background-mobile.png');
+    }
 
     .area {
       display: -webkit-box;

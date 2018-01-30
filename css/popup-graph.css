@@ -1,0 +1,126 @@
+body {
+	font-family: 'Roboto';
+	font-size: 16px;
+	line-height: 1.15;
+}
+.graph-popup-background {
+	position: fixed;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255,255,255,0.8);
+}
+.graph-popup-foreground {
+	position: fixed;
+	z-index: 100001;
+	top: 40px;
+	bottom: 50px;
+	width: 940px;
+	left: 50%;
+	margin-left: -470px;
+}
+.graph-popup-foreground iframe {
+	width: 100%;
+	height: calc(100% - 30px);
+}
+.graph-popup-close {
+	position: absolute;
+	top: 0;
+	right: -50px;
+	z-index: 10;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.graph-popup-close span:before, .graph-popup-close span:after {
+	transform-origin: 50% 50%;
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 30px;
+	height: 2px;
+	background: #777777;
+}
+.graph-popup-close span:before {
+	transform: rotate(45deg);
+}
+.graph-popup-close span:after {
+	transform: rotate(-45deg);
+}
+.graph-popup-social-links {
+	position: absolute;
+	z-index: 10;
+	right:-50px;
+	top: 70px;
+}
+.graph-popup-social-links a {
+	display: block;
+	text-decoration: none;
+	margin-bottom: 16px;
+}
+.graph-popup-social-links a:before {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-size: 24px;
+	color: #777777;
+}
+.graph-popup-social-links .gps-facebook:before {
+	content: '\f09a';
+}
+.graph-popup-social-links .gps-twitter:before {
+	content: '\f099';
+}
+.graph-popup-social-links .gps-linkedin:before {
+	content: '\f0e1';
+}
+
+@media screen and (max-width: 1060px) {
+	.graph-popup-close {
+		top: 10px;
+		left: 20px;
+	}
+	.theme-dark .graph-popup-close span:before,
+	.theme-dark .graph-popup-close span:after {
+		background: #aaaaaa;
+	}
+	.graph-popup-social-links {
+		top: 10px;
+		right: 20px;
+	}
+	.graph-popup-social-links a {
+		display: inline-block;
+		margin: 0 0 0 16px;
+	}
+	.theme-dark .graph-popup-social-links a:before {
+		color: #aaaaaa;
+	}
+	.graph-popup-close span:before,
+	.graph-popup-close span:after {
+		transform-origin: 0% 50%;
+		width: 14px;
+	}
+}
+@media screen and (max-width: 940px) {
+	.graph-popup-foreground {
+		left: 0;
+		right: 0;
+		width: auto;
+		margin-left: 0;
+	}
+}
+@media screen and (max-width: 690px) {
+	.graph-popup-foreground {
+		top: 0;
+		bottom: 0;
+	}	
+	.graph-popup-foreground iframe {
+		height: 100%;
+	}
+	.graph-popup-source {
+		display: none;
+	}
+}

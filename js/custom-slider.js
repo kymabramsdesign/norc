@@ -21,119 +21,26 @@ function slides() {
     $('.nav-arrow.next').hide();
   }
 
-  // Functions for click on right arrow
+  // move slide on click right arrow
   $('.nav-arrow.next').click( function() {
-    var currentSlidePosition = $('.slider').offset().left;
-
-    if ( currentSlidePosition === slide1 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.nav-arrow.prev').show();
-      $('.slider').animate({ left: slide2 }, 300);
-      $('.president').show().addClass('active');
-      window.location.hash = 'president';
-    }
-    else if ( currentSlidePosition === slide2 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide3 }, 300);
-      $('.economics').show().addClass('active');
-      window.location.hash = 'economics';
-    }
-    else if ( currentSlidePosition === slide3 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide4 }, 300);
-      $('.education').show().addClass('active');
-      window.location.hash = 'education';
-    }
-    else if ( currentSlidePosition === slide4 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide5 }, 300);
-      $('.global').show().addClass('active');
-      window.location.hash = 'global';
-    }
-    else if ( currentSlidePosition === slide5 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide6 }, 300);
-      $('.health').show().addClass('active');
-      window.location.hash = 'health';
-    }
-    else if ( currentSlidePosition === slide6 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide7 }, 300);
-      $('.society').show().addClass('active');
-      window.location.hash = 'society';
-    }
-    else if ( currentSlidePosition === slide7 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide8 }, 300);
-      $('.nav-arrow.next').hide();
-      $('.gain-more').show().addClass('active');
-      window.location.hash = 'gain-more';
-    }
+    goLeft();
   });
 
-  // Functions for click on left arrow
+  // move slide on click left arrow
   $('.nav-arrow.prev').click( function() {
-    var currentSlidePosition = $('.slider').offset().left;
-
-    if ( currentSlidePosition === slide2 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.nav-arrow.prev').hide();
-      $('.slider').animate({ left: slide1 }, 300);
-      $('.insight').show().addClass('active');
-      window.location.hash = 'insight';
-    }
-    else if ( currentSlidePosition === slide3 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide2 }, 300);
-      $('.president').show().addClass('active');
-      window.location.hash = 'president';
-    }
-    else if ( currentSlidePosition === slide4 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide3 }, 300);
-      $('.economics').show().addClass('active');
-      window.location.hash = 'economics';
-    }
-    else if ( currentSlidePosition === slide5 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide4 }, 300);
-      $('.education').show().addClass('active');
-      window.location.hash = 'education';
-    }
-    else if ( currentSlidePosition === slide6 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide5 }, 300);
-      $('.global').show().addClass('active');
-      window.location.hash = 'global';
-    }
-    else if ( currentSlidePosition === slide7 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide6 }, 300);
-      $('.health').show().addClass('active');
-      window.location.hash = 'health';
-    }
-    else if ( currentSlidePosition === slide8 ) {
-      $('.section-title').hide();
-      $('.nav-dot, .section-title, .slide').removeClass('active');
-      $('.slider').animate({ left: slide7 }, 300);
-      $('.nav-arrow.next').show();
-      $('.society').show().addClass('active');
-      window.location.hash = 'society';
-    }
+    goRight();
   });
+
+  // move slide on Swipe Left
+  $('.slide').on( 'swipeleft', function() {
+    goLeft();
+  });
+
+  // move slide on swipe right
+  $('.slide').on( 'swiperight', function() {
+    goRight();
+  });
+
 
   $('.dot-nav svg').hover(function() {
 
@@ -277,7 +184,120 @@ function slides() {
     $('.nav-arrow.prev').show();
     $('.gain-more').show().addClass('active');
   }
+
+  function goLeft() {
+    var currentSlidePosition = $('.slider').offset().left;
+
+    if ( currentSlidePosition === slide1 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.nav-arrow.prev').show();
+      $('.slider').animate({ left: slide2 }, 300);
+      $('.president').show().addClass('active');
+      window.location.hash = 'president';
+    }
+    else if ( currentSlidePosition === slide2 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide3 }, 300);
+      $('.economics').show().addClass('active');
+      window.location.hash = 'economics';
+    }
+    else if ( currentSlidePosition === slide3 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide4 }, 300);
+      $('.education').show().addClass('active');
+      window.location.hash = 'education';
+    }
+    else if ( currentSlidePosition === slide4 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide5 }, 300);
+      $('.global').show().addClass('active');
+      window.location.hash = 'global';
+    }
+    else if ( currentSlidePosition === slide5 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide6 }, 300);
+      $('.health').show().addClass('active');
+      window.location.hash = 'health';
+    }
+    else if ( currentSlidePosition === slide6 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide7 }, 300);
+      $('.society').show().addClass('active');
+      window.location.hash = 'society';
+    }
+    else if ( currentSlidePosition === slide7 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide8 }, 300);
+      $('.nav-arrow.next').hide();
+      $('.gain-more').show().addClass('active');
+      window.location.hash = 'gain-more';
+    }
+  }
+
+  function goRight() {
+    var currentSlidePosition = $('.slider').offset().left;
+
+    if ( currentSlidePosition === slide2 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.nav-arrow.prev').hide();
+      $('.slider').animate({ left: slide1 }, 300);
+      $('.insight').show().addClass('active');
+      window.location.hash = 'insight';
+    }
+    else if ( currentSlidePosition === slide3 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide2 }, 300);
+      $('.president').show().addClass('active');
+      window.location.hash = 'president';
+    }
+    else if ( currentSlidePosition === slide4 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide3 }, 300);
+      $('.economics').show().addClass('active');
+      window.location.hash = 'economics';
+    }
+    else if ( currentSlidePosition === slide5 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide4 }, 300);
+      $('.education').show().addClass('active');
+      window.location.hash = 'education';
+    }
+    else if ( currentSlidePosition === slide6 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide5 }, 300);
+      $('.global').show().addClass('active');
+      window.location.hash = 'global';
+    }
+    else if ( currentSlidePosition === slide7 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide6 }, 300);
+      $('.health').show().addClass('active');
+      window.location.hash = 'health';
+    }
+    else if ( currentSlidePosition === slide8 ) {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.slider').animate({ left: slide7 }, 300);
+      $('.nav-arrow.next').show();
+      $('.society').show().addClass('active');
+      window.location.hash = 'society';
+    }
+  }
 }
+
 
 function verticalPosition() {
   var windowHeight = $(window).height();
@@ -564,6 +584,7 @@ function initialize() {
   presidentEssay();
   landingVideo();
   matchHeight();
+  // swipey();
 }
 
 // Collect all functions to execute on Resize

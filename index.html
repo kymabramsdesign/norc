@@ -9,15 +9,16 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
-<script src="js/jquery-3.2.1.min.js"></script><!-- Load jQuery -->
+<script src="js/jquery-3.2.1.min.js"></script><!-- Load jQuery here in order to run the intro animation -->
 <script src="js/js-cookie.js"></script><!-- Load cookie tracking plugin -->
 <script src="js/typeIt.min.js"></script><!-- Load cookie tracking plugin -->
+<script src="js/ticker.js"></script><!-- Load cookie tracking plugin -->
 
 <!-- Intro Animation Script -->
 <script>
   $(document).ready( function() {
 
-    if ( Cookies.get('intro-shown') == null) {
+    if ( Cookies.get('intro-shown') == null ) {
       
       // add cookie that expires in one day to site homepage
       Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
@@ -29,7 +30,6 @@
       $('#intro-overlay').fadeOut(250); // Hides Intro Animation Overlay
       $('.typed-first, .typed-second, .ti-cursor').remove();
     }
-    
     // Cookies.remove('intro-shown', { path: '/' }); // for testing, resets the cookies
   });
 </script>
