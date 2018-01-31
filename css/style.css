@@ -5486,6 +5486,8 @@ body.intro {
 
 /* line 1235, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one {
+  -webkit-transition: height 0.4s ease-in-out;
+  transition: height 0.4s ease-in-out;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -5494,12 +5496,12 @@ body.intro {
   width: 49%;
 }
 
-/* line 1243, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 1244, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one.blank {
   background-color: transparent;
 }
 
-/* line 1247, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 1248, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one .small.caption {
   font-size: 22px;
   letter-spacing: .75px;
@@ -5509,7 +5511,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1440px) {
-  /* line 1247, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+  /* line 1248, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .two-vertical .one .small.caption {
     font-size: 20px;
     letter-spacing: .75px;
@@ -5518,7 +5520,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1100px) {
-  /* line 1247, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+  /* line 1248, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .two-vertical .one .small.caption {
     font-size: 18px;
     letter-spacing: .75px;
@@ -5528,7 +5530,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 1247, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+  /* line 1248, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .two-vertical .one .small.caption {
     font-size: 16px;
     line-height: 22px;
@@ -5536,19 +5538,19 @@ body.intro {
   }
 }
 
-/* line 1273, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 1274, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one .small.caption.white {
   color: #fff;
 }
 
-/* line 1277, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 1278, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one .small.caption.black {
   color: #000;
   font-weight: 400 !important;
   letter-spacing: .25px;
 }
 
-/* line 1289, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 1290, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area.scrolled .landing-text {
   -webkit-transition: opacity 1.5s ease-in-out, height 1s ease-in-out;
   transition: opacity 1.5s ease-in-out, height 1s ease-in-out;
@@ -5556,21 +5558,21 @@ body.intro {
   /* height: 65vh;*/
 }
 
-/* line 1294, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 1295, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area.scrolled .landing-text.button-scrolled {
   -webkit-transition: opacity 0.75s ease-in-out, height 0.75s ease-in-out;
   transition: opacity 0.75s ease-in-out, height 0.75s ease-in-out;
   /* height: 98px;*/
 }
 
-/* line 1300, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 1301, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area.scrolled .thumbnails {
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   opacity: 1;
 }
 
-/* line 1308, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 1309, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .grey-box {
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
@@ -5581,13 +5583,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 1308, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+  /* line 1309, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
   .grey-box {
     background-color: #000 !important;
   }
 }
 
-/* line 1319, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
+/* line 1320, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .grey-box.scrolled {
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;

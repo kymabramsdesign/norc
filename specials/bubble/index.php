@@ -70,9 +70,8 @@
 	*Data come from the Media Insight Project (2,199 American adults) and a study of people’s trust in news from the media (2,036 American adults). Distribution of Respondents by Political Identification: 35% Democrat | 24% Republican | 41% independent
 	</div>
 	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
-<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
-<script src="../../js/jquery-3.2.1.min.js"></script>
+	<script src="../../js/d3.min.js"></script>
+	<script src="../../js/jquery-3.2.1.min.js"></script>
 	<script src="bubbles2.js"></script>
 </body>
  </html>

@@ -304,16 +304,24 @@ function verticalPosition() {
   var areaHeight = $('.area p').height();
 }
 
-// image heights
+
+// Calculates image heights
 function matchHeight() {
-  var largeSize = $('.one-vertical img').height();
+  var largeSize = $('#img-to-measure').height();
   largeSize = largeSize+7;
+  console.log(largeSize);
 
   $('.two-vertical').css('height', largeSize);
   $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
   $('.president .two-vertical').css('height', (largeSize/2));
   $('.gain-more .two-vertical.first').css('height', (largeSize/2));
 }
+
+
+// fires image height function after president image load
+$('#img-to-measure').bind("load", function() {
+  matchHeight();
+});
 
 
 // On Scroll functions
@@ -458,60 +466,64 @@ function presidentEssay() {
     essay.preventDefault();
   });
 
-  var imageHeight = $('.president .one-vertical img').height();
-  imageHeight = imageHeight-7; // Height of large images
-  var dataPointHeight = imageHeight/2; // Height of small images
-  var columnHeight = (imageHeight*2) + (dataPointHeight*3); // Height of all images on the President slide
+  // wait to measure height until the president's image has fully loaded
+  $('#img-to-measure').bind("load", function() {
 
-  columnHeight = columnHeight+132; // Add room for text and vertical spacing here
+    var imageHeight = $('.president .one-vertical img').height();
+    imageHeight = imageHeight-7; // Height of large images
+    var dataPointHeight = imageHeight/2; // Height of small images
+    var columnHeight = (imageHeight*2) + (dataPointHeight*3); // Height of all images on the President slide
 
-  var windowHeight = $(window).height();
-  var windowWidth = $(window).width();
+    columnHeight = columnHeight+132; // Add room for text and vertical spacing here
 
-  if ( windowWidth >= 901 ) {
-    $('.president .area, .gain-more .area').on('scroll', function() {
-      var thumb = $('.active .area .landing-text').offset().top;
+    var windowHeight = $(window).height();
+    var windowWidth = $(window).width();
 
-      if ( thumb <= 100 ) {
-        $(this).addClass('scrolled');
-        $(this).find('.grey-box').addClass('scrolled');
-      }
-      else {
-        if ( $('.landing-text').hasClass('button-scrolled') === false ) {
-          $(this).removeClass('scrolled');
-          $(this).find('.grey-box').removeClass('scrolled');
+    if ( windowWidth >= 901 ) {
+      $('.president .area, .gain-more .area').on('scroll', function() {
+        var thumb = $('.active .area .landing-text').offset().top;
+
+        if ( thumb <= 100 ) {
+          $(this).addClass('scrolled');
+          $(this).find('.grey-box').addClass('scrolled');
         }
-      }
-
-      if ( (windowHeight-columnHeight) >= thumb+80 ) {
-        $('.president .thumbnails').css('position', 'fixed');
-        $('.president .landing-text').css('margin-left', '50vw');
-      }
-      else {
-        $('.president .thumbnails').css('position', 'initial');
-        $('.president .landing-text').css('margin-left', 'initial');
-      }
-    });
-  }
-
-  else if ( windowWidth <= 900 && windowWidth >= 768 ) {
-    $('.president .area, .gain-more .area').on('scroll', function() {
-      var thumb = $('.active .area .thumbnails').offset().top;
-      var text = $('.active .area .landing-text').offset().top;
-      console.log(thumb);
-
-      if ( thumb <= 75 || text <= 100 ) {
-        $(this).addClass('scrolled');
-        $(this).find('.grey-box').addClass('scrolled');
-      }
-      else {
-        if ( $('.landing-text').hasClass('button-scrolled') === false ) {
-          $(this).removeClass('scrolled');
-          $(this).find('.grey-box').removeClass('scrolled');
+        else {
+          if ( $('.landing-text').hasClass('button-scrolled') === false ) {
+            $(this).removeClass('scrolled');
+            $(this).find('.grey-box').removeClass('scrolled');
+          }
         }
-      }
-    });
-  }
+
+        if ( (windowHeight-columnHeight) >= thumb+80 ) {
+          $('.president .thumbnails').css('position', 'fixed');
+          $('.president .landing-text').css('margin-left', '50vw');
+        }
+        else {
+          $('.president .thumbnails').css('position', 'initial');
+          $('.president .landing-text').css('margin-left', 'initial');
+        }
+      });
+    }
+
+    else if ( windowWidth <= 900 && windowWidth >= 768 ) {
+      $('.president .area, .gain-more .area').on('scroll', function() {
+        var thumb = $('.active .area .thumbnails').offset().top;
+        var text = $('.active .area .landing-text').offset().top;
+        console.log(thumb);
+
+        if ( thumb <= 75 || text <= 100 ) {
+          $(this).addClass('scrolled');
+          $(this).find('.grey-box').addClass('scrolled');
+        }
+        else {
+          if ( $('.landing-text').hasClass('button-scrolled') === false ) {
+            $(this).removeClass('scrolled');
+            $(this).find('.grey-box').removeClass('scrolled');
+          }
+        }
+      });
+    }
+  });
 }
 
 function landingVideo() {
@@ -583,18 +595,26 @@ function initialize() {
   scrollTime();
   presidentEssay();
   landingVideo();
-  matchHeight();
-  // swipey();
 }
 
 // Collect all functions to execute on Resize
 function initializeResize() {
   verticalPosition();
   slides();
-  presidentEssay();
+  
   landingVideo();
-  matchHeight();
 }
 
 $(document).ready(initialize);
-$(window).resize(initializeResize);
+
+var resizeTimer;
+$(window).on('resize', function(e) {
+  initializeResize();
+  clearTimeout(resizeTimer);
+
+  resizeTimer = setTimeout(function() {
+    matchHeight();
+    presidentEssay();
+    explore();   
+  }, 600);
+});
