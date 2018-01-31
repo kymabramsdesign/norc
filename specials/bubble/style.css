@@ -210,7 +210,23 @@ circle {
 	fill:white;
 }
 
+.solid-bar {
+	display: none;
+}
+
 @media screen and (max-width: 670px) {
+	.solid-bar {
+		display: inline-block;
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		height: 50px;
+		background-color: #bac7d1;
+	}
+	body {
+		padding-bottom: 20px;
+		padding-top: 50px;
+	}
 	.source {
 		display: block;
 		font-size: 16px;
@@ -223,6 +239,7 @@ circle {
 	}
 	#intro h1 {
 		margin-bottom: 10px;
+		padding-left: 0;
 	}
 	#chart-types span {
 		font-size: 11px;
