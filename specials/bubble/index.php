@@ -14,10 +14,10 @@
 		<div id="intro">
 			<div class="intro-left">
 				<h1>News Media Sources and Attitudes vary by Political Party</h1>
-				<h2>Data come from the Media Insight Project (2,199 respondents) and a study of people’s trust in news media (2,036 respondents)</h2>
+				<h2>Data come from a 2017 study of people’s trust in news media (2,036 American adults).</h2>
 			</div>
 			<div class="intro-right">
-				<p>The AP-NORC Center and American Press Institute investigates how Americans of different partisan stripes get news and their attitudes toward the news media.</p>
+				<p>The AP-NORC Center and American Press Institute investigates how Americans of different partisan stripes get their news and their attitudes toward the news media.</p>
 			</div>
 		</div>
 		<div class="clear"></div>
@@ -73,7 +73,7 @@
 		</div>
 	</div>
 	<div class="source wrap">
-	*The interactive includes 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (independent). Once dots are sorted into Yes or No category, their position is random. Distribution of respondents by Political Identification: 35% Democrat, 24% Republican, 41% independent.
+	*The interactive includes 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (independent). Once dots are sorted into Yes or No category, their position is random. Distribution of respondents by Political Identification: 35% Democrat, 24% Republican, 41% Independent.
 	</div>
 	
 	<script src="../../js/d3.min.js"></script>

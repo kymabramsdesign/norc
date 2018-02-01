@@ -22,8 +22,10 @@ body {
 .story-page_education .graph-popup-background  {
 	background: #f5eeef;
 }
+.story-page_global .graph-popup-background  {
+	background: #e8e2e8;
+}
 .graph-popup-foreground {
-	/*bottom: 50px;*/
 	bottom: 8vh;
 	left: 50%;
 	margin-left: -470px;
@@ -124,6 +126,10 @@ body {
 	.theme-dark .graph-popup-close span:after {
 		background: #aaaaaa;
 	}
+	.theme-mid .graph-popup-close span:before,
+	.theme-mid .graph-popup-close span:after {
+		background: #fff;
+	}
 	.graph-popup-social-links {
 		top: 15px;
 		right: 20px;
@@ -134,6 +140,9 @@ body {
 	}
 	.theme-dark .graph-popup-social-links a:before {
 		color: #aaaaaa;
+	}
+	.theme-mid .graph-popup-social-links a:before {
+		color: #fff;
 	}
 	.graph-popup-close span:before,
 	.graph-popup-close span:after {

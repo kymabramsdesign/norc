@@ -1,10 +1,10 @@
 jQuery(function() {
 	var bubble_popup_src = 'specials/bubble/index.php';
-	var bubble_popup_source = '*The interactive includes 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (independent). Once dots are sorted into Yes or No category, their position is random. Distribution of respondents by Political Identification: 35% Democrat, 24% Republican, 41% independent.';
+	var bubble_popup_source = '*The interactive includes 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (independent). Once dots are sorted into Yes or No category, their position is random. Distribution of respondents by Political Identification: 35% Democrat, 24% Republican, 41% Independent.';
 	var line_popup_src = 'specials/line/index.html';
 	var line_popup_source = '*Rates are comparable within each demographic category (e.g. Female to Male within Gender), but not across categories (e.g. Female to Republican). Number of respondents range from 430 (2004) to 896 (2006). Data are weighted. We did not control for current employment due to sample size.';
 	var graph3_src = 'specials/chart3/index.php';
-	var graph4_src = 'chart4/index.php';
+	var graph4_src = 'specials/chart4/index.php';
 
 	//delay load fontawesome
 	setTimeout(function() {
@@ -98,7 +98,7 @@ jQuery(function() {
 	});
 	jQuery('.graph4-popup').click(function() {
 
-		show_popup(graph4_src, '', 'dark', jQuery(this).data());
+		show_popup(graph4_src, '', 'mid', jQuery(this).data());
 
 		return false;
 	});

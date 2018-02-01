@@ -26,6 +26,9 @@ body {
 	font-size: 14px;
 	line-height: 1.5;
 }
+#intro strong {
+	color: #d2cedd;
+}
 #intro .intro-left {
 	float: left;
 	width: 40%;
