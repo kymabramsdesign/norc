@@ -17,7 +17,10 @@ body {
 	background: #f2f5f6;
 }
 .story-page_economics .graph-popup-background  {
-	background: #ecf0ed;
+	background: #ecf0ed;f5eeef
+}
+.story-page_education .graph-popup-background  {
+	background: #f5eeef;
 }
 .graph-popup-foreground {
 	/*bottom: 50px;*/

@@ -1,0 +1,126 @@
+* {
+	-webkit-transition: opacity 0.75s;
+	transition: opacity 0.75s;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #d7ffeb;
+	font: 14px/1.4 'Roboto', Helvetica, arial, sans-serif;
+	-webkit-text-size-adjust: none;
+}
+.graph-wrap {
+	position: relative;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.column-labels {
+	height: 30px;
+}
+.column-labels div {
+	text-transform: uppercase;
+	color: #231f20;
+	letter-spacing: 0.05em;
+	font-size: 11px;
+	position: absolute;
+	top: 0;
+	font-weight: bold;
+}
+.column-labels > div:first-child {
+	left: 115px;
+}
+.column-labels > div:last-child {
+	left: 575px;
+}
+#sankey {
+	height:380px;
+	overflow: hidden;
+}
+.mobile .graph-wrap {
+	width: auto;
+	max-width: 620px;
+}
+.mobile .column-labels > div:last-child {
+	left: 442px;
+}
+#intro {
+	max-width: 800px;
+	margin: 0 auto 50px;
+	padding: 46px 60px 0 20px
+}
+#intro .intro-left {
+	width: 53%;
+	float: left;
+}
+#intro h1 {
+	font-size: 23px;
+	line-height: 1.25;
+	font-weight: normal;
+}
+#intro p {
+	font-size: 14px;
+}
+#intro .intro-right {
+	width: 45%;
+	float: right;
+}
+#intro:after {
+	content: ' ';
+	display: block;
+	clear: both;
+}
+.mobile .column-labels > div {
+	width: 110px;
+}
+.mobile .column-labels > div:first-child {
+	left: 130px;
+}
+.mobile .column-labels > div:last-child {
+	left: auto;
+	right: 103px;
+	text-align: right;
+	width: auto;
+}
+.solid-bar {
+	display: none;
+}
+
+@media screen and (max-width: 760px) {
+	#intro > div {
+		float: none !important;
+		width: auto !important;
+	}
+	#intro .intro-right {
+		padding-top: 20px;
+	}
+}
+@media screen and (max-width: 670px) {
+	.solid-bar {
+		display: inline-block;
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		height: 50px;
+		background-color: #d7ffeb;
+	}
+	#intro {
+		margin-bottom: 40px;
+		padding-right: 20px;
+		padding-top: 60px;
+	}
+}
+@media screen and (max-width: 620px) {
+	#sankey {
+		height: 81vw;
+		overflow: hidden;
+	}
+	
+}
+@media screen and (max-width: 580px) {
+	.mobile .column-labels > div:first-child {
+		left: 20px;
+	}
+	.mobile .column-labels > div:last-child {
+		right: 20px;
+	}
+}
