@@ -9,7 +9,6 @@
     z-index: 1;
   }
 
-
   .owl-stage {
     -ms-touch-action: pan-Y;
     -moz-backface-visibility: hidden;
@@ -55,9 +54,12 @@
     }
   }
 
-  .owl-nav.disabled,
-  .owl-dots.disabled {
+  .owl-nav.disabled {
     display: none;
+  }
+
+  .owl-dots.disabled .owl-dot.active span {
+    background: transparent;
   }
 
   .owl-nav .owl-prev,

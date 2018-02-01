@@ -802,29 +802,38 @@ iframe {
 @media screen and (max-width: 767px) {
   /* line 43, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .picture:before, .left-50 .chart:before {
-    display: none;
+    left: 89vw;
+    opacity: .65;
+    width: 20px;
   }
 }
 
-/* line 61, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 63, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture.white:before, .left-50 .chart.white:before {
   content: url("/img/zoom-white.svg");
   opacity: .55;
 }
 
-/* line 66, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+@media screen and (max-width: 767px) {
+  /* line 63, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  .left-50 .picture.white:before, .left-50 .chart.white:before {
+    opacity: .8;
+  }
+}
+
+/* line 72, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:hover, .left-50 .chart:hover {
   cursor: pointer;
 }
 
-/* line 69, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 75, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:hover:before, .left-50 .chart:hover:before {
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
   opacity: 1;
 }
 
-/* line 76, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 82, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video {
   -webkit-transition: height 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
@@ -845,13 +854,13 @@ iframe {
   width: 50vw;
 }
 
-/* line 94, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 100, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video.aging {
   background-image: url("/img/aging-3.jpg");
 }
 
 @media screen and (max-width: 767px) {
-  /* line 94, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 100, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video.aging {
     height: 60vw;
     width: 100vw;
@@ -859,13 +868,13 @@ iframe {
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 76, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 82, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video {
     height: 30vw;
   }
 }
 
-/* line 111, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 117, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video img {
   -webkit-transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
@@ -874,46 +883,46 @@ iframe {
 }
 
 @media screen and (min-width: 1441px) {
-  /* line 111, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 117, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 200px;
   }
 }
 
 @media screen and (max-width: 1100px) {
-  /* line 111, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 117, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 160px;
   }
 }
 
 @media screen and (max-width: 900px) {
-  /* line 111, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 117, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 140px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 111, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 117, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     opacity: .8;
   }
 }
 
-/* line 133, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 139, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover {
   cursor: pointer;
 }
 
-/* line 136, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 142, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover img {
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
   opacity: .95;
 }
 
-/* line 144, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+/* line 150, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
 .right-50 {
   -webkit-transition: padding 0.3s ease-in-out;
   transition: padding 0.3s ease-in-out;
@@ -924,14 +933,14 @@ iframe {
 }
 
 @media screen and (max-width: 1024px) {
-  /* line 144, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 150, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .right-50 {
     padding: 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 144, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
+  /* line 150, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
   .right-50 {
     padding: 0 20px 20px;
     position: relative;
@@ -1085,14 +1094,14 @@ circle {
   }
 }
 
-/* line 13, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 12, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-stage {
   -ms-touch-action: pan-Y;
   -moz-backface-visibility: hidden;
   position: relative;
 }
 
-/* line 18, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 17, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-stage:after {
   clear: both;
   content: ".";
@@ -1102,7 +1111,7 @@ circle {
   visibility: hidden;
 }
 
-/* line 28, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 27, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-stage-outer {
   overflow: hidden;
   position: relative;
@@ -1110,7 +1119,7 @@ circle {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 35, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 34, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-wrapper,
 .left-50 .owl-item {
   -webkit-backface-visibility: hidden;
@@ -1120,7 +1129,7 @@ circle {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 44, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 43, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-item {
   float: left;
   min-height: 1px;
@@ -1130,19 +1139,23 @@ circle {
   -webkit-touch-callout: none;
 }
 
-/* line 52, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 51, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-item img {
   display: block;
   width: 100%;
 }
 
-/* line 58, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
-.left-50 .owl-nav.disabled,
-.left-50 .owl-dots.disabled {
+/* line 57, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+.left-50 .owl-nav.disabled {
   display: none;
 }
 
-/* line 63, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 61, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+.left-50 .owl-dots.disabled .owl-dot.active span {
+  background: transparent;
+}
+
+/* line 65, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-nav .owl-prev,
 .left-50 .owl-nav .owl-next,
 .left-50 .owl-dot {
@@ -1154,28 +1167,28 @@ circle {
   user-select: none;
 }
 
-/* line 74, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 76, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-loaded {
   display: block;
 }
 
-/* line 78, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 80, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-loading {
   display: block;
   opacity: 0;
 }
 
-/* line 83, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 85, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-hidden {
   opacity: 0;
 }
 
-/* line 87, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 89, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-refresh .owl-item {
   visibility: hidden;
 }
 
-/* line 91, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 93, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-drag .owl-item {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1183,29 +1196,29 @@ circle {
   user-select: none;
 }
 
-/* line 98, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 100, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-grab {
   cursor: move;
   cursor: -webkit-grab;
   cursor: grab;
 }
 
-/* line 104, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 106, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-rtl {
   direction: rtl;
 }
 
-/* line 107, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 109, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-rtl .owl-item {
   float: right;
 }
 
-/* line 113, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 115, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .no-js .left-50 {
   display: block;
 }
 
-/* line 118, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 120, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -1213,17 +1226,17 @@ circle {
   animation-fill-mode: both;
 }
 
-/* line 125, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 127, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-animated-in {
   z-index: 0;
 }
 
-/* line 129, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 131, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-animated-out {
   z-index: 1;
 }
 
-/* line 133, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 135, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -1247,27 +1260,27 @@ circle {
   }
 }
 
-/* line 161, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 163, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-item .owl-lazy {
   -webkit-transition: pacity 0.4s ease-in-out;
   transition: pacity 0.4s ease-in-out;
   opacity: 0;
 }
 
-/* line 166, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 168, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-item img.owl-lazy {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-/* line 173, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 175, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-wrapper {
   background: #000;
   height: 100%;
   position: relative;
 }
 
-/* line 179, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 181, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-play-icon {
   -webkit-transition: transform 0.1s ease-in-out;
   transition: transform 0.1s ease-in-out;
@@ -1284,19 +1297,19 @@ circle {
   z-index: 1;
 }
 
-/* line 194, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 196, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-play-icon:hover {
   -webkit-transform: scale(1.3, 1.3);
   transform: scale(1.3, 1.3);
 }
 
-/* line 199, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 201, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-playing .owl-video-tn,
 .left-50 .owl-video-playing .owl-video-play-icon {
   display: none;
 }
 
-/* line 204, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 206, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-tn {
   -webkit-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
@@ -1307,7 +1320,7 @@ circle {
   opacity: 0;
 }
 
-/* line 213, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 215, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-frame {
   height: 100%;
   position: relative;
@@ -1315,25 +1328,25 @@ circle {
   z-index: 1;
 }
 
-/* line 222, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 224, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-nav.disabled + .owl-dots {
   margin-top: 5px;
 }
 
-/* line 225, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 227, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-dots {
   text-align: center;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* line 229, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 231, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-dots .owl-dot {
   *display: inline;
   display: inline-block;
   zoom: 1;
 }
 
-/* line 234, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 236, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-dots .owl-dot span {
   -webkit-transition: opacity 0.2s ease-in-out;
   transition: opacity 0.2s ease-in-out;
@@ -1346,38 +1359,38 @@ circle {
   width: 9px;
 }
 
-/* line 251, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 253, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .story-page_health .owl-dot.active span,
 .story-page_health .owl-dot:hover span {
   background: #5a7f94;
 }
 
-/* line 258, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 260, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .story-page_education .owl-dot.active span,
 .story-page_education .owl-dot:hover span {
   background: #9e525d;
 }
 
-/* line 265, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 267, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .story-page_society .owl-dot.active span,
 .story-page_society .owl-dot:hover span {
   background: #F27E71;
 }
 
-/* line 272, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 274, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .story-page_economics .owl-dot.active span,
 .story-page_economics .owl-dot:hover span {
   background: #6fa387;
 }
 
-/* line 279, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 281, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .story-page_global .owl-dot.active span,
 .story-page_global .owl-dot:hover span {
   background: #613064;
 }
 
 /* Owl Carousel - Auto Height Plugin*/
-/* line 287, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
+/* line 289, /Users/kadimac/Desktop/norc-repo/sass/elements/_carousel.scss */
 .owl-height {
   -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
