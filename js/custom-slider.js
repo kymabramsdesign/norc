@@ -309,7 +309,6 @@ function verticalPosition() {
 function matchHeight() {
   var largeSize = $('#img-to-measure').height();
   largeSize = largeSize+7;
-  console.log(largeSize);
 
   $('.two-vertical').css('height', largeSize);
   $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
@@ -319,8 +318,16 @@ function matchHeight() {
 
 
 // fires image height function after president image load
-$('#img-to-measure').bind("load", function() {
-  matchHeight();
+$(document).ready( function() { 
+$('#img-to-measure').bind('load', function() {
+  var largeSize = $('#img-to-measure').height();
+  largeSize = largeSize+7;
+
+  $('.two-vertical').css('height', largeSize);
+  $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
+  $('.president .two-vertical').css('height', (largeSize/2));
+  $('.gain-more .two-vertical.first').css('height', (largeSize/2));
+});
 });
 
 
@@ -509,7 +516,6 @@ function presidentEssay() {
       $('.president .area, .gain-more .area').on('scroll', function() {
         var thumb = $('.active .area .thumbnails').offset().top;
         var text = $('.active .area .landing-text').offset().top;
-        console.log(thumb);
 
         if ( thumb <= 75 || text <= 100 ) {
           $(this).addClass('scrolled');
@@ -601,7 +607,6 @@ function initialize() {
 function initializeResize() {
   verticalPosition();
   slides();
-  
   landingVideo();
 }
 
