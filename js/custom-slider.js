@@ -319,15 +319,15 @@ function matchHeight() {
 
 // fires image height function after president image load
 $(document).ready( function() { 
-$('#img-to-measure').bind('load', function() {
-  var largeSize = $('#img-to-measure').height();
-  largeSize = largeSize+7;
+  $('#img-to-measure').bind('load', function() {
+    var largeSize = $('#img-to-measure').height();
+    largeSize = largeSize+7;
 
-  $('.two-vertical').css('height', largeSize);
-  $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
-  $('.president .two-vertical').css('height', (largeSize/2));
-  $('.gain-more .two-vertical.first').css('height', (largeSize/2));
-});
+    $('.two-vertical').css('height', largeSize);
+    $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
+    $('.president .two-vertical').css('height', (largeSize/2));
+    $('.gain-more .two-vertical.first').css('height', (largeSize/2));
+  });
 });
 
 

@@ -90,10 +90,7 @@ function columns() {
         'top': subnavHeight+80
       });
       $('.left-50 div:last-of-type img').css('margin-bottom', '-5px');
-      $('.left-50').css({
-        'position': 'absolute',
-        'top': subnavHeight+80
-      });
+
     } else {
       $('.right-50').css({
         'position': 'absolute',
@@ -102,15 +99,10 @@ function columns() {
       $('.left-50 div:last-of-type img').css('margin-bottom', '-5px');
     }
 
-    if ( leftHeight <= ( windowHeight - (subnavHeight+80)) ) {
+    if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
       $('.left-50').css({
-        'position': 'fixed',
-        'top': subnavHeight+80
-      });
-    } else if ( (windowHeight + scrollPosition) >= (leftBottom) ) {
-      $('.left-50').css({
-        'position': 'fixed',
-        'bottom': 0
+        // 'position': 'fixed',
+        // 'bottom': 0
       });
     }
 
@@ -278,13 +270,6 @@ function popUpTop () {
   }
 }
 
-//Gif controls for when to trigger gif on scroll
-// window.onscroll = function() {
-//   var animate = $('.chart img').attr('src');
-//   if ( animate === 'img/sample-static.png' ) {
-//     $('.chart img:visible').attr("src", "img/sample.gif");
-//   }
-// };
 
 $('.chart.bubble').on('click', function() {
   setTimeout(function() {
@@ -309,12 +294,6 @@ function videoPopup() {
     else {
       $('.main-image').hide(); // hide image if click on video
       $('.video-container').show();
-      // $('.close-button').css({
-      //   'margin-top': 0,
-      //   'top': '18px',
-      //   'right': '21px',
-      //   'position': 'fixed'
-      // });
     }
   });
 }

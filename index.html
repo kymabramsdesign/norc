@@ -11,13 +11,24 @@
 
 <script src="js/jquery-3.2.1.min.js"></script><!-- Load jQuery here in order to run the intro animation -->
 <script src="js/js-cookie.js"></script><!-- Load cookie tracking plugin -->
-<script src="js/typeIt.min.js"></script><!-- Load cookie tracking plugin -->
-<script src="js/ticker.js"></script><!-- Load cookie tracking plugin -->
+<script src="js/typeIt.min.js"></script><!-- Load type js -->
 
 <!-- Intro Animation Script -->
 <script>
   $(document).ready( function() {
 
+    // Get the size of the large landing page images
+    function sizeImages() {
+      var largeSize = $('#img-to-measure').height();
+      largeSize = largeSize+7;
+
+      $('.two-vertical').css('height', largeSize);
+      $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
+      $('.president .two-vertical').css('height', (largeSize/2));
+      $('.gain-more .two-vertical.first').css('height', (largeSize/2));
+    }
+
+    // fire animation function
     if ( Cookies.get('intro-shown') == null ) {
       
       // add cookie that expires in one day to site homepage
@@ -25,11 +36,18 @@
 
       // Load Intro Animation JS file
       $.getScript('js/ticker.js');
+
+      //call sizing function
+      sizeImages();
     }
     else {
-      $('#intro-overlay').fadeOut(250); // Hides Intro Animation Overlay
+      $('#intro-overlay').fadeOut(1000); // Hides Intro Animation Overlay
       $('.typed-first, .typed-second, .ti-cursor').remove();
+
+      //call sizing function
+      sizeImages();
     }
+
     // Cookies.remove('intro-shown', { path: '/' }); // for testing, resets the cookies
   });
 </script>

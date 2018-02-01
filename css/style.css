@@ -3974,7 +3974,7 @@ body.intro {
 /* line 66, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
 .area {
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
   width: 100vw;
 }
 
