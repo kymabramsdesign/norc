@@ -76,46 +76,10 @@
 </header>
 <main>
 
-  <div class="page-overlay"></div>
-  <div class="image-container">
-
-    <div class="video-container chart-scroll">
-      
-      <div id="charts">
-        <div id="bubbleContainer">
-          <div class="heading-box">
-            <p class="chart-title">Partisanship and the Media</p>
-            <p class="chart-body">There are 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (Independent). Each circle represents 1/100, or 1%, for each political party.</p>
-          </div>
-        <div id="bubbleChart"></div>
-          <div id="overallRatings" class="btn-group btn-info top-btn" data-toggle="buttons">
-
-            <label class="btn ratingBtn" id="Informed">
-            <input type="radio" name="options">Media keeps them very well informed on important issues</label>
-            <label class="btn ratingBtn" id="CNN">
-            <input type="radio" name="options">Get news from CNN</label>
-            <label class="btn ratingBtn" id="Fox">
-            <input type="radio" name="options">Get news from Fox News</label>
-            <label class="btn ratingBtn" id="Social Media">
-            <input type="radio" name="options">Get news on Social Media</label>
-            <label class="btn ratingBtn" id="Accurate">
-            <input type="radio" name="options">News from media is very accurate</label>
-            <label class="btn ratingBtn" id="Prevent">
-            <input type="radio" name="options">News organizations prevent political leaders from doing their job</label>
-
-          </div>
-
-          
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <div class="story-content">
 
     <div class="left-50">
-      <div class="chart bubble"><img src="img/sample.gif" alt="Congregations Image 4" caption="" /></div>
+      <div class="chart bubble"><a href="#" class="line-graph-popup" data-share-url-twitter="https://twitter.com/intent/tweet?url=<?php echo urlencode('http://dev.websitetesturl2.com/graphs/')?>" data-share-url-facebook="https://www.facebook.com/dialog/share?app_id=145634995501895&display=popup&href=<?php echo urlencode('http://dev.websitetesturl2.com/graphs/'); ?>" data-share-url-linkedin="https://www.linkedin.com/shareArticle?url=<?php echo urlencode('http://dev.websitetesturl2.com/graphs/'); ?>" data-share-url-linkedin="https://www.linkedin.com/shareArticle?url=<?php echo urlencode('http://dev.websitetesturl2.com/graphs/'); ?>"><img src="img/sample.gif" alt="Congregations Image 4" caption="" /></a></div>
     </div>
 
     <div class="right-50">
@@ -135,10 +99,8 @@
   <script src="js/navigation.js"></script>
 
   <!-- BEGIN Scripts for interactive animated graphs -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="js/bubbles.js"></script>
+  <script src="js/popup-graph.js"></script>
+  <link rel="stylesheet" href="css/popup-graph.css">
   <!-- END Scripts for interactive animated graphs -->
 
   <!-- AddToAny BEGIN -->

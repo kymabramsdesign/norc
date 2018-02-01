@@ -4,13 +4,20 @@ body {
 	line-height: 1.15;
 }
 .graph-popup-background {
-	position: fixed;
-	z-index: 100000;
-	top: 0;
-	left: 0;
-	right: 0;
+	background: #fff;
 	bottom: 0;
-	background: rgba(255,255,255,0.9);
+	left: 0;
+	opacity: .91;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100000;
+}
+.story-page_society .graph-popup-background  {
+	background: #f2f5f6;
+}
+.story-page_economics .graph-popup-background  {
+	background: #ecf0ed;
 }
 .graph-popup-foreground {
 	/*bottom: 50px;*/

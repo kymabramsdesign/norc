@@ -4,12 +4,13 @@
 }
 body {
 	background: #bac7d1;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Helvetica, arial, sans-serif;
 	color: #231f20;
 	padding-top: 46px;
 }
 .clear {
 	clear: both;
+	margin-bottom: 30px;
 }
 #intro {
 	color: #5c5d5f;
@@ -20,13 +21,23 @@ body {
 	font-size: 23px;
 	float: left;
 	padding-left: 20px;
-	width: 50%;
+}
+#intro h2 {
+	font-size: 14px;
+	padding-left: 20px;
 }
 #intro p {
-	font-size: 14px;
+	font-size: 16px;
 	float: right;
-	line-height: 18px;
-	width: 45%;
+	line-height: 22px;
+}
+#intro .intro-left {
+	float: left;
+	width: 48%;
+}
+#intro .intro-right {
+	float: right;
+	width: 47%;
 }
 .wrap {
 	max-width: 920px;
@@ -215,6 +226,19 @@ circle {
 }
 
 @media screen and (max-width: 670px) {
+	#intro {
+		padding-bottom: 0;
+	}
+	#intro .intro-left,
+	#intro .intro-right {
+		float: none;
+		width: 100%;
+	}
+	#intro h2,
+	#intro p {
+		font-size: 12px;
+		line-height: 18px;
+	}
 	.solid-bar {
 		display: inline-block;
 		position: fixed;
@@ -222,6 +246,9 @@ circle {
 		width: 100vw;
 		height: 50px;
 		background-color: #bac7d1;
+	}
+	.clear {
+		margin-bottom: 15px;
 	}
 	body {
 		padding-bottom: 20px;
@@ -239,6 +266,9 @@ circle {
 	}
 	#intro h1 {
 		margin-bottom: 10px;
+		padding-left: 0;
+	}
+	#intro h2 {
 		padding-left: 0;
 	}
 	#chart-types span {

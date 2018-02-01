@@ -1,0 +1,183 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 12px/1.2 'Roboto', Helvetica, arial, sans-serif;
+	background: #161136;
+	color: #9c97a7;
+}
+#intro {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 46px 10px 20px;
+}
+#intro h1 {
+	font-size: 23px;
+}
+#intro h2 {
+	font-size: 14px;
+}
+#intro h1, #intro h2 {
+	font-weight: normal;
+	color: white;
+}
+#intro p {
+	font-size: 14px;
+	line-height: 1.5;
+}
+#intro .intro-left {
+	float: left;
+	width: 40%;
+}
+#intro .intro-right {
+	float: right;
+	width: 55%;
+}
+#intro:after {
+	content: ' ';
+	display: block;
+	clear: both;
+}
+.filter-reset {
+	text-align: center;
+	padding-bottom: 30px;
+}
+.filter-reset button {
+	transition: all 0.25s;
+	cursor: pointer;
+	background: none;
+	border: solid 1px #9c97a7;
+	color: #9c97a7;
+	text-align: center;
+	padding: 0;
+	height: 28px;
+	line-height: 28px;
+	width: 80px;
+	border-radius: 7px;
+	font-size: 12px;
+}
+.filter-reset button:hover {
+	color: white;
+	border-color: white;
+}
+.filter-reset button:focus {
+	outline: none;
+}
+.line {
+	fill:none ;
+	stroke-width: 1.5px;
+}
+.filter label{
+	cursor: pointer;  
+	user-select: none;
+}
+#filter-container {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+#filters {
+	display: table;
+	padding: 0 0 0 20px;
+	margin: 20px auto 0;
+	width: 780px;
+}
+#filters .filter {
+	display: table-cell;
+	vertical-align: top;
+	padding-right: 22px;
+}
+#filters .filter:last-child {
+	padding-right: 0;
+}
+#filters .filter-name {
+	transition: color 0.25s;
+	text-transform: uppercase;
+	cursor: pointer;
+	height: 30px;
+	padding-bottom: 12px;
+}
+#filters .filter-name input:checked + span {
+	background: white;
+}
+#filters .filter-name:hover, #filters .active-filter .filter-name {
+	color: white;
+}
+#filters label {
+	display: block;
+	margin-bottom: 10px;
+}
+#filters label:hover {
+	color: white;
+}
+#filters input {
+	display: none;
+}
+#filters input + span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+}
+#filters strong {
+	font-weight: normal;
+}
+#filters input:not(:checked) + span {
+	background: #393c5b !important;
+}
+#filters input:checked + span + strong {
+	color: white;
+}
+.y.axis path, .x.axis path {
+	display: none;
+}
+.y.axis line {
+	stroke: #2f2b48;
+}
+svg {
+	user-select: none;
+}
+svg text {
+	fill: #9c97a7;
+	font-size: 14px;
+	font-weight: 100;
+}
+#line-graph {
+	max-width: 780px;
+	margin: 0 auto;
+}
+.source {
+	display: none;
+}
+@media screen and (max-width: 800px) {
+	#filter-container {
+		overflow: scroll;
+		overflow-y: hidden;
+		margin-bottom: 20px;
+	}
+	.ios #filter-container {
+		width: 375px;
+	}
+	svg text {
+		font-size: 18px;
+	}
+	#intro .intro-left, #intro .intro-right {
+		float: none;
+		width: auto;
+	}
+}
+@media screen and (max-width: 670px) {
+	#filters {
+		background: #111e43;
+		padding-top: 20px;
+	}
+	#line-graph {
+		margin: 0 20px;
+	}
+	.source {
+		display: block;
+		font-size: 16px;
+		padding: 30px 20px 0;
+	}
+}

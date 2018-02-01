@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>NORC GSS Economy and workplace issues over time</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="line.css">
+</head>
+<body>
+	<div id="intro">
+		<div class="intro-left">
+			<h1>Many Americans would Continue Working Even if Rich</h1>
+			<h2>Data from the General Social Survey: 1998 to 2016</h2>
+		</div>
+		<div class="intro-right">
+			<p>Percentage of Americans who said they would continue working even if they had enough money to live “as comfortably as they would like for the rest of their lives, would you continue to work or would you stop working?"
+		</div>
+	</div>
+	<div id="filter-container">
+		<div id="filters">
+			<div class="filter" id="filter-1">
+				<div class="filter-name"><label><input type="checkbox"><span></span> <strong>Gender</strong></label></div>
+				<div class="filter-items"></div>
+			</div>
+			<div class="filter" id="filter-2">
+				<div class="filter-name"><label><input type="checkbox"><span></span> <strong>Age</strong></label></div>
+				<div class="filter-items"></div>
+			</div>
+			<div class="filter" id="filter-3">
+				<div class="filter-name"><label><input type="checkbox"><span></span> <strong>Race</strong></label></div>
+				<div class="filter-items"></div>
+			</div>
+			<div class="filter" id="filter-4">
+				<div class="filter-name"><label><input type="checkbox"><span></span> <strong>Education</strong></label></div>
+				<div class="filter-items"></div>
+			</div>
+			<div class="filter" id="filter-5">
+				<div class="filter-name"><label><input type="checkbox"><span></span> <strong>Political<br>Affiliation</strong></label></div>
+				<div class="filter-items"></div>
+			</div>
+			<div class="filter" id="filter-6">
+				<div class="filter-name"><label><input type="checkbox"><span></span> <strong>Region</strong></label></div>
+				<div class="filter-items"></div>
+			</div>
+			<div class="filter" id="filter-7">
+				<div class="filter-name"><label><input type="checkbox"><span></span><strong>Self-Identified<br>Social Class</strong></label></div>
+				<div class="filter-items"></div>
+			</div>
+		</div>
+	</div>
+	<div class="filter-reset">
+		<button>Reset</button>
+	</div>
+	<div id="line-graph"></div>
+	<p class="source">
+		Rates are comparable within each demographic category (e.g. Female to Male within Gender), but not across categories (e.g. Female to Republican). Number of respondents range from 430 (2004) to 896 (2006). Data are weighted. We did not control for current employment due to sample size.
+	</p>		
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="line.js"></script>
+</body>
+</html>
