@@ -150,6 +150,9 @@ svg text {
 .source {
 	display: none;
 }
+.solid-bar {
+	display: none;
+}
 @media screen and (max-width: 800px) {
 	#filter-container {
 		overflow: scroll;
@@ -168,6 +171,21 @@ svg text {
 	}
 }
 @media screen and (max-width: 670px) {
+	#intro h1,
+	#intro h2 {
+		padding-top: 2px;
+	}
+	.solid-bar {
+		display: inline-block;
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		height: 50px;
+		background-color: #161136;
+	}
+	body {
+		padding-bottom: 20px;
+	}
 	#filters {
 		background: #111e43;
 		padding-top: 20px;
