@@ -69,6 +69,18 @@
   width: 100vw;
 }
 
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+// ::-webkit-scrollbar-track-piece:start {
+//     background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;
+// }
+
+// ::-webkit-scrollbar-track-piece:end {
+//     background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;
+// }
+
 .slide.insight {
   background-image: url('/img/insight-background.png');
 
