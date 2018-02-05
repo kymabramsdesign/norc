@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>NORC’s Global Portfolio</title>
+	<title>NORC's Global Portfolio</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 	<style>
 		* {
@@ -14,7 +14,7 @@
 			height: 100%;
 		}
 		body {
-			background: #613064;
+			background: #603063;
 			touch-action: none;
 			font: 14px/1.2 'Roboto', Helvetica, Arial, sans-serif;
 		}
@@ -45,6 +45,12 @@
 			display: block;
 			position: relative;
 			margin-bottom: 12px;
+			-webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 		}
 		#map-controls button:focus {
 			outline: none;
@@ -91,6 +97,12 @@
 			bottom: 120px;
 		}
 		.zoom-indicator {
+			-webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
 			width: 13px;
 			border-radius: 7px;
 			height: 100px;
@@ -100,53 +112,60 @@
 			bottom: 20px;
 			left: 31px;
 			overflow: hidden;
+			cursor: pointer;
+		}
+		.zoom-indicator, .zoom-indicator:focus, .zoom-indicator:active {
+			outline: none !important;
+			-webkit-tap-highlight-color: transparent !important;
 		}
 		.zoom-indicator span {
 			position: absolute;
-			transition: bottom 0.25s;
+			z-index: 10;
+			transition: top 0.25s;
 			width: 11px;
 			height: 11px;
 			border-radius: 50%;
 			display: block;
-			bottom: 1px;
+			top: 100%;
 			left: 1px;
 			background: rgba(255,255,255,0.8);
+			margin-top: -12px;
 		}
-		.zoom-indicator:after {
+		.zoom-indicator div {
 			transition: height 0.25s;
 			width: 9px;
 			height: 0px;
 			display: block;
-			content: ' ';
 			position: absolute;
+			z-index: 9;
 			bottom: 2px;
 			left: 2px;
 			background: rgba(255,255,255,0.4);
 			border-radius: 5px;
 		}
-		.zoom-indicator.zoom-2:after {
-			height: calc(22% + 7px);
+		.zoom-indicator.zoom-2 div {
+			height: 25%;
 		}
-		.zoom-indicator.zoom-3:after {
-			height: calc(42% + 7px);
+		.zoom-indicator.zoom-3 div {
+			height: 50%;
 		}
-		.zoom-indicator.zoom-4:after {
-			height: calc(62% + 7px);
+		.zoom-indicator.zoom-4 div {
+			height: 75%;
 		}
-		.zoom-indicator.zoom-5:after {
-			height: calc(84% + 7px);
+		.zoom-indicator.zoom-5 div {
+			height: 92px;
 		}
 		.zoom-indicator.zoom-2 span {
-			bottom: 22%;
+			top: calc(75% + 6px);
 		}
 		.zoom-indicator.zoom-3 span {
-			bottom: 42%;
+			top: calc(50% + 6px);
 		}
 		.zoom-indicator.zoom-4 span {
-			bottom: 62%;
+			top: calc(25% + 6px);
 		}
 		.zoom-indicator.zoom-5 span {
-			bottom: 88%;
+			top: 13px;
 		}
 		#norc-popup {
 			position: absolute;
@@ -243,7 +262,7 @@
 		.bubbles circle {
 			stroke:#dd7334 !important;
 			stroke-opacity: 0.4 !important;
-			stroke-width: 16px !important;
+			vector-effect: initial !important;
 		}
 		#header {
 			position: absolute;
@@ -302,6 +321,28 @@
 				max-height: calc(100% - 240px);
 			}
 		}
+		@media screen and (max-width: 520px) {
+			#norc-popup {
+				left: 10px !important;
+				right: 10px !important;
+				width: auto !important;
+				bottom: 0 !important;
+				top: auto !important;
+				background: white;
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			.mobile-hidden {
+				display: none;
+			}
+			#map-controls button {
+				width: 26px !important;
+				height: 26px !important;
+			}
+			.zoom-indicator {
+				left: 27px;
+			}
+		}
 		#map-legend {
 			display: block;
 		}
@@ -331,13 +372,13 @@
 			margin-bottom: 5px;
 			box-sizing: border-box;
 		}
-		#map-legend-scale .n2:before { background: #815983; }
-		#map-legend-scale .n4:before { background: #916f93; }
-		#map-legend-scale .n6:before { background: #a083a2; }
-		#map-legend-scale .n8:before { background: #b098b2; }
-		#map-legend-scale .n10:before { background: #c0acc1; }
-		#map-legend-scale .n12:before { background: #cfc0d0; }
-		#map-legend-scale .n14:before { background: #dfd6e0; }
+		#map-legend-scale .n2:before { background: #876087; }
+		#map-legend-scale .n4:before { background: #9b7c9e; }
+		#map-legend-scale .n6:before { background: #b299b2; }
+		#map-legend-scale .n8:before { background: #c6b7c9; }
+		#map-legend-scale .n10:before { background: #ddd3dd; }
+		#map-legend-scale .n12:before { background: #f4eff4; }
+		#map-legend-scale .n14:before { background: #ffffff; }
 
 		svg.datamap g.datamaps-subunits path:not([data-info]) {
 			stroke: #91708d !important;
@@ -377,12 +418,15 @@
 	<script src="topojson.min.js"></script>
 	<script src="datamaps.world.min.js"></script>
 	
-	<script>
+		<script>
 		var norc_map = {
 			DATA_FILE: 'data.csv',
 			IDEAL_WIDTH: 1600,
 			IDEAL_HEIGHT: 900,
 			VIEW_Y_SHIFT: -100,
+
+			BUBBLE_RADIUS: 6,
+			BUBBLE_STROKE: 8,
 
 			jq_win: null,
 			country_data: null,
@@ -438,7 +482,7 @@
 				var max_zoom = 5;
 				var me = this;
 
-				var zoom_indicator = jQuery('<div class="zoom-indicator zoom-1"><span></span></div>');
+				var zoom_indicator = jQuery('<div class="zoom-indicator zoom-1"><span></span><div></div></div>');
 				var btn_zoom_in = jQuery('<button class="zoom-in"><span></span></button>');
 				var btn_zoom_out = jQuery('<button class="zoom-out" disabled><span></span></button>');
 
@@ -447,8 +491,7 @@
 				});
 				btn_zoom_out.click(function() {
 					zoom(false);
-				})
-
+				});
 
 				jQuery('#norc-map').bind('mousewheel', function(e){
 					if(e.originalEvent.wheelDelta /120 > 0) {
@@ -458,16 +501,40 @@
 					}
 				});
 
+				function zoom_to(new_zoom) {
+					if (new_zoom > zoom_level) {
+						if (zoom_busy) {
+							zoom_busy = false;
+							clearInterval(tmr_animate);
+						}
+						zoom(true);
+					} else if (new_zoom < zoom_level) {
+						if (zoom_busy) {
+							zoom_busy = false;
+							clearInterval(tmr_animate);
+						}
+						zoom(false);
+					}
+				}
+				zoom_indicator.on('zoom_move', function(ev, new_zoom) {
+					zoom_to(new_zoom);
+				});
+
 				var controls = jQuery('<div id="map-controls"></div>');
 				controls.append(btn_zoom_in, btn_zoom_out);
 
 				jQuery('body').append(controls, zoom_indicator);
+
+				setup_zoom_indicator(zoom_indicator);
+
 				var cur_svg = me.jq_map.children('svg').get(0);
 
 				var zoom_busy = false;
-				function zoom(zoom_in) {
-					if (zoom_busy)
+				var tmr_animate = 0;
+				function zoom(zoom_in, callback) {
+					if (zoom_busy) {
 						return;
+					}
 					var original_zoom = zoom_level;
 					if (zoom_in) {
 						if (zoom_level < max_zoom) {
@@ -501,7 +568,7 @@
 					var original_view_width = view_width;
 					var original_view_height = view_height;
 
-					jQuery('.bubbles circle').attr('r', 7 / Math.pow(2,zoom_level-1));
+					jQuery('.bubbles circle').attr('r', me.BUBBLE_RADIUS / Math.pow(2,zoom_level-1)).css('stroke-width', me.BUBBLE_STROKE / Math.pow(2,zoom_level-1));
 
 					if (zoom_level == 1) {
 						view_width = me.IDEAL_WIDTH;
@@ -525,8 +592,7 @@
 					var d3 = view_width - original_view_width;
 					var d4 = view_height - original_view_height;
 					var perc = 0;
-
-					var tmr_animate = setInterval(function() {
+					tmr_animate = setInterval(function() {
 						if (perc >= 100) {
 							perc = 100;
 							zoom_busy = false;
@@ -549,7 +615,7 @@
 					popup.clear();
 				}
 
-				jQuery('.bubbles circle').attr('r', 7);
+				jQuery('.bubbles circle').attr('r', me.BUBBLE_RADIUS).css('stroke-width', me.BUBBLE_STROKE);
 
 				this.zoom = zoom;
 
@@ -795,21 +861,21 @@
 					width: this.IDEAL_WIDTH,
 					height: this.IDEAL_HEIGHT,
 					fills: {
-						defaultFill: '#714971',
-						1: '#794f7b',
-						2: '#815983',
-						3: '#89648b',
-						4: '#916f93',
-						5: '#98789a',
-						6: '#a083a2',
-						7: '#a88daa',
-						8: '#b098b2',
-						9: '#b8a2b9',
-						10: '#c0acc1',
-						11: '#c8b7c9',
-						12: '#cfc0d0',
-						13: '#d7cbda',
-						'14+': '#dfd6e0',
+						defaultFill: '#603063',
+						1: '#7a517c',
+						2: '#876087',
+						3: '#917093',
+						4: '#9b7c9e',
+						5: '#a58ca8',
+						6: '#b299b2',
+						7: '#bca8bf',
+						8: '#c6b7c9',
+						9: '#d3c4d3',
+						10: '#ddd3dd',
+						11: '#e8e2e8',
+						12: '#f4eff4',
+						13: '#ffffff',
+						'14+': '#ffffff',
 						bubble: '#dd7334'
 
 					},
@@ -878,6 +944,8 @@
 				if (!this.initd)
 					this.init();
 
+				jQuery('#map-controls, .zoom-indicator').addClass('mobile-hidden');
+
 				var country_name = data.country;
 				var project_list = data.info;
 
@@ -936,6 +1004,9 @@
 					l = win_width - popup_width - lr_padding;
 				}
 
+				if (l < 66)
+					l = 66;
+
 				var tb_padding = 40;
 				var t = offset.top - tb_padding;
 
@@ -958,6 +1029,7 @@
 				if (this.visible) {
 					this.visible = false;
 					this.jq_popup.hide();
+					jQuery('#map-controls, .zoom-indicator').removeClass('mobile-hidden');
 				}
 			}
 		};
@@ -1029,6 +1101,117 @@ function track_movement(jq, start_callback, move_callback, release_callback) {
 		}
 	});
 }
+function setup_zoom_indicator(zoom_indicator) {
+	var jq_body = jQuery('body');
+	var btn_zoom = zoom_indicator.children('span');
+	var btn_zoom_y = 0;
+	var zoom_fill = zoom_indicator.children('div');
+	var zoom_down = false;
+	var zoom_down_y = 0;
+	var mouse_y = 0;
+	var jq_zoom_in = jQuery('button.zoom-in');
+	var jq_zoom_out = jQuery('button.zoom-out');
+
+	function zoom_move() {
+		var delta_y = mouse_y - zoom_down_y;
+
+		var new_btn_y = btn_zoom_y + delta_y;
+		if (new_btn_y < 13)
+			new_btn_y = 13;
+		else if (new_btn_y > 100)
+			new_btn_y = 100;
+
+		var zoom_level = 5;
+		if (new_btn_y > 90) {
+			zoom_level = 1;
+		} else if (new_btn_y > 68) {
+			zoom_level = 2;
+		} else if (new_btn_y > 44) {
+			zoom_level = 3;
+		} else if (new_btn_y > 22) {
+			zoom_level = 4;
+		}
+		
+		zoom_indicator.trigger('zoom_move', zoom_level);
+
+		btn_zoom.css({
+			top: new_btn_y,
+			transition: 'none'
+		});
+		zoom_fill.css({
+			height: (100 - new_btn_y) + 6,
+			transition: 'none'
+		});
+	}
+	function zoom_release() {
+		btn_zoom.attr('style', '');
+		zoom_fill.attr('style', '');
+	}
+
+	zoom_indicator.on('mousedown touchstart', function(ev) {
+		if (ev.originalEvent.touches && ev.originalEvent.touches.length >= 1) {
+			y_pos = ev.originalEvent.touches[0].clientY;
+		} else {
+			y_pos = mouse_y;
+		}
+
+		var btn_pos = btn_zoom.offset().top;
+
+		if (y_pos < btn_pos) {
+			jq_zoom_in.click();
+		} else {
+			jq_zoom_out.click();
+		}
+	});
+
+	btn_zoom.on('mousedown', function(ev) {
+		zoom_down = true;
+		zoom_down_y = mouse_y;
+		btn_zoom_y = btn_zoom.position().top;
+
+		ev.stopPropagation();
+	});
+	jq_body.on('mousemove', function(ev) {
+		mouse_y = ev.pageY;
+		if (zoom_down) {
+			zoom_move();
+			return false;
+		}
+	});
+	jq_body.on('mouseup', function() {
+		if (zoom_down) {
+			zoom_down = false;
+			zoom_release();
+		}
+	});
+	btn_zoom.on('touchstart', function(ev) {
+		var touches = ev.originalEvent.touches;
+		if (touches.length >= 1) {
+			zoom_down = true;
+			zoom_down_y = touches[0].clientY;
+			btn_zoom_y = btn_zoom.position().top;
+		}
+		ev.stopPropagation();
+	});
+	btn_zoom.on('touchend', function(ev) {
+		if (zoom_down) {
+			zoom_down = false;
+			zoom_release();
+		}
+	});
+	btn_zoom.on('touchmove', function(ev) {
+		if (zoom_down) {
+			var touches = ev.originalEvent.touches;
+			if (touches.length >= 1) { 
+				mouse_y = touches[0].clientY;
+				zoom_move();
+				ev.preventDefault();
+				return false;
+			}
+		}
+	});
+}
+
 	</script>
 </body>
 </html>

@@ -153,6 +153,15 @@ svg text {
 .source {
 	display: none;
 }
+.filter-name label {
+	padding-left: 13px;
+	position: relative;
+}
+.filter-name label span {
+	position: absolute;
+	top: 1px;
+	left: 0;
+}
 .solid-bar {
 	display: none;
 }
