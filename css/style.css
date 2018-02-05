@@ -2559,11 +2559,9 @@ html.fp-enabled,
 
 /* line 132, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav {
-  left: 0 !important;
   margin: 0 auto !important;
   opacity: 1;
   position: absolute;
-  right: 0;
   -ms-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -2573,21 +2571,25 @@ html.fp-enabled,
 /* line 144, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav.bottom {
   bottom: 17px;
+  text-align: center;
+  width: 100vw;
 }
 
-/* line 148, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 150, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav.top {
+  text-align: center;
   top: 17px;
+  width: 100vw;
 }
 
-/* line 152, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 156, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul,
 .fp-slidesNav ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 158, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 162, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li,
 .fp-slidesNav ul li {
   display: block;
@@ -2597,12 +2599,12 @@ html.fp-enabled,
   width: 14px;
 }
 
-/* line 167, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 171, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav ul li {
   display: inline-block;
 }
 
-/* line 171, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 175, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a,
 .fp-slidesNav ul li a {
   cursor: pointer;
@@ -2614,7 +2616,7 @@ html.fp-enabled,
   z-index: 1;
 }
 
-/* line 182, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 186, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
@@ -2626,7 +2628,7 @@ html.fp-enabled,
   width: 12px;
 }
 
-/* line 193, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 197, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   -webkit-transition: all 0.1s ease-in-out;
@@ -2645,7 +2647,7 @@ html.fp-enabled,
   z-index: 1;
 }
 
-/* line 209, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 213, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span {
   height: 10px;
@@ -2653,7 +2655,7 @@ html.fp-enabled,
   width: 10px;
 }
 
-/* line 216, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 220, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip {
   color: #fff;
   cursor: pointer;
@@ -2669,7 +2671,7 @@ html.fp-enabled,
   width: 0;
 }
 
-/* line 231, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 235, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li:hover .fp-tooltip,
 #fp-nav.fp-show-active a.active + .fp-tooltip {
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -2679,17 +2681,17 @@ html.fp-enabled,
   width: auto;
 }
 
-/* line 238, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 242, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip.right {
   right: 20px;
 }
 
-/* line 242, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 246, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip.left {
   left: 20px;
 }
 
-/* line 246, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 250, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
 .fp-auto-height .fp-tableCell,
@@ -4157,7 +4159,7 @@ body.intro {
   display: flex;
   height: 100vh;
   padding: 34px 74px 0;
-  position: fixed;
+  position: absolute;
   width: 50vw;
 }
 
