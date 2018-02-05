@@ -44,6 +44,7 @@
 
   &.menu-open {
     -webkit-transform: rotateZ(-180deg);
+    -ms-transform: rotate(-180deg);
     transform: rotateZ(-180deg);
   }
 }
@@ -96,6 +97,7 @@
 .sub-nav {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   position: fixed;
   top: 80px;
@@ -118,6 +120,7 @@
 
       &.open-menu {
         @include transition(all .1s ease-in-out);
+        -webkit-box-shadow: 0 3px 15px $black-12;
         box-shadow: 0 3px 15px $black-12;
       }
 
@@ -127,8 +130,10 @@
         .menu-wrapper {
           display: -webkit-box;
           display: -ms-flexbox;
+          display: -webkit-flex;
           display: flex;
           -ms-flex-wrap: wrap;
+          -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
           padding: 18px 0 0;
         }
@@ -156,6 +161,7 @@
           margin-left: 0;
           padding: 12px 0 4px;
           -webkit-transform: scaleX(2);
+          -ms-transform: scaleX(2);
           transform: scaleX(2);
           width: 22px;
         }
@@ -171,6 +177,7 @@
           .arrow {
             @include transition(transform .3s ease-in-out);
             -webkit-transform: rotate(-180deg) translateY(4px) scaleX(2);
+            -ms-transform: rotate(-180deg) translateY(4px) scaleX(2);
             transform: rotate(-180deg) translateY(4px) scaleX(2);
           }
         }

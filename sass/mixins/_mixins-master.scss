@@ -26,5 +26,6 @@
 /*CSS Transitions*/
 @mixin transition($args...) {
   -webkit-transition: $args;
+  -o-transition: $args;
   transition: $args;
 }

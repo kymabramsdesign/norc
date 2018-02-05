@@ -40,6 +40,7 @@
   /* line them up horizontally */
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   height: 100vh;
   left: 0;
@@ -59,6 +60,7 @@
 
 .slider > div {
   -ms-flex-negative: 0;
+  -webkit-flex-shrink: 0;
   flex-shrink: 0;
   width: 100vw;
 }
@@ -73,13 +75,13 @@
   display: none; 
 }
 
-// ::-webkit-scrollbar-track-piece:start {
-//     background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;
-// }
+/* ::-webkit-scrollbar-track-piece:start {*/
+/*     background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;*/
+/* }*/
 
-// ::-webkit-scrollbar-track-piece:end {
-//     background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;
-// }
+/* ::-webkit-scrollbar-track-piece:end {*/
+/*     background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;*/
+/* }*/
 
 .slide.insight {
   background-image: url('/img/insight-background.png');
@@ -91,9 +93,11 @@
   .left {
     -webkit-box-align: center;
     -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     height: 100vh;
     padding: 34px 74px 0;
@@ -141,9 +145,11 @@
   .right {
     -webkit-box-align: center;
     -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     height: 100vh;
     padding: 34px 74px 0 50vw;
@@ -206,45 +212,47 @@
     top: 67px;
   }
 
-  // .preview-text {
-  //   background-color: $black-70;
-  //   color: $white;
-  //   font-size: 12px;
-  //   font-weight: 300;
-  //   letter-spacing: .5px;
-  //   padding: 3px 10px 4px ;
-  //   position: fixed;
-  //   right: 14px;
-  //   top: -39px;
-  // }
+  /* .preview-text {*/
+  /*   background-color: $black-70;*/
+  /*   color: $white;*/
+  /*   font-size: 12px;*/
+  /*   font-weight: 300;*/
+  /*   letter-spacing: .5px;*/
+  /*   padding: 3px 10px 4px ;*/
+  /*   position: fixed;*/
+  /*   right: 14px;*/
+  /*   top: -39px;*/
+  /* }*/
 
   &.prev {
     display: none;
     left: 35px;
     -webkit-transform: rotate(135deg) skew(-2deg, -2deg);
+    -ms-transform: rotate(135deg) skew(-2deg, -2deg);
     transform: rotate(135deg) skew(-2deg, -2deg);
 
     @media screen and (max-width:767px) {
       left: 20px;
     }
 
-    // .preview-text {
-    //   transform: rotate(-135deg);
-    // }
+    /* .preview-text {*/
+    /*   transform: rotate(-135deg);*/
+    /* }*/
   }
 
   &.next {
     right: 35px;
     -webkit-transform: rotate(-45deg) skew(-2deg, -2deg);
+    -ms-transform: rotate(-45deg) skew(-2deg, -2deg);
     transform: rotate(-45deg) skew(-2deg, -2deg);
 
     @media screen and (max-width:767px) {
       right: 20px;
     }
 
-    // .preview-text {
-    //   transform: rotate(45deg);
-    // }
+    /* .preview-text {*/
+    /*   transform: rotate(45deg);*/
+    /* }*/
   }
 
   &:hover {
@@ -257,11 +265,14 @@
   bottom: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: absolute;
   width: 180px;
@@ -294,6 +305,7 @@
     opacity: .75;
     padding: 14px;
     -webkit-transform: rotate(45deg) skew(-2deg, -2deg);
+    -ms-transform: rotate(45deg) skew(-2deg, -2deg);
     transform: rotate(45deg) skew(-2deg, -2deg);
     width: 0;
 
@@ -312,12 +324,14 @@
 
   .down-arrow {
     -webkit-transform: rotate(-135deg) skew(-2deg, -2deg);
+    -ms-transform: rotate(-135deg) skew(-2deg, -2deg);
     transform: rotate(-135deg) skew(-2deg, -2deg);
   }
 }
 
 .slide {
   background-position: center;
+  -webkit-background-size: cover;
   background-size: cover;
 
   &.president {
@@ -330,12 +344,15 @@
     .area {
       display: -webkit-box;
       display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       -ms-flex-wrap: nowrap;
+      -webkit-flex-wrap: nowrap;
       flex-wrap: nowrap;
 
       @media screen and (max-width: 900px) {
         -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
       }
     }
@@ -405,15 +422,19 @@
         .four {
           -webkit-box-align: center;
           -ms-flex-align: center;
+          -webkit-align-items: center;
           align-items: center;
           background-image: url('/img/president-video-2.jpg');
           background-position: center;
+          -webkit-background-size: cover;
           background-size: cover;
           display: -webkit-box;
           display: -ms-flexbox;
+          display: -webkit-flex;
           display: flex;
           -webkit-box-pack: center;
           -ms-flex-pack: center;
+          -webkit-justify-content: center;
           justify-content: center;
 
           img {
@@ -512,12 +533,15 @@
           .four {
             -webkit-box-align: center;
             -ms-flex-align: center;
+            -webkit-align-items: center;
             align-items: center;
             background-image: url('/img/president-video-2.jpg');
             background-position: center;
+            -webkit-background-size: cover;
             background-size: cover;
             display: -webkit-box;
             display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
 
             img {
@@ -577,6 +601,7 @@
     }
 
     .bottom-arrow {
+      left: -webkit-calc(250vw - 90px);
       left: calc(250vw - 90px);
     }
   }
@@ -589,6 +614,7 @@
     }
 
     .bottom-arrow {
+      left: -webkit-calc(350vw - 90px);
       left: calc(350vw - 90px);
     }
   }
@@ -601,6 +627,7 @@
     }
 
     .bottom-arrow {
+      left: -webkit-calc(450vw - 90px);
       left: calc(450vw - 90px);
     }
   }
@@ -613,6 +640,7 @@
     }
 
     .bottom-arrow {
+      left: -webkit-calc(550vw - 90px);
       left: calc(550vw - 90px);
     }
   }
@@ -625,6 +653,7 @@
     }
 
     .bottom-arrow {
+      left: -webkit-calc(650vw - 90px);
       left: calc(650vw - 90px);
     }
   }
@@ -731,6 +760,7 @@
 
     .one-vertical {
       -ms-flex-line-pack: start !important;
+      -webkit-align-content: flex-start !important;
       align-content: flex-start !important;
       margin-bottom: 0 !important;
       padding-bottom: 0 !important;
@@ -754,6 +784,7 @@
       @media screen and (max-width: 900px) {
         display: -webkit-box !important;
         display: -ms-flexbox !important;
+        display: -webkit-flex !important;
         display: flex !important;
         margin-top: 20px;
         width: 100% !important;
@@ -864,13 +895,16 @@
       background-color: $white-5;
       display: -webkit-box;
       display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
       padding: 62px 74px 110px;
       width: 100vw;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
       justify-content: space-between;
 
       @media screen and (max-width: 1024px) {
@@ -949,11 +983,14 @@
     @include transition(opacity 1.8s ease-in-out, height .65s ease-in-out);
     -webkit-box-align: center;
     -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     height: 100vh;
     padding: 0 16.5vw;
@@ -981,6 +1018,7 @@
     @media screen and (max-width: 767px) {
       -webkit-box-align: start;
       -ms-flex-align: start;
+      -webkit-align-items: flex-start;
       align-items: flex-start;
       height: auto;
       padding: 99px 20px 10px;
@@ -1021,11 +1059,14 @@
     @include transition(all .5s ease-in-out);
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
     padding: 0 74px 80px;
     width: 100%;
@@ -1040,11 +1081,14 @@
 
     .one-vertical {
       -ms-flex-line-pack: justify;
+      -webkit-align-content: space-between;
       align-content: space-between;
       display: -webkit-box;
       display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
       margin-bottom: 4px;
       padding: 7px;
@@ -1060,6 +1104,7 @@
       @media screen and (max-width: 767px) {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
+        -webkit-justify-content: center;
         justify-content: center;
         padding: 0;
       }
@@ -1122,11 +1167,14 @@
 
       @media screen and (max-width: 900px) {
         -ms-flex-line-pack: justify;
+        -webkit-align-content: space-between;
         align-content: space-between;
         display: -webkit-box;
         display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
         -ms-flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
         flex-wrap: wrap;
         padding: 10px 10px 0;
         width: 100%;
@@ -1138,6 +1186,7 @@
         &.essay-container {
           -webkit-box-pack: justify;
           -ms-flex-pack: justify;
+          -webkit-justify-content: space-between;
           justify-content: space-between;
 
           @media screen and (max-width: 767px) {
@@ -1149,6 +1198,7 @@
       @media screen and (max-width: 767px) {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
+        -webkit-justify-content: center;
         justify-content: center;
         padding: 0;
         width: 100%;
@@ -1172,6 +1222,7 @@
 
         &.essay {
           background-position: center;
+          -webkit-background-size: cover;
           background-size: cover;
           height: 25vw;
           margin-bottom: 2%;
@@ -1234,14 +1285,18 @@
 
     .two-vertical {
       -ms-flex-line-pack: justify;
+      -webkit-align-content: space-between;
       align-content: space-between;
       display: -webkit-box;
       display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
+      -webkit-justify-content: space-between;
       justify-content: space-between;
       padding: 7px 6px 0;
       width: 50%;
@@ -1253,6 +1308,7 @@
       .one {
         @include transition(height .4s ease-in-out);
         background-repeat: no-repeat;
+        -webkit-background-size: cover;
         background-size: cover;
         background-position: center;
         height: 48%;

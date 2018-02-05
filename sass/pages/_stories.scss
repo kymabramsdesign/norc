@@ -62,17 +62,21 @@
   .percent {
     -webkit-box-align: center;
     -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
     padding: 10px 30px;
 
     @media screen and (max-width:900px) {
       -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
       padding: 10px 15px 5px;
     }
@@ -158,6 +162,7 @@
     &:before {
       background: url(/img/pre-quote.svg) no-repeat;
       background-position: top;
+      -webkit-background-size: 28px 28px;
       background-size: 28px;
       bottom: 3px;
       content: "";
@@ -166,12 +171,14 @@
       position: relative;
 
       @media screen and (max-width:1024px) {
+        -webkit-background-size: 24px 24px;
         background-size: 24px;
         margin-left: -39px;
         padding-right: 39px;
       }
 
       @media screen and (max-width:900px) {
+        -webkit-background-size: 20px 20px;
         background-size: 20px;
         margin-left: -30px;
         padding-right: 30px;
@@ -181,6 +188,7 @@
     &:after {
       background: url(/img/post-quote.svg) no-repeat;
       background-position: top;
+      -webkit-background-size: 28px 28px;
       background-size: 28px;
       bottom: 3px;
       content: "";
@@ -188,11 +196,13 @@
       position: relative;
 
       @media screen and (max-width:1024px) {
+        -webkit-background-size: 24px 24px;
         background-size: 24px;
         padding-left: 31px;
       }
 
       @media screen and (max-width:1024px) {
+        -webkit-background-size: 20px 20px;
         background-size: 20px;
         padding-left: 27px;
       }
@@ -420,12 +430,15 @@
     @include transition(left .3s ease-in-out);
     -webkit-box-align: center;
     -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
     position: absolute;
     z-index: 206;
@@ -433,11 +446,14 @@
     @media screen and (max-width: 767px) {
       -webkit-box-align: start;
       -ms-flex-align: start;
+      -webkit-align-items: flex-start;
       align-items: flex-start;
       -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
       -webkit-box-pack: end;
       -ms-flex-pack: end;
+      -webkit-justify-content: flex-end;
       justify-content: flex-end;
     }
     
@@ -538,11 +554,14 @@
 
     .special-share {
       -ms-flex-line-pack: start;
+      -webkit-align-content: flex-start;
       align-content: flex-start;
       display: -webkit-box;
       display: -ms-flexbox;
+      display: -webkit-flex;
       display: flex;
       -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
       margin: 124px 0 0 23px;
       width: 22px;
@@ -552,12 +571,17 @@
       }
 
       @media screen and (max-width: 767px) {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
         align-items: center; 
         -ms-flex-wrap: nowrap;
+        -webkit-flex-wrap: nowrap;
         flex-wrap: nowrap;
         height: auto !important;
         -webkit-box-pack: end;
         -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
         justify-content: flex-end;
         margin: 0 5px 0 0;
         position: fixed;
@@ -609,6 +633,7 @@
     .close-button {
       @include transition(opacity .3s ease-in-out);
       -ms-flex-item-align: start;
+      -webkit-align-self: flex-start;
       align-self: flex-start;
       cursor: pointer;
       opacity: .55;
@@ -657,6 +682,7 @@
       margin: 20px 0 0 20px;
       padding: 8px;
       -webkit-transform: rotate(135deg) skew(-2deg, -2deg);
+      -ms-transform: rotate(135deg) skew(-2deg, -2deg);
       transform: rotate(135deg) skew(-2deg, -2deg);
       width: 0;
     }

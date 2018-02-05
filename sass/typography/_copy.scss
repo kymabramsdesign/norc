@@ -1,7 +1,7 @@
 p {
-	color: $text-grey;
-	font-weight: 400;
-	@include transition(font-size .3s ease-in-out);
+  color: $text-grey;
+  font-weight: 400;
+  @include transition(font-size .3s ease-in-out);
 
   @media screen and (max-width:767px) {
     color: $mobile-text-grey;
@@ -10,14 +10,14 @@ p {
 
 .main {
   p {
-  	color: $white-85;
-  	font-size: 22px;
-  	font-weight: 400;
+    color: $white-85;
+    font-size: 22px;
+    font-weight: 400;
     letter-spacing: .75px;
-  	line-height: 40px;
+    line-height: 40px;
     text-shadow: 1px 1px 100px rgba(0,0,0,.6);
 
-  	@media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
       font-size: 21px;
       line-height: 36px;
     }
@@ -38,41 +38,41 @@ p {
 }
 
 dfn, cite, em, i {
-	font-style: italic;
+  font-style: italic;
 }
 
 blockquote {
-	margin: 0 1.5em;
+  margin: 0 1.5em;
 }
 
 address {
-	margin: 0 0 1.5em;
+  margin: 0 0 1.5em;
 }
 
 pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
-	@include font-size(0.9375);
-	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
+  background: $color__background-pre;
+  font-family: $font__pre;
+  @include font-size(0.9375);
+  line-height: $font__line-height-pre;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
 }
 
 code, kbd, tt, var {
-	font-family: $font__code;
-	@include font-size(0.9375);
+  font-family: $font__code;
+  @include font-size(0.9375);
 }
 
 abbr, acronym {
-	border-bottom: 1px dotted $color__border-abbr;
-	cursor: help;
+  border-bottom: 1px dotted $color__border-abbr;
+  cursor: help;
 }
 
 mark, ins {
-	background: $color__background-ins;
-	text-decoration: none;
+  background: $color__background-ins;
+  text-decoration: none;
 }
 
 sup {

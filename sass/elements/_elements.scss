@@ -1,10 +1,12 @@
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *:before,
-*:after { // Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ 
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
 
@@ -32,12 +34,12 @@ hr {
 @import 'lists';
 
 img {
-  height: auto; // Make sure images are scaled correctly.
-  max-width: 100%; // Adhere to container width.
+  height: auto; /* Make sure images are scaled correctly.*/
+  max-width: 100%; /* Adhere to container width.*/
 }
 
 figure {
-  margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
+  margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area.*/
 }
 
 @import 'tables';
