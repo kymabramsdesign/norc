@@ -102,4 +102,24 @@ jQuery(function() {
 
 		return false;
 	});
+
+	var checkUrl = window.location.hash.substr(1);
+
+  if ( checkUrl === 'blue' ) {
+  	show_popup(bubble_popup_src, bubble_popup_source, 'light', jQuery(this).data());
+		return false;
+  }
+  else if ( checkUrl === 'light' ) {
+  	show_popup(line_popup_src, line_popup_source, 'dark', jQuery(this).data());
+		return false;
+  }
+  else if ( checkUrl === 'degrees' ) {
+  	show_popup(graph3_src, '', 'light', jQuery(this).data());
+		return false;
+  }
+  else if ( checkUrl === 'map' ) {
+  	show_popup(graph4_src, '', 'mid', jQuery(this).data());
+		return false;
+  }
+
 });
