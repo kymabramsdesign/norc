@@ -1,24 +1,17 @@
 $(document).ready(function() {
   $('#fullpage').fullpage({
     anchors: ['home'],
-    scrollOverflow: true,
     slidesNavigation: true,
     slidesNavPosition: 'bottom',
     navigationTooltips: ['one', 'two'],
     showActiveTooltip: true,
     menu: true,
     autoScrolling: false,
-    loopHorizontal: false
+    loopHorizontal: false,
+    scrollOverflow: true
   });
 });
 
-//Check Browser and adjust font-weights for Chrome
-function checkBrowser() {
-  var isChromium = !!window.chrome;
-  if ( isChromium === true ) {
-    $('.main p, .area .h2 p, .main .section-title').css('font-weight', '300');
-  }
-}
 
 // On Scroll functions
 function scrollTime() {
@@ -27,24 +20,24 @@ function scrollTime() {
 
   if ( windowWidth >= 768 ) {
 
-    $('.fp-slides, .economics .area, .active .fp-tableCell, .global .area, .health .area, .society .area').on('scroll', function() {
-      var text = $('.active .area .landing-text p').offset().top;
-      var thumb = $('.active .area .thumbnails').offset().top;
-      var thumbsHeight = $('.active .area .thumbnails').innerHeight();
-      alert(windowHeight);
+    $('.president .area, .economics .area, .education .area, .global .area, .health .area, .society .area, .gain-more .area').on('scroll', function() {
 
-      if ( thumb === windowHeight ) {
+      var areaPosition = $(this).scrollTop();
+      var areaHeight = $(this).height();
+      console.log(areaHeight);
+      console.log(areaPosition);
+
+
+      // Explore more button functions
+      if ( areaPosition === 0 ) {
         $(this).find('.bottom-arrow').stop().delay(50).fadeIn(600);
-
       }
-      else if ( (thumb-10) <= (windowHeight-thumbsHeight) ) {
-        $(this).find('.bottom-arrow').stop().delay(100).fadeIn(600);
-      }
-      else {
+      else if ( areaPosition >= 5 ) {
         $(this).find('.bottom-arrow').hide();
       }
 
-      if ( text <= 100 ) {
+      // Top Menu bar functions
+      if ( areaPosition >= 75 ) {
         $(this).addClass('scrolled');
         $(this).find('.grey-box').addClass('scrolled');
       }
@@ -57,6 +50,16 @@ function scrollTime() {
     });
   }
 }
+
+
+//Check Browser and adjust font-weights for Chrome
+function checkBrowser() {
+  var isChromium = !!window.chrome;
+  if ( isChromium === true ) {
+    $('.main p, .area .h2 p, .main .section-title').css('font-weight', '300');
+  }
+}
+
 
 // Collect all functions to execute at once on Load
 function initialize() {

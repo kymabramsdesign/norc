@@ -75,14 +75,6 @@
   display: none; 
 }
 
-/* ::-webkit-scrollbar-track-piece:start {*/
-/*     background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;*/
-/* }*/
-
-/* ::-webkit-scrollbar-track-piece:end {*/
-/*     background: transparent url('images/backgrounds/scrollbar.png') repeat-y !important;*/
-/* }*/
-
 .slide.insight {
   background-image: url('/img/insight-background.png');
 
@@ -318,14 +310,8 @@
 
 .scrolled .bottom-arrow {
 
-  .explore {
+  .explore, .down-arrow {
     display: none;
-  }
-
-  .down-arrow {
-    -webkit-transform: rotate(-135deg) skew(-2deg, -2deg);
-    -ms-transform: rotate(-135deg) skew(-2deg, -2deg);
-    transform: rotate(-135deg) skew(-2deg, -2deg);
   }
 }
 
@@ -1382,10 +1368,16 @@
 
 .grey-box {
   @include transition(all .7s ease-in-out);
-  position: fixed;
-  height: 80px;
   background-color: transparent;
+  height: 80px;
+  position: fixed;
+  top: 0;
   width: 100vw;
+
+  /* IE10+ CSS styles go here */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    left: 0;
+  }
 
   @media screen and (max-width: 767px) {
     background-color: $black !important;
@@ -1395,5 +1387,14 @@
     @include transition(all .6s ease-in-out);
     background-color: $black-90;
     z-index: 1;
+
+    /* IE Edge 12+ CSS styles go here */
+    @supports (-ms-accelerator:true) {
+      background-color: $black;
+    }
+    /* IE10+ CSS styles go here */
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      background-color: $black;
+    }
   }
 }
