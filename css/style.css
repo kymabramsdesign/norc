@@ -2705,9 +2705,27 @@ html.fp-enabled,
   margin-top: 5px;
   position: fixed;
   width: 4px;
+  /* IE Edge 12+ CSS styles go here */
+  /* IE10+ CSS styles go here */
 }
 
-/* line 246, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+@supports (-ms-accelerator: true) {
+  /* line 232, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+  #fp-nav ul li:hover a span:after,
+  .fp-slidesNav ul li:hover a span:after {
+    margin-left: 5px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 232, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+  #fp-nav ul li:hover a span:after,
+  .fp-slidesNav ul li:hover a span:after {
+    margin-left: 5px;
+  }
+}
+
+/* line 255, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip {
   color: #fff;
   cursor: pointer;
@@ -2723,7 +2741,7 @@ html.fp-enabled,
   width: 0;
 }
 
-/* line 261, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 270, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li:hover .fp-tooltip,
 #fp-nav.fp-show-active a.active + .fp-tooltip {
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -2733,17 +2751,17 @@ html.fp-enabled,
   width: auto;
 }
 
-/* line 268, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 277, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip.right {
   right: 20px;
 }
 
-/* line 272, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 281, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip.left {
   left: 20px;
 }
 
-/* line 276, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 285, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
 .fp-auto-height .fp-tableCell,
@@ -2751,6 +2769,11 @@ html.fp-enabled,
 .fp-responsive .fp-auto-height-responsive .fp-slide,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
   height: auto !important;
+}
+
+/* line 295, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+.dot-nav {
+  top: 45px;
 }
 
 /*--------------------------------------------------------------

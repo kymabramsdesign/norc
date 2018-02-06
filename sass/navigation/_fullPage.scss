@@ -240,6 +240,15 @@ html.fp-enabled,
     margin-top: 5px;
     position: fixed;
     width: 4px;
+
+    /* IE Edge 12+ CSS styles go here */
+    @supports (-ms-accelerator:true) {
+      margin-left: 5px;
+    }
+    /* IE10+ CSS styles go here */
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      margin-left: 5px;
+    }
   }
 }
 
@@ -280,4 +289,9 @@ html.fp-enabled,
 .fp-responsive .fp-auto-height-responsive .fp-slide,
 .fp-responsive .fp-auto-height-responsive .fp-tableCell {
   height: auto !important;
+}
+
+// adjust height of changing text
+.dot-nav {
+  top: 45px;
 }

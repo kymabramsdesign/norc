@@ -8,9 +8,187 @@ $(document).ready(function() {
     menu: true,
     autoScrolling: false,
     loopHorizontal: false,
-    scrollOverflow: true
+    scrollOverflow: true,
+    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+      var loadedSlide = $(this);
+
+      if (slideIndex == 0) {
+        $('.section-title').hide();
+        $('.nav-dot, .section-title, .slide').removeClass('active');
+        $('.insight').show().addClass('active');
+      }
+      else if (slideIndex == 1) {
+        $('.section-title').hide();
+        $('.nav-dot, .section-title, .slide').removeClass('active');
+        $('.president').show().addClass('active');
+      }
+      else if (slideIndex == 2) {
+        $('.section-title').hide();
+        $('.nav-dot, .section-title, .slide').removeClass('active');
+        $('.economics').show().addClass('active');
+      }
+      else if (slideIndex == 3) {
+        $('.section-title').hide();
+        $('.nav-dot, .section-title, .slide').removeClass('active');
+        $('.education').show().addClass('active');
+      }
+      else if (slideIndex == 4) {
+        $('.section-title').hide();
+        $('.nav-dot, .section-title, .slide').removeClass('active');
+        $('.global').show().addClass('active');
+      }
+      else if (slideIndex == 5) {
+        $('.section-title').hide();
+        $('.nav-dot, .section-title, .slide').removeClass('active');
+        $('.health').show().addClass('active');
+      }
+      else if (slideIndex == 6) {
+        $('.section-title').hide();
+        $('.nav-dot, .section-title, .slide').removeClass('active');
+        $('.society').show().addClass('active');
+      }
+      else if (slideIndex == 7) {
+        $('.section-title').hide();
+        $('.nav-dot, .section-title, .slide').removeClass('active');
+        $('.gain-more').show().addClass('active');
+      }
+    }
   });
 });
+
+// Hover over dots Script
+function dotHover() {
+
+  $('.fp-slidesNav ul li:nth-of-type(1) a span').hover( function() {
+    var hash = location.hash.substr(6);
+    if ( hash == 0 ) { 
+      // do nothing
+    } else {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.insight').stop(true,true).fadeIn().addClass('active');
+    }
+  }, function() {
+    currentSlide();
+  });
+  $('.fp-slidesNav ul li:nth-of-type(2) a span').hover( function() {
+    var hash = location.hash.substr(6);
+    if ( hash == 1 ) { 
+      // do nothing
+    } else {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.president').stop(true,true).fadeIn().addClass('active');
+    }
+  }, function() {
+    currentSlide();
+  });
+  $('.fp-slidesNav ul li:nth-of-type(3) a span').hover( function() {
+    var hash = location.hash.substr(6);
+    if ( hash == 2 ) { 
+      // do nothing
+    } else {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.economics').stop(true,true).fadeIn().addClass('active');
+    }
+  }, function() {
+    currentSlide();
+  });
+  $('.fp-slidesNav ul li:nth-of-type(4) a span').hover( function() {
+    var hash = location.hash.substr(6);
+    if ( hash == 3 ) { 
+      // do nothing
+    } else {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.education').stop(true,true).fadeIn().addClass('active');
+    }
+  }, function() {
+    currentSlide();
+  });
+  $('.fp-slidesNav ul li:nth-of-type(5) a span').hover( function() {
+    var hash = location.hash.substr(6);
+    if ( hash == 4 ) { 
+      // do nothing
+    } else {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.global').stop(true,true).fadeIn().addClass('active');
+    }
+  }, function() {
+    currentSlide();
+  });
+  $('.fp-slidesNav ul li:nth-of-type(6) a span').hover( function() {
+    var hash = location.hash.substr(6);
+    if ( hash == 5 ) { 
+      // do nothing
+    } else {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.health').stop(true,true).fadeIn().addClass('active');
+    }
+  }, function() {
+    currentSlide();
+  });
+  $('.fp-slidesNav ul li:nth-of-type(7) a span').hover( function() {
+    var hash = location.hash.substr(6);
+    if ( hash == 6 ) { 
+      // do nothing
+    } else {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.society').stop(true,true).fadeIn().addClass('active');
+    }
+  }, function() {
+    currentSlide();
+  });
+  $('.fp-slidesNav ul li:nth-of-type(8) a span').hover( function() {
+    var hash = location.hash.substr(6);
+    if ( hash == 7 ) { 
+      // do nothing
+    } else {
+      $('.section-title').hide();
+      $('.nav-dot, .section-title, .slide').removeClass('active');
+      $('.gain-more').stop(true,true).fadeIn().addClass('active');
+    }
+  }, function() {
+    currentSlide();
+  });
+}
+
+// Get current slide to return the title after hover on Dots
+function currentSlide() {
+  var hash = location.hash.substr(6);
+
+  $('.section-title').hide();
+  $('.nav-dot, .section-title, .slide').removeClass('active');
+
+    if ( hash == 0 ) {
+      $('.insight').stop(true,true).show().addClass('active');
+    }
+    if ( hash == 1 ) {
+      $('.president').stop(true,true).show().addClass('active');
+    }
+    if ( hash == 2 ) {
+      $('.economics').stop(true,true).show().addClass('active');
+    }
+    if ( hash == 3 ) {
+      $('.education').stop(true,true).show().addClass('active');
+    }
+    if ( hash == 4 ) {
+      $('.global').stop(true,true).show().addClass('active');
+    }
+    if ( hash == 5 ) {
+      $('.health').stop(true,true).show().addClass('active');
+    }
+    if ( hash == 6 ) {
+      $('.society').stop(true,true).show().addClass('active');
+    }
+    if ( hash == 7 ) {
+      $('.gain-more').stop(true,true).show().addClass('active');
+    }
+}
 
 
 // On Scroll functions
@@ -65,6 +243,7 @@ function checkBrowser() {
 function initialize() {
   checkBrowser();
   scrollTime();
+  dotHover();
 }
 
 // Collect all functions to execute on Resize
