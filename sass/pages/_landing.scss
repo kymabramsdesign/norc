@@ -3,7 +3,7 @@
   
   .section-title.active {
     display: inline-block;
-    color: $white !important;
+    color: $white-90 !important;
 
     @media screen and (max-width:767px) {
       background-color: $white-15;
@@ -226,10 +226,6 @@
     @media screen and (max-width:767px) {
       left: 20px;
     }
-
-    /* .preview-text {*/
-    /*   transform: rotate(-135deg);*/
-    /* }*/
   }
 
   &.next {
@@ -241,10 +237,6 @@
     @media screen and (max-width:767px) {
       right: 20px;
     }
-
-    /* .preview-text {*/
-    /*   transform: rotate(45deg);*/
-    /* }*/
   }
 
   &:hover {
@@ -277,7 +269,7 @@
   .explore {
     @include transition(all .4s ease-in-out);
     color: $white-75;
-    cursor: default;
+    cursor: pointer;
     font-size: 14px;
     letter-spacing: 2.5px;
     line-height: 14px;

@@ -164,30 +164,30 @@ function currentSlide() {
   $('.section-title').hide();
   $('.nav-dot, .section-title, .slide').removeClass('active');
 
-    if ( hash == 0 ) {
-      $('.insight').stop(true,true).show().addClass('active');
-    }
-    if ( hash == 1 ) {
-      $('.president').stop(true,true).show().addClass('active');
-    }
-    if ( hash == 2 ) {
-      $('.economics').stop(true,true).show().addClass('active');
-    }
-    if ( hash == 3 ) {
-      $('.education').stop(true,true).show().addClass('active');
-    }
-    if ( hash == 4 ) {
-      $('.global').stop(true,true).show().addClass('active');
-    }
-    if ( hash == 5 ) {
-      $('.health').stop(true,true).show().addClass('active');
-    }
-    if ( hash == 6 ) {
-      $('.society').stop(true,true).show().addClass('active');
-    }
-    if ( hash == 7 ) {
-      $('.gain-more').stop(true,true).show().addClass('active');
-    }
+  if ( hash == 0 ) {
+    $('.insight').stop(true,true).show().addClass('active');
+  }
+  if ( hash == 1 ) {
+    $('.president').stop(true,true).show().addClass('active');
+  }
+  if ( hash == 2 ) {
+    $('.economics').stop(true,true).show().addClass('active');
+  }
+  if ( hash == 3 ) {
+    $('.education').stop(true,true).show().addClass('active');
+  }
+  if ( hash == 4 ) {
+    $('.global').stop(true,true).show().addClass('active');
+  }
+  if ( hash == 5 ) {
+    $('.health').stop(true,true).show().addClass('active');
+  }
+  if ( hash == 6 ) {
+    $('.society').stop(true,true).show().addClass('active');
+  }
+  if ( hash == 7 ) {
+    $('.gain-more').stop(true,true).show().addClass('active');
+  }
 }
 
 
@@ -229,6 +229,34 @@ function scrollTime() {
   }
 }
 
+// Explore More Click Function
+function explore() {
+  $('.bottom-arrow').on('click', function() {
+    var windowHeight = $(window).height();
+    var thumbsHeight = $('.active .area .thumbnails').height();
+    console.log(thumbsHeight);
+
+    if ( $('.slide.active').hasClass('education') ) {
+      
+      elem = document.getElementById("ed");
+
+      topPos = elem.offsetTop;
+
+      $(this).find('.area').animate({
+        'top': 0
+      }, 'slow');
+      // scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
+console.log(topPos);
+
+      // if ( $('.slide.active .area').hasClass('scrolled') ) {
+      //   scrollTo(document.getElementById('ed-contain'), -topPos, 600);
+      // } else {
+      //   scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
+      // }
+    }
+  });
+}
+
 
 //Check Browser and adjust font-weights for Chrome
 function checkBrowser() {
@@ -244,6 +272,7 @@ function initialize() {
   checkBrowser();
   scrollTime();
   dotHover();
+  explore();
 }
 
 // Collect all functions to execute on Resize
