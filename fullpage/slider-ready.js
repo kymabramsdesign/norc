@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#fullpage').fullpage({
     anchors: ['home'],
     slidesNavigation: true,
-    slidesNavPosition: 'bottom',
+    slidesNavPosition: 'top',
     navigationTooltips: ['one', 'two'],
     showActiveTooltip: true,
     menu: true,

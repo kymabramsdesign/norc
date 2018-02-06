@@ -130,11 +130,9 @@ html.fp-enabled,
 }
 
 .fp-slidesNav{
-  // left: 0 !important;
   margin: 0 auto !important;
   opacity: 1;
   position: absolute;
-  // right: 0;
   -ms-transform: translate3d(0,0,0);
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
@@ -163,7 +161,7 @@ html.fp-enabled,
 .fp-slidesNav ul li {
   display: block;
   height: 13px;
-  margin: 7px;
+  margin: 4px;
   position:relative;
   width: 14px;
 }
@@ -186,35 +184,63 @@ html.fp-enabled,
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span{
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  height: 12px;
-  margin: -6px 0 0 -6px;
-  width: 12px;
+.fp-slidesNav ul li:hover a.active span {
+  background: $white-35;
+
+  &:after {
+    @include transition(all .1s ease-in-out);
+    background: $white-85;
+    border-radius: 2px;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    margin-left: -2px;
+    margin-top: 5px;
+    position: fixed;
+    width: 4px;
+
+    /* IE Edge 12+ CSS styles go here */
+    @supports (-ms-accelerator:true) {
+      margin-left: 5px;
+    }
+    /* IE10+ CSS styles go here */
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      margin-left: 5px;
+    }
+  }
 }
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   @include transition(all .1s ease-in-out);
-  background: #fff;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: 0;
-  height: 4px;
+  background: transparent;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid $white-70;
+  height: 16px;
   left: 50%;
-  margin: -2px 0 0 -2px;
+  margin: -3px 0 0 -8px;
   position: absolute;
   top: 50%;
-  width: 4px;
+  width: 15px;
   z-index: 1;
 }
 
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span {
-  height: 10px;
-  margin: -5px 0 0 -5px;
-  width: 10px;
+  background: $white-35;
+  &:after {
+    @include transition(all .1s ease-in-out);
+    background: $white-85;
+    border-radius: 2px;
+    content: "";
+    display: inline-block;
+    height: 4px;
+    margin-left: -2px;
+    margin-top: 5px;
+    position: fixed;
+    width: 4px;
+  }
 }
 
 #fp-nav ul li .fp-tooltip {

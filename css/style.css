@@ -2568,43 +2568,43 @@ html.fp-enabled,
   z-index: 4;
 }
 
-/* line 144, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 142, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav.bottom {
   bottom: 17px;
   text-align: center;
   width: 100vw;
 }
 
-/* line 150, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 148, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav.top {
   text-align: center;
   top: 17px;
   width: 100vw;
 }
 
-/* line 156, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 154, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul,
 .fp-slidesNav ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 162, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 160, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li,
 .fp-slidesNav ul li {
   display: block;
   height: 13px;
-  margin: 7px;
+  margin: 4px;
   position: relative;
   width: 14px;
 }
 
-/* line 171, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 169, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav ul li {
   display: inline-block;
 }
 
-/* line 175, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 173, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a,
 .fp-slidesNav ul li a {
   cursor: pointer;
@@ -2616,46 +2616,98 @@ html.fp-enabled,
   z-index: 1;
 }
 
-/* line 186, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 184, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li:hover a.active span {
-  -webkit-border-radius: 100%;
-  border-radius: 100%;
-  height: 12px;
-  margin: -6px 0 0 -6px;
-  width: 12px;
+  background: rgba(255, 255, 255, 0.35);
 }
 
-/* line 197, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 190, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+#fp-nav ul li a.active span:after,
+.fp-slidesNav ul li a.active span:after,
+#fp-nav ul li:hover a.active span:after,
+.fp-slidesNav ul li:hover a.active span:after {
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+  content: "";
+  display: inline-block;
+  height: 4px;
+  margin-left: -2px;
+  margin-top: 5px;
+  position: fixed;
+  width: 4px;
+  /* IE Edge 12+ CSS styles go here */
+  /* IE10+ CSS styles go here */
+}
+
+@supports (-ms-accelerator: true) {
+  /* line 190, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+  #fp-nav ul li a.active span:after,
+  .fp-slidesNav ul li a.active span:after,
+  #fp-nav ul li:hover a.active span:after,
+  .fp-slidesNav ul li:hover a.active span:after {
+    margin-left: 5px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 190, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+  #fp-nav ul li a.active span:after,
+  .fp-slidesNav ul li a.active span:after,
+  #fp-nav ul li:hover a.active span:after,
+  .fp-slidesNav ul li:hover a.active span:after {
+    margin-left: 5px;
+  }
+}
+
+/* line 213, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   -webkit-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  background: #fff;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  border: 0;
-  height: 4px;
+  background: transparent;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  height: 16px;
   left: 50%;
-  margin: -2px 0 0 -2px;
+  margin: -3px 0 0 -8px;
   position: absolute;
   top: 50%;
-  width: 4px;
+  width: 15px;
   z-index: 1;
 }
 
-/* line 213, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 229, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span {
-  height: 10px;
-  margin: -5px 0 0 -5px;
-  width: 10px;
+  background: rgba(255, 255, 255, 0.35);
 }
 
-/* line 220, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 232, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+#fp-nav ul li:hover a span:after,
+.fp-slidesNav ul li:hover a span:after {
+  -webkit-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2px;
+  content: "";
+  display: inline-block;
+  height: 4px;
+  margin-left: -2px;
+  margin-top: 5px;
+  position: fixed;
+  width: 4px;
+}
+
+/* line 246, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip {
   color: #fff;
   cursor: pointer;
@@ -2671,7 +2723,7 @@ html.fp-enabled,
   width: 0;
 }
 
-/* line 235, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 261, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li:hover .fp-tooltip,
 #fp-nav.fp-show-active a.active + .fp-tooltip {
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -2681,17 +2733,17 @@ html.fp-enabled,
   width: auto;
 }
 
-/* line 242, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 268, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip.right {
   right: 20px;
 }
 
-/* line 246, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 272, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip.left {
   left: 20px;
 }
 
-/* line 250, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
+/* line 276, /Users/kadimac/Desktop/norc-repo/sass/navigation/_fullPage.scss */
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
 .fp-auto-height .fp-tableCell,
