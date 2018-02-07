@@ -68,10 +68,10 @@ $(window).bind("load", function() {
   $('.menu-container').html(
     '<ul>'+
     '<li class="menu-title">2017 Annual Report</li>' +
-    '<li><a href="/#introduction" onclick="location.reload()">Introduction</a></li>' +
-    '<li><a href="/#president" onclick="location.reload()">President’s Essay</a></li>' +
+    '<li><a href="/index.html#home" class="trigger-slider">Introduction</a></li>' +
+    '<li><a href="/index.html#home/1" class="trigger-slider"">President’s Essay</a></li>' +
     '<li class="divider"><hr /></li>' +
-    '<li class="arrow"><a href="/#economics" onclick="location.reload()">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/index.html#home/2" class="trigger-slider"">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/congregations">Tracking the Professional and Economic Outlook of Congregations</a></li>' +
       '<li><a href="/gas-prices">Tracking Gasoline and Diesel Prices</a></li>' +
@@ -80,13 +80,13 @@ $(window).bind("load", function() {
       '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
       '<li><a href="/gss-trends">GSS Trends</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/#education" onclick="location.reload()">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/index.html#home/3" class="trigger-slider"">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/higher-education">Making Higher Education More Accessible and Achievable</a></li>' +
       '<li><a href="/early-childhood">Assessing and Shaping the Impact of Early Childhood Education</a></li>' +
       '<li><a href="/science-and-technology">Tracking the Careers of STEM Doctorates</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/#global" onclick="location.reload()">Global Development</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/index.html#home/4" class="trigger-slider"">Global Development</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/usaid-evaluations">Measuring Impact and Improving Performance</a></li>' +
       '<li><a href="/complex-projects">Assessing the Impact of Complex Projects</a></li>' +
@@ -95,7 +95,7 @@ $(window).bind("load", function() {
       '<li><a href="/closed-societies">Peering Into Closed Societies</a></li>' +
       '<li><a href="/global-portfolio">NORC\'s Global Portfolio</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/#health" onclick="location.reload()">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/index.html#home/5" class="trigger-slider"">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/medicare-medicaid">Making Medicare and Medicaid More Effective</a></li>' +
       '<li><a href="/patient-risk">Using Data to Improve Safety and Quality</a></li>' +
@@ -104,7 +104,7 @@ $(window).bind("load", function() {
       '<li><a href="/health-culture">Cultivating a Culture of Health</a></li>' +
       '<li><a href="/zika-awareness">Assessing Americans\' Zika Awareness</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/#society" onclick="location.reload()">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<li class="arrow"><a href="/index.html#home/6" class="trigger-slider"">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu last-one">' +
       '<li><a href="/aging">Informing Policy on Retirement and Aging</a></li>' +
       '<li><a href="/intimate-partner-violence">Combating Intimate Partner Violence</a></li>' +
@@ -114,7 +114,7 @@ $(window).bind("load", function() {
       '<li><a href="/smoking-and-social-media">Mapping Smoking Policies to Behavior</a></li>' +
     '</ul></li>' +
     '<li class="divider"><hr /></li>' +
-    '<li><a href="/#gain-more" onclick="location.reload()">Gain More Insight</a></li>' +
+    '<li><a href="/index.html#home/7" class="trigger-slider"">Gain More Insight</a></li>' +
     '</ul>'
   );
 
@@ -134,5 +134,28 @@ $(window).bind("load", function() {
       $(this).addClass('open').attr('src', 'img/arrow-orange.svg');
     }
   });
+
+  var windowWidth = $(window).width();
+
+  if ( windowWidth >= 768 ) {
+    $('.trigger-slider').on('click', function() {
+      $('.white-page-overlay').fadeOut(300);
+      $('.share-button').css('z-index',99);
+      $('.menu-button').css('z-index',200);
+      $('.menu-container').removeClass('moved');
+      $("body").removeClass('no-scroll'); // body to scroll again
+      $('.arrow a').removeClass('active');
+      $('.arrow-img').attr('src', 'img/arrow.svg').removeClass('open');
+      $('.dropdown-menu').slideUp(200);
+
+      var whatPage = $('body').attr('class');
+      if ( whatPage.indexOf('main') >= 0 ) {
+        $('.menu-button').removeClass('menu-open').attr('src', 'img/menu-button-white.svg');
+      }
+      else {
+        $('.menu-button').removeClass('menu-open').attr('src', 'img/menu-button.svg');
+      }
+    });
+  }
 
 });

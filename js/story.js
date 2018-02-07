@@ -335,9 +335,26 @@ function closeResisze() {
 
 // Functions for the Dot Navigation on Story Pages
 function dotNav() {
+  
+  var currentColor = $('h1').css('color'); //gets main color on page
   var page = $('body').attr('class'); // get the page user is on
   page = page.replace('story-page story-page_', ''); //gets the page
-  var currentColor = $('h1').css('color'); //gets main color on page
+
+  if ( page == 'economics') {
+    page = '/index.html#home/2';
+  }
+  else if ( page == 'education') {
+    page = '/index.html#home/3';
+  }
+  else if ( page == 'global') {
+    page = '/index.html#home/4';
+  }
+  else if ( page == 'health') {
+    page = '/index.html#home/5';
+  }
+  else if ( page == 'society') {
+    page = '/index.html#home/6';
+  }
 
   $('.dot-nav svg').hover(function() {
     $('.section-title').hide().css('color', '#989a9d');
@@ -348,55 +365,55 @@ function dotNav() {
     if ( location.indexOf('active') >= 0 ) {
       $('.section-title.current').stop(true,true).show().css('color', currentColor);
       $(this).on('click', function() {
-        window.location = '/#'+ page;
+        window.location = page;
       });
     }
     else if ( location.indexOf('insight-dot') >= 0 ) {
       $('.section-title.one').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/#introduction';
+        window.location = '/index.html#home';
       });
     }
     else if ( location.indexOf('president-dot') >= 0 ) {
       $('.section-title.two').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/#president';
+        window.location = '/index.html#home/1';
       });
     }
     else if ( location.indexOf('economics-dot') >= 0 ) {
       $('.section-title.three').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/#economics';
+        window.location = '/index.html#home/2';
       });
     }
     else if ( location.indexOf('education-dot') >= 0 ) {
       $('.section-title.four').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/#education';
+        window.location = '/index.html#home/3';
       });
     }
     else  if ( location.indexOf('global-dot') >= 0 ) {
       $('.section-title.five').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/#global';
+        window.location = '/index.html#home/4';
       });
     }
     else if ( location.indexOf('health-dot') >= 0 ) {
       $('.section-title.six').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/#health';
+        window.location = '/index.html#home/5';
       });
     }
     else if ( location.indexOf('society-dot') >= 0 ) {
       $('.section-title.seven').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/#society';
+        window.location = '/index.html#home/6';
       });
     }
     else if ( location.indexOf('more-dot') >= 0 ) {
       $('.section-title.nine').stop(true,true).fadeIn(300);
       $(this).on('click', function() {
-        window.location = '/#gain-more';
+        window.location = '/index.html#home/7';
       });
     }
   }, function() {

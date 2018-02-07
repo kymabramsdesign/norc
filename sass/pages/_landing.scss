@@ -6,11 +6,11 @@
     color: $white-90 !important;
 
     @media screen and (max-width:767px) {
-      background-color: $white-15;
+      background-color: #262626;
       color: $white-85 !important;
       font-size: 15px;
       letter-spacing: .25px;
-      margin: 6px 0 0;
+      margin: 10px 0 0;
       padding: 10px 0 9px;
 
       &.economics {
@@ -103,7 +103,7 @@
 
     @media screen and (max-width: 767px) {
       height: auto;
-      padding: 115px 20px 0;
+      padding: 12px 20px 0;
       position: relative;
       width: 100vw;
     }
@@ -154,7 +154,7 @@
     @media screen and (max-width: 767px) {
       display: inline-block;
       height: auto;
-      padding: 20px 20px 100px;
+      padding: 20px;
     }
 
     p {
@@ -478,7 +478,7 @@
       }
 
       @media screen and (max-width: 767px) {
-        margin-top: 114px;
+        margin-top: 17px;
         padding: 0 20px;
 
         &:last-of-type {
@@ -649,7 +649,7 @@
 
       @media screen and (max-width: 767px) {
         margin-bottom: 20px;
-        margin-top: 102px;
+        margin-top: 6px;
         padding: 0 20px;
       }
 
@@ -895,7 +895,7 @@
 
       @media screen and (max-width: 767px) {
         margin-top: -20px;
-        padding: 40px 20px 100px;
+        padding: 40px 20px 20px;
       }
 
       a {
@@ -999,7 +999,7 @@
       -webkit-align-items: flex-start;
       align-items: flex-start;
       height: auto;
-      padding: 99px 20px 10px;
+      padding: 4px 20px 10px;
 
       .mobile-explore {
         color: $white;
@@ -1054,7 +1054,7 @@
     }
 
     @media screen and (max-width: 767px) {
-      padding: 0 20px 80px
+      padding: 0 20px 20px
     }
 
     .one-vertical {
@@ -1168,7 +1168,7 @@
           justify-content: space-between;
 
           @media screen and (max-width: 767px) {
-            padding-bottom: 80px;
+            padding-bottom: 20px;
           }
         }
       }
@@ -1353,7 +1353,6 @@
     .thumbnails {
       @include transition(all 1s ease-in-out);
       opacity: 1;
-      
     }
   }
 }
@@ -1372,8 +1371,7 @@
   }
 
   @media screen and (max-width: 767px) {
-    background-color: $black !important;
-    height: 94px;
+    display: none;
   }
 
   &.scrolled {

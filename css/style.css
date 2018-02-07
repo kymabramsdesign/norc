@@ -24,16 +24,19 @@
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
+/* line 7, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 body {
   margin: 0;
 }
 
+/* line 11, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 article,
 aside,
 details,
@@ -49,6 +52,7 @@ summary {
   display: block;
 }
 
+/* line 26, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -57,52 +61,63 @@ video {
   vertical-align: baseline;
 }
 
+/* line 34, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
+/* line 39, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 [hidden],
 template {
   display: none;
 }
 
+/* line 44, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 a {
   background-color: transparent;
 }
 
+/* line 48, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
 }
 
+/* line 53, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
+/* line 57, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 b,
 strong {
   font-weight: 700;
 }
 
+/* line 62, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 dfn {
   font-style: italic;
 }
 
+/* line 66, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
+/* line 71, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
+/* line 76, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 small {
   font-size: 80%;
 }
 
+/* line 80, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -111,36 +126,44 @@ sup {
   vertical-align: baseline;
 }
 
+/* line 88, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
+/* line 92, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
 
+/* line 96, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 img {
   border: 0;
 }
 
+/* line 100, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
+/* line 104, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 figure {
   margin: 1em 40px;
 }
 
+/* line 108, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
+/* line 114, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 pre {
   overflow: auto;
 }
 
+/* line 118, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -149,6 +172,7 @@ samp {
   font-size: 1em;
 }
 
+/* line 126, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 button,
 input,
 optgroup,
@@ -159,15 +183,18 @@ textarea {
   margin: 0;
 }
 
+/* line 136, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 button {
   overflow: visible;
 }
 
+/* line 140, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 button,
 select {
   text-transform: none;
 }
 
+/* line 145, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -176,21 +203,25 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+/* line 153, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
+/* line 158, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
+/* line 164, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 input {
   line-height: normal;
 }
 
+/* line 168, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
@@ -198,40 +229,48 @@ input[type="radio"] {
   padding: 0;
 }
 
+/* line 175, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
+/* line 180, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
+/* line 185, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
+/* line 191, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 legend {
   border: 0;
   padding: 0;
 }
 
+/* line 196, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 textarea {
   overflow: auto;
 }
 
+/* line 200, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 optgroup {
   font-weight: bold;
 }
 
+/* line 204, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+/* line 209, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/_normalize.scss */
 td,
 th {
   padding: 0;
@@ -240,6 +279,7 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_typography.scss */
 body,
 button,
 input,
@@ -253,10 +293,12 @@ textarea {
   line-height: initial;
 }
 
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
+/* line 5, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
 h1 {
   font-size: 30px;
   font-weight: 400;
@@ -267,18 +309,21 @@ h1 {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 5, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
   h1 {
     font-size: 26px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 5, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
   h1 {
     font-size: 22px;
     line-height: 26px;
   }
 }
 
+/* line 21, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
 h2 {
   color: rgba(0, 0, 0, 0.43);
   font-size: 28px;
@@ -290,12 +335,14 @@ h2 {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 21, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
   h2 {
     font-size: 24px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 21, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
   h2 {
     color: rgba(0, 0, 0, 0.6);
     font-size: 20px;
@@ -303,6 +350,7 @@ h2 {
   }
 }
 
+/* line 39, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
 .main h2 {
   color: #fff;
   font-size: 32px;
@@ -311,23 +359,27 @@ h2 {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 39, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
   .main h2 {
     font-size: 28px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 39, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
   .main h2 {
     font-size: 22px;
   }
 }
 
+/* line 54, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_headings.scss */
 h3 {
   -webkit-transition: font-size 0.3s ease-in-out;
   -o-transition: font-size 0.3s ease-in-out;
   transition: font-size 0.3s ease-in-out;
 }
 
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 p {
   color: rgba(0, 0, 0, 0.43);
   font-weight: 400;
@@ -337,11 +389,13 @@ p {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
   p {
     color: rgba(0, 0, 0, 0.66);
   }
 }
 
+/* line 12, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 .main p {
   color: rgba(255, 255, 255, 0.85);
   font-size: 22px;
@@ -352,6 +406,7 @@ p {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 12, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
   .main p {
     font-size: 21px;
     line-height: 36px;
@@ -359,6 +414,7 @@ p {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 12, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
   .main p {
     font-size: 17px;
     font-weight: 400 !important;
@@ -367,24 +423,29 @@ p {
   }
 }
 
+/* line 33, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 .main .president p,
 .main .insight p,
 .main .gain-more p {
   text-shadow: none;
 }
 
+/* line 40, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
+/* line 44, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 blockquote {
   margin: 0 1.5em;
 }
 
+/* line 48, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 address {
   margin: 0 0 1.5em;
 }
 
+/* line 52, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 pre {
   background: #eee;
   font-family: "Courier 10 Pitch", Courier, monospace;
@@ -397,22 +458,26 @@ pre {
   padding: 1.6em;
 }
 
+/* line 63, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
+/* line 68, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
+/* line 73, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 mark, ins {
   background: #fff9c0;
   text-decoration: none;
 }
 
+/* line 78, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_copy.scss */
 sup {
   font-size: 65%;
   padding: 2px;
@@ -422,11 +487,13 @@ sup {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_elements.scss */
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* line 6, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_elements.scss */
 *,
 *:before,
 *:after {
@@ -435,22 +502,26 @@ html {
   box-sizing: inherit;
 }
 
+/* line 13, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_elements.scss */
 body {
   background: #fff;
   /* Fallback for when there is no custom background color defined. */
 }
 
+/* line 17, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_elements.scss */
 blockquote,
 q {
   quotes: '' '';
 }
 
+/* line 21, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_elements.scss */
 blockquote:before, blockquote:after,
 q:before,
 q:after {
   content: '';
 }
 
+/* line 27, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_elements.scss */
 hr {
   background-color: #ccc;
   border: 0;
@@ -458,32 +529,39 @@ hr {
   margin-bottom: 1.5em;
 }
 
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_lists.scss */
 ul, ol {
   margin: 0 0 1.5em 3em;
 }
 
+/* line 5, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_lists.scss */
 ul {
   list-style: disc;
 }
 
+/* line 9, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_lists.scss */
 ol {
   list-style: decimal;
 }
 
+/* line 13, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_lists.scss */
 li > ul,
 li > ol {
   margin-bottom: 0;
   margin-left: 1.5em;
 }
 
+/* line 19, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_lists.scss */
 dt {
   font-weight: bold;
 }
 
+/* line 23, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_lists.scss */
 dd {
   margin: 0 1.5em 1.5em;
 }
 
+/* line 36, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_elements.scss */
 img {
   height: auto;
   /* Make sure images are scaled correctly.*/
@@ -491,17 +569,20 @@ img {
   /* Adhere to container width.*/
 }
 
+/* line 41, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_elements.scss */
 figure {
   margin: 1em 0;
   /* Extra wide images within figure tags don't overflow the content area.*/
 }
 
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_tables.scss */
 table {
   margin: 0 0 1.5em;
   width: 100%;
 }
 
 /* Make sure embeds and iframes fit their containers.*/
+/* line 2, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 embed,
 iframe,
 object {
@@ -511,6 +592,7 @@ object {
   max-width: 100%;
 }
 
+/* line 10, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 .page-overlay {
   display: none;
   height: 100vh;
@@ -521,6 +603,7 @@ object {
   z-index: 201;
 }
 
+/* line 20, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 .white-page-overlay {
   background-color: #fff;
   display: none;
@@ -533,15 +616,18 @@ object {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 20, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
   .white-page-overlay {
     opacity: .97;
   }
 }
 
+/* line 35, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 .no-scroll {
   overflow: hidden;
 }
 
+/* line 39, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 iframe {
   -webkit-transition: none;
   -o-transition: none;
@@ -550,6 +636,7 @@ iframe {
 }
 
 /* Video popup controls for Landing Page video*/
+/* line 45, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 .image-container {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -574,6 +661,7 @@ iframe {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 45, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
   .image-container {
     height: auto;
     -webkit-box-pack: start;
@@ -584,6 +672,7 @@ iframe {
   }
 }
 
+/* line 74, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 .image-container.visible-video {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -593,17 +682,20 @@ iframe {
 }
 
 @media screen and (max-width: 800px) {
+  /* line 74, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
   .image-container.visible-video {
     left: 14px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 74, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
   .image-container.visible-video {
     left: 0;
   }
 }
 
+/* line 87, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 .image-container .home-close {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -617,17 +709,20 @@ iframe {
 }
 
 @media screen and (max-width: 800px) {
+  /* line 87, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
   .image-container .home-close {
     margin-left: 14px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 87, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
   .image-container .home-close {
     display: none;
   }
 }
 
+/* line 104, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 .image-container .home-close:hover {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -635,11 +730,13 @@ iframe {
   opacity: 1;
 }
 
+/* line 110, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
 .image-container .close-arrow {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 110, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_media.scss */
   .image-container .close-arrow {
     display: inline-block;
     border: solid rgba(0, 0, 0, 0.55);
@@ -657,6 +754,7 @@ iframe {
 }
 
 /*Story Pages*/
+/* line 2, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .story-content {
   -webkit-transition: margin 0.3s ease-in-out;
   -o-transition: margin 0.3s ease-in-out;
@@ -669,6 +767,7 @@ iframe {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 2, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .story-content {
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
@@ -676,6 +775,7 @@ iframe {
   }
 }
 
+/* line 17, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 {
   width: 50%;
   display: -webkit-box;
@@ -690,6 +790,7 @@ iframe {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 17, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 {
     margin-bottom: 6px;
     margin-top: 6px;
@@ -698,16 +799,19 @@ iframe {
   }
 }
 
+/* line 36, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 img {
   height: 100%;
   width: 50vw;
 }
 
+/* line 42, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture img, .left-50 .chart img {
   height: 100%;
   width: 50vw;
 }
 
+/* line 47, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:before, .left-50 .chart:before {
   -webkit-transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
@@ -721,12 +825,14 @@ iframe {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 47, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 .picture:before, .left-50 .chart:before {
     left: 91%;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 47, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 .picture:before, .left-50 .chart:before {
     left: 89vw;
     opacity: .65;
@@ -734,21 +840,25 @@ iframe {
   }
 }
 
+/* line 67, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture.white:before, .left-50 .chart.white:before {
   content: url("/img/zoom-white.svg");
   opacity: .55;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 67, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 .picture.white:before, .left-50 .chart.white:before {
     opacity: .8;
   }
 }
 
+/* line 76, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:hover, .left-50 .chart:hover {
   cursor: pointer;
 }
 
+/* line 79, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .picture:hover:before, .left-50 .chart:hover:before {
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
@@ -756,6 +866,7 @@ iframe {
   opacity: 1;
 }
 
+/* line 86, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .video {
   -webkit-transition: height 0.3s ease-in-out;
   -o-transition: height 0.3s ease-in-out;
@@ -781,11 +892,13 @@ iframe {
   width: 50vw;
 }
 
+/* line 108, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .video.aging {
   background-image: url("/img/aging-3.jpg");
 }
 
 @media screen and (max-width: 767px) {
+  /* line 108, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 .video.aging {
     height: 60vw;
     width: 100vw;
@@ -793,11 +906,13 @@ iframe {
 }
 
 @media screen and (max-width: 1000px) {
+  /* line 86, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 .video {
     height: 30vw;
   }
 }
 
+/* line 125, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .video img {
   -webkit-transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
@@ -807,33 +922,39 @@ iframe {
 }
 
 @media screen and (min-width: 1441px) {
+  /* line 125, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 200px;
   }
 }
 
 @media screen and (max-width: 1100px) {
+  /* line 125, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 160px;
   }
 }
 
 @media screen and (max-width: 900px) {
+  /* line 125, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     height: 140px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 125, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .left-50 .video img {
     opacity: .8;
   }
 }
 
+/* line 147, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover {
   cursor: pointer;
 }
 
+/* line 150, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .left-50 .video:hover img {
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
@@ -841,6 +962,7 @@ iframe {
   opacity: .95;
 }
 
+/* line 158, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
 .right-50 {
   -webkit-transition: padding 0.3s ease-in-out;
   -o-transition: padding 0.3s ease-in-out;
@@ -852,12 +974,14 @@ iframe {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 158, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .right-50 {
     padding: 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 158, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_columns.scss */
   .right-50 {
     padding: 0 20px 20px;
     position: relative;
@@ -866,10 +990,12 @@ iframe {
 }
 
 /*Global Chart Styles*/
+/* line 2, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 .video-container.chart-scroll {
   overflow: scroll;
 }
 
+/* line 6, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 .heading-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -881,6 +1007,7 @@ iframe {
   justify-content: space-between;
 }
 
+/* line 16, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 .heading-box .chart-title {
   color: #fff;
   font-size: 22px;
@@ -890,6 +1017,7 @@ iframe {
   width: 48%;
 }
 
+/* line 25, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 .heading-box .chart-body {
   color: #303030;
   font-size: 16px;
@@ -899,20 +1027,24 @@ iframe {
 }
 
 /* Bubble Chart */
+/* line 35, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 #bubbleContainer {
   background-color: #6e6e6e;
   padding: 30px;
 }
 
+/* line 39, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 #bubbleContainer #bubbleChart {
   margin-top: -160px;
   text-align: center;
 }
 
+/* line 44, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 #bubbleContainer input[type="radio"] {
   display: none;
 }
 
+/* line 48, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 #bubbleContainer .btn-group {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -933,6 +1065,7 @@ iframe {
   width: 100%;
 }
 
+/* line 67, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 #bubbleContainer .btn-group .btn {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -948,6 +1081,7 @@ iframe {
   text-align: center;
 }
 
+/* line 79, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 #bubbleContainer .btn-group .btn.active {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -955,10 +1089,12 @@ iframe {
   background-color: rgba(255, 255, 255, 0.65) !important;
 }
 
+/* line 84, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 #bubbleContainer .btn-group .btn:hover {
   background-color: rgba(255, 255, 255, 0.35);
 }
 
+/* line 91, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 circle {
   fill: red;
   opacity: .85;
@@ -966,24 +1102,29 @@ circle {
   stroke: #303030;
 }
 
+/* line 98, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 .label {
   fill: white;
   font-size: 25px;
   font-weight: 300;
 }
 
+/* line 104, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 .Dem {
   fill: #0157ae;
 }
 
+/* line 108, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 .Rep {
   fill: #d42729;
 }
 
+/* line 112, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_charts.scss */
 .Ind {
   fill: #fff;
 }
 
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 {
   /* No Js */
   /* Owl Carousel - Animate Plugin*/
@@ -993,6 +1134,7 @@ circle {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
   .left-50 {
     display: none;
     -webkit-tap-highlight-color: transparent;
@@ -1003,12 +1145,14 @@ circle {
   }
 }
 
+/* line 12, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-stage {
   -ms-touch-action: pan-Y;
   -moz-backface-visibility: hidden;
   position: relative;
 }
 
+/* line 17, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-stage:after {
   clear: both;
   content: ".";
@@ -1018,6 +1162,7 @@ circle {
   visibility: hidden;
 }
 
+/* line 27, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-stage-outer {
   overflow: hidden;
   position: relative;
@@ -1025,6 +1170,7 @@ circle {
   transform: translate3d(0, 0, 0);
 }
 
+/* line 34, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-wrapper,
 .left-50 .owl-item {
   -webkit-backface-visibility: hidden;
@@ -1034,6 +1180,7 @@ circle {
   transform: translate3d(0, 0, 0);
 }
 
+/* line 43, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-item {
   float: left;
   min-height: 1px;
@@ -1043,19 +1190,23 @@ circle {
   -webkit-touch-callout: none;
 }
 
+/* line 51, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-item img {
   display: block;
   width: 100%;
 }
 
+/* line 57, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-nav.disabled {
   display: none;
 }
 
+/* line 61, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-dots.disabled .owl-dot.active span {
   background: transparent;
 }
 
+/* line 65, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-nav .owl-prev,
 .left-50 .owl-nav .owl-next,
 .left-50 .owl-dot {
@@ -1067,23 +1218,28 @@ circle {
   user-select: none;
 }
 
+/* line 76, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-loaded {
   display: block;
 }
 
+/* line 80, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-loading {
   display: block;
   opacity: 0;
 }
 
+/* line 85, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-hidden {
   opacity: 0;
 }
 
+/* line 89, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-refresh .owl-item {
   visibility: hidden;
 }
 
+/* line 93, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-drag .owl-item {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1091,24 +1247,29 @@ circle {
   user-select: none;
 }
 
+/* line 100, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-grab {
   cursor: move;
   cursor: -webkit-grab;
   cursor: grab;
 }
 
+/* line 106, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-rtl {
   direction: rtl;
 }
 
+/* line 109, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50.owl-rtl .owl-item {
   float: right;
 }
 
+/* line 115, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .no-js .left-50 {
   display: block;
 }
 
+/* line 120, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -1116,14 +1277,17 @@ circle {
   animation-fill-mode: both;
 }
 
+/* line 127, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-animated-in {
   z-index: 0;
 }
 
+/* line 131, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-animated-out {
   z-index: 1;
 }
 
+/* line 135, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -1147,6 +1311,7 @@ circle {
   }
 }
 
+/* line 163, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-item .owl-lazy {
   -webkit-transition: pacity 0.4s ease-in-out;
   -o-transition: pacity 0.4s ease-in-out;
@@ -1154,17 +1319,20 @@ circle {
   opacity: 0;
 }
 
+/* line 168, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-item img.owl-lazy {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
+/* line 175, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-wrapper {
   background: #000;
   height: 100%;
   position: relative;
 }
 
+/* line 181, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-play-icon {
   -webkit-transition: transform 0.1s ease-in-out;
   -o-transition: transform 0.1s ease-in-out;
@@ -1182,17 +1350,20 @@ circle {
   z-index: 1;
 }
 
+/* line 196, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-play-icon:hover {
   -webkit-transform: scale(1.3, 1.3);
   -ms-transform: scale(1.3, 1.3);
   transform: scale(1.3, 1.3);
 }
 
+/* line 202, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-playing .owl-video-tn,
 .left-50 .owl-video-playing .owl-video-play-icon {
   display: none;
 }
 
+/* line 207, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-tn {
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
@@ -1205,6 +1376,7 @@ circle {
   opacity: 0;
 }
 
+/* line 217, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-video-frame {
   height: 100%;
   position: relative;
@@ -1212,21 +1384,25 @@ circle {
   z-index: 1;
 }
 
+/* line 226, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-nav.disabled + .owl-dots {
   margin-top: 5px;
 }
 
+/* line 229, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-dots {
   text-align: center;
   -webkit-tap-highlight-color: transparent;
 }
 
+/* line 233, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-dots .owl-dot {
   *display: inline;
   display: inline-block;
   zoom: 1;
 }
 
+/* line 238, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .left-50 .owl-dots .owl-dot span {
   -webkit-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
@@ -1241,32 +1417,38 @@ circle {
   width: 9px;
 }
 
+/* line 256, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .story-page_health .owl-dot.active span,
 .story-page_health .owl-dot:hover span {
   background: #5a7f94;
 }
 
+/* line 263, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .story-page_education .owl-dot.active span,
 .story-page_education .owl-dot:hover span {
   background: #9e525d;
 }
 
+/* line 270, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .story-page_society .owl-dot.active span,
 .story-page_society .owl-dot:hover span {
   background: #F27E71;
 }
 
+/* line 277, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .story-page_economics .owl-dot.active span,
 .story-page_economics .owl-dot:hover span {
   background: #6fa387;
 }
 
+/* line 284, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .story-page_global .owl-dot.active span,
 .story-page_global .owl-dot:hover span {
   background: #613064;
 }
 
 /* Owl Carousel - Auto Height Plugin*/
+/* line 292, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/elements/_carousel.scss */
 .owl-height {
   -webkit-transition: height 0.5s ease-in-out;
   -o-transition: height 0.5s ease-in-out;
@@ -1276,6 +1458,7 @@ circle {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/forms/_buttons.scss */
 button,
 input[type="button"],
 input[type="reset"],
@@ -1292,6 +1475,7 @@ input[type="submit"] {
   padding: .6em 1em .4em;
 }
 
+/* line 15, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/forms/_buttons.scss */
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
@@ -1299,6 +1483,7 @@ input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
 }
 
+/* line 19, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/forms/_buttons.scss */
 button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
@@ -1309,6 +1494,7 @@ input[type="submit"]:focus {
   border-color: #aaa #bbb #bbb;
 }
 
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/forms/_fields.scss */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -1332,6 +1518,7 @@ textarea {
   padding: 3px;
 }
 
+/* line 23, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/forms/_fields.scss */
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
@@ -1351,10 +1538,12 @@ textarea:focus {
   color: #111;
 }
 
+/* line 28, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/forms/_fields.scss */
 select {
   border: 1px solid #ccc;
 }
 
+/* line 32, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/forms/_fields.scss */
 textarea {
   width: 100%;
 }
@@ -1365,11 +1554,13 @@ textarea {
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_links.scss */
 a {
   outline: 0;
   text-decoration: none;
 }
 
+/* line 5, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_links.scss */
 a:hover, a:focus, a:active, a:visited {
   outline: 0;
   text-decoration: none;
@@ -1378,6 +1569,7 @@ a:hover, a:focus, a:active, a:visited {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container {
   -webkit-transition: right 0.25s ease-in-out;
   -o-transition: right 0.25s ease-in-out;
@@ -1395,17 +1587,20 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container {
     width: 60vw;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container {
     width: 100vw;
   }
 }
 
+/* line 22, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container.moved {
   -webkit-transition: right 0.35s ease-in-out;
   -o-transition: right 0.35s ease-in-out;
@@ -1413,6 +1608,7 @@ a:hover, a:focus, a:active, a:visited {
   right: 0 !important;
 }
 
+/* line 27, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1426,17 +1622,20 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 27, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul {
     margin: 135px 30px 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 27, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul {
     margin: 125px 20px 20px;
   }
 }
 
+/* line 46, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li {
   font-size: 21px;
   line-height: 52px;
@@ -1445,6 +1644,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 46, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li {
     font-size: 18px;
     line-height: 42px;
@@ -1452,17 +1652,20 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 46, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li {
     font-size: 16px;
     line-height: 20px;
     margin: 10px 0;
   }
+  /* line 62, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li.arrow {
     margin: 4px 0;
     line-height: 30px;
   }
 }
 
+/* line 68, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li.menu-title {
   font-size: 16px;
   letter-spacing: 2.5px;
@@ -1472,6 +1675,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 68, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li.menu-title {
     font-size: 15px;
     line-height: 15px;
@@ -1479,6 +1683,7 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
+/* line 82, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li a {
   -webkit-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
@@ -1486,6 +1691,7 @@ a:hover, a:focus, a:active, a:visited {
   color: rgba(0, 0, 0, 0.43);
 }
 
+/* line 86, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li a:hover {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
@@ -1493,21 +1699,25 @@ a:hover, a:focus, a:active, a:visited {
   color: #e97200;
 }
 
+/* line 92, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li a.active {
   color: #e97200;
 }
 
+/* line 97, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li.divider hr {
   background-color: rgba(0, 0, 0, 0.12);
   margin: 12px 0;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 97, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li.divider hr {
     margin: 4px 0 6px;
   }
 }
 
+/* line 106, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li img {
   -webkit-transition: transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out;
@@ -1518,6 +1728,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 106, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li img {
     height: 13px;
     margin-left: 14px;
@@ -1526,6 +1737,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 106, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li img {
     float: right;
     height: 32px;
@@ -1538,6 +1750,7 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
+/* line 129, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li img.open {
   -webkit-transform: rotate(-180deg) translateY(6px);
   -ms-transform: rotate(-180deg) translateY(6px);
@@ -1545,6 +1758,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 129, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li img.open {
     float: right;
     height: 32px;
@@ -1557,6 +1771,7 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
+/* line 147, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul {
   background-color: rgba(0, 0, 0, 0.03);
   display: none;
@@ -1565,6 +1780,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 147, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul {
     margin: 1px -30px;
     padding: 20px 0 20px 50px;
@@ -1572,16 +1788,19 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 147, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul {
     margin: 10px -20px 0;
     padding: 20px 0 20px 30px;
   }
 }
 
+/* line 163, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul.last-one {
   margin-bottom: 17px;
 }
 
+/* line 167, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul li {
   font-size: 19px;
   line-height: 23px;
@@ -1590,6 +1809,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 167, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul li {
     font-size: 16px;
     line-height: 20px;
@@ -1597,21 +1817,25 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
+/* line 179, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul li:first-of-type {
   margin-top: 10px;
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 179, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul li:first-of-type {
     margin-top: 7px;
   }
 }
 
+/* line 187, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
 .menu-container ul li ul li:last-of-type {
   margin-bottom: 11px;
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 187, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_menus.scss */
   .menu-container ul li ul li:last-of-type {
     margin-bottom: 7px;
   }
@@ -1621,6 +1845,7 @@ a:hover, a:focus, a:active, a:visited {
 ## Header
 --------------------------------------------------------------*/
 /* NORC logo*/
+/* line 2, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
 .header-logo {
   left: 30px;
   position: fixed;
@@ -1630,6 +1855,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 2, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .header-logo {
     left: 20px;
     position: fixed;
@@ -1638,18 +1864,21 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
+/* line 20, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
 .story-page .header-logo,
 .main .header-logo {
   width: 164px;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 20, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .story-page .header-logo,
   .main .header-logo {
     width: 120px;
   }
 }
 
+/* line 29, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
 .menu-button {
   -webkit-transition: transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out;
@@ -1662,6 +1891,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 29, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .menu-button {
     height: 38px;
     right: 10px;
@@ -1671,12 +1901,14 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
+/* line 45, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
 .menu-button.menu-open {
   -webkit-transform: rotateZ(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotateZ(-180deg);
 }
 
+/* line 52, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
 .share-button {
   position: fixed;
   right: 83px;
@@ -1685,10 +1917,12 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 52, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .share-button {
     right: 59px;
     top: 10px;
   }
+  /* line 62, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .share-button img {
     height: 38px;
     padding: 10px;
@@ -1696,7 +1930,8 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
-.header-background {
+/* line 70, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
+.story-page .header-background {
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
@@ -1709,23 +1944,27 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
-  .header-background {
+  /* line 70, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
+  .story-page .header-background {
     height: 58px;
   }
 }
 
-.header-background.scrolled {
+/* line 83, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
+.story-page .header-background.scrolled {
   background-color: #000;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 88, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .main .header-background {
     background-color: #000;
-    height: 94px;
+    height: 92px;
   }
 }
 
 /* Sub Navigation for Story Pages*/
+/* line 97, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
 .sub-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1737,19 +1976,23 @@ a:hover, a:focus, a:active, a:visited {
   z-index: 12;
 }
 
+/* line 107, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
 .sub-nav.mobile {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 112, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.desktop {
     display: none !important;
   }
+  /* line 116, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile {
     display: block;
     padding: 0;
     top: 82px;
   }
+  /* line 121, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile.open-menu {
     -webkit-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
@@ -1757,9 +2000,11 @@ a:hover, a:focus, a:active, a:visited {
     -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
   }
+  /* line 127, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile .menu-items {
     display: none;
   }
+  /* line 130, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile .menu-items .menu-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1770,11 +2015,13 @@ a:hover, a:focus, a:active, a:visited {
     flex-wrap: wrap;
     padding: 18px 0 0;
   }
+  /* line 142, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile .load-more {
     margin: 10px 0 0;
     text-align: center;
     width: 100vw;
   }
+  /* line 147, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile .load-more-text {
     -webkit-transition: opacity 0.4s ease-in-out;
     -o-transition: opacity 0.4s ease-in-out;
@@ -1787,6 +2034,7 @@ a:hover, a:focus, a:active, a:visited {
     opacity: 1;
     text-transform: uppercase;
   }
+  /* line 158, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile .load-more .arrow {
     -webkit-transition: transform 0.2s ease-in-out;
     -o-transition: transform 0.2s ease-in-out;
@@ -1799,15 +2047,18 @@ a:hover, a:focus, a:active, a:visited {
     transform: scaleX(2);
     width: 22px;
   }
+  /* line 169, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile .load-more.open-menu {
     margin: 15px 0 0;
   }
+  /* line 172, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile .load-more.open-menu .load-more-text {
     -webkit-transition: opacity 0.2s ease-in-out;
     -o-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
   }
+  /* line 177, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav.mobile .load-more.open-menu .arrow {
     -webkit-transition: transform 0.3s ease-in-out;
     -o-transition: transform 0.3s ease-in-out;
@@ -1818,6 +2069,7 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
+/* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
 .sub-nav .story-item {
   color: rgba(0, 0, 0, 0.3);
   font-size: 14px;
@@ -1831,6 +2083,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav .story-item {
     font-size: 13px;
     padding: 10px;
@@ -1838,6 +2091,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 860px) {
+  /* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav .story-item {
     font-size: 12px;
     padding: 10px 6px;
@@ -1845,6 +2099,7 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
   .sub-nav .story-item {
     color: rgba(0, 0, 0, 0.6);
     font-size: 15px;
@@ -1855,6 +2110,7 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
+/* line 216, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_header.scss */
 .sub-nav .story-item:hover {
   -webkit-transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
   -o-transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
@@ -1865,6 +2121,7 @@ a:hover, a:focus, a:active, a:visited {
 ## Breadcrumb Header
 --------------------------------------------------------------*/
 /* Styles for Dot Navigation*/
+/* line 3, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .dot-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1884,11 +2141,13 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 3, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .dot-nav {
     z-index: 2;
   }
 }
 
+/* line 24, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .dot-nav svg {
   height: 16px;
   margin: 25px 0 0;
@@ -1896,6 +2155,7 @@ a:hover, a:focus, a:active, a:visited {
   width: 22px;
 }
 
+/* line 31, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .dot-nav .section-title {
   display: none;
   font-size: 19px;
@@ -1905,11 +2165,13 @@ a:hover, a:focus, a:active, a:visited {
   width: 100vw;
 }
 
+/* line 39, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .dot-nav .section-title.current {
   display: block;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 39, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .dot-nav .section-title.current {
     font-size: 15px;
     margin: 58px 0 5px;
@@ -1917,16 +2179,19 @@ a:hover, a:focus, a:active, a:visited {
   }
 }
 
+/* line 51, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot {
   cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 51, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .nav-dot {
     display: none !important;
   }
 }
 
+/* line 58, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot .inner {
   -webkit-transition: fill 0.2s ease-in-out;
   -o-transition: fill 0.2s ease-in-out;
@@ -1934,6 +2199,7 @@ a:hover, a:focus, a:active, a:visited {
   fill: transparent;
 }
 
+/* line 63, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot .outer {
   -webkit-transition: fill 0.2s ease-in-out;
   -o-transition: fill 0.2s ease-in-out;
@@ -1942,22 +2208,26 @@ a:hover, a:focus, a:active, a:visited {
   stroke-miterlimit: 10;
 }
 
+/* line 71, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot:hover .inner {
   -webkit-transition: fill 0.3s ease-in-out;
   -o-transition: fill 0.3s ease-in-out;
   transition: fill 0.3s ease-in-out;
 }
 
+/* line 75, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot:hover .outer {
   -webkit-transition: fill 0.3s ease-in-out;
   -o-transition: fill 0.3s ease-in-out;
   transition: fill 0.3s ease-in-out;
 }
 
+/* line 82, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .nav-dot.active .outer {
   fill: transparent;
 }
 
+/* line 90, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .main .section-title {
   -webkit-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
@@ -1965,31 +2235,38 @@ a:hover, a:focus, a:active, a:visited {
   color: rgba(255, 255, 255, 0.85);
 }
 
+/* line 97, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .main .nav-dot .outer {
   stroke: rgba(255, 255, 255, 0.7);
 }
 
+/* line 103, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .main .nav-dot:hover .inner {
   fill: rgba(255, 255, 255, 0.85);
 }
 
+/* line 107, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .main .nav-dot:hover .outer {
   fill: rgba(255, 255, 255, 0.35);
 }
 
+/* line 114, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .main .nav-dot.active .inner {
   fill: #fff;
 }
 
+/* line 118, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .main .nav-dot.active .outer {
   stroke: #fff;
 }
 
+/* line 121, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .main .nav-dot.active .outer:hover {
   fill: transparent;
 }
 
 /* Nav Dots on Story Pages*/
+/* line 129, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page {
   /* Economics*/
   /* Education*/
@@ -1998,99 +2275,124 @@ a:hover, a:focus, a:active, a:visited {
   /* Society*/
 }
 
+/* line 132, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot .outer {
   stroke: #989a9d;
 }
 
+/* line 138, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot:hover .inner {
   fill: #989a9d;
 }
 
+/* line 142, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot:hover .outer {
   fill: rgba(0, 0, 0, 0.075);
 }
 
+/* line 147, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot.active .outer {
   stroke: #989a9d;
 }
 
+/* line 150, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot.active .outer:hover {
   fill: transparent;
 }
 
+/* line 157, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot.economics-dot.active .inner {
   fill: #6fa387;
 }
 
+/* line 161, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page.story-page_economics .dot-nav h3 a {
   color: #6fa387;
 }
 
+/* line 166, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot.education-dot.active .inner {
   fill: #9e525d;
 }
 
+/* line 170, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page.story-page_education .dot-nav h3 a {
   color: #9e525d;
 }
 
+/* line 175, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot.global-dot.active .inner {
   fill: #613064;
 }
 
+/* line 179, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page.story-page_global .dot-nav h3 a {
   color: #613064;
 }
 
+/* line 184, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot.health-dot.active .inner {
   fill: #5a7f94;
 }
 
+/* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page.story-page_health .dot-nav h3 a {
   color: #5a7f94;
 }
 
+/* line 193, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page .nav-dot.society-dot.active .inner {
   fill: #F27E71;
 }
 
+/* line 197, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
 .story-page.story-page_society .dot-nav h3 a {
   color: #F27E71;
 }
 
 @media screen and (max-width: 767px) {
   /* Economics*/
+  /* line 205, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_economics .dot-nav .section-title.current {
     background-color: #dde6df;
   }
+  /* line 208, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_economics .dot-nav .section-title.current a {
     color: rgba(0, 0, 0, 0.6);
   }
   /* Education*/
+  /* line 214, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_education .dot-nav .section-title.current {
     background-color: #EFE3E4;
   }
+  /* line 217, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_education .dot-nav .section-title.current a {
     color: rgba(0, 0, 0, 0.6);
   }
   /* Global*/
+  /* line 223, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_global .dot-nav .section-title.current {
     background-color: #e1dae1;
   }
+  /* line 226, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_global .dot-nav .section-title.current a {
     color: rgba(0, 0, 0, 0.6);
   }
   /* Health*/
+  /* line 232, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_health .dot-nav .section-title.current {
     background-color: #dde7eb;
   }
+  /* line 235, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_health .dot-nav .section-title.current a {
     color: rgba(0, 0, 0, 0.6);
   }
   /* Society*/
+  /* line 241, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_society .dot-nav .section-title.current {
     background-color: #e8edf0;
   }
+  /* line 244, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_dot-navigation.scss */
   .story-page_society .dot-nav .section-title.current a {
     color: rgba(0, 0, 0, 0.6);
   }
@@ -2099,6 +2401,7 @@ a:hover, a:focus, a:active, a:visited {
 /*--------------------------------------------------------------
 ## FullPage.js 
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 html.fp-enabled,
 .fp-enabled body {
   margin: 0;
@@ -2108,6 +2411,7 @@ html.fp-enabled,
   -webkit-tap-highlight-color: transparent;
 }
 
+/* line 10, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-section {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -2116,15 +2420,18 @@ html.fp-enabled,
   box-sizing: border-box;
 }
 
+/* line 16, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slide {
   float: left;
 }
 
+/* line 20, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slide, .fp-slidesContainer {
   display: block;
   height: 100%;
 }
 
+/* line 25, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slides {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -2135,6 +2442,7 @@ html.fp-enabled,
   z-index: 1;
 }
 
+/* line 33, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-section.fp-table,
 .fp-slide.fp-table {
   display: table;
@@ -2142,6 +2450,7 @@ html.fp-enabled,
   width: 100%;
 }
 
+/* line 40, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-tableCell {
   display: table-cell;
   vertical-align: middle;
@@ -2149,11 +2458,13 @@ html.fp-enabled,
   height: 100%;
 }
 
+/* line 47, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesContainer {
   float: left;
   position: relative;
 }
 
+/* line 52, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-controlArrow {
   -webkit-user-select: none;
   /* webkit (safari, chrome) browsers */
@@ -2176,6 +2487,7 @@ html.fp-enabled,
   transform: translate3d(0, 0, 0);
 }
 
+/* line 70, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-controlArrow {
   -webkit-transition: border 0.2s ease-in-out;
   -o-transition: border 0.2s ease-in-out;
@@ -2185,6 +2497,7 @@ html.fp-enabled,
   padding: 14px;
 }
 
+/* line 76, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-controlArrow:hover {
   -webkit-transition: border 0.3s ease-in-out;
   -o-transition: border 0.3s ease-in-out;
@@ -2192,6 +2505,7 @@ html.fp-enabled,
   border-color: rgba(255, 255, 255, 0.85);
 }
 
+/* line 81, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-controlArrow.fp-prev {
   left: 37px;
   -webkit-transform: rotate(135deg) skew(-2deg, -2deg);
@@ -2200,14 +2514,17 @@ html.fp-enabled,
 }
 
 @media screen and (max-width: 767px) {
+  /* line 81, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
   .fp-controlArrow.fp-prev {
     border: solid rgba(255, 255, 255, 0.85);
     border-width: 0 1px 1px 0;
+    left: 22px;
     padding: 6px;
-    top: 104px;
+    top: 12px;
   }
 }
 
+/* line 96, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-controlArrow.fp-next {
   right: 37px;
   -webkit-transform: rotate(-45deg) skew(-2deg, -2deg);
@@ -2216,33 +2533,40 @@ html.fp-enabled,
 }
 
 @media screen and (max-width: 767px) {
+  /* line 96, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
   .fp-controlArrow.fp-next {
     border: solid rgba(255, 255, 255, 0.85);
     border-width: 0 1px 1px 0;
     padding: 6px;
-    top: 104px;
+    right: 22px;
+    top: 12px;
   }
 }
 
+/* line 112, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-scrollable {
   overflow: hidden;
   position: relative;
 }
 
+/* line 117, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-scroller {
   overflow: hidden;
 }
 
+/* line 121, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .iScrollIndicator {
   border: 0 !important;
 }
 
+/* line 125, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-notransition {
   -webkit-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
 }
 
+/* line 131, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav {
   -webkit-transform: translate3d(0, 0, 0);
   margin-top: -32px;
@@ -2252,14 +2576,17 @@ html.fp-enabled,
   z-index: 100;
 }
 
+/* line 140, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav.right {
   right: 17px;
 }
 
+/* line 144, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav.left {
   left: 17px;
 }
 
+/* line 148, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav {
   margin: 0 auto !important;
   opacity: 1;
@@ -2270,12 +2597,14 @@ html.fp-enabled,
   z-index: 4;
 }
 
+/* line 158, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav.bottom {
   bottom: 17px;
   text-align: center;
   width: 100vw;
 }
 
+/* line 164, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav.top {
   text-align: center;
   top: 17px;
@@ -2283,17 +2612,20 @@ html.fp-enabled,
 }
 
 @media screen and (max-width: 767px) {
+  /* line 164, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
   .fp-slidesNav.top {
     display: none;
   }
 }
 
+/* line 174, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul,
 .fp-slidesNav ul {
   margin: 0;
   padding: 0;
 }
 
+/* line 180, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li,
 .fp-slidesNav ul li {
   display: block;
@@ -2303,10 +2635,12 @@ html.fp-enabled,
   width: 14px;
 }
 
+/* line 189, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-slidesNav ul li {
   display: inline-block;
 }
 
+/* line 193, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a,
 .fp-slidesNav ul li a {
   cursor: pointer;
@@ -2318,6 +2652,7 @@ html.fp-enabled,
   z-index: 1;
 }
 
+/* line 204, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a.active span,
 .fp-slidesNav ul li a.active span,
 #fp-nav ul li:hover a.active span,
@@ -2325,6 +2660,7 @@ html.fp-enabled,
   background: rgba(255, 255, 255, 0.35);
 }
 
+/* line 210, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a.active span:after,
 .fp-slidesNav ul li a.active span:after,
 #fp-nav ul li:hover a.active span:after,
@@ -2346,6 +2682,7 @@ html.fp-enabled,
 }
 
 @supports (-ms-accelerator: true) {
+  /* line 210, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
   #fp-nav ul li a.active span:after,
   .fp-slidesNav ul li a.active span:after,
   #fp-nav ul li:hover a.active span:after,
@@ -2355,6 +2692,7 @@ html.fp-enabled,
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 210, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
   #fp-nav ul li a.active span:after,
   .fp-slidesNav ul li a.active span:after,
   #fp-nav ul li:hover a.active span:after,
@@ -2363,6 +2701,7 @@ html.fp-enabled,
   }
 }
 
+/* line 233, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
   -webkit-transition: all 0.1s ease-in-out;
@@ -2381,11 +2720,13 @@ html.fp-enabled,
   z-index: 1;
 }
 
+/* line 249, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li:hover a span,
 .fp-slidesNav ul li:hover a span {
   background: rgba(255, 255, 255, 0.35);
 }
 
+/* line 252, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li:hover a span:after,
 .fp-slidesNav ul li:hover a span:after {
   -webkit-transition: all 0.1s ease-in-out;
@@ -2405,6 +2746,7 @@ html.fp-enabled,
 }
 
 @supports (-ms-accelerator: true) {
+  /* line 252, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
   #fp-nav ul li:hover a span:after,
   .fp-slidesNav ul li:hover a span:after {
     margin-left: 5px;
@@ -2412,12 +2754,14 @@ html.fp-enabled,
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 252, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
   #fp-nav ul li:hover a span:after,
   .fp-slidesNav ul li:hover a span:after {
     margin-left: 5px;
   }
 }
 
+/* line 275, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip {
   color: #fff;
   cursor: pointer;
@@ -2433,6 +2777,7 @@ html.fp-enabled,
   width: 0;
 }
 
+/* line 290, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li:hover .fp-tooltip,
 #fp-nav.fp-show-active a.active + .fp-tooltip {
   -webkit-transition: opacity 0.2s ease-in-out;
@@ -2442,14 +2787,17 @@ html.fp-enabled,
   width: auto;
 }
 
+/* line 297, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip.right {
   right: 20px;
 }
 
+/* line 301, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 #fp-nav ul li .fp-tooltip.left {
   left: 20px;
 }
 
+/* line 305, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,
 .fp-auto-height .fp-tableCell,
@@ -2459,6 +2807,7 @@ html.fp-enabled,
   height: auto !important;
 }
 
+/* line 315, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/navigation/_fullPage.scss */
 .main header .dot-nav {
   top: 45px;
 }
@@ -2467,6 +2816,7 @@ html.fp-enabled,
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
+/* line 2, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/modules/_accessibility.scss */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -2477,6 +2827,7 @@ html.fp-enabled,
   /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
+/* line 10, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/modules/_accessibility.scss */
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   -webkit-border-radius: 3px;
@@ -2501,6 +2852,7 @@ html.fp-enabled,
 }
 
 /* Do not show the outline on the skip link target. */
+/* line 33, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/modules/_accessibility.scss */
 #content[tabindex="-1"]:focus {
   outline: 0;
 }
@@ -2508,6 +2860,7 @@ html.fp-enabled,
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/modules/_clearings.scss */
 .clear:before,
 .clear:after,
 .entry-content:before,
@@ -2525,6 +2878,7 @@ html.fp-enabled,
   table-layout: fixed;
 }
 
+/* line 16, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/modules/_clearings.scss */
 .clear:after,
 .entry-content:after,
 .comment-content:after,
@@ -2537,6 +2891,7 @@ html.fp-enabled,
 /*--------------------------------------------------------------
 # Opening Ticker
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 #intro-overlay {
   background-color: #151336;
   height: 100vh;
@@ -2545,10 +2900,12 @@ html.fp-enabled,
   z-index: 100;
 }
 
+/* line 9, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 body.intro {
   background-color: #151336;
 }
 
+/* line 13, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .entry-screen {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2559,6 +2916,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 13, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen {
     -webkit-align-content: flex-start;
     -ms-flex-line-pack: start;
@@ -2571,11 +2929,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 13, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen {
     padding: 0 9px;
   }
 }
 
+/* line 35, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .entry-screen .typed-first, .entry-screen .typed-second {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2583,6 +2943,7 @@ body.intro {
   display: flex;
 }
 
+/* line 42, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .entry-screen .typed-first {
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: start;
@@ -2590,6 +2951,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 42, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .typed-first {
     -webkit-box-pack: start;
     -webkit-justify-content: flex-start;
@@ -2598,6 +2960,7 @@ body.intro {
   }
 }
 
+/* line 55, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .entry-screen .ti-cursor {
   color: #fff !important;
   display: -webkit-box !important;
@@ -2611,6 +2974,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 55, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .ti-cursor {
     font-size: 60px !important;
     line-height: 54px !important;
@@ -2618,17 +2982,20 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 55, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .ti-cursor {
     line-height: 36px !important;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 55, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .ti-cursor {
     display: none !important;
   }
 }
 
+/* line 80, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .entry-screen .text-overlay {
   height: 100%;
   left: 423px;
@@ -2641,6 +3008,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1320px) {
+  /* line 80, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .text-overlay {
     left: 390px;
     width: 797px;
@@ -2648,6 +3016,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1200px) {
+  /* line 80, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .text-overlay {
     left: 315px;
     width: 697px;
@@ -2655,6 +3024,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 80, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .text-overlay {
     left: 283px;
     width: 629px;
@@ -2662,6 +3032,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 80, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .text-overlay {
     height: auto;
     left: 22px;
@@ -2671,6 +3042,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 80, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .entry-screen .text-overlay {
     margin-top: 48vh;
     left: 0;
@@ -2678,58 +3050,68 @@ body.intro {
   }
 }
 
+/* line 120, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .intro {
   background-color: #151336;
   margin-top: 38vh;
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 120, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro {
     margin-top: 38vh;
   }
 }
 
 @media screen and (max-width: 900px) {
+  /* line 120, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro {
     margin-top: 300px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 120, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro {
     margin-top: 40vh;
   }
 }
 
+/* line 136, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .intro-left {
   color: #e97200;
   width: 410px;
 }
 
 @media screen and (max-width: 1320px) {
+  /* line 136, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-left {
     width: 377px;
   }
 }
 
 @media screen and (max-width: 1200px) {
+  /* line 136, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-left {
     width: 306px;
   }
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 136, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-left {
     width: 271px;
   }
 }
 
 @media screen and (max-width: 900px) {
+  /* line 136, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-left {
     width: 100%;
   }
 }
 
+/* line 156, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .intro-left h3 {
   font-size: 77px;
   font-weight: 400;
@@ -2738,12 +3120,14 @@ body.intro {
 }
 
 @media screen and (max-width: 1320px) {
+  /* line 156, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-left h3 {
     font-size: 70px;
   }
 }
 
 @media screen and (max-width: 1200px) {
+  /* line 156, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-left h3 {
     font-size: 62px;
     margin-left: 21px;
@@ -2751,6 +3135,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 156, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-left h3 {
     font-size: 54px;
     line-height: 68px;
@@ -2758,6 +3143,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 156, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-left h3 {
     font-size: 60px;
     margin-left: 31px;
@@ -2765,6 +3151,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 156, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-left h3 {
     font-size: 44px;
     line-height: 50px;
@@ -2772,6 +3159,7 @@ body.intro {
   }
 }
 
+/* line 189, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .intro-right {
   color: #fff;
   padding-left: 14px;
@@ -2779,12 +3167,14 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 189, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-right {
     padding-left: 12px;
   }
 }
 
 @media screen and (max-width: 900px) {
+  /* line 189, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-right {
     margin-top: 19px;
     padding-left: 32px;
@@ -2793,11 +3183,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 189, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-right {
     padding-left: 5px;
   }
 }
 
+/* line 208, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
 .intro-right h3 {
   font-size: 77px;
   font-weight: 400;
@@ -2806,18 +3198,21 @@ body.intro {
 }
 
 @media screen and (max-width: 1320px) {
+  /* line 208, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-right h3 {
     font-size: 70px;
   }
 }
 
 @media screen and (max-width: 1200px) {
+  /* line 208, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-right h3 {
     font-size: 62px;
   }
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 208, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-right h3 {
     font-size: 54px;
     line-height: 68px;
@@ -2825,6 +3220,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 208, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-right h3 {
     font-size: 60px;
     margin-left: 0;
@@ -2834,6 +3230,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 208, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_ticker.scss */
   .intro-right h3 {
     font-size: 44px;
     line-height: 54px;
@@ -2844,6 +3241,7 @@ body.intro {
 /*--------------------------------------------------------------
 # Story Pages
 --------------------------------------------------------------*/
+/* line 1, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page {
   /* Global Development Stories*/
   /* Health & Well-Being Stories*/
@@ -2852,6 +3250,7 @@ body.intro {
   /* Society, Media, and Public Affairs Stories*/
 }
 
+/* line 3, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page p {
   font-size: 21px;
   line-height: 32px;
@@ -2859,6 +3258,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 3, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page p {
     font-size: 18px;
     line-height: 28px;
@@ -2867,6 +3267,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 3, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page p {
     font-size: 16px;
     line-height: 25px;
@@ -2875,6 +3276,7 @@ body.intro {
   }
 }
 
+/* line 22, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .body-list {
   color: rgba(0, 0, 0, 0.43);
   font-size: 21px;
@@ -2883,6 +3285,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 22, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .body-list {
     font-size: 18px;
     line-height: 28px;
@@ -2891,6 +3294,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 22, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .body-list {
     color: rgba(0, 0, 0, 0.66);
     font-size: 16px;
@@ -2899,10 +3303,12 @@ body.intro {
   }
 }
 
+/* line 41, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .body-list li {
   margin-bottom: 16px;
 }
 
+/* line 46, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .data {
   color: #000;
   font-size: 18px;
@@ -2910,6 +3316,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 46, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .data {
     font-size: 16px;
     line-height: 24px;
@@ -2917,12 +3324,14 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 46, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .data {
     font-size: 15px;
     line-height: 21px;
   }
 }
 
+/* line 62, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .percent {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2940,6 +3349,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 62, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .percent {
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
@@ -2949,36 +3359,43 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 62, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .percent {
     padding: 15px 0 0;
   }
 }
 
+/* line 90, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .percent .number img {
   height: 105px;
   width: 100%;
 }
 
+/* line 96, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .percent.comma {
   padding: 10px 15px;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 96, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .percent.comma {
     padding: 10px 15px 5px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 96, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .percent.comma {
     padding: 15px 0 0;
   }
 }
 
+/* line 107, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .percent.comma img {
   height: 115px;
 }
 
+/* line 112, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .percent .text {
   font-size: 16px;
   font-weight: 300;
@@ -2989,6 +3406,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 112, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .percent .text {
     padding-left: 0;
     padding-top: 12px;
@@ -2998,6 +3416,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 112, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .percent .text {
     font-size: 18px;
     line-height: 22px;
@@ -3007,6 +3426,7 @@ body.intro {
   }
 }
 
+/* line 137, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .pull-quote {
   color: #6fa387;
   font-size: 26px;
@@ -3016,6 +3436,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1200px) {
+  /* line 137, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .pull-quote {
     font-size: 24px;
     line-height: 36px;
@@ -3024,6 +3445,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 137, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .pull-quote {
     font-size: 22px;
     line-height: 32px;
@@ -3032,6 +3454,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 137, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .pull-quote {
     font-size: 18px;
     line-height: 28px;
@@ -3039,6 +3462,7 @@ body.intro {
   }
 }
 
+/* line 162, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .pull-quote:before {
   background: url(/img/pre-quote.svg) no-repeat;
   background-position: top;
@@ -3052,6 +3476,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 162, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .pull-quote:before {
     -webkit-background-size: 24px 24px;
     background-size: 24px;
@@ -3061,6 +3486,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 162, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .pull-quote:before {
     -webkit-background-size: 20px 20px;
     background-size: 20px;
@@ -3069,6 +3495,7 @@ body.intro {
   }
 }
 
+/* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .pull-quote:after {
   background: url(/img/post-quote.svg) no-repeat;
   background-position: top;
@@ -3081,6 +3508,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .pull-quote:after {
     -webkit-background-size: 24px 24px;
     background-size: 24px;
@@ -3089,6 +3517,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .pull-quote:after {
     -webkit-background-size: 20px 20px;
     background-size: 20px;
@@ -3096,6 +3525,7 @@ body.intro {
   }
 }
 
+/* line 212, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .footnote {
   font-size: 14px;
   font-weight: 300;
@@ -3103,221 +3533,267 @@ body.intro {
   line-height: 18px;
 }
 
+/* line 220, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_global {
   background-color: #e8e2e8;
 }
 
+/* line 223, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_global .header-background {
   background-color: #e8e2e8;
 }
 
+/* line 227, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_global .sub-nav {
   background-color: #e1dae1;
 }
 
+/* line 230, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_global .sub-nav .story-item {
   width: 25vw;
 }
 
+/* line 233, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_global .sub-nav .story-item:hover {
   background-color: rgba(97, 49, 100, 0.16);
   color: #613064;
 }
 
+/* line 238, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_global .sub-nav .story-item.active {
   background-color: rgba(97, 49, 100, 0.16);
   color: #613064;
 }
 
+/* line 245, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_global h1,
 .story-page_global .text,
 .story-page_global .footnote {
   color: #613064;
 }
 
+/* line 251, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_global .page-overlay {
   background-color: #e8e2e8;
   opacity: .91;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 251, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page_global .page-overlay {
     opacity: .97;
   }
 }
 
+/* line 262, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_health {
   background-color: #e8eff2;
 }
 
+/* line 265, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_health .header-background {
   background-color: #e8eff2;
 }
 
+/* line 269, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_health .sub-nav {
   background-color: #dde7eb;
 }
 
+/* line 272, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_health .sub-nav .story-item {
   width: 25vw;
 }
 
+/* line 275, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_health .sub-nav .story-item:hover {
   background-color: rgba(25, 92, 125, 0.14);
   color: #5a7f94;
 }
 
+/* line 280, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_health .sub-nav .story-item.active {
   background-color: rgba(25, 92, 125, 0.14);
   color: #5a7f94;
 }
 
+/* line 287, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_health h1,
 .story-page_health .text,
 .story-page_health .footnote {
   color: #5a7f94;
 }
 
+/* line 293, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_health .page-overlay {
   background-color: #e8eff2;
   opacity: .91;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 293, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page_health .page-overlay {
     opacity: .97;
   }
 }
 
+/* line 304, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_education {
   background-color: #f5eeef;
 }
 
+/* line 307, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_education .header-background {
   background-color: #f5eeef;
 }
 
+/* line 311, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_education .sub-nav {
   background-color: #EFE3E4;
 }
 
+/* line 314, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_education .sub-nav .story-item {
   width: 33.3333vw;
 }
 
+/* line 317, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_education .sub-nav .story-item:hover {
   background-color: rgba(158, 82, 93, 0.11);
   color: #9e525d;
 }
 
+/* line 322, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_education .sub-nav .story-item.active {
   background-color: rgba(158, 82, 93, 0.11);
   color: #9e525d;
 }
 
+/* line 329, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_education h1,
 .story-page_education .text,
 .story-page_education .footnote {
   color: #9e525d;
 }
 
+/* line 335, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_education .page-overlay {
   background-color: #f5eeef;
   opacity: .91;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 335, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page_education .page-overlay {
     opacity: .97;
   }
 }
 
+/* line 346, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_society {
   background-color: #f2f5f6;
 }
 
+/* line 349, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_society .header-background {
   background-color: #f2f5f6;
 }
 
+/* line 353, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_society .sub-nav {
   background-color: #e8edf0;
 }
 
+/* line 356, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_society .sub-nav .story-item {
   width: 25vw;
 }
 
+/* line 359, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_society .sub-nav .story-item:hover {
   background-color: rgba(91, 127, 149, 0.14);
   color: #F27E71;
 }
 
+/* line 364, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_society .sub-nav .story-item.active {
   background-color: rgba(91, 127, 149, 0.14);
   color: #F27E71;
 }
 
+/* line 371, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_society h1,
 .story-page_society .text,
 .story-page_society .footnote {
   color: #F27E71;
 }
 
+/* line 377, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_society .page-overlay {
   background-color: #f2f5f6;
   opacity: .91;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 377, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page_society .page-overlay {
     opacity: .97;
   }
 }
 
+/* line 388, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_economics {
   background-color: #ecf0ed;
 }
 
+/* line 391, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_economics .header-background {
   background-color: #ecf0ed;
 }
 
+/* line 395, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_economics .sub-nav {
   background-color: #dde6df;
 }
 
+/* line 398, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_economics .sub-nav .story-item {
   width: 25vw;
 }
 
+/* line 401, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_economics .sub-nav .story-item:hover {
   background-color: rgba(111, 163, 136, 0.2);
   color: #6fa387;
 }
 
+/* line 406, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_economics .sub-nav .story-item.active {
   background-color: rgba(111, 163, 136, 0.2);
   color: #6fa387;
 }
 
+/* line 413, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_economics h1,
 .story-page_economics .text,
 .story-page_economics .footnote {
   color: #6fa387;
 }
 
+/* line 419, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page_economics .page-overlay {
   background-color: #f2f5f6;
   opacity: .91;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 419, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page_economics .page-overlay {
     opacity: .97;
   }
 }
 
+/* line 429, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container {
   -webkit-transition: left 0.3s ease-in-out;
   -o-transition: left 0.3s ease-in-out;
@@ -3339,6 +3815,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 429, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container {
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -3354,10 +3831,12 @@ body.intro {
   }
 }
 
+/* line 460, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container img {
   max-height: 100%;
 }
 
+/* line 464, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container.move-out {
   -webkit-transition: left 0.35s ease-in-out;
   -o-transition: left 0.35s ease-in-out;
@@ -3369,33 +3848,39 @@ body.intro {
 }
 
 @media screen and (min-width: 1441px) {
+  /* line 464, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-out {
     padding: 100px 160px 100px 205px;
   }
 }
 
 @media screen and (max-width: 1210px) {
+  /* line 464, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-out {
     padding: 80px 100px 80px 145px;
   }
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 464, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-out {
     padding: 100px 50px 100px 95px;
   }
 }
 
 @media screen and (max-width: 900px) {
+  /* line 464, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-out {
     padding: 60px 30px 60px 65px;
   }
+  /* line 487, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-out .main-image {
     max-width: 98%;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 464, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-out {
     -webkit-transition: left 0.15s ease-in-out, top 0.2s ease-in-out;
     -o-transition: left 0.15s ease-in-out, top 0.2s ease-in-out;
@@ -3404,11 +3889,13 @@ body.intro {
     padding: 0;
     top: 34vh;
   }
+  /* line 498, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-out .main-image {
     max-width: 100vw;
   }
 }
 
+/* line 504, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container.move-in {
   -webkit-transition: left 0.55s ease-in-out;
   -o-transition: left 0.55s ease-in-out;
@@ -3421,27 +3908,32 @@ body.intro {
 }
 
 @media screen and (max-width: 1210px) {
+  /* line 504, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-in {
     padding: 80px 100px 80px 145px;
   }
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 504, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-in {
     padding: 100px 50px 100px 95px;
   }
 }
 
 @media screen and (max-width: 900px) {
+  /* line 504, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-in {
     padding: 60px 30px 60px 65px;
   }
+  /* line 523, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-in .main-image {
     max-width: 98%;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 504, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-in {
     -webkit-transition: left 0.35s ease-in-out, top 0.2s ease-in-out;
     -o-transition: left 0.35s ease-in-out, top 0.2s ease-in-out;
@@ -3450,11 +3942,13 @@ body.intro {
     padding: 0;
     top: 34vh;
   }
+  /* line 534, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container.move-in .main-image {
     max-width: 100vw;
   }
 }
 
+/* line 540, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .caption {
   color: rgba(0, 0, 0, 0.55);
   font-size: 17px;
@@ -3465,6 +3959,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 540, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container .caption {
     margin-top: 12px;
     padding: 0 20px;
@@ -3472,6 +3967,7 @@ body.intro {
   }
 }
 
+/* line 555, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .special-share {
   -ms-flex-line-pack: start;
   -webkit-align-content: flex-start;
@@ -3488,12 +3984,14 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 555, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container .special-share {
     margin: 124px 0 0 11px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 555, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container .special-share {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -3514,17 +4012,20 @@ body.intro {
   }
 }
 
+/* line 592, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .special-share a {
   width: 22px;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 592, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container .special-share a {
     margin-right: 5px;
     width: 35px;
   }
 }
 
+/* line 601, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .special-share .facebook,
 .story-page .image-container .special-share .twitter,
 .story-page .image-container .special-share .linkedin {
@@ -3538,6 +4039,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 601, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container .special-share .facebook,
   .story-page .image-container .special-share .twitter,
   .story-page .image-container .special-share .linkedin {
@@ -3545,6 +4047,7 @@ body.intro {
   }
 }
 
+/* line 614, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .special-share .facebook:hover,
 .story-page .image-container .special-share .twitter:hover,
 .story-page .image-container .special-share .linkedin:hover {
@@ -3554,20 +4057,24 @@ body.intro {
   opacity: 1;
 }
 
+/* line 620, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .special-share .facebook {
   padding: 0 4px;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 620, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container .special-share .facebook {
     padding: 0 5px;
   }
 }
 
+/* line 628, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .special-share .linkedin {
   padding: 0 1px;
 }
 
+/* line 633, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .close-button {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
@@ -3581,12 +4088,14 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 633, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .image-container .close-button {
     margin: 18px;
     opacity: .75;
   }
 }
 
+/* line 647, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .close-button:hover {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
@@ -3594,26 +4103,31 @@ body.intro {
   opacity: 1;
 }
 
+/* line 654, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .contains-video .close-button {
   margin: 0 0 0 23px;
 }
 
 @media screen and (max-width: 800px) {
+  /* line 654, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .contains-video .close-button {
     margin: 0 0 0 18px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 654, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
   .story-page .contains-video .close-button {
     margin: 0;
   }
 }
 
+/* line 666, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .video-container {
   display: none;
 }
 
+/* line 670, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .mobile-bar {
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
@@ -3625,6 +4139,7 @@ body.intro {
   width: 100vw;
 }
 
+/* line 678, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_stories.scss */
 .story-page .mobile-bar .close-arrow {
   border: solid rgba(0, 0, 0, 0.55);
   border-width: 0 2px 2px 0;
@@ -3640,53 +4155,64 @@ body.intro {
 /*--------------------------------------------------------------
 # Main Pages
 --------------------------------------------------------------*/
+/* line 4, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .main .section-title.active {
   display: inline-block;
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 4, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .main .section-title.active {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: #262626;
     color: rgba(255, 255, 255, 0.85) !important;
     font-size: 15px;
     letter-spacing: .25px;
-    margin: 6px 0 0;
+    margin: 10px 0 0;
     padding: 10px 0 9px;
   }
+  /* line 16, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .main .section-title.active.economics {
     color: #B7D5C3 !important;
   }
+  /* line 20, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .main .section-title.active.education {
     color: #C07A84 !important;
   }
+  /* line 24, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .main .section-title.active.global {
     color: #C8ADCA !important;
   }
+  /* line 28, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .main .section-title.active.health {
     color: #A8C8D4 !important;
   }
+  /* line 32, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .main .section-title.active.society {
     color: #ED8A7F !important;
   }
 }
 
+/* line 68, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area {
   height: 100vh;
   overflow-y: scroll;
   width: 100vw;
 }
 
+/* line 78, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.insight {
   background-image: url("/img/insight-background.png");
 }
 
 @media screen and (max-width: 767px) {
+  /* line 78, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight {
     background-image: url("/img/insight-background-mobile.png");
   }
 }
 
+/* line 85, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.insight .left {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3703,6 +4229,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 85, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .left {
     padding: 34px 50px 0 0;
     width: 40vw;
@@ -3710,14 +4237,16 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 85, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .left {
     height: auto;
-    padding: 115px 20px 0;
+    padding: 12px 20px 0;
     position: relative;
     width: 100vw;
   }
 }
 
+/* line 111, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.insight .left h2 {
   font-size: 77px;
   font-weight: 400;
@@ -3728,6 +4257,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 111, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .left h2 {
     font-size: 65px;
     line-height: 78px;
@@ -3735,6 +4265,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 111, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .left h2 {
     font-size: 50px;
     line-height: 64px;
@@ -3742,6 +4273,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 111, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .left h2 {
     font-size: 36px;
     line-height: 44px;
@@ -3749,6 +4281,7 @@ body.intro {
   }
 }
 
+/* line 137, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.insight .right {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -3764,19 +4297,22 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 137, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .right {
     padding-left: 40vw;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 137, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .right {
     display: inline-block;
     height: auto;
-    padding: 20px 20px 100px;
+    padding: 20px;
   }
 }
 
+/* line 160, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.insight .right p {
   font-size: 28px;
   line-height: 42px;
@@ -3784,6 +4320,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1200px) {
+  /* line 160, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .right p {
     font-size: 24px;
     line-height: 38px;
@@ -3791,6 +4328,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 160, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .right p {
     font-size: 22px;
     line-height: 34px;
@@ -3798,6 +4336,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 160, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .right p {
     font-size: 21px;
     line-height: 36px;
@@ -3805,12 +4344,14 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 160, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.insight .right p {
     font-size: 17px;
     line-height: 25px;
   }
 }
 
+/* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .nav-arrow {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -3838,6 +4379,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 188, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .nav-arrow {
     border: solid rgba(255, 255, 255, 0.85);
     border-width: 0 1px 1px 0;
@@ -3846,6 +4388,7 @@ body.intro {
   }
 }
 
+/* line 219, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .nav-arrow.prev {
   display: none;
   left: 35px;
@@ -3855,11 +4398,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 219, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .nav-arrow.prev {
     left: 20px;
   }
 }
 
+/* line 231, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .nav-arrow.next {
   right: 35px;
   -webkit-transform: rotate(-45deg) skew(-2deg, -2deg);
@@ -3868,11 +4413,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 231, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .nav-arrow.next {
     right: 20px;
   }
 }
 
+/* line 242, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .nav-arrow:hover {
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -3880,6 +4427,7 @@ body.intro {
   border-color: rgba(255, 255, 255, 0.85);
 }
 
+/* line 248, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .bottom-arrow {
   bottom: 21px;
   display: -webkit-box;
@@ -3899,11 +4447,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 248, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .bottom-arrow {
     display: none;
   }
 }
 
+/* line 269, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .bottom-arrow .explore {
   -webkit-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -3920,6 +4470,7 @@ body.intro {
   width: 100vw;
 }
 
+/* line 283, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .bottom-arrow .down-arrow {
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
@@ -3936,6 +4487,7 @@ body.intro {
   width: 0;
 }
 
+/* line 296, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .bottom-arrow .down-arrow:hover {
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
@@ -3943,26 +4495,31 @@ body.intro {
   opacity: 1;
 }
 
+/* line 305, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .scrolled .bottom-arrow .explore, .scrolled .bottom-arrow .down-arrow {
   display: none;
 }
 
+/* line 310, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide {
   background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
+/* line 315, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president {
   background-image: url("/img/president-background.png");
 }
 
 @media screen and (max-width: 767px) {
+  /* line 315, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president {
     background-image: url("/img/president-background-mobile.png");
   }
 }
 
+/* line 322, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3974,6 +4531,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 322, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .area {
     -ms-flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
@@ -3981,10 +4539,12 @@ body.intro {
   }
 }
 
+/* line 338, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president a {
   cursor: default;
 }
 
+/* line 342, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text {
   height: auto;
   margin-top: 155px;
@@ -3993,6 +4553,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 342, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .landing-text {
     margin-top: 0;
     padding: 20px 74px 0;
@@ -4001,11 +4562,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 342, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .landing-text {
     padding: 0 20px;
   }
 }
 
+/* line 358, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text p {
   color: rgba(0, 0, 0, 0.55);
   font-size: 21px;
@@ -4015,6 +4578,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 358, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .landing-text p {
     font-size: 18px;
     line-height: 28px;
@@ -4023,6 +4587,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 358, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .landing-text p {
     color: rgba(0, 0, 0, 0.66);
     font-size: 17px;
@@ -4031,22 +4596,26 @@ body.intro {
   }
 }
 
+/* line 378, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text p:last-of-type {
   margin-bottom: 23px;
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 378, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .landing-text p:last-of-type {
     margin-bottom: 24px;
   }
 }
 
+/* line 387, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text .mobile-video {
   display: none;
   margin: 5px 0 20px;
   width: 100%;
 }
 
+/* line 392, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text .mobile-video .caption {
   color: #fff;
   font-size: 18px;
@@ -4055,6 +4624,7 @@ body.intro {
   width: 100%;
 }
 
+/* line 400, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text .mobile-video .four {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4074,6 +4644,7 @@ body.intro {
   justify-content: center;
 }
 
+/* line 418, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text .mobile-video .four img {
   -webkit-transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
@@ -4083,16 +4654,19 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 418, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .landing-text .mobile-video .four img {
     height: 130px;
     opacity: .8;
   }
 }
 
+/* line 429, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text .mobile-video .four:hover {
   cursor: pointer;
 }
 
+/* line 432, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text .mobile-video .four:hover img {
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
@@ -4101,11 +4675,13 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 387, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .landing-text .mobile-video {
     display: inline-block;
   }
 }
 
+/* line 444, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .landing-text .slide-title {
   color: rgba(0, 0, 0, 0.55);
   padding-bottom: 15px;
@@ -4113,11 +4689,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 444, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .landing-text .slide-title {
     padding-bottom: 0;
   }
 }
 
+/* line 455, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails {
   margin-top: 144px;
   bottom: 20px;
@@ -4125,19 +4703,23 @@ body.intro {
   width: 50vw;
 }
 
+/* line 461, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails.mobile {
   display: none;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 455, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails {
     padding: 0 74px;
     margin-top: 102px;
     width: 100vw;
   }
+  /* line 470, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails.mobile {
     display: inline-block;
   }
+  /* line 474, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails:last-of-type {
     margin-bottom: 60px;
     margin-top: 10px;
@@ -4145,26 +4727,31 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 455, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails {
-    margin-top: 114px;
+    margin-top: 17px;
     padding: 0 20px;
   }
+  /* line 484, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails:last-of-type {
     margin-bottom: 20px;
   }
 }
 
+/* line 489, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails .one-vertical {
   margin-top: 8px;
   width: 100%;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 489, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails .one-vertical {
     padding: 0 0 5px;
   }
 }
 
+/* line 499, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails .one-vertical.desktop-video .caption {
   line-height: 28px;
   margin: 8px 0 0;
@@ -4173,12 +4760,14 @@ body.intro {
 }
 
 @media screen and (max-width: 1000px) {
+  /* line 499, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails .one-vertical.desktop-video .caption {
     font-size: 18px;
     line-height: 24px;
   }
 }
 
+/* line 511, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails .one-vertical.desktop-video .four {
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -4194,6 +4783,7 @@ body.intro {
   display: flex;
 }
 
+/* line 525, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails .one-vertical.desktop-video .four img {
   -webkit-transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
@@ -4203,33 +4793,39 @@ body.intro {
 }
 
 @media screen and (min-width: 1441px) {
+  /* line 525, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails .one-vertical.desktop-video .four img {
     height: 200px;
   }
 }
 
 @media screen and (max-width: 1100px) {
+  /* line 525, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails .one-vertical.desktop-video .four img {
     height: 160px;
   }
 }
 
 @media screen and (max-width: 900px) {
+  /* line 525, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails .one-vertical.desktop-video .four img {
     height: 140px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 525, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails .one-vertical.desktop-video .four img {
     opacity: .8;
   }
 }
 
+/* line 547, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails .one-vertical.desktop-video .four:hover {
   cursor: pointer;
 }
 
+/* line 550, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails .one-vertical.desktop-video .four:hover img {
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
@@ -4238,99 +4834,119 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 497, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.president .thumbnails .one-vertical.desktop-video {
     display: none;
   }
 }
 
+/* line 563, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails .two-vertical {
   margin-bottom: 12px;
   width: 100%;
 }
 
+/* line 567, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.president .thumbnails .two-vertical .one {
   height: 100%;
 }
 
+/* line 574, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.economics {
   background-image: url("/img/economics-background.jpg");
 }
 
 @media screen and (max-width: 767px) {
+  /* line 574, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.economics {
     background-image: url("/img/economics-background-mobile.jpg");
   }
 }
 
+/* line 581, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.economics .bottom-arrow {
   left: -webkit-calc(250vw - 90px);
   left: calc(250vw - 90px);
 }
 
+/* line 587, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.education {
   background-image: url("/img/education-background.jpg");
 }
 
 @media screen and (max-width: 767px) {
+  /* line 587, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.education {
     background-image: url("/img/education-background-mobile.jpg");
   }
 }
 
+/* line 594, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.education .bottom-arrow {
   left: -webkit-calc(350vw - 90px);
   left: calc(350vw - 90px);
 }
 
+/* line 600, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.global {
   background-image: url("/img/global-background.jpg");
 }
 
 @media screen and (max-width: 767px) {
+  /* line 600, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.global {
     background-image: url("/img/global-background-mobile.jpg");
   }
 }
 
+/* line 607, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.global .bottom-arrow {
   left: -webkit-calc(450vw - 90px);
   left: calc(450vw - 90px);
 }
 
+/* line 613, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.health {
   background-image: url("/img/health-background.jpg");
 }
 
 @media screen and (max-width: 767px) {
+  /* line 613, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.health {
     background-image: url("/img/health-background-mobile.jpg");
   }
 }
 
+/* line 620, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.health .bottom-arrow {
   left: -webkit-calc(550vw - 90px);
   left: calc(550vw - 90px);
 }
 
+/* line 626, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.society {
   background-image: url("/img/society-background.jpg");
 }
 
 @media screen and (max-width: 767px) {
+  /* line 626, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.society {
     background-image: url("/img/society-background-mobile.jpg");
   }
 }
 
+/* line 633, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.society .bottom-arrow {
   left: -webkit-calc(650vw - 90px);
   left: calc(650vw - 90px);
 }
 
+/* line 639, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more {
   background-color: #151336;
 }
 
+/* line 642, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .landing-text {
   display: inline-block;
   height: auto;
@@ -4341,20 +4957,23 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 642, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .landing-text {
     margin-bottom: 20px;
-    margin-top: 102px;
+    margin-top: 6px;
     padding: 0 20px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 656, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .landing-text .slide-title {
     margin-top: 12px;
     text-align: left;
   }
 }
 
+/* line 665, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .slide-heading {
   color: rgba(255, 255, 255, 0.9);
   display: inline-block;
@@ -4364,17 +4983,20 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 665, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .slide-heading {
     font-size: 26px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 665, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .slide-heading {
     font-size: 22px;
   }
 }
 
+/* line 681, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more p {
   color: rgba(255, 255, 255, 0.65);
   font-size: 21px;
@@ -4385,6 +5007,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 681, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more p {
     font-size: 18px;
     line-height: 28px;
@@ -4392,12 +5015,14 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 681, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more p {
     margin-right: 0;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 681, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more p {
     color: rgba(255, 255, 255, 0.85);
     font-size: 17px;
@@ -4406,11 +5031,13 @@ body.intro {
   }
 }
 
+/* line 705, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more p.small.caption.white {
   line-height: 22px;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 705, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more p.small.caption.white {
     font-size: 21px !important;
     padding: 15px !important;
@@ -4418,6 +5045,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 705, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more p.small.caption.white {
     font-size: 15px !important;
     line-height: 15px !important;
@@ -4425,26 +5053,31 @@ body.intro {
   }
 }
 
+/* line 719, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more p.small.caption.white:after {
   content: url("/img/linkout.svg");
   padding-left: 5px;
   vertical-align: middle;
 }
 
+/* line 725, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more p.small.caption.white.touch:after {
   content: "";
 }
 
+/* line 731, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .thumbnails {
   padding-bottom: 62px;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 731, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .thumbnails {
     padding-bottom: 45px;
   }
 }
 
+/* line 739, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .one-vertical {
   -ms-flex-line-pack: start !important;
   -webkit-align-content: flex-start !important;
@@ -4454,16 +5087,19 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 747, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .two-vertical {
     padding: 0 !important;
   }
 }
 
+/* line 753, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .two-vertical.touch {
   height: 199px !important;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 753, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .two-vertical.touch {
     height: 100px !important;
     margin-left: -33px;
@@ -4471,6 +5107,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 747, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .two-vertical {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -4481,27 +5118,32 @@ body.intro {
   }
 }
 
+/* line 771, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .two-vertical.first .one {
   height: 100%;
 }
 
+/* line 776, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more hr {
   background-color: rgba(255, 255, 255, 0.15);
   margin: 0 100px 23px 80px;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 776, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more hr {
     margin: 0 80px 30px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 776, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more hr {
     margin: 0 20px 20px;
   }
 }
 
+/* line 789, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .contact-link {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
@@ -4512,11 +5154,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 789, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .contact-link {
     opacity: .85;
   }
 }
 
+/* line 799, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .contact-link:hover {
   -webkit-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
@@ -4524,6 +5168,7 @@ body.intro {
   opacity: .9;
 }
 
+/* line 805, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .in-touch {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
@@ -4534,11 +5179,13 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 805, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .in-touch {
     font-size: 20px;
   }
 }
 
+/* line 815, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .in-touch:hover {
   -webkit-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
@@ -4546,6 +5193,7 @@ body.intro {
   opacity: .9;
 }
 
+/* line 821, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .facebook-icon {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
@@ -4556,12 +5204,14 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 821, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .facebook-icon {
     margin: 0 12px 26px 8px;
     width: 13px;
   }
 }
 
+/* line 832, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .facebook-icon:hover {
   -webkit-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
@@ -4569,6 +5219,7 @@ body.intro {
   opacity: .9;
 }
 
+/* line 838, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .twitter-icon {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
@@ -4579,12 +5230,14 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 838, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .twitter-icon {
     margin: 0 8px 26px 8px;
     width: 27px;
   }
 }
 
+/* line 849, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .twitter-icon:hover {
   -webkit-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
@@ -4592,6 +5245,7 @@ body.intro {
   opacity: .9;
 }
 
+/* line 855, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .linkedin-icon {
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
@@ -4602,12 +5256,14 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 855, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .linkedin-icon {
     margin: 0 0 26px 8px;
     width: 24px;
   }
 }
 
+/* line 866, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .linkedin-icon:hover {
   -webkit-transition: opacity 0.2s ease-in-out;
   -o-transition: opacity 0.2s ease-in-out;
@@ -4615,6 +5271,7 @@ body.intro {
   opacity: .9;
 }
 
+/* line 872, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .credits {
   background-color: rgba(255, 255, 255, 0.05);
   display: -webkit-box;
@@ -4633,24 +5290,28 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 872, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .credits {
     padding: 62px 74px;
   }
 }
 
 @media screen and (max-width: 900px) {
+  /* line 872, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .credits {
     padding: 62px 84px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 872, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .credits {
     margin-top: -20px;
-    padding: 40px 20px 100px;
+    padding: 40px 20px 20px;
   }
 }
 
+/* line 901, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .credits a {
   -webkit-transition: color 0.3s ease-in-out;
   -o-transition: color 0.3s ease-in-out;
@@ -4659,6 +5320,7 @@ body.intro {
   text-decoration: underline;
 }
 
+/* line 906, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .credits a:hover {
   -webkit-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
@@ -4666,16 +5328,19 @@ body.intro {
   color: #fff;
 }
 
+/* line 912, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .credits .two {
   width: 48%;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 912, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .credits .two {
     width: 100%;
   }
 }
 
+/* line 920, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .credits .slide-heading {
   font-size: 30px;
   margin-bottom: 10px;
@@ -4683,12 +5348,14 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 920, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .credits .slide-heading {
     color: #fff;
     font-size: 22px;
   }
 }
 
+/* line 931, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .credits .column-heading {
   color: rgba(255, 255, 255, 0.85);
   font-size: 21px;
@@ -4696,6 +5363,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 931, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .credits .column-heading {
     color: #fff;
     font-size: 19px;
@@ -4703,6 +5371,7 @@ body.intro {
   }
 }
 
+/* line 943, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .slide.gain-more .credits p {
   color: rgba(255, 255, 255, 0.75);
   font-size: 16px;
@@ -4710,6 +5379,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 943, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .slide.gain-more .credits p {
     font-size: 14px;
     letter-spacing: .5px;
@@ -4717,10 +5387,12 @@ body.intro {
   }
 }
 
+/* line 958, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area {
   /* Behaviors when user is scrolling*/
 }
 
+/* line 960, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .landing-text {
   -webkit-transition: opacity 1.8s ease-in-out, height 0.65s ease-in-out;
   -o-transition: opacity 1.8s ease-in-out, height 0.65s ease-in-out;
@@ -4740,43 +5412,50 @@ body.intro {
   padding: 0 16.5vw;
 }
 
+/* line 976, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .landing-text .mobile-explore {
   display: none;
 }
 
 @media screen and (min-width: 1600px) {
+  /* line 960, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .landing-text {
     padding: 0 20vw;
   }
 }
 
 @media screen and (max-width: 1300px) {
+  /* line 960, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .landing-text {
     padding: 0 13vw;
   }
 }
 
 @media screen and (max-width: 1100px) {
+  /* line 960, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .landing-text {
     padding: 0 10vw;
   }
 }
 
 @media screen and (max-width: 800px) {
+  /* line 960, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .landing-text {
     padding: 0 13vw;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 960, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .landing-text {
     -webkit-box-align: start;
     -ms-flex-align: start;
     -webkit-align-items: flex-start;
     align-items: flex-start;
     height: auto;
-    padding: 99px 20px 10px;
+    padding: 4px 20px 10px;
   }
+  /* line 1004, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .landing-text .mobile-explore {
     color: #fff;
     display: inline-block;
@@ -4790,6 +5469,7 @@ body.intro {
   }
 }
 
+/* line 1017, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .landing-text .slide-title {
   color: #fff;
   display: inline-block;
@@ -4799,12 +5479,14 @@ body.intro {
 }
 
 @media screen and (max-width: 1024px) {
+  /* line 1017, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .landing-text .slide-title {
     font-size: 26px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1017, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .landing-text .slide-title {
     font-size: 21px;
     margin-bottom: 14px;
@@ -4812,6 +5494,7 @@ body.intro {
   }
 }
 
+/* line 1036, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails {
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -4832,17 +5515,20 @@ body.intro {
 }
 
 @media screen and (min-width: 1600px) {
+  /* line 1036, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails {
     padding: 0 10vw 80px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1036, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails {
-    padding: 0 20px 80px;
+    padding: 0 20px 20px;
   }
 }
 
+/* line 1060, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .one-vertical {
   -ms-flex-line-pack: justify;
   -webkit-align-content: space-between;
@@ -4860,6 +5546,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 1060, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .one-vertical {
     margin-bottom: 0;
     height: auto;
@@ -4869,6 +5556,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1060, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .one-vertical {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -4878,18 +5566,21 @@ body.intro {
   }
 }
 
+/* line 1090, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .one-vertical .four {
   overflow: hidden;
   width: 100%;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 1090, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .one-vertical .four {
     overflow: visible;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1090, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .one-vertical .four {
     height: auto;
     margin-bottom: 15px;
@@ -4897,18 +5588,21 @@ body.intro {
   }
 }
 
+/* line 1104, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .one-vertical .four img {
   width: 100%;
   max-width: none;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1104, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .one-vertical .four img {
     height: auto;
     max-width: 100%;
   }
 }
 
+/* line 1114, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .one-vertical .four .large.caption {
   line-height: 28px;
   margin: 8px 0 0;
@@ -4917,6 +5611,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1000px) {
+  /* line 1114, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .one-vertical .four .large.caption {
     font-size: 18px;
     line-height: 24px;
@@ -4925,6 +5620,7 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 1114, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .one-vertical .four .large.caption {
     font-size: 18px;
     line-height: 25px;
@@ -4936,17 +5632,20 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1114, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .one-vertical .four .large.caption {
     margin: -1px 0 0;
     padding: 0;
   }
 }
 
+/* line 1143, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .mobile-tiles {
   display: none;
 }
 
 @media screen and (max-width: 900px) {
+  /* line 1143, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles {
     -ms-flex-line-pack: justify;
     -webkit-align-content: space-between;
@@ -4961,9 +5660,11 @@ body.intro {
     padding: 10px 10px 0;
     width: 100%;
   }
+  /* line 1160, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles.one-vertical {
     padding: 0 10px 5px;
   }
+  /* line 1164, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles.essay-container {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -4973,12 +5674,14 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) and (max-width: 767px) {
+  /* line 1164, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles.essay-container {
-    padding-bottom: 80px;
+    padding-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1143, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -4987,24 +5690,29 @@ body.intro {
     padding: 0;
     width: 100%;
   }
+  /* line 1184, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles.one-vertical {
     padding: 0;
   }
 }
 
+/* line 1189, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .mobile-tiles .one {
   overflow: hidden;
   width: 50%;
 }
 
+/* line 1193, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .mobile-tiles .one.left {
   padding-right: 6px;
 }
 
+/* line 1197, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .mobile-tiles .one.right {
   padding-left: 6px;
 }
 
+/* line 1201, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .mobile-tiles .one.essay {
   background-position: center;
   -webkit-background-size: cover;
@@ -5016,6 +5724,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1201, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles .one.essay {
     height: 50vw;
     margin-bottom: 4%;
@@ -5024,29 +5733,35 @@ body.intro {
   }
 }
 
+/* line 1218, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .mobile-tiles .one img {
   height: auto;
   width: 100%;
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1189, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles .one {
     height: auto;
     margin-bottom: 15px;
     width: 100%;
   }
+  /* line 1228, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles .one.left {
     padding-right: 0;
   }
+  /* line 1232, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles .one.right {
     padding-left: 0;
   }
+  /* line 1236, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles .one img {
     height: auto;
     width: 100%;
   }
 }
 
+/* line 1242, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .mobile-tiles .one .small.caption {
   font-size: 18px;
   line-height: 25px;
@@ -5056,6 +5771,7 @@ body.intro {
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1242, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles .one .small.caption {
     font-size: 21px;
     line-height: 29px;
@@ -5063,11 +5779,13 @@ body.intro {
     padding: 0;
     width: 100%;
   }
+  /* line 1256, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles .one .small.caption.black {
     color: rgba(0, 0, 0, 0.7);
   }
 }
 
+/* line 1264, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical {
   -ms-flex-line-pack: justify;
   -webkit-align-content: space-between;
@@ -5088,11 +5806,13 @@ body.intro {
 }
 
 @media screen and (max-width: 900px) {
+  /* line 1264, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .two-vertical {
     display: none;
   }
 }
 
+/* line 1286, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one {
   -webkit-transition: height 0.4s ease-in-out;
   -o-transition: height 0.4s ease-in-out;
@@ -5106,10 +5826,12 @@ body.intro {
   width: 49%;
 }
 
+/* line 1296, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one.blank {
   background-color: transparent;
 }
 
+/* line 1300, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one .small.caption {
   font-size: 22px;
   letter-spacing: .75px;
@@ -5119,6 +5841,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1440px) {
+  /* line 1300, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .two-vertical .one .small.caption {
     font-size: 20px;
     letter-spacing: .75px;
@@ -5127,6 +5850,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1100px) {
+  /* line 1300, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .two-vertical .one .small.caption {
     font-size: 18px;
     letter-spacing: .75px;
@@ -5136,6 +5860,7 @@ body.intro {
 }
 
 @media screen and (max-width: 1000px) {
+  /* line 1300, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .two-vertical .one .small.caption {
     font-size: 16px;
     line-height: 22px;
@@ -5143,16 +5868,19 @@ body.intro {
   }
 }
 
+/* line 1326, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one .small.caption.white {
   color: #fff;
 }
 
+/* line 1330, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area .thumbnails .two-vertical .one .small.caption.black {
   color: #000;
   font-weight: 400 !important;
   letter-spacing: .25px;
 }
 
+/* line 1342, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area.scrolled .landing-text {
   -webkit-transition: opacity 1.5s ease-in-out, height 1s ease-in-out;
   -o-transition: opacity 1.5s ease-in-out, height 1s ease-in-out;
@@ -5161,6 +5889,7 @@ body.intro {
   /* height: 65vh;*/
 }
 
+/* line 1347, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area.scrolled .landing-text.button-scrolled {
   -webkit-transition: opacity 0.75s ease-in-out, height 0.75s ease-in-out;
   -o-transition: opacity 0.75s ease-in-out, height 0.75s ease-in-out;
@@ -5168,6 +5897,7 @@ body.intro {
   /* height: 98px;*/
 }
 
+/* line 1353, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .area.scrolled .thumbnails {
   -webkit-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
@@ -5175,6 +5905,7 @@ body.intro {
   opacity: 1;
 }
 
+/* line 1360, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .grey-box {
   -webkit-transition: all 0.7s ease-in-out;
   -o-transition: all 0.7s ease-in-out;
@@ -5188,18 +5919,20 @@ body.intro {
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 1360, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .grey-box {
     left: 0;
   }
 }
 
 @media screen and (max-width: 767px) {
+  /* line 1360, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .grey-box {
-    background-color: #000 !important;
-    height: 94px;
+    display: none;
   }
 }
 
+/* line 1377, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
 .grey-box.scrolled {
   -webkit-transition: all 0.6s ease-in-out;
   -o-transition: all 0.6s ease-in-out;
@@ -5211,12 +5944,14 @@ body.intro {
 }
 
 @supports (-ms-accelerator: true) {
+  /* line 1377, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .grey-box.scrolled {
     background-color: #000;
   }
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 1377, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/pages/_landing.scss */
   .grey-box.scrolled {
     background-color: #000;
   }
@@ -5226,6 +5961,7 @@ body.intro {
 # Browser Hacks
 --------------------------------------------------------------*/
 /*Safari and Chrome*/
+/* line 2, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_hacks.scss */
 .main p:not(*:root),
 .area .h2 p:not(*:root),
 .main .section-title:not(*:root),
@@ -5235,12 +5971,16 @@ body.intro {
 
 /*Firefox*/
 @media screen and (min--moz-device-pixel-ratio: 0) {
+  /* line 12, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_hacks.scss */
   .main p,
   .area .h2 p,
   .main .section-title {
     font-weight: 300;
   }
+  /* line 18, /Users/brandon/Documents/KAD/NORC/norc-repo/sass/typography/_hacks.scss */
   .dot-nav .section-title {
     font-weight: 400;
   }
 }
+
+/*# sourceMappingURL=../css/style.map */

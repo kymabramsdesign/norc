@@ -67,8 +67,8 @@
   }
 }
 
-.header-background {
-  @include transition(background-color .3s ease-in-out)
+.story-page .header-background {
+  @include transition(background-color .3s ease-in-out);
   background-color: transparent;
   height: 80px;
   position: fixed;
@@ -88,7 +88,7 @@
 .main .header-background {
   @media screen and (max-width:767px) {
     background-color: $black;
-    height: 94px;
+    height: 92px;
   }
 }
 
