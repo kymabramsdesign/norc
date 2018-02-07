@@ -1,5 +1,5 @@
 .main {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   
   .section-title.active {
     display: inline-block;
@@ -10,7 +10,7 @@
       color: $white-85 !important;
       font-size: 15px;
       letter-spacing: .25px;
-      margin: 57px 0 0;
+      margin: 6px 0 0;
       padding: 10px 0 9px;
 
       &.economics {
@@ -36,34 +36,34 @@
   }
 }
 
-.slider {
-  /* line them up horizontally */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  height: 100vh;
-  left: 0;
+// .slider {
+//   /* line them up horizontally */
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: -webkit-flex;
+//   display: flex;
+//   height: 100vh;
+//   left: 0;
 
-  /* make it smooth on iOS */
-  -webkit-overflow-scrolling: touch;
-  /* each slide snaps into place on iOS */
-  -webkit-scroll-snap-points-x: repeat(1000px);
-  -ms-scroll-snap-points-x: repeat(1000px);
-  scroll-snap-points-x: repeat(1000px);
-  -webkit-scroll-snap-type: mandatory;
-  -ms-scroll-snap-type: mandatory;
-  scroll-snap-type: mandatory;
-  position: fixed;
-  width: 100vw;
-}
+//   /* make it smooth on iOS */
+//   -webkit-overflow-scrolling: touch;
+//   /* each slide snaps into place on iOS */
+//   -webkit-scroll-snap-points-x: repeat(1000px);
+//   -ms-scroll-snap-points-x: repeat(1000px);
+//   scroll-snap-points-x: repeat(1000px);
+//   -webkit-scroll-snap-type: mandatory;
+//   -ms-scroll-snap-type: mandatory;
+//   scroll-snap-type: mandatory;
+//   position: fixed;
+//   width: 100vw;
+// }
 
-.slider > div {
-  -ms-flex-negative: 0;
-  -webkit-flex-shrink: 0;
-  flex-shrink: 0;
-  width: 100vw;
-}
+// .slider > div {
+//   -ms-flex-negative: 0;
+//   -webkit-flex-shrink: 0;
+//   flex-shrink: 0;
+//   width: 100vw;
+// }
 
 .area {
   height: 100vh;
@@ -71,9 +71,9 @@
   width: 100vw;
 }
 
-::-webkit-scrollbar { 
-  display: none; 
-}
+// ::-webkit-scrollbar { 
+//   display: none; 
+// }
 
 .slide.insight {
   background-image: url('/img/insight-background.png');
@@ -1373,6 +1373,7 @@
 
   @media screen and (max-width: 767px) {
     background-color: $black !important;
+    height: 94px;
   }
 
   &.scrolled {

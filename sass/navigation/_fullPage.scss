@@ -83,6 +83,13 @@ html.fp-enabled,
     -webkit-transform: rotate(135deg) skew(-2deg, -2deg);
     -ms-transform: rotate(135deg) skew(-2deg, -2deg);
     transform: rotate(135deg) skew(-2deg, -2deg);
+
+    @media screen and (max-width:767px) {
+      border: solid $white-85;
+      border-width: 0 1px 1px 0;
+      padding: 6px;
+      top: 104px;
+    }
   }
 
   &.fp-next {
@@ -90,6 +97,13 @@ html.fp-enabled,
     -webkit-transform: rotate(-45deg) skew(-2deg, -2deg);
     -ms-transform: rotate(-45deg) skew(-2deg, -2deg);
     transform: rotate(-45deg) skew(-2deg, -2deg);
+
+    @media screen and (max-width:767px) {
+      border: solid $white-85;
+      border-width: 0 1px 1px 0;
+      padding: 6px;
+      top: 104px;
+    }
   }
 }
 
@@ -149,6 +163,10 @@ html.fp-enabled,
   text-align: center;
   top: 17px;
   width: 100vw;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 
 #fp-nav ul,
