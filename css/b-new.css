@@ -13,14 +13,14 @@
 @supports (-ms-accelerator: true) {
   /* line 6, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
   .slide.president .thumbnails {
-    left: 0;
+    left: 100vw;
   }
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   /* line 6, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
   .slide.president .thumbnails {
-    left: 0;
+    left: 100vw;
   }
 }
 
