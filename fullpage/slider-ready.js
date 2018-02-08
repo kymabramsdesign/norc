@@ -165,28 +165,28 @@ function currentSlide() {
   $('.nav-dot, .section-title, .slide').removeClass('active');
 
   if ( hash == 0 ) {
-    $('.insight').stop(true,true).show().addClass('active');
+    $('.insight').stop(true,true).fadeIn(800).addClass('active');
   }
   if ( hash == 1 ) {
-    $('.president').stop(true,true).show().addClass('active');
+    $('.president').stop(true,true).fadeIn(800).addClass('active');
   }
   if ( hash == 2 ) {
-    $('.economics').stop(true,true).show().addClass('active');
+    $('.economics').stop(true,true).fadeIn(800).addClass('active');
   }
   if ( hash == 3 ) {
-    $('.education').stop(true,true).show().addClass('active');
+    $('.education').stop(true,true).fadeIn(800).addClass('active');
   }
   if ( hash == 4 ) {
-    $('.global').stop(true,true).show().addClass('active');
+    $('.global').stop(true,true).fadeIn(800).addClass('active');
   }
   if ( hash == 5 ) {
-    $('.health').stop(true,true).show().addClass('active');
+    $('.health').stop(true,true).fadeIn(800).addClass('active');
   }
   if ( hash == 6 ) {
-    $('.society').stop(true,true).show().addClass('active');
+    $('.society').stop(true,true).fadeIn(800).addClass('active');
   }
   if ( hash == 7 ) {
-    $('.gain-more').stop(true,true).show().addClass('active');
+    $('.gain-more').stop(true,true).fadeIn(800).addClass('active');
   }
 }
 
