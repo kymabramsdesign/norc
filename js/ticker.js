@@ -46,6 +46,8 @@ if ( windowWidth >= 768 ) {
     .tiSettings({speed: 0}).tiType("<h3>a Better World</h3>").tiPause(1800);
     }
   });
+
+    $('.skip-intro p').delay(2000).fadeIn(1000);
 }
 
 else {
@@ -91,6 +93,8 @@ else {
     .tiSettings({speed: 0}).tiType("<h3>a Better World</h3>").tiPause(1000);
     }
   });
+
+  $('.skip-intro p').delay(2000).fadeIn(1000);
 }
 
 

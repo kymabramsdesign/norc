@@ -35,6 +35,7 @@
   p {
     color: rgba(255,255,255,.75);
     cursor: pointer;
+    display: none;
     font-size: 14px;
     letter-spacing: 2.5px;
     line-height: 14px;
@@ -58,4 +59,12 @@
       color: #fff;
     }
   }
+}
+
+.popup-image {
+
+}
+
+.area .thumbnails .one-vertical {
+  margin-bottom: 20px;
 }

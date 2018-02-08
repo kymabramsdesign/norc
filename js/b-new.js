@@ -51,6 +51,7 @@ function presidentEssay() {
   }
 }
 
+// Landing Page popups
 function landingVideo() {
   var windowHeight = $(window).height();
   var windowWidth = $(window).width();
@@ -100,6 +101,11 @@ function landingVideo() {
     if ( $('iframe').is(':visible')) {
       $('#welcome-video').attr('src', 'https://www.youtube.com/embed/TNeQXQ42qVA?rel=0&showinfo=1&modestbranding=1');
     }
+  });
+
+  $('.popup-image').on('click', function(gas) {
+    gas.preventDefault();
+    $('.white-page-overlay').fadeIn();
   });
 }
 

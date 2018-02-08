@@ -51,6 +51,7 @@
 .skip-intro p {
   color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
+  display: none;
   font-size: 14px;
   letter-spacing: 2.5px;
   line-height: 14px;
@@ -71,12 +72,17 @@
   }
 }
 
-/* line 54, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+/* line 55, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
 .skip-intro p:hover {
   -webkit-transition: color .3s ease-in-out;
   -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
   color: #fff;
+}
+
+/* line 68, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+.area .thumbnails .one-vertical {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=../b-new.map */
