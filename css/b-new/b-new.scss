@@ -1,15 +1,51 @@
 .slide.president .landing-text p:last-of-type {
-  padding-bottom: 23px;
   margin-bottom: 0;
+  padding-bottom: 23px;
 }
 
 .slide.president .thumbnails {
   /* IE Edge 12+ CSS styles go here */
-    @supports (-ms-accelerator:true) {
-      left: 100vw;
+  @supports (-ms-accelerator:true) {
+    left: 100vw;
+  }
+  /* IE10+ CSS styles go here */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    left: 100vw;
+  }
+}
+
+.skip-intro {
+  bottom: 51px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 1001;
+
+  @media screen and (max-width:767px) {
+    bottom: 30px;
+  }
+
+  p {
+    color: rgba(255,255,255,.75);
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    line-height: 14px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    transition: color .2s ease-in-out;
+
+    @media screen and (max-width:767px) {
+      font-size: 12px;
+      letter-spacing: 2px;
+      line-height: 10px;
     }
-    /* IE10+ CSS styles go here */
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      left: 100vw;
+
+    &:hover {
+      transition: color .3s ease-in-out;
+      color: #fff;
     }
+  }
 }

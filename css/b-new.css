@@ -1,7 +1,7 @@
 /* line 1, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
 .slide.president .landing-text p:last-of-type {
-  padding-bottom: 23px;
   margin-bottom: 0;
+  padding-bottom: 23px;
 }
 
 /* line 6, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
@@ -22,6 +22,51 @@
   .slide.president .thumbnails {
     left: 100vw;
   }
+}
+
+/* line 17, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+.skip-intro {
+  bottom: 51px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  z-index: 1001;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 17, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+  .skip-intro {
+    bottom: 30px;
+  }
+}
+
+/* line 29, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+.skip-intro p {
+  color: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  line-height: 14px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: color .2s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 29, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+  .skip-intro p {
+    font-size: 12px;
+    letter-spacing: 2px;
+    line-height: 10px;
+  }
+}
+
+/* line 46, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+.skip-intro p:hover {
+  transition: color .3s ease-in-out;
+  color: #fff;
 }
 
 /*# sourceMappingURL=../b-new.map */
