@@ -1,0 +1,63 @@
+//fixes for most ie browsers
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    //addresses run on content, on slides
+    .fp-slides .right *,
+    .fp-slides .landing-text *,
+    .fp-slides .thumbnails p,
+    .slide.gain-more .credits .one {
+        width: 100%;
+    }
+    .slide.gain-more .credits {
+        width: calc(100%);
+    }
+    //backs out fix for p tags inside of a tags (prevent background image blow-out)
+    .fp-slides .thumbnails a p {
+        width: auto;
+    }
+    //allows for a tags to show up properly on slides when they are ones with background images
+    .fp-slides .thumbnails a {
+        display: block;
+    }
+    .fp-slides .thumbnails .small.caption.white.touch a {
+        display: inline-block;
+    }
+    //addresses down arrow and explore our world call to action
+    .fp-tableCell .bottom-arrow {
+        .explore {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        .president.slide .landing-text {
+            width: calc(100% - .5px);
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .president.slide .thumbnails {
+            width: calc(100% - .5px);
+        }
+        .area,
+        .menu-container,
+        .president .area {
+            width: calc(100% - .5px);
+        }
+        #heal-contain.area .two-vertical+.two-vertical+.one-vertical .four,
+        #glo-contain.area .two-vertical+.two-vertical+.one-vertical .four,
+        #ed.area .one-vertical+.one-vertical .four,
+        #ed-contain.area .mobile-tiles.one-vertical .four,
+        #soc-contain.area .mobile-tiles+.one-vertical .four,
+        #econ-contain.area .two-vertical+.one-vertical .four,
+        .president .thumbnails.mobile,
+        .gain-more .credits .one {
+            padding-bottom: 75px;
+        }
+        html,
+        body {
+            overflow: hidden !important;
+        }
+    }
+    .sub-nav.desktop {
+        padding: 8px 0;
+    }
+}
