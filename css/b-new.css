@@ -27,7 +27,13 @@
 /* line 17, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
 .skip-intro {
   bottom: 51px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: fixed;
   width: 100vw;
@@ -41,7 +47,7 @@
   }
 }
 
-/* line 29, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+/* line 35, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
 .skip-intro p {
   color: rgba(255, 255, 255, 0.75);
   cursor: pointer;
@@ -51,11 +57,13 @@
   margin: 0;
   text-align: center;
   text-transform: uppercase;
+  -webkit-transition: color .2s ease-in-out;
+  -o-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 29, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+  /* line 35, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
   .skip-intro p {
     font-size: 12px;
     letter-spacing: 2px;
@@ -63,8 +71,10 @@
   }
 }
 
-/* line 46, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+/* line 54, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
 .skip-intro p:hover {
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
   color: #fff;
 }

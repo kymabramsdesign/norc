@@ -95,7 +95,7 @@ else {
 
 
 $('.skip-intro p').on('click', function() {
-  $('#intro-overlay').fadeOut(1000); // Hides Intro Animation Overlay
+  $('#intro-overlay').fadeOut(500); // Hides Intro Animation Overlay
   $('.typed-first, .typed-second, .ti-cursor').remove(); //Stops Animation
 });
 

@@ -16,7 +16,13 @@
 
 .skip-intro {
   bottom: 51px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   position: fixed;
   width: 100vw;
@@ -35,6 +41,8 @@
     margin: 0;
     text-align: center;
     text-transform: uppercase;
+    -webkit-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
 
     @media screen and (max-width:767px) {
@@ -44,6 +52,8 @@
     }
 
     &:hover {
+      -webkit-transition: color .3s ease-in-out;
+      -o-transition: color .3s ease-in-out;
       transition: color .3s ease-in-out;
       color: #fff;
     }
