@@ -17,9 +17,6 @@ function presidentEssay() {
   if ( windowWidth >= 901 ) {
     $('.president .area').on('scroll', function() {
       var areaPosition = $(this).scrollTop();
-      console.log(columnHeight);
-      console.log(areaPosition);
-
       var thumb = $('.active .area .landing-text').offset().top;
 
       if ( (windowHeight-columnHeight) >= thumb+80 ) {
