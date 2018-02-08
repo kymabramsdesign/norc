@@ -95,7 +95,7 @@ function landingVideo() {
     $('.white-page-overlay').fadeIn();
   });
 
-  $('.home-close, .close-arrow').on('click', function() {
+  $('.contains-video .home-close, .contains-video .close-arrow').on('click', function() {
     $('.image-container').removeClass('visible-video');
     $('.white-page-overlay').fadeOut();
     if ( $('iframe').is(':visible')) {
@@ -103,9 +103,15 @@ function landingVideo() {
     }
   });
 
-  $('.popup-image').on('click', function(gas) {
+  $('.gas-image-container .home-close, .gas-image-container .close-arrow').on('click', function() {
+    $('.gas-image-container').removeClass('visible');
+    $('.white-page-overlay').fadeOut();
+  });
+
+  $('.economics .popup-image').on('click', function(gas) {
     gas.preventDefault();
     $('.white-page-overlay').fadeIn();
+    $('.gas-image-container').addClass('visible');
   });
 }
 

@@ -5778,8 +5778,8 @@ body.intro {
 @media screen and (max-width: 767px) {
   /* line 1246, /Users/kadimac/Desktop/norc-repo/sass/pages/_landing.scss */
   .area .thumbnails .mobile-tiles .one .small.caption {
-    font-size: 21px;
-    line-height: 29px;
+    font-size: 19px;
+    line-height: 25px;
     margin: -1px 0 0;
     padding: 0;
     width: 100%;
