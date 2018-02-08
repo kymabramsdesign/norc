@@ -90,6 +90,7 @@ function landingVideo() {
     });
   }
   
+  // President's Video Special Popup
   $('.desktop-video, .mobile-video').on('click', function() {
     $('.image-container').addClass('visible-video');
     $('.white-page-overlay').fadeIn();
@@ -103,16 +104,31 @@ function landingVideo() {
     }
   });
 
-  $('.gas-image-container .home-close, .gas-image-container .close-arrow').on('click', function() {
-    $('.gas-image-container').removeClass('visible');
-    $('.white-page-overlay').fadeOut();
-  });
-
+  // Gas Prices Special Popup
   $('.economics .popup-image').on('click', function(gas) {
     gas.preventDefault();
     $('.white-page-overlay').fadeIn();
     $('.gas-image-container').addClass('visible');
   });
+
+  $('.gas-image-container .home-close, .gas-image-container .close-arrow').on('click', function() {
+    $('.gas-image-container').removeClass('visible');
+    $('.white-page-overlay').fadeOut();
+  });
+
+  // Hamilton Special popup
+  $('.society .popup-image').on('click', function(gas) {
+    gas.preventDefault();
+    $('.white-page-overlay').fadeIn();
+    $('.hamilton-image-container').addClass('visible');
+  });
+
+  $('.hamilton-image-container .home-close, .hamilton-image-container .close-arrow').on('click', function() {
+    $('.hamilton-image-container').removeClass('visible');
+    $('.white-page-overlay').fadeOut();
+  });
+
+  
 }
 
 // Collect all functions to execute at once on Load
