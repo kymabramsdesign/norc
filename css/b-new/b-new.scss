@@ -73,6 +73,39 @@
   }
 }
 
+.one.popup-image {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  .expand-arrow {
+    margin: 12px;
+    opacity: .75;
+    width: 21px;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    -o-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover {
+    .expand-arrow {
+      opacity: 1;
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+}
+
 .gas-image-container {
   -webkit-transition: left 0.3s ease-in-out;
   -o-transition: left 0.3s ease-in-out;
@@ -177,6 +210,8 @@
     .facebook,
     .twitter,
     .linkedin {
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
       transition: opacity 0.3s ease-in-out;
       margin: 10px 0;
       opacity: .65;
@@ -188,6 +223,8 @@
       }
 
       &:hover {
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
         transition: opacity 0.3s ease-in-out;
         opacity: 1;
       }
@@ -207,6 +244,8 @@
   }
 
   .home-close {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
     -ms-flex-item-align: start;
     -webkit-align-self: flex-start;
@@ -220,6 +259,8 @@
     }
 
     &:hover {
+      -webkit-transition: opacity 0.3s ease-in-out;
+      -o-transition: opacity 0.3s ease-in-out;
       transition: opacity 0.3s ease-in-out;
       opacity: 1;
     }
