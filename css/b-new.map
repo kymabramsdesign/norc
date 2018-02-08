@@ -5,8 +5,8 @@
 		"b-new/b-new.scss"
 	],
 	"sourcesContent": [
-		".slide.president .landing-text p:last-of-type {\n  padding-bottom: 23px;\n  margin-bottom: 0;\n}\n"
+		".slide.president .landing-text p:last-of-type {\n  padding-bottom: 23px;\n  margin-bottom: 0;\n}\n\n.slide.president .thumbnails {\n  /* IE Edge 12+ CSS styles go here */\n    @supports (-ms-accelerator:true) {\n      left: 0;\n    }\n    /* IE10+ CSS styles go here */\n    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {\n      left: 0;\n    }\n}\n"
 	],
-	"mappings": ";AAAA,AAAgC,MAA1B,AAAA,UAAU,CAAC,aAAa,CAAC,CAAC,AAAA,aAAa,CAAC;EAC5C,cAAc,EAAE,IAAK;EACrB,aAAa,EAAE,CAAE;CAClB",
+	"mappings": ";AAAA,AAAgC,MAA1B,AAAA,UAAU,CAAC,aAAa,CAAC,CAAC,AAAA,aAAa,CAAC;EAC5C,cAAc,EAAE,IAAK;EACrB,aAAa,EAAE,CAAE;CAClB;;;AAED,AAAiB,MAAX,AAAA,UAAU,CAAC,WAAW,CAAC;EAC3B,oCAAoC;EAIlC,8BAA8B;CAIjC;;AAPmC,SAAC,EAAtB,eAAe,EAAC,IAAI;;EAFnC,AAAiB,MAAX,AAAA,UAAU,CAAC,WAAW,CAAC;IAGvB,IAAI,EAAE,CAAE;GAMb;;;AAHG,MAAM,CAAN,GAAG,MAAM,iBAAC,EAAkB,IAAI,IAAI,iBAAC,EAAkB,MAAM;;EANjE,AAAiB,MAAX,AAAA,UAAU,CAAC,WAAW,CAAC;IAOvB,IAAI,EAAE,CAAE;GAEb",
 	"names": []
 }

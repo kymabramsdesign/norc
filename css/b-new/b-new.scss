@@ -2,3 +2,14 @@
   padding-bottom: 23px;
   margin-bottom: 0;
 }
+
+.slide.president .thumbnails {
+  /* IE Edge 12+ CSS styles go here */
+    @supports (-ms-accelerator:true) {
+      left: 0;
+    }
+    /* IE10+ CSS styles go here */
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      left: 0;
+    }
+}

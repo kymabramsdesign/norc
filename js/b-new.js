@@ -15,11 +15,13 @@ function presidentEssay() {
   var windowWidth = $(window).width();
 
   if ( windowWidth >= 901 ) {
+    var thisHeight = $('.president .thumbnails').height();
     $('.president .area').on('scroll', function() {
       var areaPosition = $(this).scrollTop();
       var thumb = $('.active .area .landing-text').offset().top;
+      thumb = thumb+80;
 
-      if ( (windowHeight-columnHeight) >= thumb+80 ) {
+      if ( (windowHeight-columnHeight) >= thumb ) {
         $('.president .thumbnails').css('position', 'fixed');
         $('.president .landing-text').css('margin-left', '50vw');
       }

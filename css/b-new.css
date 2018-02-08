@@ -4,4 +4,24 @@
   margin-bottom: 0;
 }
 
+/* line 6, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+.slide.president .thumbnails {
+  /* IE Edge 12+ CSS styles go here */
+  /* IE10+ CSS styles go here */
+}
+
+@supports (-ms-accelerator: true) {
+  /* line 6, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+  .slide.president .thumbnails {
+    left: 0;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 6, /Users/kadimac/Desktop/norc-repo/css/b-new/b-new.scss */
+  .slide.president .thumbnails {
+    left: 0;
+  }
+}
+
 /*# sourceMappingURL=../b-new.map */
