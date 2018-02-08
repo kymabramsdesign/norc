@@ -5,7 +5,7 @@
     .fp-slides .right *,
     .fp-slides .landing-text *,
     .fp-slides .thumbnails p,
-    .slide.gain-more .credits p {
+    .slide.gain-more .credits .one {
         width: 100%;
     }
     .slide.gain-more .credits {
@@ -28,9 +28,18 @@
             width: 100%;
         }
     }
+    @media screen and (max-width: 900px) {
+        .president.slide .landing-text {
+            width: calc(100% - .5px);
+        }
+    }
     @media screen and (max-width: 767px) {
+        .president.slide .thumbnails {
+            width: calc(100% - .5px);
+        }
         .area,
-        .menu-container {
+        .menu-container,
+        .president .area {
             width: calc(100% - .5px);
         }
         #heal-contain.area .two-vertical+.two-vertical+.one-vertical .four,
