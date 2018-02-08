@@ -1116,9 +1116,11 @@
         }
 
         .large.caption {
+          color: $white-90;
           line-height: 28px;
           margin: 8px 0 0;
           padding-right: 10px;
+          text-shadow: none;
           width: 100%;
 
           @media screen and (max-width: 1000px) {
@@ -1251,8 +1253,8 @@
           position: relative;
 
           @media screen and (max-width: 767px) {
-            font-size: 21px;
-            line-height: 29px;
+            font-size: 19px;
+            line-height: 25px;
             margin: -1px 0 0;
             padding: 0;
             width: 100%;
