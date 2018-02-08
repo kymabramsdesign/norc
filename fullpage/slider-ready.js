@@ -202,8 +202,8 @@ function scrollTime() {
 
       var areaPosition = $(this).scrollTop();
       var areaHeight = $(this).height();
-      console.log(areaHeight);
-      console.log(areaPosition);
+      // console.log(areaHeight);
+      // console.log(areaPosition);
 
 
       // Explore more button functions

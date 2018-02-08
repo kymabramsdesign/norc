@@ -5,8 +5,8 @@
 		"b-new/b-new.scss"
 	],
 	"sourcesContent": [
-		""
+		".slide.president .landing-text p:last-of-type {\n  padding-bottom: 23px;\n  margin-bottom: 0;\n}\n"
 	],
-	"mappings": "",
+	"mappings": ";AAAA,AAAgC,MAA1B,AAAA,UAAU,CAAC,aAAa,CAAC,CAAC,AAAA,aAAa,CAAC;EAC5C,cAAc,EAAE,IAAK;EACrB,aAAa,EAAE,CAAE;CAClB",
 	"names": []
 }
