@@ -32,6 +32,14 @@ object {
   }
 }
 
+.main .white-page-overlay {
+  opacity: .91;
+
+  @media screen and (max-width:767px) {
+    opacity: .97;
+  }
+}
+
 .no-scroll {
   overflow: hidden;
 }
