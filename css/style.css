@@ -3800,6 +3800,13 @@ body.intro {
 
   *::-ms-backdrop,
   .sub-nav.desktop {
-    padding: 0; } }
+    padding: 0; }
+
+  .story-page_economics .story-content .left-50[style="bottom: 0px; position: absolute;"],
+  .story-page_education .story-content .left-50[style="bottom: 0px; position: absolute;"],
+  .story-page_global .story-content .left-50[style="bottom: 0px; position: absolute;"],
+  .story-page_health .story-content .left-50[style="bottom: 0px; position: absolute;"],
+  .story-page_society .story-content .left-50[style="bottom: 0px; position: absolute;"] {
+    bottom: auto !important; } }
 
 /*# sourceMappingURL=style.css.map */
