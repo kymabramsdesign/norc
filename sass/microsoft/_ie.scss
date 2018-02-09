@@ -57,7 +57,23 @@
             overflow: hidden !important;
         }
     }
-    .sub-nav.desktop {
+    /* .sub-nav.desktop {
         padding: 8px 0;
+        justify-content: space-between;
+    } */
+    .story-page_economics .sub-nav .story-item,
+    .story-page_global .sub-nav .story-item,
+    .story-page_health .sub-nav .story-item,
+    .story-page_society .sub-nav .story-item {
+        width: calc(100% / 6);
+        display: block;
+    }
+    .story-page_education .sub-nav .story-item {
+        width: calc(100% / 3);
+        display: block;
+    }
+    *::-ms-backdrop,
+    .sub-nav.desktop {
+        padding: 0;
     }
 }
