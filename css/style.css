@@ -3811,8 +3811,18 @@ body.intro {
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .special-share a {
-    display: block; }
+    display: block; } }
+@media screen and (-ms-high-contrast: active) and (max-width: 1210px), screen and (-ms-high-contrast: none) and (max-width: 1210px) {
+  .story-page .move-out.image-container {
+    width: calc(100% - 245px); } }
+@media screen and (-ms-high-contrast: active) and (max-width: 1024px), screen and (-ms-high-contrast: none) and (max-width: 1024px) {
+  .story-page .move-out.image-container {
+    width: calc(100% - 195px); } }
+@media screen and (-ms-high-contrast: active) and (max-width: 900px), screen and (-ms-high-contrast: none) and (max-width: 900px) {
+  .story-page .move-out.image-container {
+    width: calc(100% - 95px); } }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .main.fp-viewing-home-1 .area .thumbnails {
     transition: none; }
   .main.fp-viewing-home-1 .area:not(.scrolled) .thumbnails[style="position: absolute;"] {
