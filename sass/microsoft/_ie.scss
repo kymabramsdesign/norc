@@ -52,8 +52,7 @@
         .gain-more .credits .one {
             padding-bottom: 75px;
         }
-        html,
-        body {
+        body:not(.story-page) {
             overflow: hidden !important;
         }
     }
@@ -75,5 +74,22 @@
     *::-ms-backdrop,
     .sub-nav.desktop {
         padding: 0;
+    }
+    //for scrolls on secondary pages
+    .story-page_economics,
+    .story-page_education,
+    .story-page_global,
+    .story-page_health,
+    .story-page_society {
+        .story-content {
+            .left-50[style="bottom: 0px; position: absolute;"] {
+                bottom: auto !important;
+            }
+            @media screen and (max-width: 767px) {
+                .right {
+                    position: relative !important;
+                }
+            }
+        }
     }
 }

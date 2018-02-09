@@ -6052,8 +6052,7 @@ body.intro {
     padding-bottom: 75px;
   }
   /* line 55, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
-  html,
-  body {
+  body:not(.story-page) {
     overflow: hidden !important;
   }
 }
@@ -6063,7 +6062,7 @@ body.intro {
         padding: 8px 0;
         justify-content: space-between;
     } */
-  /* line 64, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  /* line 63, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   .story-page_economics .sub-nav .story-item,
   .story-page_global .sub-nav .story-item,
   .story-page_health .sub-nav .story-item,
@@ -6071,15 +6070,34 @@ body.intro {
     width: calc(100% / 6);
     display: block;
   }
-  /* line 71, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  /* line 70, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   .story-page_education .sub-nav .story-item {
     width: calc(100% / 3);
     display: block;
   }
-  /* line 75, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  /* line 74, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   *::-ms-backdrop,
   .sub-nav.desktop {
     padding: 0;
+  }
+  /* line 85, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  .story-page_economics .story-content .left-50[style="bottom: 0px; position: absolute;"],
+  .story-page_education .story-content .left-50[style="bottom: 0px; position: absolute;"],
+  .story-page_global .story-content .left-50[style="bottom: 0px; position: absolute;"],
+  .story-page_health .story-content .left-50[style="bottom: 0px; position: absolute;"],
+  .story-page_society .story-content .left-50[style="bottom: 0px; position: absolute;"] {
+    bottom: auto !important;
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 767px), screen and (-ms-high-contrast: none) and (max-width: 767px) {
+  /* line 89, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  .story-page_economics .story-content .right,
+  .story-page_education .story-content .right,
+  .story-page_global .story-content .right,
+  .story-page_health .story-content .right,
+  .story-page_society .story-content .right {
+    position: relative !important;
   }
 }
 
