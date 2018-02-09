@@ -3807,5 +3807,12 @@ body.intro {
   .story-page_health .story-content .left-50[style="bottom: 0px; position: absolute;"],
   .story-page_society .story-content .left-50[style="bottom: 0px; position: absolute;"] {
     bottom: auto !important; } }
+@media screen and (-ms-high-contrast: active) and (max-width: 767px), screen and (-ms-high-contrast: none) and (max-width: 767px) {
+  .story-page_economics .story-content .right,
+  .story-page_education .story-content .right,
+  .story-page_global .story-content .right,
+  .story-page_health .story-content .right,
+  .story-page_society .story-content .right {
+    position: relative !important; } }
 
 /*# sourceMappingURL=style.css.map */

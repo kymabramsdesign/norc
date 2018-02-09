@@ -85,6 +85,11 @@
             .left-50[style="bottom: 0px; position: absolute;"] {
                 bottom: auto !important;
             }
+            @media screen and (max-width: 767px) {
+                .right {
+                    position: relative !important;
+                }
+            }
         }
     }
 }
