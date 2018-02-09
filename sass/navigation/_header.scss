@@ -120,8 +120,7 @@
 
       &.open-menu {
         @include transition(all .1s ease-in-out);
-        -webkit-box-shadow: 0 3px 15px $black-12;
-        box-shadow: 0 3px 15px $black-12;
+        border-bottom: 1px solid $black-3;
       }
 
       .menu-items {
