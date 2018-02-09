@@ -76,7 +76,7 @@ $(window).bind("load", function() {
       '<li><a href="/congregations">Tracking the Professional and Economic Outlook of Congregations</a></li>' +
       '<li><a href="/poverty-research">Exploring Poverty and Resilience</a></li>' +
       '<li><a href="/consumer-finances">Monitoring the Financial Health of American Families</a></li>' +
-      '<li><a href="/just-companies">NORC Helps Identify America\'s Most Just Companies</a></li>' +
+      '<li><a href="/just-companies">Identifying America\'s Most Just Companies</a></li>' +
       '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
       '<li><a href="/gss-trends">GSS Trends</a></li>' +
     '</ul></li>' +
