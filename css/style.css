@@ -3779,8 +3779,7 @@ body.intro {
   .gain-more .credits .one {
     padding-bottom: 75px; }
 
-  html,
-  body {
+  body:not(.story-page) {
     overflow: hidden !important; } }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   /* .sub-nav.desktop {

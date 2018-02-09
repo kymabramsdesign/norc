@@ -52,8 +52,7 @@
         .gain-more .credits .one {
             padding-bottom: 75px;
         }
-        html,
-        body {
+        body:not(.story-page) {
             overflow: hidden !important;
         }
     }
