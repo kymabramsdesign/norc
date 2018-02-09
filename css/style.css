@@ -6102,9 +6102,24 @@ body.intro {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   /* line 91, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   .special-share a {
+<<<<<<< HEAD
+    display: block; } }
+@media screen and (-ms-high-contrast: active) and (max-width: 1210px), screen and (-ms-high-contrast: none) and (max-width: 1210px) {
+  .story-page .move-out.image-container {
+    width: calc(100% - 245px); } }
+@media screen and (-ms-high-contrast: active) and (max-width: 1024px), screen and (-ms-high-contrast: none) and (max-width: 1024px) {
+  .story-page .move-out.image-container {
+    width: calc(100% - 195px); } }
+@media screen and (-ms-high-contrast: active) and (max-width: 900px), screen and (-ms-high-contrast: none) and (max-width: 900px) {
+  .story-page .move-out.image-container {
+    width: calc(100% - 95px); } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+=======
     display: block;
   }
   /* line 96, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+>>>>>>> 79a8b016126b93b16e3a47bf77b3e055152dade4
   .main.fp-viewing-home-1 .area .thumbnails {
     transition: none;
   }
