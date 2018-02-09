@@ -100,6 +100,11 @@
 }
 
 /* line 76, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+.president .area .thumbnails .one-vertical {
+  margin-bottom: 0;
+}
+
+/* line 80, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .one.popup-image {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
@@ -115,7 +120,7 @@
   justify-content: space-between;
 }
 
-/* line 90, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 94, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .one.popup-image .expand-arrow {
   margin: 12px;
   opacity: .75;
@@ -125,7 +130,7 @@
   transition: opacity 0.2s ease-in-out;
 }
 
-/* line 100, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 104, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .one.popup-image:hover .expand-arrow {
   opacity: 1;
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -133,7 +138,7 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-/* line 110, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 114, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container,
 .hamilton-image-container {
   -webkit-transition: left 0.3s ease-in-out;
@@ -159,27 +164,27 @@
 }
 
 @media screen and (max-width: 767px) {
-  /* line 110, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 114, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container,
   .hamilton-image-container {
     top: -2vh;
   }
 }
 
-/* line 137, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 141, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container.visible,
 .hamilton-image-container.visible {
   left: 0;
 }
 
-/* line 141, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 145, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .home-popup,
 .hamilton-image-container .home-popup {
   width: 1004px;
 }
 
 @media screen and (max-width: 1150px) {
-  /* line 141, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 145, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .home-popup,
   .hamilton-image-container .home-popup {
     width: 803px;
@@ -187,7 +192,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  /* line 141, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 145, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .home-popup,
   .hamilton-image-container .home-popup {
     width: 679px;
@@ -195,7 +200,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  /* line 141, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 145, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .home-popup,
   .hamilton-image-container .home-popup {
     width: 100vw;
@@ -203,14 +208,14 @@
 }
 
 @media screen and (max-width: 767px) and (orientation: landscape) {
-  /* line 141, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 145, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .home-popup,
   .hamilton-image-container .home-popup {
     margin-top: 132px;
   }
 }
 
-/* line 161, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 165, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .special-share,
 .hamilton-image-container .special-share {
   -ms-flex-line-pack: start;
@@ -228,7 +233,7 @@
 }
 
 @media screen and (max-width: 1150px) {
-  /* line 161, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 165, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .special-share,
   .hamilton-image-container .special-share {
     margin: -195px 0 0 -23px;
@@ -236,7 +241,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  /* line 161, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 165, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .special-share,
   .hamilton-image-container .special-share {
     margin: -120px 0 0 -23px;
@@ -244,7 +249,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  /* line 161, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 165, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .special-share,
   .hamilton-image-container .special-share {
     -webkit-box-align: center;
@@ -267,14 +272,14 @@
   }
 }
 
-/* line 203, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 207, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .special-share a,
 .hamilton-image-container .special-share a {
   width: 22px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 203, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 207, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .special-share a,
   .hamilton-image-container .special-share a {
     margin-right: 5px;
@@ -282,7 +287,7 @@
   }
 }
 
-/* line 212, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 216, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .special-share .facebook,
 .gas-image-container .special-share .twitter,
 .gas-image-container .special-share .linkedin,
@@ -299,7 +304,7 @@
 }
 
 @media screen and (max-width: 767px) {
-  /* line 212, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 216, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .special-share .facebook,
   .gas-image-container .special-share .twitter,
   .gas-image-container .special-share .linkedin,
@@ -310,7 +315,7 @@
   }
 }
 
-/* line 227, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 231, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .special-share .facebook:hover,
 .gas-image-container .special-share .twitter:hover,
 .gas-image-container .special-share .linkedin:hover,
@@ -323,27 +328,27 @@
   opacity: 1;
 }
 
-/* line 235, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 239, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .special-share .facebook,
 .hamilton-image-container .special-share .facebook {
   padding: 0 4px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 235, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 239, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .special-share .facebook,
   .hamilton-image-container .special-share .facebook {
     padding: 0 5px;
   }
 }
 
-/* line 243, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 247, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .special-share .linkedin,
 .hamilton-image-container .special-share .linkedin {
   padding: 0 1px;
 }
 
-/* line 248, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 252, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .home-close,
 .hamilton-image-container .home-close {
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -358,14 +363,14 @@
 }
 
 @media screen and (max-width: 767px) {
-  /* line 248, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 252, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .home-close,
   .hamilton-image-container .home-close {
     display: none;
   }
 }
 
-/* line 263, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 267, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .home-close:hover,
 .hamilton-image-container .home-close:hover {
   -webkit-transition: opacity 0.3s ease-in-out;
@@ -374,14 +379,14 @@
   opacity: 1;
 }
 
-/* line 271, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+/* line 275, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
 .gas-image-container .close-arrow,
 .hamilton-image-container .close-arrow {
   display: none;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 271, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
+  /* line 275, /Users/Brandon/Desktop/KAD/NORC/norc-repo/css/b-new/b-new.scss */
   .gas-image-container .close-arrow,
   .hamilton-image-container .close-arrow {
     display: inline-block;
