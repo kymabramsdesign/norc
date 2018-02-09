@@ -1,5 +1,4 @@
 .main {
-  // overflow-x: hidden;
   
   .section-title.active {
     display: inline-block;
@@ -36,44 +35,11 @@
   }
 }
 
-// .slider {
-//   /* line them up horizontally */
-//   display: -webkit-box;
-//   display: -ms-flexbox;
-//   display: -webkit-flex;
-//   display: flex;
-//   height: 100vh;
-//   left: 0;
-
-//   /* make it smooth on iOS */
-//   -webkit-overflow-scrolling: touch;
-//   /* each slide snaps into place on iOS */
-//   -webkit-scroll-snap-points-x: repeat(1000px);
-//   -ms-scroll-snap-points-x: repeat(1000px);
-//   scroll-snap-points-x: repeat(1000px);
-//   -webkit-scroll-snap-type: mandatory;
-//   -ms-scroll-snap-type: mandatory;
-//   scroll-snap-type: mandatory;
-//   position: fixed;
-//   width: 100vw;
-// }
-
-// .slider > div {
-//   -ms-flex-negative: 0;
-//   -webkit-flex-shrink: 0;
-//   flex-shrink: 0;
-//   width: 100vw;
-// }
-
 .area {
   height: 100vh;
   overflow-y: scroll;
   width: 100vw;
 }
-
-// ::-webkit-scrollbar { 
-//   display: none; 
-// }
 
 .slide.insight {
   background-image: url('/img/insight-background.png');
@@ -259,7 +225,7 @@
   -webkit-justify-content: center;
   justify-content: center;
   position: absolute;
-  width: 180px;
+  width: 280px;
   z-index: 1000;
 
   @media screen and (max-width:767px) {
@@ -269,7 +235,7 @@
   .explore {
     @include transition(all .4s ease-in-out);
     color: $white-75;
-    cursor: pointer;
+    // cursor: pointer;
     font-size: 14px;
     letter-spacing: 2.5px;
     line-height: 14px;
@@ -284,7 +250,7 @@
     @include transition(opacity .4s ease-in-out);
     border: solid $white;
     border-width: 0 2px 2px 0;
-    cursor: pointer;
+    // cursor: pointer;
     height: 0;
     opacity: .75;
     padding: 14px;
@@ -293,10 +259,10 @@
     transform: rotate(45deg) skew(-2deg, -2deg);
     width: 0;
 
-    &:hover {
-      @include transition(opacity .4s ease-in-out);
-      opacity: 1;
-    }
+    // &:hover {
+    //   @include transition(opacity .4s ease-in-out);
+    //   opacity: 1;
+    // }
   }
 }
 
@@ -579,8 +545,8 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(250vw - 90px);
-      left: calc(250vw - 90px);
+      left: -webkit-calc(250vw - 140px);
+      left: calc(250vw - 140px);
     }
   }
 
@@ -592,8 +558,8 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(350vw - 90px);
-      left: calc(350vw - 90px);
+      left: -webkit-calc(350vw - 140px);
+      left: calc(350vw - 140px);
     }
   }
 
@@ -605,8 +571,8 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(450vw - 90px);
-      left: calc(450vw - 90px);
+      left: -webkit-calc(450vw - 140px);
+      left: calc(450vw - 140px);
     }
   }
 
@@ -618,8 +584,8 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(550vw - 90px);
-      left: calc(550vw - 90px);
+      left: -webkit-calc(550vw - 140px);
+      left: calc(550vw - 140px);
     }
   }
 
@@ -631,8 +597,8 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(650vw - 90px);
-      left: calc(650vw - 90px);
+      left: -webkit-calc(650vw - 140px);
+      left: calc(650vw - 140px);
     }
   }
 
