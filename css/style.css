@@ -6102,45 +6102,54 @@ body.intro {
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   /* line 91, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   .special-share a {
-<<<<<<< HEAD
-    display: block; } }
-@media screen and (-ms-high-contrast: active) and (max-width: 1210px), screen and (-ms-high-contrast: none) and (max-width: 1210px) {
-  .story-page .move-out.image-container {
-    width: calc(100% - 245px); } }
-@media screen and (-ms-high-contrast: active) and (max-width: 1024px), screen and (-ms-high-contrast: none) and (max-width: 1024px) {
-  .story-page .move-out.image-container {
-    width: calc(100% - 195px); } }
-@media screen and (-ms-high-contrast: active) and (max-width: 900px), screen and (-ms-high-contrast: none) and (max-width: 900px) {
-  .story-page .move-out.image-container {
-    width: calc(100% - 95px); } }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-=======
     display: block;
   }
-  /* line 96, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
->>>>>>> 79a8b016126b93b16e3a47bf77b3e055152dade4
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 1210px), screen and (-ms-high-contrast: none) and (max-width: 1210px) {
+  /* line 94, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  .story-page .move-out.image-container {
+    width: calc(100% - 245px);
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 1024px), screen and (-ms-high-contrast: none) and (max-width: 1024px) {
+  /* line 94, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  .story-page .move-out.image-container {
+    width: calc(100% - 195px);
+  }
+}
+
+@media screen and (-ms-high-contrast: active) and (max-width: 900px), screen and (-ms-high-contrast: none) and (max-width: 900px) {
+  /* line 94, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  .story-page .move-out.image-container {
+    width: calc(100% - 95px);
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* line 107, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   .main.fp-viewing-home-1 .area .thumbnails {
     transition: none;
   }
-  /* line 100, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  /* line 111, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   .main.fp-viewing-home-1 .area:not(.scrolled) .thumbnails[style="position: absolute;"] {
     position: relative !important;
     left: 0;
   }
-  /* line 104, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  /* line 115, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   .main.fp-viewing-home-1 .area:not(.scrolled) .landing-text[style="margin-left: 50vw;"] {
     margin-left: 0 !important;
   }
 }
 
 @media screen and (-ms-high-contrast: active) and (max-width: 900px), screen and (-ms-high-contrast: none) and (max-width: 900px) {
-  /* line 109, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  /* line 120, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   .main.fp-viewing-home-1 .area .thumbnailsthumbnails[style="position: absolute;"] {
     position: relative !important;
     left: 0;
   }
-  /* line 113, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
+  /* line 124, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/microsoft/_ie.scss */
   .main.fp-viewing-home-1 .area .landing-text[style="margin-left: 50vw;"] {
     margin-left: 0 !important;
   }
