@@ -56,6 +56,9 @@ function landingVideo() {
   var windowHeight = $(window).height();
   var windowWidth = $(window).width();
   var buttonOffset = 0;
+  var thisImageHeight = $('.home-popup').height();
+  var captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
+  captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
 
   // Video iframe resizing
   if ( windowWidth > 1151 ) {
@@ -117,8 +120,9 @@ function landingVideo() {
   });
 
   // Hamilton Special popup
-  $('.society .popup-image').on('click', function(gas) {
-    gas.preventDefault();
+  $('.society .popup-image').on('click', function(ham) {
+    ham.preventDefault();
+    $('.caption').css('top', captionMargin);
     $('.white-page-overlay').fadeIn();
     $('.hamilton-image-container').addClass('visible');
   });
@@ -137,11 +141,11 @@ function initialize() {
   landingVideo();
 }
 
-
 // Collect all functions to execute on Resize
 function initializeResize() {
   presidentEssay();
   landingVideo();
+  console.log('resized');
 }
 
 $(document).ready(initialize);

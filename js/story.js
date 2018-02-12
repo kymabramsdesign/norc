@@ -271,12 +271,6 @@ function popUpTop () {
 }
 
 
-$('.chart.bubble').on('click', function() {
-  setTimeout(function() {
-      $('.chart img').attr("src", "img/sample-static-complete.png");
-    }, 1000);
-});
-
 // On Click Function for the videos/charts
 function videoPopup() {
   $('.video, .chart').on('click', function() {

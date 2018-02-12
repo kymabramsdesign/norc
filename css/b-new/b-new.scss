@@ -149,7 +149,7 @@
   }
 
   .home-popup {
-    width: 1004px;
+    width: 1000px;
 
     @media screen and (max-width: 1150px) {
       width: 803px;
@@ -165,6 +165,31 @@
 
     @media screen and (max-width:767px) and (orientation: landscape) {
       margin-top: 132px;
+    }
+  }
+
+  p {
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+    text-shadow: none;
+    position: absolute;
+    top: 800px;
+    width: 1000px;
+    margin: 0 0 0 -22px;
+
+    @media screen and (max-width: 1150px) {
+      width: 803px;
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 679px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin: 0;
+      padding: 0 20px;
+      width: 100vw;
     }
   }
 
