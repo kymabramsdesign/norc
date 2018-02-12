@@ -56,9 +56,16 @@ function landingVideo() {
   var windowHeight = $(window).height();
   var windowWidth = $(window).width();
   var buttonOffset = 0;
-  var thisImageHeight = $('.home-popup').height();
-  var captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
-  captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
+  var captionMargin = 0;
+
+  if ( windowWidth <= 767 ) {
+  captionMargin = '78vh'; // add image height to half total top/bottom space
+  } 
+  else {
+    var thisImageHeight = $('.home-popup').height();
+    captionMargin = (windowHeight - thisImageHeight); // get total top and bottom space
+    captionMargin = (captionMargin/2) + thisImageHeight + 7; // add image height to half total top/bottom space
+  }
 
   // Video iframe resizing
   if ( windowWidth > 1151 ) {
@@ -122,7 +129,7 @@ function landingVideo() {
   // Hamilton Special popup
   $('.society .popup-image').on('click', function(ham) {
     ham.preventDefault();
-    $('.caption').css('top', captionMargin);
+    $('.hamilton-image-container .caption').css('top', captionMargin);
     $('.white-page-overlay').fadeIn();
     $('.hamilton-image-container').addClass('visible');
   });
