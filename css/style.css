@@ -6473,6 +6473,11 @@ body.intro {
   }
 }
 
+/* line 359, /Users/Brandon/Desktop/KAD/NORC/norc-repo/sass/pages/_new-work.scss */
+.section, .slide {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
 /*--------------------------------------------------------------
 # Browser Hacks
 --------------------------------------------------------------*/

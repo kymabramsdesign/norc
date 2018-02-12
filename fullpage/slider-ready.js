@@ -202,9 +202,6 @@ function scrollTime() {
 
       var areaPosition = $(this).scrollTop();
       var areaHeight = $(this).height();
-      // console.log(areaHeight);
-      // console.log(areaPosition);
-
 
       // Explore more button functions
       if ( areaPosition === 0 ) {
@@ -229,33 +226,33 @@ function scrollTime() {
   }
 }
 
-// Explore More Click Function
-function explore() {
-  $('.bottom-arrow').on('click', function() {
-    var windowHeight = $(window).height();
-    var thumbsHeight = $('.active .area .thumbnails').height();
-    console.log(thumbsHeight);
+// // Explore More Click Function
+// function explore() {
+//   $('.bottom-arrow').on('click', function() {
+//     var windowHeight = $(window).height();
+//     var thumbsHeight = $('.active .area .thumbnails').height();
+//     console.log(thumbsHeight);
 
-    if ( $('.slide.active').hasClass('education') ) {
+//     if ( $('.slide.active').hasClass('education') ) {
       
-      elem = document.getElementById("ed");
+//       elem = document.getElementById("ed");
 
-      topPos = elem.offsetTop;
+//       topPos = elem.offsetTop;
 
-      $(this).find('.area').animate({
-        'top': 0
-      }, 'slow');
-      // scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
-console.log(topPos);
+//       $(this).find('.area').animate({
+//         'top': 0
+//       }, 'slow');
+//       // scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
+// console.log(topPos);
 
-      // if ( $('.slide.active .area').hasClass('scrolled') ) {
-      //   scrollTo(document.getElementById('ed-contain'), -topPos, 600);
-      // } else {
-      //   scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
-      // }
-    }
-  });
-}
+//       // if ( $('.slide.active .area').hasClass('scrolled') ) {
+//       //   scrollTo(document.getElementById('ed-contain'), -topPos, 600);
+//       // } else {
+//       //   scrollTo(document.getElementById('ed-contain'), topPos-95, 400);
+//       // }
+//     }
+//   });
+// }
 
 
 //Check Browser and adjust font-weights for Chrome
@@ -272,7 +269,6 @@ function initialize() {
   checkBrowser();
   scrollTime();
   dotHover();
-  explore();
 }
 
 // Collect all functions to execute on Resize
