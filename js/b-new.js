@@ -145,7 +145,6 @@ function initialize() {
 function initializeResize() {
   presidentEssay();
   landingVideo();
-  console.log('resized');
 }
 
 $(document).ready(initialize);

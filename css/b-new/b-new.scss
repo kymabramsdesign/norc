@@ -144,10 +144,6 @@
     top: -2vh;
   }
 
-  &.visible {
-    left: 0;
-  }
-
   .home-popup {
     width: 1000px;
 
@@ -170,13 +166,14 @@
 
   p {
     color: #000;
+    display: none;
     font-size: 14px;
     line-height: 20px;
-    text-shadow: none;
+    margin: 0 0 0 -22px;
     position: absolute;
+    text-shadow: none;
     top: 800px;
     width: 1000px;
-    margin: 0 0 0 -22px;
 
     @media screen and (max-width: 1150px) {
       width: 803px;
@@ -190,6 +187,27 @@
       margin: 0;
       padding: 0 20px;
       width: 100vw;
+    }
+  }
+
+  &.visible {
+    left: 0;
+
+    p {
+      display: inline-block;
+      left: calc((100% - 1000px)/2);
+
+      @media screen and (max-width: 1150px) {
+        left: calc((100% - 803px)/2);
+      }
+
+      @media screen and (max-width: 900px) {
+        left: calc((100% - 679px)/2);
+      }
+
+      @media screen and (max-width: 767px) {
+        left: 0;
+      }
     }
   }
 
