@@ -239,7 +239,7 @@
     font-size: 14px;
     letter-spacing: 2.5px;
     line-height: 14px;
-    margin: 0;
+    margin: 0 0 10px;
     text-align: center;
     text-shadow: none;
     text-transform: uppercase;
@@ -537,6 +537,11 @@
     }
   }
 
+  .bottom-arrow {
+    left: -webkit-calc(50vw - 140px);
+    left: calc(50vw - 140px);
+  }
+
   &.economics {
     background-image: url('/img/economics-background.jpg');
 
@@ -545,8 +550,14 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(250vw - 140px);
-      left: calc(250vw - 140px);
+
+      @supports (-ms-accelerator:true) {
+        left: calc(250vw - 140px);
+      }
+      /* IE10+ CSS styles go here */
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        left: calc(250vw - 140px);
+      }
     }
   }
 
@@ -558,8 +569,13 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(350vw - 140px);
-      left: calc(350vw - 140px);
+      @supports (-ms-accelerator:true) {
+        left: calc(350vw - 140px);
+      }
+      /* IE10+ CSS styles go here */
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        left: calc(350vw - 140px);
+      }
     }
   }
 
@@ -571,8 +587,13 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(450vw - 140px);
-      left: calc(450vw - 140px);
+      @supports (-ms-accelerator:true) {
+        left: calc(450vw - 140px);
+      }
+      /* IE10+ CSS styles go here */
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        left: calc(450vw - 140px);
+      }
     }
   }
 
@@ -584,8 +605,13 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(550vw - 140px);
-      left: calc(550vw - 140px);
+      @supports (-ms-accelerator:true) {
+        left: calc(550vw - 140px);
+      }
+      /* IE10+ CSS styles go here */
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        left: calc(550vw - 140px);
+      }
     }
   }
 
@@ -597,8 +623,13 @@
     }
 
     .bottom-arrow {
-      left: -webkit-calc(650vw - 140px);
-      left: calc(650vw - 140px);
+      @supports (-ms-accelerator:true) {
+        left: calc(650vw - 140px);
+      }
+      /* IE10+ CSS styles go here */
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        left: calc(650vw - 140px);
+      }
     }
   }
 

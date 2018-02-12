@@ -596,7 +596,6 @@ function checkBrowser() {
 function initialize() {
   checkBrowser();
   verticalPosition();
-  explore();
   slides();
   scrollTime();
   presidentEssay();
@@ -620,6 +619,5 @@ $(window).on('resize', function(e) {
   resizeTimer = setTimeout(function() {
     matchHeight();
     presidentEssay();
-    explore();   
   }, 600);
 });
