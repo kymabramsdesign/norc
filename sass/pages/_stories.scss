@@ -537,6 +537,10 @@
       }
     }
 
+    .main-image.ie11 {
+      width: 100%;
+    }
+
     .caption {
       color: $black-55;
       font-size: 17px;

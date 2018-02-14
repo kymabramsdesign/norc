@@ -64,6 +64,19 @@
       }
     }
 
+    &.ie10:before {
+      left: 94.5%;
+      margin-top: -40px;
+
+      @media screen and (max-width: 1024px) {
+        left: 91%;
+      }
+
+      @media screen and (max-width: 767px) {
+        left: 89vw;
+      }
+    }
+
     &.white:before {
       content: url('/img/zoom-white.svg');
       opacity: .55;
