@@ -585,6 +585,7 @@
         justify-content: flex-end;
         margin: 0 5px 0 0;
         position: fixed;
+        right: 100vw;
         top: 0;
         width: auto;
       }
@@ -676,9 +677,11 @@
     width: 100vw;
 
     .close-arrow {
+      @include transition(left .3s ease-in-out)
       border: solid $black-55;
       border-width: 0 2px 2px 0;
       height: 0;
+      left: -100vw;
       margin: 20px 0 0 20px;
       padding: 8px;
       -webkit-transform: rotate(135deg) skew(-2deg, -2deg);

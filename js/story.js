@@ -1,3 +1,24 @@
+$(window).bind("load", function() {
+  var windowWidth = $(window).width();
+
+  if ( windowWidth <= 767 ) {
+
+    // Adds carousel library for mobile touch
+    var script = document.createElement( 'script' );
+    script.src = 'js/owl.carousel.min.js';
+    $("footer").append( script ); 
+
+    // Initialize mobile carousel with settings
+    $(".left-50").owlCarousel({
+      items: 1,
+      autoHeight: true,
+      lazyload: true,
+      dots: true,
+      loop: true
+    });
+  }
+});
+
 function columns() {
   var leftBottom = $('.left-50').position().top + $('.left-50').outerHeight(true);
   var leftOffset = $('.left-50').offset().top;
@@ -11,27 +32,12 @@ function columns() {
   // Only do the following on Mobile screens
   if ( windowWidth <= 767 ) {
 
-    // Adds carousel library for mobile touch
-    var script = document.createElement( 'script' );
-    script.src = 'js/owl.carousel.min.js';
-    $("footer").append( script ); 
-
-    // Initialize mobile carousel with settings
-    $(document).ready(function(){
-      $(".left-50").owlCarousel({
-        items: 1,
-        autoHeight:true,
-        lazyload: true,
-        dots: true
-      });
-    });
-
     if( window.innerHeight < window.innerWidth ) {
       $('.image-container').css('top', '57px');
       $('.mobile-bar').css('background-color', '#fff');
       $("body").removeClass('no-scroll');
     } else {
-      $('.image-container').css('top', '34vh');
+      $('.image-container').css('top', '30vh');
       $('.mobile-bar').css('background-color', 'transparent');
     }
 
@@ -48,8 +54,12 @@ function columns() {
       //add image the first time
       if ( $('.image-container').hasClass('move-out') !== true ) {
         $('.image-container').addClass('move-in').prepend('<div class="mobile-bar"><div class="close-arrow"></div></div>');
+        $('.close-arrow').animate({left:0}, 50);
+        $('.special-share').animate({right:0}, 350);
       } else {
         $('.image-container').addClass('move-in');
+        $('.close-arrow').animate({left:0}, 50);
+        $('.special-share').animate({right:0}, 350);
       }
 
       // Add caption
@@ -73,6 +83,8 @@ function columns() {
         $('move-out').css('left', -windowWidth*2);
         $('.image-container').removeClass('move-in').addClass('move-out');
         $("body").removeClass('no-scroll'); // body to scroll again
+        $('.close-arrow').animate({left:'-100vw'}, 5);
+        $('.special-share').animate({right:'100vw'}, 250);
 
         if ( $('iframe').is(':visible')) {
           $('#aging-video').attr('src', 'https://www.youtube.com/embed/WIAZ9lAVTVs?rel=0&showinfo=1&modestbranding=1');

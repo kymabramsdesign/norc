@@ -46,6 +46,10 @@
     -webkit-transform: rotateZ(-180deg);
     -ms-transform: rotate(-180deg);
     transform: rotateZ(-180deg);
+
+    @media screen and (max-width: 767px) {
+      background-color: $white;
+    }
   }
 }
 
