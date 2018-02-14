@@ -97,8 +97,8 @@ html.fp-enabled,
       margin: 0;
       padding: 6px;
       position: fixed;
-      top: 87px;
-      z-index: 40000;
+      top: 67px;
+      z-index: 100;
     }
   }
 
@@ -115,9 +115,23 @@ html.fp-enabled,
       padding: 6px;
       position: fixed;
       right: 22px;
-      top: 87px;
-      z-index: 40000;
+      top: 67px;
+      z-index: 100;
     }
+  }
+}
+
+.mobile-dark-bar {
+  display: none;
+
+  @media screen and (max-width:767px) {
+    background-color: #262626;
+    display: inline-block;
+    height: 38px;
+    position: fixed;
+    top: 54px;
+    width: 100vw;
+    z-index: 1;
   }
 }
 

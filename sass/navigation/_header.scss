@@ -88,7 +88,7 @@
 .main .header-background {
   @media screen and (max-width:767px) {
     background-color: $black;
-    height: 92px;
+    height: 56px;
     position: fixed;
     top: 0;
     width: 100vw;
@@ -120,7 +120,7 @@
     &.mobile {
       display: block;
       padding: 0;
-      top: 82px;
+      top: 83px;
 
       &.open-menu {
         @include transition(all .1s ease-in-out);

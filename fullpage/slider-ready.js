@@ -1,94 +1,180 @@
 $(document).ready(function() {
-  $('#fullpage').fullpage({
-    anchors: ['home'],
-    slidesNavigation: true,
-    slidesNavPosition: 'top',
-    showActiveTooltip: true,
-    menu: true,
-    autoScrolling: false,
-    loopHorizontal: false,
-    scrollOverflow: true,
-    animateAnchor: false,
-    afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-      if ( Cookies.get('intro-shown') == null ) {
-      
-      // add cookie that expires in one day to site homepage
-      Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
+  var windowWidth = $(window).width();
 
-      // Load Intro Animation JS file
-      $.getScript('js/ticker.js');
+  if (windowWidth <= 767 ) {
+    $('#fullpage').fullpage({
+      anchors: ['home'],
+      scrollingSpeed: 400,
+      autoScrolling: false,
+      loopHorizontal: false,
+      scrollOverflow: false,
+      animateAnchor: false,
+      verticalCentered: false,
+      afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+        if ( Cookies.get('intro-shown') == null ) {
+        
+        // add cookie that expires in one day to site homepage
+        Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
 
-      }
-      else {
-        $('#intro-overlay').fadeOut(500); // Hides Intro Animation Overlay
-        $('.typed-first, .typed-second, .ti-cursor').remove();
-        $('.skip-intro').hide();
-      }
+        // Load Intro Animation JS file
+        $.getScript('js/ticker.js');
 
-      var loadedSlide = $(this);
+        }
+        else {
+          $('#intro-overlay').fadeOut(100); // Hides Intro Animation Overlay
+          $('.typed-first, .typed-second, .ti-cursor').remove();
+          $('.skip-intro').hide();
+        }
 
-      if (slideIndex == 0) {
-        $('.section-title').hide();
-        $('.nav-dot, .section-title, .slide').removeClass('active');
-        $('.insight').show().addClass('active');
-      }
-      else if (slideIndex == 1) {
-        $('.section-title').hide();
-        $('.nav-dot, .section-title, .slide').removeClass('active');
-        $('.president').show().addClass('active');
-      }
-      else if (slideIndex == 2) {
-        $('.section-title').hide();
-        $('.nav-dot, .section-title, .slide').removeClass('active');
-        $('.economics').show().addClass('active');
-      }
-      else if (slideIndex == 3) {
-        $('.section-title').hide();
-        $('.nav-dot, .section-title, .slide').removeClass('active');
-        $('.education').show().addClass('active');
-      }
-      else if (slideIndex == 4) {
-        $('.section-title').hide();
-        $('.nav-dot, .section-title, .slide').removeClass('active');
-        $('.global').show().addClass('active');
-      }
-      else if (slideIndex == 5) {
-        $('.section-title').hide();
-        $('.nav-dot, .section-title, .slide').removeClass('active');
-        $('.health').show().addClass('active');
-      }
-      else if (slideIndex == 6) {
-        $('.section-title').hide();
-        $('.nav-dot, .section-title, .slide').removeClass('active');
-        $('.society').show().addClass('active');
-      }
-      else if (slideIndex == 7) {
-        $('.section-title').hide();
-        $('.nav-dot, .section-title, .slide').removeClass('active');
-        $('.gain-more').show().addClass('active');
-      }
-    },
-    afterRender: function(){
-      // sizes all the smaller thumbnail images on the homepage
-      var largeSize = $('#img-to-measure').height();
-      largeSize = largeSize+7;
+        if (slideIndex == 0) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.insight').show().addClass('active');
+        }
+        else if (slideIndex == 1) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.president').show().addClass('active');
+        }
+        else if (slideIndex == 2) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.economics').show().addClass('active');
+        }
+        else if (slideIndex == 3) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.education').show().addClass('active');
+        }
+        else if (slideIndex == 4) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.global').show().addClass('active');
+        }
+        else if (slideIndex == 5) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.health').show().addClass('active');
+        }
+        else if (slideIndex == 6) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.society').show().addClass('active');
+        }
+        else if (slideIndex == 7) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.gain-more').show().addClass('active');
+        }
+      },
+      afterRender: function(){
+        // sizes all the smaller thumbnail images on the homepage
+        var largeSize = $('#img-to-measure').height();
+        largeSize = largeSize+7;
 
-      $('.two-vertical').css('height', largeSize);
-      $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
-      $('.president .two-vertical').css('height', (largeSize/2));
-      $('.gain-more .two-vertical.first').css('height', (largeSize/2));
-    },
-    afterResize: function(){
-      // re-sizes all the smaller thumbnail images on the homepage
-      var largeSize = $('#img-to-measure').height();
-      largeSize = largeSize+7;
+        $('.two-vertical').css('height', largeSize);
+        $('.mobile-video .four').css('height', largeSize);
+        $('.president .two-vertical').css('height', (largeSize/2));
+        $('.gain-more .two-vertical.first').css('height', (largeSize/2));
 
-      $('.two-vertical').css('height', largeSize);
-      $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
-      $('.president .two-vertical').css('height', (largeSize/2));
-      $('.gain-more .two-vertical.first').css('height', (largeSize/2));
-    }
-  });
+        // adds dark bar under black nav bar
+        $('.section').append('<div class="mobile-dark-bar"></div>');
+      }
+    });
+  }
+
+  else { 
+    $('#fullpage').fullpage({
+      anchors: ['home'],
+      slidesNavigation: true,
+      slidesNavPosition: 'top',
+      showActiveTooltip: true,
+      menu: true,
+      fitToSectionDelay: 600,
+      scrollingSpeed: 600,
+      autoScrolling: false,
+      loopHorizontal: false,
+      scrollOverflow: true,
+      animateAnchor: false,
+      afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+        if ( Cookies.get('intro-shown') == null ) {
+        
+        // add cookie that expires in one day to site homepage
+        Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
+
+        // Load Intro Animation JS file
+        $.getScript('js/ticker.js');
+
+        }
+        else {
+          $('#intro-overlay').fadeOut(500); // Hides Intro Animation Overlay
+          $('.typed-first, .typed-second, .ti-cursor').remove();
+          $('.skip-intro').hide();
+        }
+
+        if (slideIndex == 0) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.insight').show().addClass('active');
+        }
+        else if (slideIndex == 1) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.president').show().addClass('active');
+        }
+        else if (slideIndex == 2) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.economics').show().addClass('active');
+        }
+        else if (slideIndex == 3) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.education').show().addClass('active');
+        }
+        else if (slideIndex == 4) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.global').show().addClass('active');
+        }
+        else if (slideIndex == 5) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.health').show().addClass('active');
+        }
+        else if (slideIndex == 6) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.society').show().addClass('active');
+        }
+        else if (slideIndex == 7) {
+          $('.section-title').hide();
+          $('.nav-dot, .section-title, .slide').removeClass('active');
+          $('.gain-more').show().addClass('active');
+        }
+      },
+      afterRender: function(){
+        // sizes all the smaller thumbnail images on the homepage
+        var largeSize = $('#img-to-measure').height();
+        largeSize = largeSize+7;
+
+        $('.two-vertical').css('height', largeSize);
+        $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
+        $('.president .two-vertical').css('height', (largeSize/2));
+        $('.gain-more .two-vertical.first').css('height', (largeSize/2));
+      },
+      afterResize: function(){
+        // re-sizes all the smaller thumbnail images on the homepage
+        var largeSize = $('#img-to-measure').height();
+        largeSize = largeSize+7;
+
+        $('.two-vertical').css('height', largeSize);
+        $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
+        $('.president .two-vertical').css('height', (largeSize/2));
+        $('.gain-more .two-vertical.first').css('height', (largeSize/2));
+      }
+    });
+  }
 });
 
 // Hover over dots Script

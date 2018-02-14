@@ -5,7 +5,7 @@
     color: $white-90 !important;
 
     @media screen and (max-width:767px) {
-      background-color: #262626;
+      // background-color: #262626;
       color: $white-85 !important;
       font-size: 15px;
       letter-spacing: .25px;
@@ -375,6 +375,7 @@
           -ms-flex-pack: center;
           -webkit-justify-content: center;
           justify-content: center;
+          min-height: 198px;
 
           img {
             @include transition(opacity .3s ease-in-out, height .3s ease-in-out);
@@ -749,6 +750,7 @@
     .two-vertical {
 
       @media screen and (max-width: 767px) {
+        min-height: 198px;
         padding: 0 !important;
       }
 
@@ -770,8 +772,15 @@
         width: 100% !important;
       }
 
-      &.first .one {
-        height: 100%;
+      &.first {
+
+        @media screen and (max-width: 767px) {
+          min-height: 99px;
+        }
+
+        .one {
+          height: 100%;
+        }
       }
     }
 

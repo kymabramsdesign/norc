@@ -73,9 +73,12 @@ $(document).ready(function() {
         largeSize = largeSize+7;
 
         $('.two-vertical').css('height', largeSize);
-        $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
+        $('.mobile-video .four').css('height', largeSize);
         $('.president .two-vertical').css('height', (largeSize/2));
         $('.gain-more .two-vertical.first').css('height', (largeSize/2));
+
+        // adds dark bar under black nav bar
+        $('.section').append('<div class="mobile-dark-bar"></div>');
       }
     });
   }

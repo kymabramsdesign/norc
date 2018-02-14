@@ -1,5 +1,11 @@
 /* Styles for Dot Navigation*/
 
+.main .dot-nav {
+  @media screen and (max-width: 767px) {
+    width: 280px;
+  }
+}
+
 .dot-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,6 +25,9 @@
 
   @media screen and (max-width: 767px) {
     z-index: 11;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   svg {
