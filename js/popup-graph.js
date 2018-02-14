@@ -22,7 +22,7 @@ jQuery(function() {
 					popup.remove();
 				});
 			
-				jQuery('body').css('overflow','');
+				jQuery('body').removeClass('no-scroll').css('overflow','');
 			}
 		}
 		jQuery('body').css('overflow','hidden');
@@ -75,28 +75,28 @@ jQuery(function() {
 		});
 		popup_background.click(function() {
 			hide_popup();
-		})
+		});
 	}
 
-	jQuery('.bubble-graph-popup').click(function() {
+	jQuery('.bubble-pop-up').click(function() {
 
 		show_popup(bubble_popup_src, bubble_popup_source, 'light', jQuery(this).data());
 
 		return false;
 	});
-	jQuery('.line-graph-popup').click(function() {
+	jQuery('.gss-popup').click(function() {
 
 		show_popup(line_popup_src, line_popup_source, 'dark', jQuery(this).data());
 
 		return false;
 	});
-	jQuery('.graph3-popup').click(function() {
+	jQuery('.degree-popup').click(function() {
 
 		show_popup(graph3_src, '', 'light', jQuery(this).data());
 
 		return false;
 	});
-	jQuery('.graph4-popup').click(function() {
+	jQuery('.global-popup').click(function() {
 
 		show_popup(graph4_src, '', 'mid', jQuery(this).data());
 

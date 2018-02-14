@@ -5,7 +5,6 @@ jQuery(function() {
 	var maxRadius = 15;
 	var radius = 6; // radius of drawn circle
 	var dataSource = 'bubbleChart.csv';
-	//var dataSource = 'small.csv';
 
 	d3.select("#bubbleChart").append("svg")
 		.attr("viewBox", '0 0 ' + width + ' ' + height)

@@ -831,13 +831,13 @@ iframe {
 }
 
 /* line 42, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-.left-50 .picture img, .left-50 .chart img {
+.left-50 .picture img, .left-50 .chart img, .left-50 .degree-popup img, .left-50 .global-popup img {
   height: 100%;
   width: 50vw;
 }
 
 /* line 47, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-.left-50 .picture:before, .left-50 .chart:before {
+.left-50 .picture:before, .left-50 .chart:before, .left-50 .degree-popup:before, .left-50 .global-popup:before {
   -webkit-transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
@@ -851,14 +851,14 @@ iframe {
 
 @media screen and (max-width: 1024px) {
   /* line 47, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-  .left-50 .picture:before, .left-50 .chart:before {
+  .left-50 .picture:before, .left-50 .chart:before, .left-50 .degree-popup:before, .left-50 .global-popup:before {
     left: 91%;
   }
 }
 
 @media screen and (max-width: 767px) {
   /* line 47, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-  .left-50 .picture:before, .left-50 .chart:before {
+  .left-50 .picture:before, .left-50 .chart:before, .left-50 .degree-popup:before, .left-50 .global-popup:before {
     left: 89vw;
     opacity: .65;
     width: 20px;
@@ -866,45 +866,45 @@ iframe {
 }
 
 /* line 67, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-.left-50 .picture.ie10:before, .left-50 .chart.ie10:before {
+.left-50 .picture.ie10:before, .left-50 .chart.ie10:before, .left-50 .degree-popup.ie10:before, .left-50 .global-popup.ie10:before {
   left: 94.5%;
   margin-top: -40px;
 }
 
 @media screen and (max-width: 1024px) {
   /* line 67, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-  .left-50 .picture.ie10:before, .left-50 .chart.ie10:before {
+  .left-50 .picture.ie10:before, .left-50 .chart.ie10:before, .left-50 .degree-popup.ie10:before, .left-50 .global-popup.ie10:before {
     left: 91%;
   }
 }
 
 @media screen and (max-width: 767px) {
   /* line 67, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-  .left-50 .picture.ie10:before, .left-50 .chart.ie10:before {
+  .left-50 .picture.ie10:before, .left-50 .chart.ie10:before, .left-50 .degree-popup.ie10:before, .left-50 .global-popup.ie10:before {
     left: 89vw;
   }
 }
 
 /* line 80, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-.left-50 .picture.white:before, .left-50 .chart.white:before {
+.left-50 .picture.white:before, .left-50 .chart.white:before, .left-50 .degree-popup.white:before, .left-50 .global-popup.white:before {
   content: url("/img/zoom-white.svg");
   opacity: .55;
 }
 
 @media screen and (max-width: 767px) {
   /* line 80, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-  .left-50 .picture.white:before, .left-50 .chart.white:before {
+  .left-50 .picture.white:before, .left-50 .chart.white:before, .left-50 .degree-popup.white:before, .left-50 .global-popup.white:before {
     opacity: .8;
   }
 }
 
 /* line 89, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-.left-50 .picture:hover, .left-50 .chart:hover {
+.left-50 .picture:hover, .left-50 .chart:hover, .left-50 .degree-popup:hover, .left-50 .global-popup:hover {
   cursor: pointer;
 }
 
 /* line 92, /Users/kadimac/Desktop/norc-repo/sass/elements/_columns.scss */
-.left-50 .picture:hover:before, .left-50 .chart:hover:before {
+.left-50 .picture:hover:before, .left-50 .chart:hover:before, .left-50 .degree-popup:hover:before, .left-50 .global-popup:hover:before {
   -webkit-transition: opacity 0.4s ease-in-out;
   -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
@@ -4045,7 +4045,7 @@ body.intro {
 
 /* line 540, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
 .story-page .image-container .main-image.ie11 {
-  width: 100%;
+  width: 92.5%;
 }
 
 /* line 544, /Users/kadimac/Desktop/norc-repo/sass/pages/_stories.scss */
