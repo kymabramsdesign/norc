@@ -96,6 +96,9 @@ function columns() {
   // Only do the following on screens larger than Mobile
   if ( windowWidth >= 768 ) {
 
+    $(".left-50").trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
+    $(".left-50").find('.owl-stage-outer').children().unwrap();
+
     if ( (rightHeight + 20) < ( windowHeight - (subnavHeight+80)) ) {
       $('.right-50').css({
         'position': 'fixed',

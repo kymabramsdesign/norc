@@ -177,20 +177,23 @@
     margin: 0 0 0 -22px;
     position: absolute;
     text-shadow: none;
-    top: 800px;
+    top: 761px;
     width: 1000px;
 
     @media screen and (max-width: 1150px) {
+      top: 706px;
       width: 803px;
     }
 
     @media screen and (max-width: 900px) {
+      top: 672px;
       width: 679px;
     }
 
     @media screen and (max-width: 767px) {
       margin: 0;
       padding: 0 20px;
+      top: 78vh;
       width: 100vw;
     }
   }
@@ -363,4 +366,15 @@
 .story-page_education .graph-popup-foreground {
   bottom: 10vh;
   top: 10vh;
+
+  @media screen and (max-width: 800px) {
+    bottom: 0;
+    top: 0;
+  }
+}
+
+@media all and (min--moz-device-pixel-ratio:0) and (min-resolution: 3e1dpcm) {
+  .main {
+    overflow: hidden !important;
+  }
 }
