@@ -12,6 +12,7 @@
 	<div id="intro">
 		<div class="intro-left">
 			<h1>What occupations do STEM doctorates pursue?</h1>
+			<h2>The lines connect degree with occupation. Line thickness is proportional to the percentage of respondents in that category.</h2>
 		</div>
 		<div class="intro-right">
 			<p>Data from the Survey of Doctorate Recipients, sponsored by the National Science Foundation and the National Institutes of Health, shows a significant amount of career flexibility among on U.S.-trained, science, engineering, and health doctorate holders.</p>
@@ -23,6 +24,9 @@
 	</div>
 
 	<div id="sankey" class="graph-wrap"></div>
+	<div class="source wrap">
+	*Categories with less than 1% may not show due to rounding.
+	</div>
 
 	<script src="ext/raphael.js"></script>
 	<script src="ext/jquery.js"></script>

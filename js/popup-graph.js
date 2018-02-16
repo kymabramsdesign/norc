@@ -4,6 +4,7 @@ jQuery(function() {
 	var line_popup_src = 'specials/line/index.html';
 	var line_popup_source = '*Rates are comparable within each demographic category (e.g. Female to Male within Gender), but not across categories (e.g. Female to Republican). Number of respondents range from 430 (2004) to 896 (2006). Data are weighted. We did not control for current employment due to sample size.';
 	var graph3_src = 'specials/chart3/index.php';
+	var graph3_source = '*Categories with less than 1% may not show due to rounding.';
 	var graph4_src = 'specials/chart4/index.php';
 
 	//delay load fontawesome
@@ -92,7 +93,7 @@ jQuery(function() {
 	});
 	jQuery('.degree-popup').click(function() {
 
-		show_popup(graph3_src, '', 'light', jQuery(this).data());
+		show_popup(graph3_src, graph3_source, 'light', jQuery(this).data());
 
 		return false;
 	});
@@ -114,7 +115,7 @@ jQuery(function() {
 		return false;
   }
   else if ( checkUrl === 'degrees' ) {
-  	show_popup(graph3_src, '', 'light', jQuery(this).data());
+  	show_popup(graph3_src, graph3_source, 'light', jQuery(this).data());
 		return false;
   }
   else if ( checkUrl === 'map' ) {

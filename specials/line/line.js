@@ -27,7 +27,7 @@ var yScale = d3.scale.linear()
 "#633974", //Female
 "#1A5276", //Male
 "#A9CCE3", //Age 18-34
-"#117864", //34-49
+"#117864", //35-49
 "#196F3D", 	//50-64
 "#B7950B",  //65+
 "#935116",  //Blask
@@ -53,7 +53,7 @@ var color = d3.scale.ordinal().range([
 "#196F3D", //Female
 "#935116", //Male
 "#A9CCE3", //Age 18-34
-"#117864", //34-49
+"#117864", //35-49
 "#633974", 	//50-64
 "#B7950B",  //65+
 "#F8C471",  //Blask
@@ -220,7 +220,7 @@ d3.tsv("gssformatted3.tsv", function(error, data) {
 		'Female' : 1,
 		'Male' : 1,
 		'Age 18-34' : 2,
-		'Age 34-49' : 2,
+		'Age 35-49' : 2,
 		'Age 50-64' : 2,
 		'Age 65+' : 2,
 		'Black' : 3,

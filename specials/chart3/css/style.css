@@ -57,6 +57,9 @@ body {
 	line-height: 1.25;
 	font-weight: normal;
 }
+#intro h2 {
+  font-size: 14px;
+}
 #intro p {
 	font-size: 14px;
 }
@@ -84,6 +87,9 @@ body {
 .solid-bar {
 	display: none;
 }
+.source {
+	display: none;
+}
 
 @media screen and (max-width: 760px) {
 	#intro > div {
@@ -95,6 +101,12 @@ body {
 	}
 }
 @media screen and (max-width: 670px) {
+	.source {
+		display: block;
+		font-size: 14px;
+		color: black;
+		padding: 0 20px;
+	}
 	.solid-bar {
 		display: inline-block;
 		position: fixed;

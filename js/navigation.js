@@ -69,16 +69,16 @@ $(window).bind("load", function() {
     '<ul>'+
     '<li class="menu-title">2017 Annual Report</li>' +
     '<li><a href="/index.html#home" class="trigger-slider">Introduction</a></li>' +
-    '<li><a href="/index.html#home/1" class="trigger-slider"">President’s Essay</a></li>' +
+    '<li><a href="/index.html#home/1" class="trigger-slider"">From the President</a></li>' +
     '<li class="divider"><hr /></li>' +
     '<li class="arrow"><a href="/index.html#home/2" class="trigger-slider"">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/congregations">Tracking the Professional and Economic Outlook of Congregations</a></li>' +
       '<li><a href="/poverty-research">Exploring Poverty and Resilience</a></li>' +
       '<li><a href="/consumer-finances">Monitoring the Financial Health of American Families</a></li>' +
-      '<li><a href="/just-companies">Identifying America\'s Most Just Companies</a></li>' +
+      '<li><a href="/just-companies">Identifying America\’s Most Just Companies</a></li>' +
       '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
-      '<li><a href="/gss-trends">GSS Trends</a></li>' +
+      '<li><a href="/gss-trends">Willing to Work</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="/index.html#home/3" class="trigger-slider"">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
@@ -92,23 +92,23 @@ $(window).bind("load", function() {
       '<li><a href="/complex-projects">Assessing the Impact of Complex Projects</a></li>' +
       '<li><a href="/real-time-adaptability">Adapting Timelines and Methodologies to Conditions on the Ground</a></li>' +
       '<li><a href="/vulnerable-populations">Reaching Vulnerable Populations in Fragile Environments</a></li>' +
-      '<li><a href="/closed-societies">Peering Into Closed Societies</a></li>' +
-      '<li><a href="/global-portfolio">NORC\'s Global Portfolio</a></li>' +
+      '<li><a href="/closed-societies">Peering into Closed Societies</a></li>' +
+      '<li><a href="/global-portfolio">NORC\’s Global Portfolio</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="/index.html#home/5" class="trigger-slider"">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
       '<li><a href="/medicare-medicaid">Making Medicare and Medicaid More Effective</a></li>' +
       '<li><a href="/patient-risk">Using Data to Improve Safety and Quality</a></li>' +
-      '<li><a href="/diverse-clients">Working with Providers, Payers, and Other Stakeholders</a></li>' +
+      '<li><a href="/diverse-stakeholders">Working with Providers, Payers, and Other Stakeholders</a></li>' +
       '<li><a href="/opioid-epidemic">Visualizing Disease Vulnerability</a></li>' +
       '<li><a href="/health-culture">Cultivating a Culture of Health</a></li>' +
-      '<li><a href="/zika-awareness">Assessing Americans\' Zika Awareness</a></li>' +
+      '<li><a href="/zika-awareness">Assessing Americans\’ Zika Awareness</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="/index.html#home/6" class="trigger-slider"">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu last-one">' +
       '<li><a href="/aging">Informing Policy on Retirement and Aging</a></li>' +
       '<li><a href="/intimate-partner-violence">Combating Intimate Partner Violence</a></li>' +
-      '<li><a href="/minds-and-media">Tracking Americans\' Opinions and the Media That Inform Them</a></li>' +
+      '<li><a href="/minds-and-media">Tracking Americans\’ Opinions and the Media That Inform Them</a></li>' +
       '<li><a href="/teen-surveys">Tapping into the Minds and Behaviors of Teens</a></li>' +
       '<li><a href="/disaster-fatalities">Understanding How Disasters Kill</a></li>' +
       '<li><a href="/smoking-and-social-media">Mapping Smoking Policies to Behavior</a></li>' +

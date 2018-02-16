@@ -5,11 +5,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 30px;
   font-weight: 400;
+  line-height: 34px;
   margin: 0 0 1px;
   @include transition(font-size .3s ease-in-out);
 
   @media screen and (max-width: 1024px) {
     font-size: 26px;
+    line-height: 30px;
   }
 
   @media screen and (max-width: 767px) {
@@ -22,16 +24,19 @@ h2 {
   color: $text-grey;
   font-size: 28px;
   font-weight: 300;
-  margin: 0 0 20px;
+  line-height: 32px;
+  margin: 5px 0 20px;
   @include transition(font-size .3s ease-in-out);
 
   @media screen and (max-width: 1024px) {
     font-size: 24px;
+    line-height: 28px;
   }
 
   @media screen and (max-width: 767px) {
     color: $mobile-menu-grey;
     font-size: 20px;
+    line-height: 24px;
     margin: 0;
   }
 }
