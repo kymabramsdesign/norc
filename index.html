@@ -33,10 +33,10 @@
     
     //fire this script if on the first slide
     var pageLocation = window.location.href.match(/\d+$/);
-
+    var cookGet=Cookies.get('intro-shown');
     if ( pageLocation === null) {
-      if ( Cookies.get('intro-shown') === null ) {
-      
+      if ( typeof cookGet === 'undefined' ) {
+       $('#intro-overlay').show();
       // add cookie that expires in one day to site homepage
       Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
 
