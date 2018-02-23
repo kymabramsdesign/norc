@@ -83,14 +83,45 @@
         @include transition(color .2s ease-in-out);
         color: $text-grey;
 
-        &:hover {
+        &:hover,
+        &.active {
           @include transition(color .3s ease-in-out);
           color: $orange;
-          
         }
+      }
 
+      &.economics-arrow a {
+        &:hover,
         &.active {
-          color: $orange;
+          color: $green;
+        }
+      }
+
+      &.education-arrow a {
+        &:hover,
+        &.active {
+          color: $maroon;
+        }
+      }
+
+      &.global-arrow a {
+        &:hover,
+        &.active {
+          color: $purple;
+        }
+      }
+
+      &.health-arrow a {
+        &:hover,
+        &.active {
+          color: $teal;
+        }
+      }
+
+      &.society-arrow a {
+        &:hover,
+        &.active {
+          color: $pink;
         }
       }
 
@@ -160,7 +191,24 @@
           padding: 20px 0 20px 30px;
         }
 
-        &.last-one {
+        &.economics-dropdown li a:hover {
+          color: $green;
+        }
+
+        &.education-dropdown li a:hover {
+          color: $maroon;
+        }
+
+        &.global-dropdown li a:hover {
+          color: $purple;
+        }
+
+        &.health-dropdown li a:hover {
+          color: $teal;
+        }
+
+        &.society-dropdown li a:hover {
+          color: $pink;
           margin-bottom: 17px;
         }
 

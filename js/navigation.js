@@ -71,8 +71,8 @@ $(window).bind("load", function() {
     '<li><a href="/index.html#home" class="trigger-slider">Introduction</a></li>' +
     '<li><a href="/index.html#home/1" class="trigger-slider"">From the President</a></li>' +
     '<li class="divider"><hr /></li>' +
-    '<li class="arrow"><a href="/index.html#home/2" class="trigger-slider"">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
-    '<ul class="dropdown-menu">' +
+    '<li class="arrow economics-arrow"><a href="/index.html#home/2" class="trigger-slider"">Economics, Markets, and the Workforce</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<ul class="dropdown-menu economics-dropdown">' +
       '<li><a href="/congregations">Tracking the Professional and Economic Outlook of Congregations</a></li>' +
       '<li><a href="/poverty-research">Exploring Poverty and Resilience</a></li>' +
       '<li><a href="/consumer-finances">Monitoring the Financial Health of American Families</a></li>' +
@@ -80,14 +80,14 @@ $(window).bind("load", function() {
       '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
       '<li><a href="/gss-trends">Willingness to Work</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/index.html#home/3" class="trigger-slider"">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
-    '<ul class="dropdown-menu">' +
+    '<li class="arrow education-arrow"><a href="/index.html#home/3" class="trigger-slider"">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<ul class="dropdown-menu education-dropdown">' +
       '<li><a href="/higher-education">Making Higher Education More Accessible and Achievable</a></li>' +
       '<li><a href="/early-childhood">Assessing and Shaping the Impact of Early Childhood Education</a></li>' +
       '<li><a href="/science-and-technology">Tracking the Careers of STEM Doctorates</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/index.html#home/4" class="trigger-slider"">Global Development</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
-    '<ul class="dropdown-menu">' +
+    '<li class="arrow global-arrow"><a href="/index.html#home/4" class="trigger-slider"">Global Development</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<ul class="dropdown-menu global-dropdown">' +
       '<li><a href="/usaid-evaluations">Measuring Impact and Improving Performance</a></li>' +
       '<li><a href="/complex-projects">Assessing the Impact of Complex Projects</a></li>' +
       '<li><a href="/real-time-adaptability">Adapting Timelines and Methodologies to Conditions on the Ground</a></li>' +
@@ -95,8 +95,8 @@ $(window).bind("load", function() {
       '<li><a href="/closed-societies">Peering into Closed Societies</a></li>' +
       '<li><a href="/global-portfolio">NORC\’s Global Portfolio</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/index.html#home/5" class="trigger-slider"">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
-    '<ul class="dropdown-menu">' +
+    '<li class="arrow health-arrow"><a href="/index.html#home/5" class="trigger-slider"">Health and Well-Being</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<ul class="dropdown-menu health-dropdown">' +
       '<li><a href="/medicare-medicaid">Making Medicare and Medicaid More Effective</a></li>' +
       '<li><a href="/patient-risk">Using Data to Improve Safety and Quality</a></li>' +
       '<li><a href="/diverse-stakeholders">Working with Providers, Payers, and Other Stakeholders</a></li>' +
@@ -104,8 +104,8 @@ $(window).bind("load", function() {
       '<li><a href="/health-culture">Cultivating a Culture of Health</a></li>' +
       '<li><a href="/zika-awareness">Assessing Americans\’ Zika Awareness</a></li>' +
     '</ul></li>' +
-    '<li class="arrow"><a href="/index.html#home/6" class="trigger-slider"">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
-    '<ul class="dropdown-menu last-one">' +
+    '<li class="arrow society-arrow"><a href="/index.html#home/6" class="trigger-slider"">Society, Media, and Public Affairs</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
+    '<ul class="dropdown-menu society-dropdown">' +
       '<li><a href="/aging">Informing Policy on Retirement and Aging</a></li>' +
       '<li><a href="/intimate-partner-violence">Combating Intimate Partner Violence</a></li>' +
       '<li><a href="/minds-and-media">Tracking Americans\’ Opinions and the Media That Inform Them</a></li>' +
@@ -122,7 +122,8 @@ $(window).bind("load", function() {
   $('.arrow-img').on('click', function() {
     $('.dropdown-menu').slideUp(200);
     $('.arrow a').removeClass('active');
-    $('.arrow-img').attr('src', 'img/arrow.svg');
+    // $('.arrow-img').attr('src', 'img/arrow.svg');
+    // text color changes...leaving arrow grey
 
     if ( $(this).hasClass('open') ) {
       $(this).removeClass('open');
@@ -131,7 +132,8 @@ $(window).bind("load", function() {
       $('.arrow-img').removeClass('open');
       $(this).prev().addClass('active');
       $(this).next('ul').slideDown(200);
-      $(this).addClass('open').attr('src', 'img/arrow-orange.svg');
+      $(this).addClass('open');
+      // $(this).addClass('open').attr('src', 'img/arrow-orange.svg');
     }
   });
 
