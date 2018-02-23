@@ -505,19 +505,15 @@
       @include transition(left .55s ease-in-out);
       height: 100vh;
       left: 0 !important;
-      padding: 80px 130px 80px 175px;
+      padding: 80px 100px 80px 145px;
       top: 0;
       width: 100vw;
 
-      @media screen and (max-width: 1210px) {
-        padding: 80px 100px 80px 145px;
+      @media screen and (max-width: 1366px) {
+        padding: 70px 50px 70px 95px;
       }
 
       @media screen and (max-width: 1024px) {
-        padding: 100px 50px 100px 95px;
-      }
-
-      @media screen and (max-width: 900px) {
         padding: 60px 30px 60px 65px;
 
         .main-image {
@@ -570,7 +566,7 @@
       margin: 124px 0 0 23px;
       width: 22px;
 
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1024px) {
         margin: 124px 0 0 11px;
       }
 
