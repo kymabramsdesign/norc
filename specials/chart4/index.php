@@ -395,7 +395,7 @@
 		<div>
 			<h1>NORC’s Global Portfolio</h1>
 			<p>
-				Since 2003, NORC has partnered with governments, non-governmental organizations, and other stakeholders to conduct research, impact evaluations, and technical assistance in more than 80 countries outside of the United States. Tour the map for a snapshot of NORC’s international work.
+				Since 2003, NORC has partnered with governments, non-governmental organizations, and other stakeholders to conduct research, impact evaluations, and technical assistance in more than 80 countries outside of the United States. Click on the highlighted countries for a snapshot of NORC’s international work. 
 			</p>
 			<div id="map-legend">
 				<label>Number of Projects</label>

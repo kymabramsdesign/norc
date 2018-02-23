@@ -78,7 +78,7 @@ $(window).bind("load", function() {
       '<li><a href="/consumer-finances">Monitoring the Financial Health of American Families</a></li>' +
       '<li><a href="/just-companies">Identifying America\’s Most Just Companies</a></li>' +
       '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
-      '<li><a href="/gss-trends">Willing to Work</a></li>' +
+      '<li><a href="/gss-trends">Willingness to Work</a></li>' +
     '</ul></li>' +
     '<li class="arrow"><a href="/index.html#home/3" class="trigger-slider"">Education, Training, and Learning</a><img src="img/arrow.svg" alt="Arrow" class="arrow-img" />' +
     '<ul class="dropdown-menu">' +
