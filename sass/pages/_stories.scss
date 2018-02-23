@@ -274,12 +274,12 @@
 
         &:hover {
           background-color: $teal-hover;
-          color: $teal;
+          color: $dark-teal;
         }
 
         &.active {
           background-color: $teal-hover;
-          color: $teal;
+          color: $dark-teal;
         }
       }
     }
@@ -384,7 +384,7 @@
     }
   }
 
-  /* Society, Media, and Public Affairs Stories*/
+  /* Economics Stories*/
   &_economics {
     background-color: $green-background;
 
@@ -400,12 +400,12 @@
 
         &:hover {
           background-color: $green-hover;
-          color: $green;
+          color: $dark-green;
         }
 
         &.active {
           background-color: $green-hover;
-          color: $green;
+          color: $dark-green;
         }
       }
     }
