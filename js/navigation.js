@@ -142,7 +142,7 @@ $(window).bind("load", function() {
   if ( windowWidth >= 768 ) {
     $('.trigger-slider').on('click', function() {
       $('#intro-overlay').fadeOut(1000); // Hides Intro Animation Overlay if visible
-      $('.typed-first, .typed-second, .ti-cursor').remove();  // Stops Intro Animation if playing
+      $('.typed-first, .typed-second, .ti-cursor').html("");  // Stops Intro Animation if playing
       $('.white-page-overlay').fadeOut(300);
       $('.share-button').css('z-index',99);
       $('.menu-button').css('z-index',200);

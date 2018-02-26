@@ -677,7 +677,7 @@
     width: 100vw;
 
     .close-arrow {
-      @include transition(left .3s ease-in-out)
+      @include transition(left .3s ease-in-out);
       border: solid $black-55;
       border-width: 0 2px 2px 0;
       height: 0;

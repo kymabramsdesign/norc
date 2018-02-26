@@ -159,6 +159,25 @@
       }
     }
   }
+  .replay-intro{
+    color: rgba(255,255,255,0.75);
+    font-size: 14px;
+    letter-spacing: 2.5px;
+    line-height: 14px;
+    margin: 0 auto;
+    position:absolute;
+    bottom:51px;
+    display:inline-block;
+    left:calc(50% - (195.875px / 2));
+    text-transform: uppercase;
+    right:auto;
+    -webkit-transition: color .2s ease-in-out;
+    -o-transition: color .2s ease-in-out;
+    transition: color .2s ease-in-out;
+    &:hover{
+      color: rgba(255,255,255,1);
+    }
+  }
 }
 
 .nav-arrow {
