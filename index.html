@@ -33,25 +33,46 @@
 
     <!-- Intro Animation Script -->
     <script src="js/ticker.js"></script>
+    <style id="ieonlyintroFix">
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .entry-screen .text-overlay{
+          width:0;
+          height:0;
+          overflow:hidden;
+        }
+      }
+      @supports (-ms-ime-align:auto) and (-webkit-text-stroke:initial){
+        .entry-screen .text-overlay{
+          width:0;
+          height:0;
+          overflow:hidden;
+        }
+      }
+    </style>
+    <style id="edgeonly">
+    
+    </style>
     <script>
         $(document).ready(function() {
 
             //fire this script if on the first slide
             var pageLocation = window.location.href.match(/\d+$/);
             var cookGet = Cookies.get('intro-shown');
+            console.log(cookGet);
             if (pageLocation === null) {
                 if (typeof cookGet === 'undefined') {
                     $('#intro-overlay').show();
+                    
+                    $("#ieonlyintroFix").remove();
+                    // Load Intro Animation JS file
+                    // $.getScript('js/ticker.js').done(function(script, textStatus) {
+                    runIntroAnimation();
+                    // });
                     // add cookie that expires in one day to site homepage
                     Cookies.set('intro-shown', 'yes', {
                         expires: 365,
                         path: '/'
                     });
-
-                    // Load Intro Animation JS file
-                    // $.getScript('js/ticker.js').done(function(script, textStatus) {
-                    runIntroAnimation();
-                    // });
 
                 } else {
                     $('#intro-overlay').fadeOut(500); // Hides Intro Animation Overlay
@@ -73,6 +94,9 @@
             runIntroAnimation();
 
         }
+        $(window).on("load",function(){
+          
+        });
     </script>
     <!-- End Intro Animation Script -->
 

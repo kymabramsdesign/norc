@@ -18,8 +18,8 @@ function runIntroAnimation(){
           $('.ti-cursor').remove();
         }
       })
-      .tiPause(800).tiSettings({deleteSpeed: 0}).tiType("<h3>Informed Decisions</h3>").tiPause(450).tiDelete()
-      .tiSettings({speed: 48,deleteSpeed: 0}).tiType("<h3>Thriving Families</h3>").tiPause(400).tiDelete()
+      .tiPause(2000).tiSettings({deleteSpeed: 0}).tiType("<h3>Informed Decisions</h3>").tiPause(450).tiDelete().tiPause(1700)
+      .tiSettings({speed: 48,deleteSpeed: 0}).tiType("<h3>Thriving Families</h3>").tiPause(400).tiDelete().tiPause(1000)
       .tiSettings({speed: 44,deleteSpeed: 0}).tiType("<h3>Safer Communities</h3>").tiPause(350).tiDelete()
       .tiSettings({speed: 40,deleteSpeed: 0}).tiType("<h3>Better Schools</h3>").tiPause(300).tiDelete()
       .tiSettings({speed: 30,deleteSpeed: 0}).tiType("<h3>Growing Economies</h3>").tiPause(250).tiDelete()

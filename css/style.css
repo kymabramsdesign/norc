@@ -2871,6 +2871,11 @@ body.intro {
     -webkit-transition: color .2s ease-in-out;
     -o-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .slide.insight .replay-intro {
+        left: auto;
+        width: calc(100% / 8);
+        text-align: center; } }
     .slide.insight .replay-intro:hover {
       color: white; }
 
