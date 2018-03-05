@@ -11,7 +11,7 @@
 	<div class="solid-bar"></div>
 	<div id="intro">
 		<div class="intro-left">
-			<h1>What occupations do STEM doctorates pursue?</h1>
+			<h1>What Occupations Do STEM Doctorates Pursue?</h1>
 			<h2>The lines connect degree with occupation. Line thickness is proportional to the percentage of respondents in that category.</h2>
 		</div>
 		<div class="intro-right">

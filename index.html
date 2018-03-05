@@ -26,8 +26,6 @@
 
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Load jQuery here in order to run the intro animation -->
-    <script src="js/js-cookie.js"></script>
-    <!-- Load cookie tracking plugin -->
     <script src="js/typeIt.min.js"></script>
     <!-- Load type js -->
 
@@ -54,13 +52,14 @@
     </style>
     <script>
         $(document).ready(function() {
-
+console.log("loaded")
             //fire this script if on the first slide
             var pageLocation = window.location.href.match(/\d+$/);
-            var cookGet = Cookies.get('intro-shown');
-            console.log(cookGet);
+           // var cookGet = Cookies.get('intro-shown');
+            var lsGet=localStorage.getItem("intro-shown");
             if (pageLocation === null) {
-                if (typeof cookGet === 'undefined') {
+             console.log(pageLocation);
+                if (typeof lsGet === 'undefined' || lsGet == null) {console.log("intro-shown not set")
                     $('#intro-overlay').show();
                     
                     $("#ieonlyintroFix").remove();
@@ -69,19 +68,18 @@
                     runIntroAnimation();
                     // });
                     // add cookie that expires in one day to site homepage
-                    Cookies.set('intro-shown', 'yes', {
-                        expires: 365,
-                        path: '/'
-                    });
-
-                } else {
+                    //Cookies.set('intro-shown', 'yes', {expires: 365, path: '/'});
+                    localStorage.setItem('intro-shown', 'yes');
+                } else {console.log("intro-shown set")
                     $('#intro-overlay').fadeOut(500); // Hides Intro Animation Overlay
                     //$('.typed-first, .typed-second, .ti-cursor').html("");
                     //$('.skip-intro').hide();
                 }
+            }else{
+              $(window).on("load",function(){
+                 $('#intro-overlay').fadeOut(500);
+              });
             }
-
-            // Cookies.remove('intro-shown', { path: '/' }); // for testing, resets the cookies
 
         });
 
@@ -95,7 +93,6 @@
 
         }
         $(window).on("load",function(){
-          
         });
     </script>
     <!-- End Intro Animation Script -->
@@ -699,7 +696,7 @@
                                     </a>
                                 </div>
                                 <div class="one right">
-                                    <a href="/disaster-fatalities"><img src="/img/society-6.jpg" alt="Disaster Fatalities Image" />
+                                    <a href="/disaster-fatalities"><img src="/img/society-6.png" alt="Disaster Fatalities Image" />
                                         <p class="small caption">Understanding How Disasters Kill</p>
                                     </a>
                                 </div>
@@ -722,7 +719,7 @@
                                 <a href="/aging" class="one" style="background-image: url('/img/society-5.jpg');">
                                     <p class="small caption white">Informing Policy on Retirement and Aging</p>
                                 </a>
-                                <a href="/disaster-fatalities" class="one" style="background-image: url('/img/society-6.jpg');">
+                                <a href="/disaster-fatalities" class="one" style="background-image: url('/img/society-6.png');">
                                     <p class="small caption white">Understanding How Disasters Kill</p>
                                 </a>
                                 <a href="/smoking-and-social-media" class="one" style="background-image: url('/img/society-2.jpg');">

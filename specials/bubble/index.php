@@ -13,7 +13,7 @@
 	<div class="wrap">
 		<div id="intro">
 			<div class="intro-left">
-				<h1>News Media Sources and Attitudes vary by Political Party</h1>
+				<h1>News Media Sources and Attitudes Vary by Political Party</h1>
 				<h2>Data come from a 2017 study of people’s trust in news media (2,036 American adults).</h2>
 			</div>
 			<div class="intro-right">

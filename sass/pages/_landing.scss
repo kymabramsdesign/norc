@@ -330,7 +330,9 @@
       margin-top: 155px;
       padding: 0 60px 0 30px;
       width: 50vw;
-
+      &[style*="margin-left: 50vw"]{ //so content doesn't jerk to left when thumbs are fixed position
+        margin-left:calc(50vw - 74px) !important;
+      }
       @media screen and (max-width: 900px) {
         margin-top: 0;
         padding: 20px 74px 0;
@@ -443,7 +445,7 @@
       margin-top: 144px;
       bottom: 20px;
       padding: 0 0 0 74px;
-      width: 50vw;
+      width: calc(50vw - 74px); // keeps thumbs from changing size when thumbs go from relative to fixed positioning
 
       &.mobile {
         display: none;

@@ -11,19 +11,19 @@ $(document).ready(function() {
             animateAnchor: false,
             verticalCentered: false,
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
-                if (Cookies.get('intro-shown') == null) {
+                //                if (Cookies.get('intro-shown') == null) {
 
-                    // add cookie that expires in one day to site homepage
-                    Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
+                //                    // add cookie that expires in one day to site homepage
+                //                   // Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
 
-                    // Load Intro Animation JS file
-                    $.getScript('js/ticker.js');
+                //                    // Load Intro Animation JS file
+                //                   // $.getScript('js/ticker.js');
 
-                } else {
-                    $('#intro-overlay').fadeOut(100); // Hides Intro Animation Overlay
-                    $('.typed-first, .typed-second, .ti-cursor').html("");
-                    // $('.skip-intro').hide();
-                }
+                //                } else {
+                //                    $('#intro-overlay').fadeOut(100); // Hides Intro Animation Overlay
+                //                    $('.typed-first, .typed-second, .ti-cursor').html("");
+                //                    // $('.skip-intro').hide();
+                //                }
 
                 if (slideIndex == 0) {
                     $('.section-title').hide();
@@ -87,19 +87,19 @@ $(document).ready(function() {
             scrollOverflow: true,
             animateAnchor: false,
             afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
-                if (Cookies.get('intro-shown') == null) {
+                //                if (Cookies.get('intro-shown') == null) {
 
-                    // add cookie that expires in one day to site homepage
-                    Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
+                //                    // add cookie that expires in one day to site homepage
+                //                   // Cookies.set('intro-shown', 'yes', { expires: 1, path: '/' });
 
-                    // Load Intro Animation JS file
-                    $.getScript('js/ticker.js');
+                //                    // Load Intro Animation JS file
+                //                  //  $.getScript('js/ticker.js');
 
-                } else {
-                    $('#intro-overlay').fadeOut(500); // Hides Intro Animation Overlay
-                    $('.typed-first, .typed-second, .ti-cursor').html("");
-                    //$('.skip-intro').hide();
-                }
+                //                } else {
+                //                    $('#intro-overlay').fadeOut(500); // Hides Intro Animation Overlay
+                //                    $('.typed-first, .typed-second, .ti-cursor').html("");
+                //                    //$('.skip-intro').hide();
+                //                }
 
                 if (slideIndex == 0) {
                     $('.section-title').hide();
@@ -136,24 +136,33 @@ $(document).ready(function() {
                 }
             },
             afterRender: function() {
-                // sizes all the smaller thumbnail images on the homepage
-                var largeSize = $('#img-to-measure').height();
-                largeSize = largeSize + 7;
+                setTimeout(function() {
+                    // sizes all the smaller thumbnail images on the homepage
+                    var largeSize = $('#img-to-measure').height();
+                    largeSize = largeSize + 7;
 
-                $('.two-vertical').css('height', largeSize);
-                $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
-                $('.president .two-vertical').css('height', (largeSize / 2));
-                $('.gain-more .two-vertical.first').css('height', (largeSize / 2));
+                    var largeSizeActive = $('.fp-slide.economics .thumbnails .one-vertical .four').find("img").height();
+                    $('.two-vertical').css('height', largeSizeActive + 7);
+
+                    $('.desktop-video .four, .mobile-video .four img').css('height', largeSize);
+                    $('.president .two-vertical').css('height', (largeSize / 2));
+                    $('.gain-more .two-vertical.first').css('height', (largeSize / 2));
+                }, 300);
+
             },
             afterResize: function() {
-                // re-sizes all the smaller thumbnail images on the homepage
-                var largeSize = $('#img-to-measure').height();
-                largeSize = largeSize + 7;
+                setTimeout(function() { //wait a couple of thousands of a second to let image resize and then resize double talls
+                    // re-sizes all the smaller thumbnail images on the homepage
+                    var largeSize = $('#img-to-measure').height();
+                    largeSize = largeSize + 7;
 
-                $('.two-vertical').css('height', largeSize);
-                $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
-                $('.president .two-vertical').css('height', (largeSize / 2));
-                $('.gain-more .two-vertical.first').css('height', (largeSize / 2));
+                    var largeSizeActive = $('.fp-slide.active .thumbnails .one-vertical .four').find("img").height();
+                    $('.two-vertical').css('height', largeSizeActive + 7);
+
+                    $('.desktop-video .four, .mobile-video .four').css('height', largeSize);
+                    $('.president .two-vertical').css('height', (largeSize / 2));
+                    $('.gain-more .two-vertical.first').css('height', (largeSize / 2));
+                }, 400);
             }
         });
     }

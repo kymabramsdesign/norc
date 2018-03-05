@@ -7,7 +7,13 @@ body {
 	font-family: 'Roboto', Helvetica, arial, sans-serif;
 	color: #231f20;
 	padding-top: 46px;
+	
 }
+@media screen and (max-height:658px){
+  body {
+    padding-top:20px;
+   }
+	}
 .clear {
 	clear: both;
 	margin-bottom: 30px;
@@ -15,7 +21,13 @@ body {
 #intro {
 	color: #5c5d5f;
 	padding-bottom: 40px;
+
 }
+	@media screen and (max-height:658px){
+	  #intro {
+	    padding-bottom:20px;
+	  }
+	}
 #intro h1 {
 	font-weight: normal;
 	font-size: 23px;
@@ -100,7 +112,14 @@ body {
 	width: 90%;
 	height: 38.1vw;
 	margin: 0 auto;
+	
 }
+@media screen and (max-height:700px){
+    #bubbleChart{
+	    transform:scale(.85);
+	    margin-top:-20px;
+	  }
+	}
 #bubbleChart .yes-no-label, #bubbleChart .party-label {
 	display: none;
 }

@@ -101,6 +101,22 @@ html.fp-enabled,
       top: 67px;
       z-index: 100;
     }
+    &:before{
+       @media screen and (max-width:767px) {
+        content:"";
+        display:block;
+        background:transparent;
+        -webkit-transform: rotate(-135deg) skew(0deg, 0deg);
+        -ms-transform: rotate(-135deg) skew(0deg, 0deg);
+        transform: rotate(-135deg) skew(0deg, 0deg);
+        width: 60px;
+        height: 38px;
+        position: absolute;
+        left: -49px;
+        top: -30px;
+        transform-origin: 45px 23px;
+       }
+      }
   }
 
   &.fp-next {
@@ -118,7 +134,24 @@ html.fp-enabled,
       right: 22px;
       top: 67px;
       z-index: 100;
+     
     }
+     &:before{
+       @media screen and (max-width:767px) {
+        content:"";
+        display:block;
+        background:transparent;
+        -webkit-transform: rotate(405deg) skew(2deg, 2deg);
+        -ms-transform: rotate(405deg) skew(2deg, 2deg);
+        transform: rotate(405deg) skew(0deg, 0deg);
+        width: 60px;
+        height: 38px;
+        position: absolute;
+        right: -49px;
+        top: -30px;
+        transform-origin: 0px 0px;
+       }
+      }
   }
 }
 
