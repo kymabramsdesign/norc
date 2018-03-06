@@ -221,3 +221,8 @@ svg {
 	svg {
 		height: 32vw;
 	}
+}
+
+#filters .filter[id="filter-5"] .filter-items label:nth-child(2){
+  text-transform: lowercase;
+}

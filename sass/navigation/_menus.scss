@@ -133,8 +133,8 @@
           margin: 4px 0 6px;
         }
       }
-
-      img {
+      
+      img, svg {
         @include transition(transform .3s ease-in-out);
         cursor: pointer;
         margin-left: 10px;
@@ -171,6 +171,30 @@
             -ms-transform: rotate(-180deg) translateY(4px) scaleX(2);
             transform: rotate(-180deg) translateY(4px) scaleX(2);
             width: 22px;
+          }
+        }
+      }
+      
+      svg{
+        width:21px;
+        height:17px;
+        @media screen and (max-width: 1024px) {
+          width:52px;
+          height:42px;
+          &.open {
+            width:52px;
+            height:42px;
+            transform: rotate(-180deg) translateX(65px) translateY(4px) scaleX(2);
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          width:52px;
+          height:42px;
+          &.open {
+            width:52px;
+            height:42px;
+            transform: rotate(-180deg) translateX(65px) translateY(4px) scaleX(2);
           }
         }
       }

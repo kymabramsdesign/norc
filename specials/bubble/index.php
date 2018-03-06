@@ -73,7 +73,7 @@
 		</div>
 	</div>
 	<div class="source wrap">
-	*The interactive includes 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (independent). Once dots are sorted into Yes or No category, their position is random. Distribution of respondents by Political Identification: 35% Democrat, 24% Republican, 41% Independent.
+	*The interactive includes 100 blue circles (Democrat), 100 red circles (Republican), and 100 white circles (independent). Once dots are sorted into Yes or No category, their position is random. Distribution of respondents by Political Identification: 35% Democrat, 24% Republican, 41% independent.
 	</div>
 	
 	<script src="../../js/d3.min.js"></script>

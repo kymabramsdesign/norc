@@ -222,7 +222,7 @@ console.log("loaded")
                                     <p class="small caption white">2,000+ employees</p>
                                 </a>
                                 <a href="#" class="one" style="background-image: url('/img/pres-2.png');">
-                                    <p class="small caption white">168,581 cups of coffee consumed<sup>1</sup></p>
+                                    <p class="small caption white">168,581 cups of coffee consumed<sup  id="dgfootnote1">1</sup></p>
                                 </a>
                             </div>
                             <div class="two-vertical">
@@ -233,11 +233,11 @@ console.log("loaded")
                                     <p class="small caption black">50+ languages spoken</p>
                                 </a>
                             </div>
-                            <div class="one-vertical desktop-video">
+                            <div class="one-vertical">
                                 <div class="four">
-                                    <img src="img/play-button-text.svg" alt="play button" caption="" />
+                                    <div class="pull-quote">We are committed to ensuring society benefits from the production and analysis of data, guided by our unwavering obligation to the principles of rigorous science coupled with a fascination for the opportunities ahead.</div>
                                 </div>
-                                <p class="large caption">Creating Insight for Informed Decisions</p>
+                                
                             </div>
                             <div class="two-vertical">
                                 <a href="#" class="one" style="background-image: url('/img/pres-5.png');">
@@ -267,11 +267,11 @@ console.log("loaded")
                                 with a corresponding, and very substantial, negative impact on society. In contrast, we at NORC believe it is possible to achieve the best-case outcome. In this scenario, the hard lessons learned over the years about correctly
                                 using data will be coupled with new methods, advanced tools, and the increasing democratization of data to unlock the power of new and emerging data streams to use them in ways that are novel, societally responsible, scientifically
                                 accurate, and beneficial to all.</p>
-                            <div class="one-vertical mobile-video">
+                            <div class="one-vertical mobile-quote">
                                 <div class="four">
-                                    <img src="img/play-button-text.svg" alt="play button" caption="" />
+                                   <div class="pull-quote">We are committed to ensuring society benefits from the production and analysis of data, guided by our unwavering obligation to the principles of rigorous science coupled with a fascination for the opportunities ahead.</div>
                                 </div>
-                                <p class="large caption">Creating Insight for Informed Decisions</p>
+                               
                             </div>
 
                             <p>To achieve these results, the work of the research community and those new to data must be guided by the longstanding principles of good science, a culture of innovation, a commitment to transparency, and a mandate for objective
@@ -296,7 +296,7 @@ console.log("loaded")
                                     <p class="small caption white">2,000+ employees</p>
                                 </a>
                                 <a href="#" class="one essay" style="background-image: url('/img/pres-2.png');">
-                                    <p class="small caption white">168,581 cups of coffee consumed<sup>1</sup></p>
+                                    <p class="small caption white">168,581 cups of coffee consumed<sup id="gfootnote1">1</sup></p>
                                 </a>
                                 <a href="#" class="one essay" style="background-image: url('/img/pres-3.png');">
                                     <p class="small caption white">250+ majors</p>
@@ -736,7 +736,7 @@ console.log("loaded")
                 </div>
                 <!-- End of Society Slide -->
 
-                <div class="slide gain-more">
+                <div id="gainMore" class="slide gain-more">
                     <div class="area">
                         <div class="grey-box"></div>
                         <div class="landing-text">
@@ -759,7 +759,12 @@ console.log("loaded")
                                 <a href="http://www.norc.org/Research/Projects/Pages/default.aspx" class="one" target="_blank" style="background-image: url('/img/norc-leader-link.jpg');">
                                     <p class="small caption white">NORC Projects</p>
                                 </a>
-                                <div class="one blank"></div>
+                                <div class="one desktop-video">
+                                  <div class="">
+                                    <p class="small caption white">Working at NORC</p>
+                                    <img src="img/play-button-text.svg" alt="play button" />
+                                  </div>
+                                </div>
                             </div>
 
                         </div>
@@ -850,8 +855,8 @@ console.log("loaded")
                             </div>
                             <div class="one">
                                 <p class="column-heading">Appendix and Footnotes</p>
-                                <p><sup>1</sup>The hot beverage count includes only those produced by cafeteria drink machines and does not include self-provided beverages or those made using traditional coffee or tea pots.</p>
-                                <p><sup>2</sup>Statistics derived from Medicare Current Beneficiary Survey (2013 Cost and Use, 2012-2013 Access to Care).</p>
+                                <p id="footnote1"><sup>1</sup><span>The hot beverage count includes only those produced by cafeteria drink machines and does not include self-provided beverages or those made using traditional coffee or tea pots.</span></p>
+                                <p id="footnote2"><sup>2</sup><span>Statistics derived from Medicare Current Beneficiary Survey (2013 Cost and Use, 2012-2013 Access to Care).</span></p>
                             </div>
                         </div>
 

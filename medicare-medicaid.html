@@ -118,7 +118,7 @@
         <div class="number">
           <img src="img/70-blue.svg" alt="Seventy Percent" />
         </div>
-        <div class="text">of Medicare beneficiaries report having hypertension. 60% report having arthritis.<sup>2</sup></div>
+        <div class="text">of Medicare beneficiaries report having hypertension. 60% report having arthritis.<sup id="footnote">2</sup></div>
       </div>
       <p>In addition to our work on the MCBS, NORC is leading the evaluation of the Next Generation Accountable Care Organization (ACO) Model, which offers financial incentives to provider groups that maintain or improve quality of care while restraining Medicare spending. NORC’s mixed-methods evaluation describes ACO and provider features; characterizes implementation across the ACOs; estimates the impact of the Next Generation ACO Model on cost of care and measures of utilization, quality, and beneficiary health; and identifies variations in the model’s impact and replicability.</p>
       <p>NORC is also at the forefront of exploring improvements in the Medicaid program. In partnership with the Center for Health Care Strategies, the RAND Corporation, and the Actuarial Research Corporation, NORC is providing technical support to 10 state Medicaid agencies participating in the Medicaid Innovation Accelerator Program (IAP). The goal of IAP is to improve the health and health care of Medicaid beneficiaries and to reduce costs by supporting states’ ongoing payment and delivery system reforms.</p>
@@ -136,7 +136,22 @@
 </main>
 
 <footer>
+<div id="footnoter" style="display:none"></div>
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script>
+  $(window).on("load",function(){
+    $( "#footnoter" ).load( "/index.html #footnote2")
+    setTimeout(function(){
+     //alert( $( "#footnoter span" ).html())
+     $("#footnote").attr("title",$( "#footnoter span" ).html()).attr("style","cursor:pointer").bind("click",function(){
+    
+    location.href="index.html?footnotes#home/7"
+    
+  });
+     },1700);
+    
+  })
+  </script>
   <script src="js/story.js"></script>
   <script src="js/navigation.js"></script>
   <!-- AddToAny BEGIN -->

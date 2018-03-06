@@ -558,6 +558,94 @@
         }
       }
     }
+    
+    .mobile-quote{
+      display:none;
+      padding: 10px 60px;
+        @media screen and (max-width: 900px) {
+          display: block;
+          .pull-quote{display: block;}
+        }
+      }
+    
+  
+    .pull-quote {
+      color: $orange;
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 38px;
+      padding: 10px 45px;
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+      
+      @media screen and (max-width:1200px) {
+        font-size: 24px;
+        line-height: 36px;
+        padding: 10px 50px;
+      }
+
+      @media screen and (max-width:1024px) {
+        font-size: 22px;
+        line-height: 32px;
+        padding: 10px 35px;
+      }
+
+      @media screen and (max-width:900px) {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 10px 24px;
+      }
+
+      &:before {
+        background: url(/img/pre-quote-orange.svg) no-repeat;
+        background-position: top;
+        -webkit-background-size: 28px 28px;
+        background-size: 28px;
+        bottom: 3px;
+        content: "";
+        margin-left: -45px;
+        padding-right: 45px;
+        position: relative;
+
+        @media screen and (max-width:1024px) {
+          -webkit-background-size: 24px 24px;
+          background-size: 24px;
+          margin-left: -39px;
+          padding-right: 39px;
+        }
+
+        @media screen and (max-width:900px) {
+          -webkit-background-size: 20px 20px;
+          background-size: 20px;
+          margin-left: -30px;
+          padding-right: 30px;
+        }
+      }
+
+      &:after {
+        background: url(/img/post-quote-orange.svg) no-repeat;
+        background-position: top;
+        -webkit-background-size: 28px 28px;
+        background-size: 28px;
+        bottom: 3px;
+        content: "";
+        padding-left: 39px;
+        position: relative;
+
+        @media screen and (max-width:1024px) {
+          -webkit-background-size: 24px 24px;
+          background-size: 24px;
+          padding-left: 31px;
+        }
+
+        @media screen and (max-width:1024px) {
+          -webkit-background-size: 20px 20px;
+          background-size: 20px;
+          padding-left: 27px;
+        }
+      }
+    }
   }
 
   .bottom-arrow {
@@ -764,6 +852,7 @@
       @media screen and (max-width: 900px) {
         padding-bottom: 45px;
       }
+          
     }
 
     .one-vertical {
@@ -807,6 +896,7 @@
 
         .one {
           height: 100%;
+          
         }
       }
     }
@@ -1335,6 +1425,40 @@
 
         &.blank {
           background-color: transparent;
+        }
+        &.desktop-video{
+          cursor:pointer;
+          background:url(/img/president-video-2.jpg) no-repeat center center;
+          background-size:cover;
+          div {
+            display:flex;
+            align-items:flex-start;
+            justify-content:flex-start;
+            flex-direction:column;
+            height:100%;
+            p{
+              padding-bottom:0;
+              &:after{
+                display:none;
+              }
+            }
+            img{
+              width:27%;
+              align-self:center;
+              @media screen and (max-width:900px) and (min-width:768px){
+                width:30%;
+              }
+              @media screen and (max-width:767px) and (min-width:590px){
+                width:35%;
+              }
+              @media screen and (max-width:589px) and (min-width:540px){
+                width:34%;
+              }
+              @media screen and (max-width:539px) and (min-width:390px){
+                width:30%;
+              }
+            }
+          }
         }
 
         .small.caption {

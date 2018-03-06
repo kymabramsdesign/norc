@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="12px" viewBox="0 0 21 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+    </defs>
+    <symbol id="off" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path class="ones" d="M5.2902832,6.51379395 L5.2902832,-5.48620605 L3.2902832,-5.48620605 L3.2902832,7.4861297 L3.2902832,8.51379395 L17.2349547,8.51379395 L17.2349547,6.51379395 L5.2902832,6.51379395 Z" id="Combined-Shape-1" fill="#919191" transform="translate(10.262619, 1.513794) rotate(-45.000000) translate(-10.262619, -1.513794) "></path>
+    </symbol>
+    
+    <symbol id="econ" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path class="ones" d="M5.2902832,6.51379395 L5.2902832,-5.48620605 L3.2902832,-5.48620605 L3.2902832,7.4861297 L3.2902832,8.51379395 L17.2349547,8.51379395 L17.2349547,6.51379395 L5.2902832,6.51379395 Z" id="Combined-Shape-2" fill="#6fa387" transform="translate(10.262619, 1.513794) rotate(-45.000000) translate(-10.262619, -1.513794) "></path>
+    </symbol>
+    
+    <symbol id="ed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path class="ones" d="M5.2902832,6.51379395 L5.2902832,-5.48620605 L3.2902832,-5.48620605 L3.2902832,7.4861297 L3.2902832,8.51379395 L17.2349547,8.51379395 L17.2349547,6.51379395 L5.2902832,6.51379395 Z" id="Combined-Shape-3" fill="#9e525d" transform="translate(10.262619, 1.513794) rotate(-45.000000) translate(-10.262619, -1.513794) "></path>
+    </symbol>
+    
+    <symbol id="global" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path class="ones" d="M5.2902832,6.51379395 L5.2902832,-5.48620605 L3.2902832,-5.48620605 L3.2902832,7.4861297 L3.2902832,8.51379395 L17.2349547,8.51379395 L17.2349547,6.51379395 L5.2902832,6.51379395 Z" id="Combined-Shape-4" fill="#6D3670" transform="translate(10.262619, 1.513794) rotate(-45.000000) translate(-10.262619, -1.513794) "></path>
+    </symbol>
+    
+    <symbol id="health" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path class="ones" d="M5.2902832,6.51379395 L5.2902832,-5.48620605 L3.2902832,-5.48620605 L3.2902832,7.4861297 L3.2902832,8.51379395 L17.2349547,8.51379395 L17.2349547,6.51379395 L5.2902832,6.51379395 Z" id="Combined-Shape-5" fill="#5a7f94" transform="translate(10.262619, 1.513794) rotate(-45.000000) translate(-10.262619, -1.513794) "></path>
+    </symbol>
+    
+   <symbol id="soc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <path class="ones" d="M5.2902832,6.51379395 L5.2902832,-5.48620605 L3.2902832,-5.48620605 L3.2902832,7.4861297 L3.2902832,8.51379395 L17.2349547,8.51379395 L17.2349547,6.51379395 L5.2902832,6.51379395 Z" id="Combined-Shape-6" fill="#F27E71" transform="translate(10.262619, 1.513794) rotate(-45.000000) translate(-10.262619, -1.513794) "></path>
+    </symbol>
+</svg>
