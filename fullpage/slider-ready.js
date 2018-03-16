@@ -327,7 +327,7 @@ function scrollTime() {
                 $(this).addClass('scrolled');
                 $(this).find('.grey-box').addClass('scrolled');
             } else {
-                if ($('.landing-text').hasClass('button-scrolled') === false) {
+                if ($('.landing-text').hasClass('button-scrolled') == false) {
                     $(this).removeClass('scrolled');
                     $(this).find('.grey-box').removeClass('scrolled');
                 }
@@ -339,6 +339,14 @@ function scrollTime() {
 
 //Check Browser and adjust font-weights for Chrome
 function checkBrowser() {
+  var testbrowser=navigator.userAgent;
+    testbrowser=testbrowser.toString().toLowerCase();
+    
+    if(testbrowser.indexOf("mobile") > -1){
+      $("body").addClass("mobile"); 
+      
+    }
+
     var isChromium = !!window.chrome;
     if (isChromium === true) {
         $('.main p, .area .h2 p, .main .section-title').css('font-weight', '300');
@@ -360,3 +368,6 @@ function initializeResize() {
 
 $(document).ready(initialize);
 $(window).resize(initializeResize);
+$(window).on("load",function(){
+  initialize();
+});

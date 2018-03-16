@@ -1,6 +1,6 @@
 // Adjusts where the menu falls to the right of the content
 function menuMove () {
-  var windowWidth = $(window).width();
+  var windowWidth = $(window).width()+100;
   $('.menu-container').css('right',-windowWidth);
 }
 
@@ -71,7 +71,7 @@ $(window).bind("load", function() {
     '<li><a href="/index.html#home" class="trigger-slider check-url">Introduction</a></li>' +
     '<li><a href="/index.html#home/1" class="trigger-slider check-url">President\'s Letter</a></li>' +
     '<li class="divider"><hr /></li>' +
-    '<li class="arrow economics-arrow"><a href="javascript:void(0)" data-area="#econ">Economics, Markets, and the Workforce</a><svg class="arrow-img"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
+    '<li class="arrow economics-arrow"><a href="javascript:void(0)" data-area="#econ">Economics, Markets, and the Workforce</a><svg class="arrow-img" data-activeColor="#6fa387"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu economics-dropdown">' +
       '<li><a href="/index.html#home/2" class="trigger-slider">Overview</a><li><a href="/congregations">Tracking the Professional and Economic Outlook of Congregations</a></li>' +
       '<li><a href="/poverty-research">Exploring Poverty and Resilience</a></li>' +
@@ -80,13 +80,13 @@ $(window).bind("load", function() {
       '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
       '<li><a href="/gss-trends">Willingness to Work</a></li>' +
     '</ul></li>' +
-    '<li class="arrow education-arrow"><a href="javascript:void(0)" data-area="#ed">Education, Training, and Learning</a><svg class="arrow-img"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
+    '<li class="arrow education-arrow"><a href="javascript:void(0)" data-area="#ed">Education, Training, and Learning</a><svg class="arrow-img" data-activeColor="#9e525d"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu education-dropdown">' +
       '<li><a href="/index.html#home/3" class="trigger-slider"">Overview</a></li><li><a href="/higher-education">Making Higher Education More Accessible and Achievable</a></li>' +
       '<li><a href="/early-childhood">Assessing and Shaping the Impact of Early Childhood Education</a></li>' +
       '<li><a href="/science-and-technology">Tracking the Careers of STEM Doctorates</a></li>' +
     '</ul></li>' +
-    '<li class="arrow global-arrow"><a href="javascript:void(0)" data-area="#global">Global Development</a><svg class="arrow-img"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
+    '<li class="arrow global-arrow"><a href="javascript:void(0)" data-area="#global">Global Development</a><svg class="arrow-img" data-activeColor="#6D3670"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu global-dropdown">' +
       '<li><a href="/index.html#home/4" class="trigger-slider"">Overview</a></li><li><a href="/usaid-evaluations">Measuring Impact and Improving Performance</a></li>' +
       '<li><a href="/complex-projects">Assessing the Impact of Complex Projects</a></li>' +
@@ -95,7 +95,7 @@ $(window).bind("load", function() {
       '<li><a href="/closed-societies">Peering into Closed Societies</a></li>' +
       '<li><a href="/global-portfolio">NORC\’s Global Portfolio</a></li>' +
     '</ul></li>' +
-    '<li class="arrow health-arrow"><a href="javascript:void(0)" data-area="#health">Health and Well-Being</a><svg class="arrow-img"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
+    '<li class="arrow health-arrow"><a href="javascript:void(0)" data-area="#health">Health and Well-Being</a><svg class="arrow-img" data-activeColor="#5a7f94"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu health-dropdown">' +
       '<li><a href="/index.html#home/5" class="trigger-slider"">Overview</a></li><li><a href="/medicare-medicaid">Making Medicare and Medicaid More Effective</a></li>' +
       '<li><a href="/patient-risk">Using Data to Improve Safety and Quality</a></li>' +
@@ -104,7 +104,7 @@ $(window).bind("load", function() {
       '<li><a href="/health-culture">Cultivating a Culture of Health</a></li>' +
       '<li><a href="/zika-awareness">Assessing Americans\’ Zika Awareness</a></li>' +
     '</ul></li>' +
-    '<li class="arrow society-arrow"><a href="javascript:void(0)" data-area="#soc" >Society, Media, and Public Affairs</a><svg class="arrow-img"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
+    '<li class="arrow society-arrow"><a href="javascript:void(0)" data-area="#soc" >Society, Media, and Public Affairs</a><svg class="arrow-img" data-activeColor="#F27E71"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu society-dropdown">' +
       '<li><a href="/index.html#home/6" class="trigger-slider"">Overview</a></li><li><a href="/aging">Informing Policy on Retirement and Aging</a></li>' +
       '<li><a href="/intimate-partner-violence">Combating Intimate Partner Violence</a></li>' +
@@ -115,8 +115,17 @@ $(window).bind("load", function() {
     '</ul></li>' +
     '<li class="divider"><hr /></li>' +
     '<li><a href="/index.html#home/7" class="trigger-slider check-url">Gain More Insight</a></li>' +
+    '<li><a href="/infographics.html" class="trigger-slider check-url">Infographics and Interactive Visualizations</a></li>' +
     '</ul>'
   );
+  var isIE11s = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
+  if(isIE11s == true){
+    $.getScript('/js/svg4everybody.js').done(function(script, textStatus) { 
+        setTimeout(function(){
+          svg4everybody();
+        },300);
+    });
+  }
 
   // Internal Menu Functions
   $('.arrow-img').on('click', function() {
@@ -124,17 +133,39 @@ $(window).bind("load", function() {
     $('.arrow a').removeClass('active');
     // $('.arrow-img').attr('src', 'img/arrow.svg');
     // text color changes...leaving arrow grey
-
+    $("svg.arrow-img").each(function(){
+      $(this).children().attr("xlink:href","img/arrow2.svg#off");
+      if(isIE11s == true){
+            $(this).children().attr("fill","#919191");
+        }
+    });
+    if(isIE11s == true){
+      
+    }
+    //setTimeout(function(){
     if ( $(this).hasClass('open') ) {
       $(this).removeClass('open');
+      $("svg.arrow-img").each(function(){
+        $(this).children().attr("xlink:href","img/arrow2.svg#off");
+        if(isIE11s == true){
+            $(this).children().attr("fill","#919191");
+        }
+     });
     }
     else {
       $('.arrow-img').removeClass('open');
       $(this).prev().addClass('active');
       $(this).next('ul').slideDown(200);
       $(this).addClass('open');
+      
+        $(this).children().attr("xlink:href","img/arrow2.svg"+$(this).prev().attr("data-area"));
+        if(isIE11s == true){
+            $(this).children().attr("fill",$(this).attr("data-activecolor"));
+        }
+      
       // $(this).addClass('open').attr('src', 'img/arrow-orange.svg');
     }
+    //},500);
   });
 
   var windowWidth = $(window).width();
@@ -183,13 +214,7 @@ $(window).on("load",function(){
     e.preventDefault();
     $(this).next().click();
     setsvgs=$(this).next().children().attr("xlink:href");
-    if(setsvgs.indexOf("off")>-1){
-      $("svg.arrow-img use").attr("xlink:href","img/arrow2.svg#off");
-      $(this).next().children().attr("xlink:href","img/arrow2.svg"+$(this).attr("data-area"));
-    }else{
-       $("svg.arrow-img use").attr("xlink:href","img/arrow2.svg#off");
-    }
-    if($(window).width() <= 767){}
+    
   });
   
   $("#gfootnote1,#dgfootnote1").attr("title",$("#footnote1 span").html()).attr("style","cursor:pointer;").bind("click",function(){

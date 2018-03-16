@@ -19,7 +19,7 @@
     .fp-slides .thumbnails a {
         display: block;
     }
-    .fp-slides .thumbnails .small.caption.white.touch a {
+    .fp-slides .thumbnails .small.caption.white.touch a, .fp-slides .thumbnails.contact-info a {
         display: inline-block;
     }
     //addresses down arrow and explore our world call to action
@@ -127,4 +127,22 @@
             }
         }
     }
+}
+
+@media all and (-ms-high-contrast:none){
+  #gainMore .area .thumbnails .two-vertical .one.desktop-video div img{
+    display:none;
+  }
+  #gainMore .area .thumbnails .two-vertical .one.desktop-video .small.caption.white:before{
+      content:"" !important;
+      position:absolute;
+      width:100%;
+      height:100%;
+      background:url(/img/play-button-text.svg) no-repeat center center;
+      background-size:60%;
+    
+  }
+  .gas-image-container, .hamilton-image-container{
+    left:-200vw;
+  }
 }

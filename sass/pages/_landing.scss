@@ -1,3 +1,13 @@
+body{
+  background:#151336;
+  
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .fp-enabled .main{
+      overflow:hidden !important;
+    }
+  }
 .main {
   
   .section-title.active {
@@ -37,7 +47,7 @@
 
 .area {
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 100vw;
 
   @media screen and (max-width: 767px) {
@@ -178,7 +188,13 @@
       left:auto;
       width:calc(100% / 8);
       text-align:center;
-      
+    }
+    @media all and (max-height: 640px) and (max-width: 360px){
+      position:relative;
+      display:block;
+      left: auto;
+      text-align:center;
+      bottom:auto;
     }
     &:hover{
       color: rgba(255,255,255,1);
@@ -297,7 +313,11 @@
 
   &.president {
     background-image: url('/img/president-background.png');
-
+    
+    .area .thumbnails .one-vertical .four .large.caption{
+      margin-bottom: 21px;
+      color: $black-70;
+    }
     @media screen and (max-width: 767px) {
       background-image: url('/img/president-background-mobile.png');
       .area {
@@ -317,10 +337,13 @@
       @media screen and (max-width: 900px) {
         -ms-flex-wrap: wrap;
         -webkit-flex-wrap: wrap;
-        flex-wrap: wrap;
+        flex-wrap: wrap; 
+       /* flex-direction:column;
+        display:block;
+        overflow:visible;*/
       }
     }
-
+    
     a {
       cursor: default;
     }
@@ -332,7 +355,29 @@
       width: 50vw;
       &[style*="margin-left: 50vw"]{ //so content doesn't jerk to left when thumbs are fixed position
         margin-left:calc(50vw - 74px) !important;
+        @media screen and (max-width: 900px){
+            margin-left:0 !important;
+          }
+        &:before{
+          content:"";
+          position:absolute;
+          left:74px;
+          width:calc(50vw - 150px);
+          height:100%;
+          background:transparent;
+          z-index:10;
+        }
       }
+      &:before[style*="margin-left: 50vw"]{
+          content:"";
+          position:absolute;
+          left:74px;
+          width:calc(50vw - 150px);
+          height:100%;
+          background:transparent;
+          z-index:10;
+          
+        }
       @media screen and (max-width: 900px) {
         margin-top: 0;
         padding: 20px 74px 0;
@@ -344,7 +389,7 @@
       }
 
       p {
-        color: $black-55;
+        color: $black-70;
         font-size: 21px;
         line-height: 32px;
         margin-bottom: 20px;
@@ -431,7 +476,7 @@
       }
 
       .slide-title {
-        color: $black-55;
+        color: $black-70;
         padding-bottom: 15px;
         text-align: left;
 
@@ -443,10 +488,15 @@
 
     .thumbnails {
       margin-top: 144px;
-      bottom: 20px;
+      bottom: 0;
       padding: 0 0 0 74px;
       width: calc(50vw - 74px); // keeps thumbs from changing size when thumbs go from relative to fixed positioning
-
+      &[style="position: fixed;"]{
+        bottom:0px;
+        @media screen and (max-width: 900px){
+          position:relative !important;
+        }
+      }
       &.mobile {
         display: none;
       }
@@ -548,20 +598,41 @@
           }
         }
       }
-
+      @media screen and (max-width: 900px) {
+            .desktop-quote{
+              display:none;
+            }
+          }
       .two-vertical {
-        margin-bottom: 12px;
+        margin-bottom: 2px;
         width: 100%;
-
+        &[style*="height:"]{
+          height:auto !important;
+          
+        }
         .one {
-          height: 100%;
+          height:auto;
+          &.last-two{
+            margin-bottom:0;
+            @-moz-document url-prefix() {
+              &:after{
+                display:none;
+              }
+            }
+          }
+        }
+        .one div{
+          height: 0;
+          padding-bottom:calc(59.56% - 2px);
+          width:100%;
+          background-size:cover;
         }
       }
     }
     
     .mobile-quote{
       display:none;
-      padding: 10px 60px;
+      padding: 10px 0px;
         @media screen and (max-width: 900px) {
           display: block;
           .pull-quote{display: block;}
@@ -903,7 +974,7 @@
 
     hr {
       background-color: $white-15;
-      margin: 0 100px 23px 80px;
+      margin: 0 80px 23px 80px;
 
       @media screen and (max-width: 900px) {
         margin: 0 80px 30px;
@@ -1408,6 +1479,10 @@
       justify-content: space-between;
       padding: 7px 6px 0;
       width: 50%;
+      
+      &[style*="height"]{
+        height:0 !important;
+      }
 
       @media screen and (max-width: 900px) {
         display: none;
@@ -1419,10 +1494,54 @@
         -webkit-background-size: cover;
         background-size: cover;
         background-position: center;
-        height: 48%;
+        height: auto; //48%;
         overflow: hidden;
         width: 49%;
-
+        margin-bottom:2%;
+        position:relative;
+        
+        &.popup-image {
+          @-moz-document url-prefix() {
+            display:block !important;
+          }
+          @supports (-ms-ime-align: auto) {
+             display:block !important;
+          }
+            img{
+            position:absolute;
+            right:3px;
+            top:3px;
+            }
+            p{
+              padding-right:28px !important;
+            }
+        }
+        
+        @-moz-document url-prefix() {
+          &:after{
+            content:"block";
+            padding-bottom:4%;
+            display:block;
+            font-size:0;
+            color:transparent;
+          }
+        }
+        @supports (-ms-ime-align: auto) {
+          &:after{
+            content:"block";
+            padding-bottom:4%;
+            display:block;
+            font-size:0;
+            color:transparent;
+          }
+        }
+        .norc-img-holder{
+          background-repeat:no-repeat;
+          background-size:cover;
+          background-position:center;
+          height:0;
+          padding-bottom:58.4%;
+        }
         &.blank {
           background-color: transparent;
         }
@@ -1430,12 +1549,13 @@
           cursor:pointer;
           background:url(/img/president-video-2.jpg) no-repeat center center;
           background-size:cover;
+          
           div {
             display:flex;
             align-items:flex-start;
             justify-content:flex-start;
             flex-direction:column;
-            height:100%;
+            //height:100%;
             p{
               padding-bottom:0;
               &:after{
@@ -1443,19 +1563,21 @@
               }
             }
             img{
-              width:27%;
+
               align-self:center;
-              @media screen and (max-width:900px) and (min-width:768px){
+              transition: opacity 0.4s ease-in-out;
+              opacity: .65;
+              
                 width:30%;
+              @media screen and (min-width: 1100px){
+                width:25%;
               }
-              @media screen and (max-width:767px) and (min-width:590px){
-                width:35%;
-              }
-              @media screen and (max-width:589px) and (min-width:540px){
-                width:34%;
-              }
-              @media screen and (max-width:539px) and (min-width:390px){
-                width:30%;
+            }
+          }
+          &:hover{
+            div{
+              img{
+                opacity:.9;
               }
             }
           }
@@ -1552,4 +1674,19 @@
       background-color: $black;
     }
   }
+  
 }
+
+#gainMore{
+    .fp-tableCell[style*="height"]{
+      height:auto !important;
+      .area .thumbnails .two-vertical[style*="height"]{
+        height:auto !important;
+      }
+    }
+    @media screen and (min-width: 1600px){
+      .area .thumbnails {
+          padding: 0 80px 80px;
+      }
+     }
+  }

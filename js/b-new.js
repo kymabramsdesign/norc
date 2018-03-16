@@ -7,7 +7,8 @@ function presidentEssay() {
   var imageHeight = $('.president .one-vertical img').height();
   imageHeight = imageHeight-7; // Height of large images
   var dataPointHeight = imageHeight/2; // Height of small images
-  var columnHeight = (imageHeight*2) + (dataPointHeight*3); // Height of all images on the President slide
+  var quoteHeight=$(".pull-quote").height()+15; // adds height of quote
+  var columnHeight = (imageHeight) + (dataPointHeight*3) + quoteHeight; // Height of all images on the President slide
 
   columnHeight = columnHeight+132; // Add room for text and vertical spacing here
 
@@ -16,10 +17,12 @@ function presidentEssay() {
 
   if ( windowWidth >= 901 ) {
     var thisHeight = $('.president .thumbnails').height();
+    
     $('.president .area').on('scroll', function() {
       var areaPosition = $(this).scrollTop();
+      
       var thumb = $('.active .area .landing-text').offset().top;
-      thumb = thumb+80;
+      thumb = thumb;
 
       var isIE11 = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
       var isIE10 = 'behavior' in document.documentElement.style && '-ms-user-select' in document.documentElement.style;
@@ -156,3 +159,7 @@ function initializeResize() {
 
 $(document).ready(initialize);
 $(window).resize(initializeResize);
+$(window).on("load",function(){
+  initialize();
+   console.log(navigator.userAgent)
+});

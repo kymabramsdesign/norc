@@ -5,7 +5,7 @@
 	padding: 0;
 }
 body {
-	background: #d7ffeb;
+	background: #d8e1e1;
 	font: 14px/1.4 'Roboto', Helvetica, arial, sans-serif;
 	-webkit-text-size-adjust: none;
 }
@@ -136,4 +136,9 @@ body {
 	.mobile .column-labels > div:last-child {
 		right: 20px;
 	}
+}
+
+svg rect[fill="#b4d5c4"]{
+  fill:#c7d0d0;
+  stroke:#c7d0d0;
 }

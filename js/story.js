@@ -31,6 +31,36 @@ function columns() {
 
   // Only do the following on Mobile screens
   if ( windowWidth <= 767 ) {
+    console.log(script);
+  
+    if(script == null){
+      // Adds carousel library for mobile touch
+      var script = document.createElement( 'script' );
+      script.src = 'js/owl.carousel.min.js';
+      $("footer").append( script ); 
+      
+      // Initialize mobile carousel with settings
+      $(".left-50").owlCarousel({
+        items: 1,
+        autoHeight: true,
+        lazyload: true,
+        dots: true,
+        loop: true
+      });
+      $(".left-50").attr("style","");
+      $(".right-50").attr("style","");
+    }else{
+      // Initialize mobile carousel with settings
+      $(".left-50").owlCarousel({
+        items: 1,
+        autoHeight: true,
+        lazyload: true,
+        dots: true,
+        loop: true
+      });
+      $(".left-50").attr("style","");
+      $(".right-50").attr("style","");
+    }
 
     if( window.innerHeight < window.innerWidth ) {
       $('.image-container').css('top', '57px');
