@@ -73,45 +73,45 @@ $(window).bind("load", function() {
     '<li class="divider"><hr /></li>' +
     '<li class="arrow economics-arrow"><a href="javascript:void(0)" data-area="#econ">Economics, Markets, and the Workforce</a><svg class="arrow-img" data-activeColor="#6fa387"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu economics-dropdown">' +
-      '<li><a href="/index.html#home/2" class="trigger-slider">Overview</a><li><a href="/congregations">Tracking the Professional and Economic Outlook of Congregations</a></li>' +
-      '<li><a href="/poverty-research">Exploring Poverty and Resilience</a></li>' +
-      '<li><a href="/consumer-finances">Monitoring the Financial Health of American Families</a></li>' +
-      '<li><a href="/just-companies">Identifying America\’s Most Just Companies</a></li>' +
-      '<li><a href="/youth-data">Serving Diverse Purposes with Rich Data</a></li>' +
-      '<li><a href="/gss-trends">Willingness to Work</a></li>' +
+      '<li><a href="/index.html#home/2" class="trigger-slider">Overview</a><li><a href="/congregations.html">Tracking the Professional and Economic Outlook of Congregations</a></li>' +
+      '<li><a href="/poverty-research.html">Exploring Poverty and Resilience</a></li>' +
+      '<li><a href="/consumer-finances.html">Monitoring the Financial Health of American Families</a></li>' +
+      '<li><a href="/just-companies.html">Identifying America\’s Most Just Companies</a></li>' +
+      '<li><a href="/youth-data.html">Serving Diverse Purposes with Rich Data</a></li>' +
+      '<li><a href="/gss-trends.html">Willingness to Work</a></li>' +
     '</ul></li>' +
     '<li class="arrow education-arrow"><a href="javascript:void(0)" data-area="#ed">Education, Training, and Learning</a><svg class="arrow-img" data-activeColor="#9e525d"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu education-dropdown">' +
-      '<li><a href="/index.html#home/3" class="trigger-slider"">Overview</a></li><li><a href="/higher-education">Making Higher Education More Accessible and Achievable</a></li>' +
-      '<li><a href="/early-childhood">Assessing and Shaping the Impact of Early Childhood Education</a></li>' +
-      '<li><a href="/science-and-technology">Tracking the Careers of STEM Doctorates</a></li>' +
+      '<li><a href="/index.html#home/3" class="trigger-slider"">Overview</a></li><li><a href="/higher-education.html">Making Higher Education More Accessible and Achievable</a></li>' +
+      '<li><a href="/early-childhood.html">Assessing and Shaping the Impact of Early Childhood Education</a></li>' +
+      '<li><a href="/science-and-technology.html">Tracking the Careers of STEM Doctorates</a></li>' +
     '</ul></li>' +
     '<li class="arrow global-arrow"><a href="javascript:void(0)" data-area="#global">Global Development</a><svg class="arrow-img" data-activeColor="#6D3670"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu global-dropdown">' +
-      '<li><a href="/index.html#home/4" class="trigger-slider"">Overview</a></li><li><a href="/usaid-evaluations">Measuring Impact and Improving Performance</a></li>' +
-      '<li><a href="/complex-projects">Assessing the Impact of Complex Projects</a></li>' +
-      '<li><a href="/real-time-adaptability">Adapting Timelines and Methodologies to Conditions on the Ground</a></li>' +
-      '<li><a href="/vulnerable-populations">Reaching Vulnerable Populations in Fragile Environments</a></li>' +
-      '<li><a href="/closed-societies">Peering into Closed Societies</a></li>' +
-      '<li><a href="/global-portfolio">NORC\’s Global Portfolio</a></li>' +
+      '<li><a href="/index.html#home/4" class="trigger-slider"">Overview</a></li><li><a href="/usaid-evaluations.html">Measuring Impact and Improving Performance</a></li>' +
+      '<li><a href="/complex-projects.html">Assessing the Impact of Complex Projects</a></li>' +
+      '<li><a href="/real-time-adaptability.html">Adapting Timelines and Methodologies to Conditions on the Ground</a></li>' +
+      '<li><a href="/vulnerable-populations.html">Reaching Vulnerable Populations in Fragile Environments</a></li>' +
+      '<li><a href="/closed-societies.html">Peering into Closed Societies</a></li>' +
+      '<li><a href="/global-portfolio.html">NORC\’s Global Portfolio</a></li>' +
     '</ul></li>' +
     '<li class="arrow health-arrow"><a href="javascript:void(0)" data-area="#health">Health and Well-Being</a><svg class="arrow-img" data-activeColor="#5a7f94"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu health-dropdown">' +
-      '<li><a href="/index.html#home/5" class="trigger-slider"">Overview</a></li><li><a href="/medicare-medicaid">Making Medicare and Medicaid More Effective</a></li>' +
-      '<li><a href="/patient-risk">Using Data to Improve Safety and Quality</a></li>' +
-      '<li><a href="/diverse-stakeholders">Working with Providers, Payers, and Other Stakeholders</a></li>' +
-      '<li><a href="/opioid-epidemic">Visualizing Disease Vulnerability</a></li>' +
-      '<li><a href="/health-culture">Cultivating a Culture of Health</a></li>' +
-      '<li><a href="/zika-awareness">Assessing Americans\’ Zika Awareness</a></li>' +
+      '<li><a href="/index.html#home/5" class="trigger-slider"">Overview</a></li><li><a href="/medicare-medicaid.html">Making Medicare and Medicaid More Effective</a></li>' +
+      '<li><a href="/patient-risk.html">Using Data to Improve Safety and Quality</a></li>' +
+      '<li><a href="/diverse-stakeholders.html">Working with Providers, Payers, and Other Stakeholders</a></li>' +
+      '<li><a href="/opioid-epidemic.html">Visualizing Disease Vulnerability</a></li>' +
+      '<li><a href="/health-culture.html">Cultivating a Culture of Health</a></li>' +
+      '<li><a href="/zika-awareness.html">Assessing Americans\’ Zika Awareness</a></li>' +
     '</ul></li>' +
     '<li class="arrow society-arrow"><a href="javascript:void(0)" data-area="#soc" >Society, Media, and Public Affairs</a><svg class="arrow-img" data-activeColor="#F27E71"><use xlink:href="img/arrow2.svg#off"></use></svg>' +
     '<ul class="dropdown-menu society-dropdown">' +
-      '<li><a href="/index.html#home/6" class="trigger-slider"">Overview</a></li><li><a href="/aging">Informing Policy on Retirement and Aging</a></li>' +
-      '<li><a href="/intimate-partner-violence">Combating Intimate Partner Violence</a></li>' +
-      '<li><a href="/minds-and-media">Tracking Americans\’ Opinions and the Media That Inform Them</a></li>' +
-      '<li><a href="/teen-surveys">Tapping into the Minds and Behaviors of Teens</a></li>' +
-      '<li><a href="/disaster-fatalities">Understanding How Disasters Kill</a></li>' +
-      '<li><a href="/smoking-and-social-media">Mapping Smoking Policies to Behavior</a></li>' +
+      '<li><a href="/index.html#home/6" class="trigger-slider"">Overview</a></li><li><a href="/aging.html">Informing Policy on Retirement and Aging</a></li>' +
+      '<li><a href="/intimate-partner-violence.html">Combating Intimate Partner Violence</a></li>' +
+      '<li><a href="/minds-and-media.html">Tracking Americans\’ Opinions and the Media That Inform Them</a></li>' +
+      '<li><a href="/teen-surveys.html">Tapping into the Minds and Behaviors of Teens</a></li>' +
+      '<li><a href="/disaster-fatalities.html">Understanding How Disasters Kill</a></li>' +
+      '<li><a href="/smoking-and-social-media.html">Mapping Smoking Policies to Behavior</a></li>' +
     '</ul></li>' +
     '<li class="divider"><hr /></li>' +
     '<li><a href="/index.html#home/7" class="trigger-slider check-url">Gain More Insight</a></li>' +

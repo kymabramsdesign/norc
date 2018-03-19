@@ -127,12 +127,31 @@
             }
         }
     }
+    
+    #gainMore{
+    .fp-tableCell[style*="height"]{
+      height:auto !important;
+      .area .thumbnails .two-vertical[style*="height"]{
+        height:auto !important;
+      }
+    }
+   
+    @media screen and (min-width: 1600px){
+      .area .thumbnails {
+          padding: 0 80px 80px;
+      }
+     }
+  }
+    
 }
 
 @media all and (-ms-high-contrast:none){
   #gainMore .area .thumbnails .two-vertical .one.desktop-video div img{
     display:none;
   }
+  
+  
+  
   #gainMore .area .thumbnails .two-vertical .one.desktop-video .small.caption.white:before{
       content:"" !important;
       position:absolute;
@@ -144,5 +163,22 @@
   }
   .gas-image-container, .hamilton-image-container{
     left:-200vw;
+    z-index:-1;
+    &.visible{
+      z-index:206;
+    }
+  }
+}
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none){
+  @media screen and (max-width: 767px) {
+    .story-page .image-container .image-inner .image-inner-top .special-share{
+      .facebook{
+        height:23.094px;
+      }
+      .linkedin{
+        height:19.938px;
+      }
+    }
   }
 }

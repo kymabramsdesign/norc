@@ -162,4 +162,11 @@ $(window).resize(initializeResize);
 $(window).on("load",function(){
   initialize();
    console.log(navigator.userAgent)
+   userA=navigator.userAgent;
+   userA=userA.toLowerCase()
+  
+   if(userA.indexOf("iphone") > -1){
+     $("body").addClass("iphone");
+     //alert(userA)
+   }
 });

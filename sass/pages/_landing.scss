@@ -174,9 +174,10 @@ body{
     font-size: 14px;
     letter-spacing: 2.5px;
     line-height: 14px;
+    font-weight:300;
     margin: 0 auto;
     position:absolute;
-    bottom:51px;
+    bottom:31px;
     display:inline-block;
     left:calc(50% - (195.875px / 2));
     text-transform: uppercase;
@@ -185,7 +186,7 @@ body{
     -o-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      left:auto;
+      left:0;
       width:calc(100% / 8);
       text-align:center;
     }
@@ -1684,9 +1685,21 @@ body{
         height:auto !important;
       }
     }
+   
     @media screen and (min-width: 1600px){
       .area .thumbnails {
           padding: 0 80px 80px;
       }
      }
   }
+  
+.iphone{
+  .area{
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch; /* adds smooth scroll for iphones */
+    padding-bottom:100px;
+  }
+  .slide.insight .area{
+    padding-bottom:100px !important;
+  }
+}

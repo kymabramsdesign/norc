@@ -25,7 +25,9 @@
   flex-wrap: wrap;
   left: 0;
   position: absolute;
-
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    overflow:hidden;
+  }
   @media screen and (max-width: 767px) {
     margin-bottom: 6px;
     margin-top: 6px;
@@ -49,12 +51,14 @@
     &:before {
       @include transition(opacity .3s ease-in-out, left .3s ease-in-out);
       content: url('/img/zoom.svg');
-      left: 93.5%;
-      margin-top: 15px;
+      right: 15px;
+      top: 15px;
       opacity: .45;
       position: absolute;
       width: 24px;
-
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        top:5px;
+      }
      /* @media screen and (max-width: 1024px) {
         left: 91%;
       }
@@ -71,8 +75,7 @@
        // background-size: 24px 27.859px;
         display:block;
         height:27.859px;
-        left:calc(100% - 35px);
-        top:-4px;
+        
      /* } */
     }
 

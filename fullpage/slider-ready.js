@@ -70,7 +70,7 @@ $(document).ready(function() {
                 $('.gain-more .two-vertical.first').css('height', (largeSize / 2));
 
                 // adds dark bar under black nav bar
-                $('.section').append('<div class="mobile-dark-bar"></div>');
+                //$('.section').append('<div class="mobile-dark-bar"></div>');
             }
         });
     } else {
