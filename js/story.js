@@ -93,6 +93,10 @@ function columns() {
     // On Click Function for the images
     $('.picture, .video').on('click', function() {
       var imageSrc = $(this).find('img').attr('src'); // Get image src
+      
+      if(imageSrc == "img/opioid-thmb.gif"){
+        imageSrc="img/opioid.gif";
+      }
       var imageAlt = $(this).find('img').attr('alt'); // Get image alt
       var caption = $(this).find('img').attr('caption'); // Get image caption
       
@@ -208,7 +212,9 @@ function columns() {
       var imageAlt = $(this).find('img').attr('alt'); // Get image alt
       var caption = $(this).find('img').attr('caption'); // Get image caption
       var windowHeight = $(window).height(); // Get window height
-      
+      if(imageSrc == "img/opioid-thmb.gif"){
+        imageSrc="img/opioid.gif";
+      }
       $(".page-overlay").fadeIn(300).css('z-index','205');
       $('.video-container').hide(); // hide video if click on image only
       $('.main-image').show().attr('src', imageSrc).attr('alt', imageAlt);
@@ -271,17 +277,11 @@ function columns() {
 
 // Adjusts the height of the Subnav
 function subNav() {
-  var navHeight = $('.sub-nav').height();
-
-  if ( navHeight >= 35 && navHeight < 60 ) {
-    $('.story-content').css('margin-top', '126px');
-  }
-  else if ( navHeight >= 60 ) {
-    $('.story-content').css('margin-top', '145px');
-  }
-  else {
-    $('.story-content').css('margin-top', '114px');
-  }
+  
+    var headerHeight=$(".dot-nav").height()+$(".sub-nav.desktop").height()+8;
+    
+    $('.story-content').attr("style","margin-top:"+headerHeight+"px");
+    
 }
 
 function extraResize() {
@@ -625,7 +625,17 @@ function fixmodels(){
 $(window).on("load",function(){
   fixmodels();
   initialize();
+  
 })
-//$(document).ready(initialize);
+$(document).ready(function(){
+  $('.story-content').attr("style","transition:none;");
+  //initialize();
+  userA=navigator.userAgent;
+   userA=userA.toLowerCase()
+  if(userA.indexOf("iphone") > -1){
+     $("body").addClass("iphone");
+   }
+
+});
 $(window).resize(initializeResize);
 

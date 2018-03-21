@@ -1542,6 +1542,57 @@ body{
           background-position:center;
           height:0;
           padding-bottom:58.4%;
+          
+          &.norc-solutions{
+            position:relative;
+            font-size: 16px;
+            line-height: 26px;
+            @media screen and (min-width: 901px) and (max-width: 1051px), (max-width: 612px){
+              background-position:left -15px;
+              background-color:#2f2a4b;
+            }
+              @media screen and (max-width: 593px){
+                background-position:left -30px;
+                background-color:#2f2a4b;
+              }
+              @media screen and (max-width: 414px){
+                background-position:left -25px;
+                background-color:#2f2a4b;
+              }
+              @media screen and (max-width: 375px){
+                background-position:left -15px;
+                background-color:#2f2a4b;
+              }
+            span{
+              display:flex;
+              align-items:flex-end;
+              position:absolute;
+              left:0;
+              top:0;
+              height:calc(100% - 0px);
+              width:calc(100% - 30px);
+              padding:0 5px 15px 15px;
+              font-weight:300;
+              color: rgba(255, 255, 255, 0.75);
+              font-size: 16px;
+              line-height: 26px;
+              @media screen and (min-width: 901px){
+               font-size: 1.10vw;
+               line-height:1.85vw;
+              }
+              @media screen and (max-width: 414px){
+                font-size: 14px;
+                line-height: 16px;
+                padding:0 5px 10px 10px;
+              }
+              @media screen and (max-width: 375px){
+                font-size: 12px;
+                line-height: 14px;
+                padding:0 5px 5px 5px;
+              }
+            }
+            
+          }
         }
         &.blank {
           background-color: transparent;

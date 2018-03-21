@@ -73,7 +73,9 @@ body.intro {
     }
 
     @media screen and (max-width: 767px) {
-      display: none !important;
+     display: none !important;
+     align-self:flex-end;
+     font-size:36px;
     }
   }
 

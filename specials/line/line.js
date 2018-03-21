@@ -225,7 +225,7 @@ d3.tsv("gssformatted3.tsv", function(error, data) {
 		'Age 65+' : 2,
 		'Black' : 3,
 		'White' : 3,
-		'Other Race' : 3,
+		'Other race' : 3,
 		'Less than high school' : 4,
 		'High school or some college' : 4,
 		'Bachelor\'s or more' : 4,

@@ -223,6 +223,10 @@ svg {
 	}
 }
 
-#filters .filter[id="filter-5"] .filter-items label:nth-child(2){
-  text-transform: lowercase;
-}
+//#filters .filter[id="filter-5"] .filter-items label:nth-child(2){
+// text-transform: lowercase;
+//}
+
+
+
+

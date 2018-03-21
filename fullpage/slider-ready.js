@@ -302,12 +302,42 @@ function currentSlide() {
     }
 }
 
+function ie11fix(){
+  
+  getActive=$(".slide.active");
+ 
+  activeClasses=$(getActive).attr("class");
+  activeClassesSplit=activeClasses.split(" ");
+  
+  getIndex=$("."+activeClassesSplit[1]).parent().index();
+  getOffset=getIndex*$("."+activeClassesSplit[1]).width();
+  getOffset="-"+getOffset;
+  transf=$(".fp-slidesContainer").css('transform').split(",")
+  if(transf[12] == null){
+    //console.log("null?")
+  }else{
+    if(transf[12]==0){
+     // console.log("ie messed up :"+getOffset);
+     // $(".fp-slidesContainer").attr("style","transform:translate3d("+getOffset+"px, 0px, 0px)");
+     // console.log("was it fixed?")
+    }
+  }
+  
+  console.log(getOffset+" "+transf[12]);
+}
 
 // On Scroll functions
 function scrollTime() {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
-
+    
+    isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+    
+    if(isIE11 == true){
+      setTimeout("ie11fix()",900);
+    }
+    
+    
     if (windowWidth >= 768) {
 
         $('.president .area, .economics .area, .education .area, .global .area, .health .area, .society .area, .gain-more .area').on('scroll', function() {

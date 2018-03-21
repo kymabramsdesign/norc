@@ -2158,7 +2158,9 @@ body.intro {
         line-height: 36px !important; } }
     @media screen and (max-width: 767px) {
       .entry-screen .ti-cursor {
-        display: none !important; } }
+        display: none !important;
+        align-self: flex-end;
+        font-size: 36px; } }
   .entry-screen .text-overlay {
     height: 100%;
     left: 423px;
@@ -4130,6 +4132,53 @@ body {
           background-position: center;
           height: 0;
           padding-bottom: 58.4%; }
+          .area .thumbnails .two-vertical .one .norc-img-holder.norc-solutions {
+            position: relative;
+            font-size: 16px;
+            line-height: 26px; }
+            @media screen and (min-width: 901px) and (max-width: 1051px), (max-width: 612px) {
+              .area .thumbnails .two-vertical .one .norc-img-holder.norc-solutions {
+                background-position: left -15px;
+                background-color: #2f2a4b; } }
+            @media screen and (max-width: 593px) {
+              .area .thumbnails .two-vertical .one .norc-img-holder.norc-solutions {
+                background-position: left -30px;
+                background-color: #2f2a4b; } }
+            @media screen and (max-width: 414px) {
+              .area .thumbnails .two-vertical .one .norc-img-holder.norc-solutions {
+                background-position: left -25px;
+                background-color: #2f2a4b; } }
+            @media screen and (max-width: 375px) {
+              .area .thumbnails .two-vertical .one .norc-img-holder.norc-solutions {
+                background-position: left -15px;
+                background-color: #2f2a4b; } }
+            .area .thumbnails .two-vertical .one .norc-img-holder.norc-solutions span {
+              display: flex;
+              align-items: flex-end;
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: calc(100% - 0px);
+              width: calc(100% - 30px);
+              padding: 0 5px 15px 15px;
+              font-weight: 300;
+              color: rgba(255, 255, 255, 0.75);
+              font-size: 16px;
+              line-height: 26px; }
+              @media screen and (min-width: 901px) {
+                .area .thumbnails .two-vertical .one .norc-img-holder.norc-solutions span {
+                  font-size: 1.10vw;
+                  line-height: 1.85vw; } }
+              @media screen and (max-width: 414px) {
+                .area .thumbnails .two-vertical .one .norc-img-holder.norc-solutions span {
+                  font-size: 14px;
+                  line-height: 16px;
+                  padding: 0 5px 10px 10px; } }
+              @media screen and (max-width: 375px) {
+                .area .thumbnails .two-vertical .one .norc-img-holder.norc-solutions span {
+                  font-size: 12px;
+                  line-height: 14px;
+                  padding: 0 5px 5px 5px; } }
         .area .thumbnails .two-vertical .one.blank {
           background-color: transparent; }
         .area .thumbnails .two-vertical .one.desktop-video {
@@ -4639,6 +4688,10 @@ body {
 @media all and (min--moz-device-pixel-ratio: 0) and (min-resolution: 30dpcm) {
   .main {
     overflow: hidden !important; } }
+.iphone .graph-popup-foreground {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
+
 /*--------------------------------------------------------------
 # Browser Hacks
 --------------------------------------------------------------*/

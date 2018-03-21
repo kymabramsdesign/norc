@@ -115,7 +115,7 @@ $(window).bind("load", function() {
     '</ul></li>' +
     '<li class="divider"><hr /></li>' +
     '<li><a href="/index.html#home/7" class="trigger-slider check-url">Gain More Insight</a></li>' +
-    '<li><a href="/infographics.html" class="trigger-slider check-url">Infographics and Interactive Visualizations</a></li>' +
+    '<!-- <li><a href="/infographics.html" class="trigger-slider check-url">Infographics and Interactive Visualizations</a></li> -->' +
     '</ul>'
   );
   var isIE11s = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
