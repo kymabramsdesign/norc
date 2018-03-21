@@ -234,3 +234,13 @@ $(window).on("load",function(){
   }
   
 });
+
+//alert(window.location.hostname)
+
+$(window).on("load",function(){
+  $(".special-share a").each(function(){
+    tempsocLink=$(this).attr("href").replace("norc.kad.website", window.location.hostname);
+    $(this).attr("href",tempsocLink);
+  });
+  
+});
