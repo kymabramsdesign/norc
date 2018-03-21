@@ -147,7 +147,16 @@
      //alert( $( "#footnoter span" ).html())
      $("#footnote").attr("title",$( "#footnoter span" ).html()).attr("style","cursor:pointer").bind("click",function(){
     
-    location.href="index.html?footnotes#home/7"
+    var isIE11s = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
+    if (isIE11s == true) {
+      
+      location.href = "index.html#home/7"//?footnotes
+      localStorage.setItem("footnotes", true);
+     
+      
+    }else{
+        location.href = "index.html?footnotes#home/7"
+        }
     
   });
      },1700);
