@@ -92,7 +92,7 @@
         display: block;
     }
     .story-page .move-out.image-container {
-        @media screen and (max-width: 1210px) {
+      /*  @media screen and (max-width: 1210px) {
             width: calc(100% - 245px)
         }
         @media screen and (max-width: 1024px) {
@@ -100,7 +100,7 @@
         }
         @media screen and (max-width: 900px) {
             width: calc(100% - 95px)
-        }
+        } */
     }
     .main.fp-viewing-home-1 {
         .area {
