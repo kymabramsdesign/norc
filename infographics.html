@@ -126,7 +126,7 @@
   <li>
     <a href="#drugawareness">
       <figure>
-        <div style="background-image:url(img/opioid.gif)"><img src="img/opioid.gif" alt="Drug Overdose Death in Appalachia" ></div>
+        <div style="background-image:url(img/opioid-thmb.gif)"><img src="img/opioid-thmb.gif" alt="Drug Overdose Death in Appalachia" ></div>
         <figcaption class="norc-light-image">Drug Overdose Death in Appalachia</figcaption> 
       </figure>
     </a>
@@ -313,6 +313,26 @@ var getContent={
             location.hash=stashhash;
             $(document).scrollTop(bodytop);
             $("body").attr("style","overflow:hidden;");
+           
+            if(stashhash=="gasoline"){
+              $( ".close-button" ).remove()
+              $( ".home-close" ).replaceWith( '<img src="img/close.svg" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');" alt="Close" class="close-button" style="margin: 0 0 0 20px;">' );
+            }
+            if(stashhash=="drugawareness"){
+              $( ".close-button" ).remove()
+              $( ".special-share" ).prepend( '<img src="img/close.svg" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');" alt="Close" class="close-button" style="margin: -120px 0 0 0px;    position: absolute;">' );
+              $(".main-image").attr("src","img/opioid.gif");
+              $(".dcaption").attr("style","width: 100%;padding: 0 100px 0 85px;");
+            }
+            if(stashhash=="aging"){
+              $( ".close-button" ).attr("style","margin: 0px 0 0 20px;")
+            }
+            if(stashhash=="disaster"){
+              $( ".close-button" ).remove()
+              $( ".special-share" ).prepend( '<img src="img/close.svg" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');" alt="Close" class="close-button" style="margin: -120px 0 0 0px;    position: absolute;">' );
+              $(".dcaption").attr("style","width: 100%;padding: 0 100px 0 85px;");
+            }
+            
             studder=false;
           },200);
           $(".special-share a").each(function() {
