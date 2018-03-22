@@ -393,7 +393,7 @@
 <body>
 	<div id="header">
 		<div>
-			<h1>NORC’s Global Portfolio</h1>
+		<h1>NORC’s Global Portfolio</h1>
 			<p>
 				Since 2003, NORC has partnered with governments, non-governmental organizations, and other stakeholders to conduct research, impact evaluations, and technical assistance in more than 80 countries outside of the United States. Click on the highlighted countries for a snapshot of NORC’s international work. 
 			</p>
@@ -414,11 +414,11 @@
 	<div id="norc-map"></div>
 
 	<script src="../../js/d3.min.js"></script>
-	<script src="../../js/jquery-3.2.1.min.js"></script>
-	<script src="topojson.min.js"></script>
-	<script src="datamaps.world.min.js"></script>
-	
-		<script>
+ 	<script src="../../js/jquery-3.2.1.min.js"></script>
+ 	<script src="topojson.min.js"></script>
+  	<script src="datamaps.world.min.js"></script>
+
+	<script>
 		var norc_map = {
 			DATA_FILE: 'data.csv',
 			IDEAL_WIDTH: 1600,
@@ -470,6 +470,36 @@
 					var offset = bubble.offset();
 
 					popup.show(info, offset);
+				});
+
+				this.add_custom_country(700, 420, 'Cape Verde');
+				this.add_custom_country(520, 424, 'St. Kitts and Nevis');
+				this.add_custom_country(532, 438, 'St. Lucia');
+			},
+
+			add_custom_country: function(x, y, country_name) {
+				var circle = jQuery(document.createElementNS("http://www.w3.org/2000/svg", "circle"));
+
+				circle.attr('cx', x);
+				circle.attr('cy', y);
+				circle.css({
+					fill: 'rgb(221,115,52)',
+					'fill-opacity': 0.75,
+					'stroke-width': 4,
+					'pointer-events': 'auto',
+					cursor: 'pointer'
+				});
+				circle.data('info', {
+					country: country_name,
+					info: this.country_data[country_name]
+				})
+
+				this.jq_map.find('.bubbles').append(
+					circle
+				);
+
+				circle.click(function() {
+					popup.show(circle.data('info'), circle.offset());
 				});
 			},
 
@@ -712,6 +742,7 @@
 					var g = all_geometries[i];
 					if (g.id != '-99') {
 						country_to_code_table[g.properties.name] = g.id;
+					} else {
 					}
 				}
 
@@ -721,10 +752,10 @@
 				for(var country in this.country_data) {
 					var item_count = this.country_data[country].length;
 
-					county = this.get_internal_country_name(country);
+					var country_internal = this.get_internal_country_name(country);
 
-					if (typeof country_to_code_table[country] != 'undefined') {
-						var code = country_to_code_table[country];
+					if (typeof country_to_code_table[country_internal] != 'undefined') {
+						var code = country_to_code_table[country_internal];
 
 						this.fill_table[code] = {fillKey: this.get_fill_code_for_item_count(item_count), info: this.country_data[country], country: country, country_code: code};
 						this.bubble_table.push({
@@ -732,7 +763,7 @@
 							fillKey: 'bubble',
 							radius: 12
 						});
-					//} else {
+					} else {
 						//console.debug(country);
 					}
 				}
@@ -741,47 +772,12 @@
 			},
 
 			get_internal_country_name: function(country) {
-				/* 
-					// hiries version
-
-					if (country == 'Bosnia & Herzegovina') {
-						country = 'Bosnia and Herzegovina';
-					} else if (country == 'Burma') {
-						country = 'Myanmar';
-					} else if (country == 'Cote d’Ivoire') {
-						country = 'Côte d\'Ivoire';
-					} else if (country == 'Democratic Republic of Congo') {
-						country = 'Congo, the Democratic Republic of the';
-					} else if (country == 'West Bank and Gaza') {
-						country = 'Palestinian Territories';
-					} else if (country == 'Bolivia') {
-						country = 'Bolivia, Plurinational State of';
-					} else if (country == 'Moldova') {
-						country = 'Moldova, Republic of';
-					} else if (country == 'Russia') {
-						country = 'Russian Federation';
-					} else if (country == 'St. Kitts and Nevis') {
-						country = 'Saint Kitts and Nevis';
-					} else if (country == 'St. Lucia') {
-						country = 'Saint Lucia';
-					} else if (country == 'Syria') {
-						country = 'Syrian Arab Republic';
-					} else if (country == 'Tanzania') {
-						country = 'Tanzania, United Republic of';
-					} else if (country == 'Vietnam') {
-						country = 'Viet Nam';
-					}
-				*/
 				switch(country) {
-					// case 'Cape Verde':
-					// case 'Kosovo':
-					// case 'St. Kitts and Nevis':
-					// case 'St. Lucia':
 					case 'Bosnia & Herzegovina':
 						return "Bosnia and Herzegovina";
 					case 'Burma':
 						return "Myanmar";
-					case 'Cote d’Ivoire':
+					case 'Côte d’Ivoire':
 						return "Ivory Coast";
 					case 'Democratic Republic of Congo':
 						return "Democratic Republic of the Congo";

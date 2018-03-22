@@ -315,14 +315,27 @@ var getContent={
             $("body").attr("style","overflow:hidden;");
            
             if(stashhash=="gasoline"){
-              $( ".close-button" ).remove()
+             /* $( ".close-button" ).remove()
               $( ".home-close" ).replaceWith( '<img src="img/close.svg" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');" alt="Close" class="close-button" style="margin: 0 0 0 20px;">' );
+              $(".home-popup").addClass("main-image");
+              $(".main-image").removeClass("home-popup");
+              //image-container main-image
+             // $(".gas-inner").removeClass("gas-inner");
+             // $(".gas-top").children().attr("stlyle","display: flex; flex-wrap: wrap;");
+              //$(".gas-top").removeClass("gas-top");
+              $(".caption").addClass("dcaption").removeClass("caption");*/
+              
+              contents='<div style="display:flex; flex-wrap:wrap;"> <img src="img/gas-prices-chart.png" alt="" class="main-image" style="width:calc(100% - 50px); height:56%"> <div class="special-share"> <a href="https://www.facebook.com/sharer/sharer.php?&amp;u=http://localhost/gas-prices.html%23chart" target="popup" onclick="window.open(\'https://www.facebook.com/sharer/sharer.php?&amp;u=http://localhost/#home/2\',\'popup\',\'width=600,height=600,left=300,top=100\'); return false;"><img src="img/facebook.svg" alt="Facebook" class="facebook"></a> <a href="https://twitter.com/intent/tweet/?text=Check%20Out%20this%20Chart!&amp;url=http://localhost/gas-prices.html%23chart" target="popup" onclick="window.open(\'https://twitter.com/intent/tweet/?text=What%20will%20Americans%20pay%20at%20the%20pump%3F%20%40NORCNews%20tracks%20gas%20prices%20by%20geographic%20region%20to%20help%20%40eigov%20forecast%20costs.&amp;url=http://localhost/#home/2\',\'popup\',\'width=600,height=400,left=300,top=100\'); return false;"><img src="img/twitter.svg" alt="Twitter" class="twitter"></a> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost/gas-prices.html%23chart&amp;title=Conventional%20Retail%20Gasoline%20Prices%20by%20Geographic%20Region,%20Compared%20to%20U.S.%20Average:%202007%20to%202017&amp;summary=What%20will%20Americans%20pay%20at%20the%20pump%3F%20NORC%20tracks%20fuel%20prices%20by%20geographic%20region%20to%20help%20the%20U.S.%20Energy%20Information%20Admiration%20forecast%20costs.&amp;submitted-image-url=http://norc.kad.website/img/gas-prices-share.png" target="popup" onclick="window.open(\'https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost/#home/2&amp;title=Conventional%20Retail%20Gasoline%20Prices%20by%20Geographic%20Region,%20Compared%20to%20U.S.%20Average:%202007%20to%202017&amp;summary=What%20will%20Americans%20pay%20at%20the%20pump%3F%20NORC%20tracks%20fuel%20prices%20by%20geographic%20region%20to%20help%20the%20U.S.%20Energy%20Information%20Admiration%20forecast%20costs.&amp;submitted-image-url=http://norc.kad.website/img/gas-prices-share.png\',\'popup\',\'width=600,height=400,left=300,top=100\'); return false;"><img src="img/linkedin.svg" alt="LinkedIn" class="linkedin"></a> </div> <img src="img/close.svg" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');" alt="Close" class="close-button" style="margin-top: 0px;"><div class="decaption" style="padding-top:8px;">The weekly EIA-878 “Motor Gasoline Price” and EIA-888 “On-Highway Diesel Fuel Price” surveys, which NORC conducted for the U.S. Energy Information Administration, allowed businesses and government entities to track and compare regional and national fuel prices.</div></div>';
+              contents=contents.replace(/localhost/g,window.location.hostname);
+              $(".image-container").html(contents);
+              
             }
             if(stashhash=="drugawareness"){
               $( ".close-button" ).remove()
               $( ".special-share" ).prepend( '<img src="img/close.svg" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');" alt="Close" class="close-button" style="margin: -120px 0 0 0px;    position: absolute;">' );
-              $(".main-image").attr("src","img/opioid.gif");
-              $(".dcaption").attr("style","width: 100%;padding: 0 100px 0 85px;");
+              $(".main-image").attr("src","img/opioid.gif").attr("style","width:calc(100% - 50px); height:56.52%");
+              $(".dcaption").attr("style","width: 100%; font-size:20px;");
+              $(".image-container").html('<div style="display:flex; flex-wrap:wrap;">'+$(".image-container").html()+'</div>');
             }
             if(stashhash=="aging"){
               $( ".close-button" ).attr("style","margin: 0px 0 0 20px;")
@@ -330,7 +343,15 @@ var getContent={
             if(stashhash=="disaster"){
               $( ".close-button" ).remove()
               $( ".special-share" ).prepend( '<img src="img/close.svg" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');" alt="Close" class="close-button" style="margin: -120px 0 0 0px;    position: absolute;">' );
-              $(".dcaption").attr("style","width: 100%;padding: 0 100px 0 85px;");
+              $(".main-image").attr("style","width:calc(100% - 50px); height:56%");
+              $(".image-container").html('<div style="display:flex; flex-wrap:wrap; height:100%;">'+$(".image-container").html()+'</div>');
+              $(".dcaption").attr("style","width: 100%;");
+            }
+            
+            if(stashhash=="medicare"){
+              $(".image-container").html('<div style="display:flex; flex-wrap:wrap;">'+$(".image-container").html()+'<div class="decaption" style="padding-top:8px;">'+getContent.medicare+'</div></div>');
+              $(".main-image").attr("style","width:calc(100% - 50px); height:56%");
+             
             }
             
             studder=false;
