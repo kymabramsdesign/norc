@@ -4946,7 +4946,8 @@ body {
           margin: 0;
           position: relative;
           display: inline-block;
-          max-width: 374px; }
+          max-width: 374px;
+          width: 100%; }
           .norc-infographics-graphics-link-list li a figure div {
             padding-bottom: 59.356%;
             background: no-repeat center center;
@@ -5014,10 +5015,12 @@ body {
   display: none; }
   .special-share a img {
     width: 22px;
-    padding: 0 4px; }
+    padding: 0 1px; }
+    .special-share a img.facebook {
+      padding: 0 4px; }
     .special-share a img.twitter {
-      margin: 10px 0;
-      height: 18px; }
+      margin: 20px 0 22px;
+      padding: 0; }
 
 .norc-modal-cover {
   display: flex;
@@ -5027,7 +5030,7 @@ body {
   align-items: center;
   z-index: 210;
   left: -180vw;
-  background-color: rgba(232, 239, 242, 0.91);
+  background-color: rgba(232, 239, 242, 0.97);
   transition: all 0.8s ease-in-out;
   height: 0;
   overflow: hidden; }
@@ -5116,23 +5119,50 @@ body {
   width: calc(100% - 100px);
   max-width: 892px;
   display: flex; }
+  @media screen and (max-width: 1000px) {
+    #continueworking.norc-modal-cover.loaded .graph-container, #degreeoccup.norc-modal-cover.loaded .graph-container, #degreeoccup.norc-modal-cover.loaded .graph-container {
+      width: 100%;
+      max-width: none; } }
 
 #continueworking.norc-modal-cover.loaded .graph-container {
   max-height: 672.297px; }
+  @media screen and (max-width: 1000px) {
+    #continueworking.norc-modal-cover.loaded .graph-container {
+      width: 100%;
+      max-height: none;
+      height: 100%; } }
 
 #degreeoccup.norc-modal-cover.loaded .graph-container {
   max-height: 645.297px; }
+  @media screen and (max-width: 1000px) {
+    #degreeoccup.norc-modal-cover.loaded .graph-container {
+      width: 100%;
+      max-height: none;
+      height: 100%; } }
 
-#norcglobal.norc-modal-cover.loaded .graph-container {
-  max-height: 637.188px; }
+@media screen and (max-width: 1000px) {
+  #norcglobal.norc-modal-cover.loaded .graph-container {
+    width: 100%;
+    max-height: none;
+    height: 100%; } }
 
 #media.norc-modal-cover.loaded .graph-container {
   max-height: 744.297px; }
+  @media screen and (max-width: 1000px) {
+    #media.norc-modal-cover.loaded .graph-container {
+      width: 100%;
+      max-height: none;
+      height: 100%; } }
 
 #norcglobal.norc-modal-cover.loaded .graph-container, #media.norc-modal-cover.loaded .graph-container {
   width: calc(100% - 100px);
   max-width: 1020px;
   display: flex; }
+  @media screen and (max-width: 1000px) {
+    #norcglobal.norc-modal-cover.loaded .graph-container, #media.norc-modal-cover.loaded .graph-container {
+      width: 100%;
+      max-height: none;
+      height: 100%; } }
 
 .norc-modal-cover .graph-inner {
   display: flex;
@@ -5141,23 +5171,58 @@ body {
   .norc-modal-cover .graph-inner .graph-top {
     display: flex;
     width: 100%; }
+    @media screen and (max-width: 1000px) {
+      .norc-modal-cover .graph-inner .graph-top {
+        height: calc(100% - 90px); } }
+    @media screen and (max-width: 670px) {
+      .norc-modal-cover .graph-inner .graph-top {
+        height: 100%; } }
     .norc-modal-cover .graph-inner .graph-top iframe {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%; }
+      @media screen and (max-width: 1000px) {
+        .norc-modal-cover .graph-inner .graph-top iframe {
+          height: 100% !important; } }
     .norc-modal-cover .graph-inner .graph-top > div {
       width: calc(100% - 30px);
       position: relative;
       padding-bottom: 73%; }
+      @media screen and (max-width: 1000px) {
+        .norc-modal-cover .graph-inner .graph-top > div {
+          width: 100%;
+          padding-bottom: 0; } }
     .norc-modal-cover .graph-inner .graph-top .graph-left {
       width: 22px; }
       .norc-modal-cover .graph-inner .graph-top .graph-left .close-button {
-        margin-left: 10px; }
+        margin-left: 30px; }
+      .norc-modal-cover .graph-inner .graph-top .graph-left .graph-popup-social-links {
+        display: none; }
+      .norc-modal-cover .graph-inner .graph-top .graph-left .graph-popup-social-links {
+        top: auto;
+        right: auto;
+        margin-top: 126px;
+        margin-left: 30px;
+        display: block; }
+      @media screen and (max-width: 1000px) {
+        .norc-modal-cover .graph-inner .graph-top .graph-left {
+          display: none; } }
   .norc-modal-cover .graph-inner .graph-bottom {
     width: calc(100% - 22px);
     align-self: flex-start;
     margin-top: -15px; }
+    @media screen and (max-width: 1000px) {
+      .norc-modal-cover .graph-inner .graph-bottom {
+        padding: 0 20px;
+        margin-top: 8px; } }
+    @media screen and (max-width: 670px) {
+      .norc-modal-cover .graph-inner .graph-bottom {
+        display: none; } }
+
+.iphone .norc-modal-cover .graph-inner .graph-top > div {
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 /*# sourceMappingURL=style.css.map */

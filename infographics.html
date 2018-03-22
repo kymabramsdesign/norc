@@ -265,17 +265,17 @@ var getContent={
       cn="graph-popup-foreground";
       break;
       case "#degreeoccup":
-      p="specials/chart3/index.php";
+      p="specials/chart3/index.html";
       ct="graph";
       cn="graph-popup-foreground";
       break;
       case "#norcglobal":
-      p="specials/chart4/index.php";
+      p="specials/chart4/index.html";
       ct="graph";
       cn="graph-popup-foreground";
       break;
       case "#media":
-      p="specials/bubble/index.php";
+      p="specials/bubble/index.html";
       ct="graph";
       cn="graph-popup-foreground";
       break;
@@ -314,7 +314,13 @@ var getContent={
             $(document).scrollTop(bodytop);
             $("body").attr("style","overflow:hidden;");
             studder=false;
-          },200)
+          },200);
+          $(".special-share a").each(function() {
+        tempsocLink = $(this).attr("href").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+        tempsocClick = $(this).attr("onclick").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+        $(this).attr("href", tempsocLink);
+        $(this).attr("onclick", tempsocClick);
+    });
         },200)
       }
      } );
@@ -325,16 +331,40 @@ var getContent={
       $(".norc-modal-cover").addClass("loaded");
       setTimeout(function(){
         
-      $(".norc-modal-cover").html('<div class="graph-container"><div class="graph-inner"><div class="graph-top"><div>'+ifcontainer+'</div><div class="graph-left"><img src="img/close.svg" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');" alt="Close" class="close-button" style="margin-top: 0px;"></div></div><div class="graph-bottom"></div></div></div>');
+      $(".norc-modal-cover").html('<div class="graph-container"><div class="graph-inner"><div class="graph-top"><div>'+ifcontainer+'</div><div class="graph-left"><img src="img/close.svg" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');" alt="Close" class="close-button" style="margin-top: 0px;"></div></div><div class="graph-bottom"></div></div></div><div class="graph-popup-close" onclick="location.hash=\'#\'; $(\'body\').attr(\'style\',\'\'); $(document).scrollTop('+bodytop+');"><span></span></div>');
       stashhash=location.hash;
       if(stashhash=="#continueworking"){
         $(".norc-modal-cover .graph-bottom").html(getContent.continuedworking);
+        $(".norc-modal-cover").addClass("theme-dark");
+        shares='<div class="graph-popup-social-links"><a class="gps-facebook" href="https://www.facebook.com/sharer/sharer.php?&amp;u=http://norc.kad.website/gss-trends%23light" target="_blank" rel="noopener"></a><a class="gps-twitter" href="https://twitter.com/intent/tweet/?text=Many%20Americans%20would%20Continue%20Working%20Even%20if%20Rich&amp;url=http://norc.kad.website/gss-trends%23light" target="_blank" rel="noopener"></a><a class="gps-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://norc.kad.website/gss-trends%23light&amp;title=Many%20Americans%20would%20Continue%20Working%20Even%20if%20Rich&amp;summary=Percentage%20of%20Americans%20who%20said%20they%20would%20continue%20working%20even%20if%20they%20had%20enough%20money%20to%20live%20as%20comfortably%20as%20they%20would%20like%20for%20the%20rest%20of%20their%20lives,%20would%20you%20continue%20to%20work%20or%20would%20you%20stop%20working?&amp;submitted-image-url=http://norc.kad.website/img/rich-share.jpg" target="_blank" rel="noopener"></a></div>';
+        shares2=shares.replace(/norc.kad.website/g,window.location.hostname);
+        shares2=shares2.replace(/%23/g,".html%23");
+        $(".graph-left").append(shares2);
+        $(".norc-modal-cover").append(shares2);
       }
       if(stashhash=="#degreeoccup"){
         $(".norc-modal-cover .graph-bottom").html(getContent.degreeoccup);
+        shares='<div class="graph-popup-social-links"><a class="gps-facebook" href="https://www.facebook.com/sharer/sharer.php?&amp;u=http://norc.kad.website/gss-trends%23light" target="_blank" rel="noopener"></a><a class="gps-twitter" href="https://twitter.com/intent/tweet/?text=Many%20Americans%20would%20Continue%20Working%20Even%20if%20Rich&amp;url=http://norc.kad.website/gss-trends%23light" target="_blank" rel="noopener"></a><a class="gps-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://norc.kad.website/gss-trends%23light&amp;title=Many%20Americans%20would%20Continue%20Working%20Even%20if%20Rich&amp;summary=Percentage%20of%20Americans%20who%20said%20they%20would%20continue%20working%20even%20if%20they%20had%20enough%20money%20to%20live%20as%20comfortably%20as%20they%20would%20like%20for%20the%20rest%20of%20their%20lives,%20would%20you%20continue%20to%20work%20or%20would%20you%20stop%20working?&amp;submitted-image-url=http://norc.kad.website/img/rich-share.jpg" target="_blank" rel="noopener"></a></div>';
+        shares2=shares.replace(/norc.kad.website/g,window.location.hostname);
+        shares2=shares2.replace(/%23/g,".html%23");
+        $(".graph-left").append(shares2);
+        $(".norc-modal-cover").append(shares2);
       }
       if(stashhash=="#media"){
         $(".norc-modal-cover .graph-bottom").html(getContent.media);
+        shares='<div class="graph-popup-social-links"><a class="gps-facebook" href="https://www.facebook.com/sharer/sharer.php?&amp;u=http://norc.kad.website/minds-and-media%23blue" target="_blank" rel="noopener"></a><a class="gps-twitter" href="https://twitter.com/intent/tweet/?text=News%20Media%20Sources%20and%20Attitudes%20vary%20by%20Political%20Party&amp;url=http://norc.kad.website/minds-and-media%23blue" target="_blank" rel="noopener"></a><a class="gps-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://norc.kad.website/minds-and-media%23blue&amp;title=News%20Media%20Sources%20and%20Attitudes%20vary%20by%20Political%20Party&amp;summary=The%20AP-NORC%20Center%20and%20American%20Press%20Institute%20investigates%20how%20Americans%20of%20different%20partisan%20stripes%20get%20their%20news%20and%20their%20attitudes%20toward%20the%20news%20media.&amp;submitted-image-url=http://norc.kad.website/img/media-share.jpg" target="_blank" rel="noopener"></a></div>';
+        shares2=shares.replace(/norc.kad.website/g,window.location.hostname);
+        shares2=shares2.replace(/%23/g,".html%23");
+        $(".graph-left").append(shares2);
+        $(".norc-modal-cover").append(shares2);
+      }
+      if(stashhash=="#norcglobal"){
+        $(".norc-modal-cover").addClass("theme-dark");
+         shares='<div class="graph-popup-social-links"><a class="gps-facebook" href="https://www.facebook.com/sharer/sharer.php?&amp;u=http://norc.kad.website/global-portfolio%23map" target="_blank" rel="noopener"></a><a class="gps-twitter" href="https://twitter.com/intent/tweet/?text=Driving%20evidence-based%20decision-making%20in%20over%2080%20countries.%20See%20@NORCNews\'%20global%20development%20expertise%20at%20work:&amp;url=http://norc.kad.website/global-portfolio%23map" target="_blank" rel="noopener"></a><a class="gps-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://norc.kad.website/global-portfolio%23map&amp;title=NORC\'s%20Global%20Portfolio&amp;summary=Driving%20evidence-based%20decision-making%20in%20over%2080%20countries.%20See%20NORC\'s%20global%20development%20expertise%20at%20work.&amp;submitted-image-url=http://norc.kad.website/img/map-share.png" target="_blank" rel="noopener"></a></div>';
+        shares2=shares.replace(/norc.kad.website/g,window.location.hostname);
+        shares2=shares2.replace(/%23/g,".html%23");
+        $(".graph-left").append(shares2);
+        $(".norc-modal-cover").append(shares2);
       }
       
           $(document).scrollTop(bodytop);
@@ -397,6 +427,7 @@ $(window).on('hashchange', function() {
     if(studder!=true){
       $('body').attr('style','');
       history.pushState('', document.title, window.location.pathname);
+      $(".norc-modal-cover").removeClass("theme-dark");
     }
   }else{
     if(studder!=true){
@@ -419,7 +450,17 @@ $(window).on("load",function(){
     
     $("a[href='"+lh+"']").click();
   }
-})
+});
+
+$(document).ready(function(){
+  $('.story-content').attr("style","transition:none;");
+  //initialize();
+  userA=navigator.userAgent;
+   userA=userA.toLowerCase()
+  if(userA.indexOf("iphone") > -1){
+     $("body").addClass("iphone");
+   }
+  });
 </script>
 
 <!-- BEGIN Scripts for interactive animated graphs -->

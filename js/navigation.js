@@ -113,7 +113,7 @@ $(window).bind("load", function() {
         '</ul></li>' +
         '<li class="divider"><hr /></li>' +
         '<li><a href="/index.html#home/7" class="trigger-slider check-url">Gain More Insight</a></li>' +
-        '<!-- <li><a href="/infographics.html" class="trigger-slider check-url">Infographics and Interactive Visualizations</a></li> -->' +
+        ' <li><a href="/infographics.html" class="trigger-slider check-url">Infographics and Interactive Visualizations</a></li> ' +
         '</ul>'
     );
     var isIE11s = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
@@ -268,8 +268,19 @@ $(window).on("load", function() {
 
 $(window).on("load", function() {
     $(".special-share a").each(function() {
-        tempsocLink = $(this).attr("href").replace("norc.kad.website", window.location.hostname);
+        tempsocLink = $(this).attr("href").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+        tempsocClick = $(this).attr("onclick").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
         $(this).attr("href", tempsocLink);
+        $(this).attr("onclick", tempsocClick);
     });
+    
+       if($(".chart").length>0){
+         templink1=$(".chart").attr("data-share-url-twitter").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+         $(".chart").attr("data-share-url-twitter",templink1);
+         templink2=$(".chart").attr("data-share-url-facebook").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+         $(".chart").attr("data-share-url-facebook",templink2);
+         templink3=$(".chart").attr("data-share-url-linkedin").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+         $(".chart").attr("data-share-url-linkedin",templink3);
+       }
 
 });
