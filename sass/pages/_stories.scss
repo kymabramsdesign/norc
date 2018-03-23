@@ -841,3 +841,18 @@
 .story-page_health.story-page .image-container .caption{
   display:none;
 }
+
+@media screen and (max-width: 767px){
+  .story-page.story-page_society .image-container.move-in .image-inner .image-inner-top .special-share{
+        right: 0 !important;
+        left: initial !important;
+  }
+  
+  .story-page.story-page_society .image-container .image-inner {
+    .dcaption{
+             word-break: break-all;
+             width:100%;
+           }
+  }
+  
+}
