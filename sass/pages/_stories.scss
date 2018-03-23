@@ -856,3 +856,13 @@
   }
   
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .story-page.story-page_health{
+    .special-share{
+      img{
+        height:22px;
+      }
+    }
+    
+  }
+}

@@ -2926,6 +2926,9 @@ body.intro {
   .story-page.story-page_society .image-container .image-inner .dcaption {
     word-break: break-all;
     width: 100%; } }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .story-page.story-page_health .special-share img {
+    height: 22px; } }
 /*--------------------------------------------------------------
 # Main Pages
 --------------------------------------------------------------*/
