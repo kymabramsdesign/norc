@@ -2928,7 +2928,14 @@ body.intro {
     width: 100%; } }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .story-page.story-page_health .special-share img {
-    height: 22px; } }
+    height: 22px; }
+
+  .story-page.story-page_society .image-container .image-inner .image-inner-top [style].close-button {
+    margin-top: 0 !important;
+    margin-left: 30px;
+    height: 22px; }
+  .story-page.story-page_society .image-container .image-inner .image-inner-top-right {
+    margin-left: -20px; } }
 /*--------------------------------------------------------------
 # Main Pages
 --------------------------------------------------------------*/
@@ -5067,7 +5074,7 @@ body {
   z-index: 210;
   left: -180vw;
   background-color: rgba(232, 239, 242, 0.97);
-  transition: all 0.8s ease-in-out;
+  transition: left 0.8s ease-in-out;
   height: 0;
   overflow: hidden; }
   .norc-modal-cover .caption {

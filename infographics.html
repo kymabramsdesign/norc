@@ -469,6 +469,7 @@ $(window).on('hashchange', function() {
       $('body').attr('style','');
       history.pushState('', document.title, window.location.pathname);
       $(".norc-modal-cover").removeClass("theme-dark");
+      $(".norc-modal-cover").removeClass("loaded");
     }
   }else{
     if(studder!=true){
@@ -484,6 +485,29 @@ $(window).on('hashchange', function() {
   
 });
 
+function resizeGraphs(){
+  if($(window).width() > 1000){
+    if($(".norc-modal-cover").hasClass("loaded")==true){
+      if($(".graph-container").length > 0){
+        getCapHeight=$(".graph-bottom").height()+8;
+        getWinHeight=$(window).height()-40;
+        setHeightIframe=getWinHeight-getCapHeight;
+       // alert(getWinHeight+" "+getCapHeight)
+        $(".graph-container").attr("style","height:"+getWinHeight+"px");
+        $(".graph-top").attr("style","height:"+setHeightIframe+"px");
+        $(".graph-top").children().attr("style","padding-bottom:0;");
+      }
+    }
+  }else{
+    $(".graph-container").attr("style","");
+    $(".graph-top").attr("style","");
+  }
+}
+
+$(window).on('resize', function() {
+  resizeGraphs();
+});
+
 $(window).on("load",function(){
   lh=location.hash;
   //alert($("a[href='"+lh+"']").html());
@@ -491,6 +515,9 @@ $(window).on("load",function(){
     
     $("a[href='"+lh+"']").click();
   }
+  setTimeout(function(){
+  resizeGraphs();
+  },500)
 });
 
 $(document).ready(function(){
