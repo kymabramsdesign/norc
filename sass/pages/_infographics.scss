@@ -507,6 +507,10 @@
        .norc-infographics .norc-modal-cover.loaded{
          .image-container{
              position: initial;
+             @media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none){
+               position:static;
+             }
              padding:0;
              width:100%;
          .special-share{

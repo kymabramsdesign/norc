@@ -84,7 +84,7 @@ function columns() {
     if( window.innerHeight < window.innerWidth ) {
       $('.image-container').css('top', '57px');
       $('.mobile-bar').css('background-color', '#fff');
-      $("body").removeClass('no-scroll');
+      //$("body").removeClass('no-scroll');
     } else {
       $('.image-container').css('top', '30vh');
       $('.mobile-bar').css('background-color', 'transparent');
@@ -606,6 +606,54 @@ function initializeResize() {
   popUpTop();
   closeResisze();
 }
+
+function resizeModal(){
+  if($(".image-container").length > 0 &&  $(".image-container").hasClass("move-in")==true){
+    getWinWidth=$(window).width()-100;
+    if(getWinWidth > 767 ){
+      $(".image-inner").attr("style","width:"+getWinWidth+"px;padding:0;");
+       var container=$(".image-inner");
+       var windowWidth = $(window).width()-100,
+        windowHeight = $(window).height()-100,
+        width = container.width()+100,
+        height = container.height()+100,
+        scale;
+        
+        if ( windowWidth > windowHeight ) {
+            scale = windowWidth / width;
+            if ( height * scale > windowHeight ) {
+                scale = windowHeight / height;
+            }
+        }
+        else {
+            scale = windowHeight / height;
+            if ( width * scale > windowWidth ) {
+                scale = windowWidth / width;
+            }
+        }
+         
+        adjustcenter=(windowHeight-height);
+        //alert(adjustcenter)
+        setTimeout(function(){
+          $(".image-container").attr("style","top:"+$(document).scrollTop()+"px");
+        },500); 
+        container.width(Math.round(width * scale));
+        
+       
+      }else{
+         $(".image-inner").attr("style","");
+         $(".image-container").attr("style","");
+        //$(".image-container").children().attr("style", "");
+        
+      }
+      
+    }
+  
+}
+
+$(window).on("resize",function(){
+  resizeModal()
+})
 
 // to fix models 
 function fixmodels(){

@@ -268,18 +268,18 @@ $(window).on("load", function() {
 
 $(window).on("load", function() {
     $(".special-share a").each(function() {
-        tempsocLink = $(this).attr("href").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
-        tempsocClick = $(this).attr("onclick").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+        tempsocLink = $(this).attr("href").replace("annualreport.norc.org", window.location.hostname).replace("%23", ".html%23");
+        tempsocClick = $(this).attr("onclick").replace("annualreport.norc.org", window.location.hostname).replace("%23", ".html%23");
         $(this).attr("href", tempsocLink);
         $(this).attr("onclick", tempsocClick);
     });
     
        if($(".chart").length>0){
-         templink1=$(".chart").attr("data-share-url-twitter").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+         templink1=$(".chart").attr("data-share-url-twitter").replace("annualreport.norc.org", window.location.hostname).replace("%23", ".html%23");
          $(".chart").attr("data-share-url-twitter",templink1);
-         templink2=$(".chart").attr("data-share-url-facebook").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+         templink2=$(".chart").attr("data-share-url-facebook").replace("annualreport.norc.org", window.location.hostname).replace("%23", ".html%23");
          $(".chart").attr("data-share-url-facebook",templink2);
-         templink3=$(".chart").attr("data-share-url-linkedin").replace("norc.kad.website", window.location.hostname).replace("%23", ".html%23");
+         templink3=$(".chart").attr("data-share-url-linkedin").replace("annualreport.norc.org", window.location.hostname).replace("%23", ".html%23");
          $(".chart").attr("data-share-url-linkedin",templink3);
        }
 

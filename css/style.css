@@ -5272,7 +5272,11 @@ body {
   .norc-infographics .norc-modal-cover.loaded .image-container {
     position: initial;
     padding: 0;
-    width: 100%; }
+    width: 100%; } }
+  @media screen and (max-width: 767px) and (-ms-high-contrast: active), screen and (max-width: 767px) and (-ms-high-contrast: none) {
+    .norc-infographics .norc-modal-cover.loaded .image-container {
+      position: static; } }
+@media screen and (max-width: 767px) {
     .norc-infographics .norc-modal-cover.loaded .image-container .special-share {
       position: absolute;
       top: 20px;
