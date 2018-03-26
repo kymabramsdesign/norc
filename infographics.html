@@ -492,13 +492,14 @@ function resizeGraphs(){
       if($(".graph-container").length > 0){
         getCapHeight=$(".graph-bottom").height()+8;
         getWinHeight=$(window).height()-40;
+       // alert(getCapHeight+" "+getWinHeight)
         var isIE11 = '-ms-scroll-limit' in document.documentElement.style && '-ms-ime-align' in document.documentElement.style;
         if (isIE11 == true) {
           getWinHeight=$(window).height()-60;
         }
         setHeightIframe=getWinHeight-getCapHeight;
        // alert(getWinHeight+" "+getCapHeight)
-        $(".graph-container").attr("style","height:"+getWinHeight+"px");
+        $(".graph-container").attr("style","height:"+getWinHeight+"px; max-height:none;");
         $(".graph-top").attr("style","height:"+setHeightIframe+"px");
         $(".graph-top").children().attr("style","padding-bottom:0;");
       }
